@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>纸间</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a href="#/" class="site-logo" id="site-logo">纸间</a>
+        <nav class="site-nav site-nav--desktop" aria-label="主导航">
+          <a href="#/" class="site-nav__link" data-nav="home">首页</a>
+          <a href="#/tags" class="site-nav__link" data-nav="tags">标签</a>
+          <a href="#/about" class="site-nav__link" data-nav="about">关于</a>
+        </nav>
+        <div class="site-header__actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="切换明暗主题"
+            title="主题"
+          >
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></span>
+          </button>
+          <button
+            type="button"
+            class="nav-burger"
+            id="nav-burger"
+            aria-label="打开菜单"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-drawer" id="mobile-drawer" hidden>
+        <nav class="mobile-drawer__nav" aria-label="移动导航">
+          <a href="#/" class="mobile-drawer__link">首页</a>
+          <a href="#/tags" class="mobile-drawer__link">标签</a>
+          <a href="#/about" class="mobile-drawer__link">关于</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="main" tabindex="-1">
+      <div id="view-root" class="view-root"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__meta">
+          <span id="footer-blog-name">纸间</span>
+          <span class="dot">·</span>
+          <span>专注阅读</span>
+        </p>
+        <button type="button" class="footer-settings-toggle" id="footer-settings-toggle">
+          简易设置
+        </button>
+      </div>
+      <div class="settings-panel" id="settings-panel" hidden>
+        <div class="settings-panel__card">
+          <label class="settings-field">
+            <span>博客名称</span>
+            <input type="text" id="setting-blog-name" maxlength="40" autocomplete="off" />
+          </label>
+          <label class="settings-field">
+            <span>一句话介绍</span>
+            <input type="text" id="setting-blog-desc" maxlength="120" autocomplete="off" />
+          </label>
+          <div class="settings-field settings-field--row">
+            <span>主题偏好</span>
+            <select id="setting-theme-mode" aria-label="主题偏好">
+              <option value="auto">跟随系统</option>
+              <option value="light">浅色</option>
+              <option value="dark">深色</option>
+            </select>
+          </div>
+          <hr class="settings-divider" />
+          <p class="settings-section-title">GitHub 文章源</p>
+          <p class="settings-hint">
+            在仓库中维护 <code>content/manifest.json</code> 与 Markdown 正文，保存后刷新站点即可更新。公开仓库无需
+            Token；私有仓库可填 Personal Access Token（仅保存在本机浏览器）。
+          </p>
+          <label class="settings-field settings-field--check">
+            <input type="checkbox" id="setting-github-enabled" />
+            <span>从 GitHub 加载文章（关闭则使用内置演示数据）</span>
+          </label>
+          <label class="settings-field">
+            <span>GitHub 用户名</span>
+            <input
+              type="text"
+              id="setting-github-user"
+              placeholder="例如 octocat"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </label>
+          <label class="settings-field">
+            <span>仓库名</span>
+            <input
+              type="text"
+              id="setting-github-repo"
+              placeholder="例如 Blog"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </label>
+          <label class="settings-field">
+            <span>分支</span>
+            <input type="text" id="setting-github-branch" placeholder="main" autocomplete="off" />
+          </label>
+          <label class="settings-field">
+            <span>manifest 路径（相对仓库根目录）</span>
+            <input
+              type="text"
+              id="setting-github-manifest"
+              placeholder="content/manifest.json"
+              autocomplete="off"
+            />
+          </label>
+          <label class="settings-field">
+            <span>Token（可选）</span>
+            <input
+              type="password"
+              id="setting-github-token"
+              placeholder="留空则保留已保存的 Token"
+              autocomplete="new-password"
+            />
+          </label>
+          <div class="settings-actions">
+            <button type="button" class="btn btn--primary" id="settings-save">保存</button>
+            <button type="button" class="btn btn--ghost" id="settings-reset">恢复默认</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      type="button"
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="返回顶部"
+      title="返回顶部"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
