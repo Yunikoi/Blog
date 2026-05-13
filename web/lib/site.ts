@@ -11,7 +11,15 @@ export type SiteProfile = {
   links?: SocialLink[];
 };
 
-export type MusicTrack = { title: string; src: string };
+export type MusicTrack = {
+  title: string;
+  /** 音频直链，或本站 public 下路径如 /music/a.mp3 */
+  src: string;
+  /** 内联 LRC 全文 */
+  lrc?: string;
+  /** 与音频同域或可跨域访问的 .lrc 地址 */
+  lrcUrl?: string;
+};
 
 export type SiteExtra = {
   profile: SiteProfile;
@@ -46,10 +54,14 @@ export async function getSiteExtra(): Promise<SiteExtra> {
       music: {
         enabled: !!j.music?.enabled,
         playlist: Array.isArray(j.music?.playlist)
-          ? j.music!.playlist!.filter(
-              (x): x is MusicTrack =>
-                x && typeof (x as MusicTrack).title === "string" && typeof (x as MusicTrack).src === "string"
-            )
+          ? j.music!.playlist!.filter((x): x is MusicTrack => {
+              if (!x || typeof (x as MusicTrack).title !== "string" || typeof (x as MusicTrack).src !== "string")
+                return false;
+              const m = x as MusicTrack;
+              if (m.lrc !== undefined && typeof m.lrc !== "string") return false;
+              if (m.lrcUrl !== undefined && typeof m.lrcUrl !== "string") return false;
+              return true;
+            })
           : [],
       },
     };

@@ -34,7 +34,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </aside>
           <main className="main-shell">{children}</main>
         </div>
-        <MusicPlayer enabled={extra.music.enabled} playlist={extra.music.playlist} />
+        <MusicPlayer useServerPlaylist={extra.music.enabled} playlist={extra.music.playlist} />
       </body>
     </html>
   );

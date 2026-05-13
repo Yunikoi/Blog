@@ -4,6 +4,7 @@ toc: true
 edit_count: 1
 date: 2026-04-27 14:58:33
 tags: 学习
+column：学习笔记
 ---
 
 #### initiative：新举措；革新方案；项目行动 | 主动性；积极性；自主行动力

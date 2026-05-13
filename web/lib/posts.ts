@@ -55,6 +55,22 @@ function pickColumn(data: Record<string, unknown>): string | undefined {
   return undefined;
 }
 
+/** frontmatter 的 tags 与 tags.json 合并（去重）；支持 `tags: 单个` 或 YAML 数组 */
+function mergePostTags(data: Record<string, unknown>, jsonTags: string[]): string[] {
+  const raw = data.tags;
+  const fromFm: string[] = [];
+  if (Array.isArray(raw)) {
+    for (const x of raw) {
+      const s = String(x).trim();
+      if (s) fromFm.push(s);
+    }
+  } else if (typeof raw === "string") {
+    const s = raw.trim();
+    if (s) fromFm.push(...s.split(/,\s*/).map((t) => t.trim()).filter(Boolean));
+  }
+  return [...new Set([...fromFm, ...jsonTags])];
+}
+
 async function readTagsMap(): Promise<Record<string, string[]>> {
   const { TAGS_FILE } = paths();
   try {
@@ -123,7 +139,7 @@ export async function listPosts(): Promise<PostMeta[]> {
         slug,
         title,
         date,
-        tags: tagsMap[slug] || [],
+        tags: mergePostTags(data as Record<string, unknown>, tagsMap[slug] || []),
         excerpt,
         column: pickColumn(data),
       });
@@ -135,7 +151,7 @@ export async function listPosts(): Promise<PostMeta[]> {
   return posts;
 }
 
-export type PostWithBody = PostMeta & { content: string };
+export type PostWithBody = PostMeta & { content: string; showToc: boolean };
 
 export async function getPost(rawSlug: string): Promise<PostWithBody | null> {
   const slug = parsePostSlugParam(rawSlug);
@@ -159,8 +175,9 @@ export async function getPost(rawSlug: string): Promise<PostWithBody | null> {
       slug,
       title: (data.title as string) || slug,
       date: normalizeFrontmatterDate(data.date),
-      tags: tagsMap[slug] || [],
+      tags: mergePostTags(data, tagsMap[slug] || []),
       column: pickColumn(data),
+      showToc: data.toc !== false,
       content,
     };
   } catch {
