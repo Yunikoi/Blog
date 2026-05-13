@@ -7,18 +7,8 @@ export default function PostReadingMode({ children }: { children: React.ReactNod
 
   useEffect(() => {
     document.documentElement.classList.add("reading-mode");
-    const id = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        document.documentElement.classList.add("reading-motion--page-in");
-      });
-    });
     return () => {
-      window.cancelAnimationFrame(id);
-      document.documentElement.classList.remove(
-        "reading-mode",
-        "reading-mode--expanded",
-        "reading-motion--page-in"
-      );
+      document.documentElement.classList.remove("reading-mode", "reading-mode--expanded");
     };
   }, []);
 

@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteProfile from "@/components/SiteProfile";
 import TagTree from "@/components/TagTree";
 import { listPublicMusicTracks } from "@/lib/music-public";
+import LayoutChrome from "@/components/LayoutChrome";
 import MusicPlayer from "@/components/MusicPlayer";
 import { getSiteExtra } from "@/lib/site";
 import { allTags } from "@/lib/posts";
@@ -31,14 +32,16 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="zh-CN">
       <body className="body">
-        <SiteHeader />
-        <div className="app-body">
-          <aside className="site-aside">
-            <SiteProfile profile={extra.profile} />
-            <TagTree nodes={trie} />
-          </aside>
-          <main className="main-shell">{children}</main>
-        </div>
+        <LayoutChrome>
+          <SiteHeader />
+          <div className="app-body">
+            <aside className="site-aside">
+              <SiteProfile profile={extra.profile} />
+              <TagTree nodes={trie} />
+            </aside>
+            <main className="main-shell">{children}</main>
+          </div>
+        </LayoutChrome>
         <MusicPlayer
           useServerPlaylist={extra.music.enabled}
           playlist={extra.music.playlist}

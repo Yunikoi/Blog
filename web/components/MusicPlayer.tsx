@@ -16,12 +16,35 @@ type Merged = {
 type Props = {
   useServerPlaylist: boolean;
   playlist: MusicTrack[];
-  publicTracks: PublicMusicTrack[];
+  /** 服务端扫描结果；若为空客户端会请求 /api/music/tracks 兜底（部署未带上 mp3 时仍可能为空） */
+  publicTracks?: PublicMusicTrack[];
 };
 
-export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks }: Props) {
+export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks = [] }: Props) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+
+  const [remoteLibrary, setRemoteLibrary] = useState<PublicMusicTrack[] | null>(null);
+
+  const library = publicTracks.length > 0 ? publicTracks : remoteLibrary ?? [];
+
+  useEffect(() => {
+    if (publicTracks.length > 0) {
+      setRemoteLibrary(null);
+      return;
+    }
+    let cancelled = false;
+    void fetch("/api/music/tracks")
+      .then((r) => r.json())
+      .then((t: PublicMusicTrack[]) => {
+        if (cancelled || !Array.isArray(t) || !t.length) return;
+        setRemoteLibrary(t);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [publicTracks.length]);
 
   const [idx, setIdx] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -42,7 +65,7 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
     : [];
 
   const merged: Merged[] = [
-    ...publicTracks.map((p) => ({
+    ...library.map((p) => ({
       title: p.title,
       src: p.src,
       filename: p.filename,
@@ -186,8 +209,7 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
       <div className="music-player music-player--empty" role="region" aria-label="音乐播放器">
         <div className="music-player__inner">
           <p className="music-player__empty-hint">
-            将 <strong>.mp3</strong> 放入 <code>web/public/music/</code>（若从仓库根目录运行开发服务器，亦可使用{" "}
-            <code>public/music/</code>）并提交后重新部署；本地请从 <code>web</code> 目录执行 <code>npm run dev</code>。
+            将 <strong>.mp3</strong> 放入 <code>web/public/music/</code> 并提交部署；本地在 <code>web</code> 目录运行 <code>npm run dev</code>。若仍无列表，请打开开发者工具看 <code>/api/music/tracks</code> 是否返回 JSON（部署环境若未包含 mp3 文件则为空）。
           </p>
         </div>
       </div>
