@@ -109,8 +109,10 @@ export async function getPost(slug: string) {
 }
 
 export async function listPostsByTag(tag: string): Promise<PostMeta[]> {
+  const t = String(tag || "").trim();
+  if (!t) return [];
   const all = await listPosts();
-  return all.filter((p) => (p.tags || []).includes(tag));
+  return all.filter((p) => (p.tags || []).includes(t));
 }
 
 export async function allTags(): Promise<string[]> {
