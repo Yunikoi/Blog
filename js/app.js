@@ -20,14 +20,15 @@
     },
   };
 
-  window.blogConfig = window.blogConfig || { ...DEFAULT_CONFIG };
-  window.blogConfig.github = Object.assign(
-    {},
-    DEFAULT_CONFIG.github,
-    window.blogConfig.github && typeof window.blogConfig.github === "object"
-      ? window.blogConfig.github
-      : {}
-  );
+  const userCfg = window.blogConfig && typeof window.blogConfig === "object" ? window.blogConfig : {};
+  window.blogConfig = {
+    ...DEFAULT_CONFIG,
+    ...userCfg,
+    github: {
+      ...DEFAULT_CONFIG.github,
+      ...(userCfg.github && typeof userCfg.github === "object" ? userCfg.github : {}),
+    },
+  };
 
   const unsplash = (id, w, h) =>
     `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -1242,6 +1243,15 @@ body {
   /* ---------- boot ---------- */
   async function bootstrap() {
     mergePrefsFromStorage();
+    const siteDefaults = window.__BLOG_SITE_DEFAULTS__;
+    if (
+      siteDefaults &&
+      typeof siteDefaults === "object" &&
+      siteDefaults.github &&
+      typeof siteDefaults.github === "object"
+    ) {
+      window.blogConfig.github = { ...window.blogConfig.github, ...siteDefaults.github };
+    }
     await loadBlogDataSource();
     applyConfigToDom();
     applyTheme();
