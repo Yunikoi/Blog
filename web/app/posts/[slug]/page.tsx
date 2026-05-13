@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import PostToc from "@/components/PostToc";
+import HashScroll from "@/components/HashScroll";
 import { extractToc } from "@/lib/markdown-toc";
 import { getPost } from "@/lib/posts";
 
@@ -27,6 +28,7 @@ export default async function PostPage({ params }: Props) {
       <p className="meta">
         <Link href="/">← 返回首页</Link>
       </p>
+      <HashScroll />
       <div className={hasToc ? "post-article-grid" : undefined}>
         {hasToc ? <PostToc items={toc} /> : null}
         <article className={`prose post-article-main${hasToc ? "" : " post-article-main--full"}`}>

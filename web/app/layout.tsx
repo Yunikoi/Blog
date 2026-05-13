@@ -3,6 +3,7 @@ import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteProfile from "@/components/SiteProfile";
 import TagTree from "@/components/TagTree";
+import { listPublicMusicTracks } from "@/lib/music-public";
 import MusicPlayer from "@/components/MusicPlayer";
 import { getSiteExtra } from "@/lib/site";
 import { allTags } from "@/lib/posts";
@@ -20,7 +21,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const [extra, tags] = await Promise.all([getSiteExtra(), allTags()]);
+  const [extra, tags, publicTracks] = await Promise.all([
+    getSiteExtra(),
+    allTags(),
+    listPublicMusicTracks(),
+  ]);
   const trie = buildTagTrie(tags);
 
   return (
@@ -34,7 +39,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </aside>
           <main className="main-shell">{children}</main>
         </div>
-        <MusicPlayer useServerPlaylist={extra.music.enabled} playlist={extra.music.playlist} />
+        <MusicPlayer
+          useServerPlaylist={extra.music.enabled}
+          playlist={extra.music.playlist}
+          publicTracks={publicTracks}
+        />
       </body>
     </html>
   );

@@ -144,7 +144,7 @@ export async function listPosts(): Promise<PostMeta[]> {
         column: pickColumn(data),
       });
     } catch (e) {
-      console.error("[listPosts] skip file", file, e);
+      console.error("[listPosts] skip file", file, e instanceof Error ? e.message : e);
     }
   }
   posts.sort((a, b) => dateSortKey(b.date).localeCompare(dateSortKey(a.date)));
