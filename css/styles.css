@@ -551,6 +551,22 @@ button {
   margin: 0 0 1rem;
 }
 
+.article-hero__submeta {
+  margin: 0.75rem auto 0;
+  max-width: var(--max-content);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.article-hero__submeta .dot {
+  opacity: 0.45;
+}
+
 .article-hero__meta {
   display: flex;
   flex-wrap: wrap;

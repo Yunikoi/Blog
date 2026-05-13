@@ -91,8 +91,8 @@
           <hr class="settings-divider" />
           <p class="settings-section-title">GitHub 文章源</p>
           <p class="settings-hint">
-            在仓库中维护 <code>content/manifest.json</code> 与 Markdown 正文，保存后刷新站点即可更新。公开仓库无需
-            Token；私有仓库可填 Personal Access Token（仅保存在本机浏览器）。
+            公开仓库可直接读取；未登录调用 GitHub API 有频率限制，文章多时建议在下方填写 Token。开启「自动扫描」后只需在
+            <code>content/posts/</code> 放 <code>.md</code>，标签在仓库的 <code>content/tags.json</code> 里按 slug 配置。
           </p>
           <label class="settings-field settings-field--check">
             <input type="checkbox" id="setting-github-enabled" />
@@ -130,6 +130,32 @@
               placeholder="content/manifest.json"
               autocomplete="off"
             />
+          </label>
+          <label class="settings-field settings-field--check">
+            <input type="checkbox" id="setting-github-autodiscover" />
+            <span>自动扫描 posts 目录下全部 .md（关闭则仅用 manifest 中的文章列表）</span>
+          </label>
+          <label class="settings-field">
+            <span>文章目录（相对仓库根）</span>
+            <input
+              type="text"
+              id="setting-github-posts-path"
+              placeholder="content/posts"
+              autocomplete="off"
+            />
+          </label>
+          <label class="settings-field">
+            <span>标签配置文件</span>
+            <input
+              type="text"
+              id="setting-github-tags-json"
+              placeholder="content/tags.json"
+              autocomplete="off"
+            />
+          </label>
+          <label class="settings-field settings-field--check">
+            <input type="checkbox" id="setting-github-view-counter" />
+            <span>文章页显示浏览量（第三方 CountAPI，近似统计）</span>
           </label>
           <label class="settings-field">
             <span>Token（可选）</span>
@@ -169,6 +195,10 @@
           repo: "Blog",
           branch: "main",
           manifestPath: "content/manifest.json",
+          autoDiscoverPosts: true,
+          postsPath: "content/posts",
+          tagsMapPath: "content/tags.json",
+          viewCounterEnabled: true,
         },
       };
     </script>

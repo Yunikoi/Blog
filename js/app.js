@@ -7,7 +7,7 @@
 
   const STORAGE_KEY = "minimal_blog_prefs_v1";
   const DEFAULT_CONFIG = {
-    blogName: "纸间",
+    blogName: "Yuniblog",
     blogDescription: "写一点技术、设计与生活的留白。",
     heroHighlight: "最新文章 · 编者按",
     themeMode: "auto",
@@ -17,6 +17,10 @@
       repo: "",
       branch: "main",
       manifestPath: "content/manifest.json",
+      autoDiscoverPosts: false,
+      postsPath: "content/posts",
+      tagsMapPath: "content/tags.json",
+      viewCounterEnabled: true,
     },
   };
 
@@ -296,12 +300,78 @@ body {
 
   function parseDate(iso) {
     if (!iso || !String(iso).trim()) return "日期待定";
-    const d = new Date(iso + "T12:00:00");
+    const s = String(iso).trim();
+    if (s.includes("T")) {
+      const d = new Date(s);
+      if (!Number.isNaN(d.getTime())) {
+        return d.toLocaleDateString("zh-CN", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
+    }
+    const day = s.length >= 10 ? s.slice(0, 10) : s;
+    const d = new Date(day + "T12:00:00");
     return d.toLocaleDateString("zh-CN", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
+  }
+
+  function formatDisplayDate(value) {
+    if (!value || !String(value).trim()) return "—";
+    return parseDate(String(value).trim());
+  }
+
+  function isoToYMD(iso) {
+    if (!iso || typeof iso !== "string") return "";
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return "";
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${y}-${m}-${day}`;
+  }
+
+  function excerptFromMarkdownBody(md) {
+    const stripped = md
+      .replace(/^\uFEFF/, "")
+      .replace(/^---[\s\S]*?---\s*/m, "")
+      .replace(/```[\s\S]*?```/g, " ")
+      .replace(/[#>*_\[\]`]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (stripped.length <= 180) return stripped;
+    return stripped.slice(0, 180) + "…";
+  }
+
+  function prettifySlugAsTitle(slug) {
+    const s = String(slug || "").replace(/[-_]+/g, " ").trim();
+    if (!s) return "未命名";
+    return s.replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  function tagsFromMapEntry(val) {
+    if (Array.isArray(val)) return val.map((t) => String(t).trim()).filter(Boolean);
+    if (typeof val === "string" && val.trim()) return val.split(/,\s*/).map((t) => t.trim()).filter(Boolean);
+    return [];
+  }
+
+  async function asyncPool(limit, items, iteratorFn) {
+    const results = new Array(items.length);
+    const queue = [...items.entries()];
+    const workers = new Array(Math.min(limit, items.length)).fill(0).map(async () => {
+      while (queue.length) {
+        const job = queue.shift();
+        if (!job) break;
+        const [i, item] = job;
+        results[i] = await iteratorFn(item, i);
+      }
+    });
+    await Promise.all(workers);
+    return results;
   }
 
   function readingMinutesFromMarkdown(md) {
@@ -395,13 +465,27 @@ body {
     return { meta, body };
   }
 
-  function applyMarkdownToPost(post, rawMarkdown) {
+  function applyMarkdownToPost(post, rawMarkdown, opts) {
+    opts = opts || {};
     const { meta, body } = parseFrontmatter(rawMarkdown);
     if (meta.title) post.title = meta.title;
-    if (meta.date) post.date = meta.date;
-    if (meta.slug) post.slug = meta.slug;
+    if (meta.date && !opts.preserveGithubDates) post.date = meta.date;
+    if (meta.slug && !opts.freezeSlug) post.slug = meta.slug;
     if (meta.cover !== undefined) post.cover = meta.cover === null ? null : meta.cover;
-    if (Array.isArray(meta.tags)) post.tags = meta.tags;
+    if (!opts.ignoreTags) {
+      if (Array.isArray(meta.tags)) post.tags = meta.tags;
+      else if (typeof meta.tags === "string" && meta.tags.trim()) {
+        if (meta.tags.trim().startsWith("[")) {
+          try {
+            post.tags = JSON.parse(meta.tags.trim());
+          } catch {
+            post.tags = meta.tags.split(/,\s*/).filter(Boolean);
+          }
+        } else {
+          post.tags = meta.tags.split(/,\s*/).filter(Boolean);
+        }
+      }
+    }
     if (meta.excerpt) post.excerpt = meta.excerpt;
     post.body = body;
   }
@@ -422,6 +506,147 @@ body {
     }
   }
 
+  function githubApiHeaders() {
+    const headers = {
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+    const token = String((loadPrefs().githubToken || "")).trim();
+    if (token) headers.Authorization = `Bearer ${token}`;
+    return headers;
+  }
+
+  async function githubApiGet(apiPath) {
+    const url =
+      apiPath.startsWith("http") ? apiPath : `https://api.github.com${apiPath.startsWith("/") ? "" : "/"}${apiPath}`;
+    return fetch(url, { headers: githubApiHeaders(), cache: "no-store" });
+  }
+
+  async function fetchTagsMapJson(gh) {
+    const p = String(gh.tagsMapPath || "content/tags.json").trim();
+    if (!p) return {};
+    const res = await githubFetch(rawContentUrl(p));
+    if (!res.ok) return {};
+    try {
+      const j = await res.json();
+      return j && typeof j === "object" && !Array.isArray(j) ? j : {};
+    } catch {
+      return {};
+    }
+  }
+
+  async function githubListMarkdownInDir(gh, dirPath) {
+    const u = encodeURIComponent(String(gh.user || "").trim());
+    const r = encodeURIComponent(String(gh.repo || "").trim());
+    const br = encodeURIComponent(String(gh.branch || "main").trim());
+    const segs = String(dirPath || "")
+      .replace(/^\/+/, "")
+      .split("/")
+      .filter(Boolean)
+      .map((s) => encodeURIComponent(s))
+      .join("/");
+    const url = `https://api.github.com/repos/${u}/${r}/contents/${segs}?ref=${br}`;
+    const res = await githubApiGet(url);
+    if (!res.ok) throw new Error(`无法列出 ${dirPath}（HTTP ${res.status}）。公开仓库未认证时 API 有频率限制，可填 Token。`);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("目录列表格式异常");
+    return data
+      .filter((item) => item.type === "file" && /\.md$/i.test(item.name || ""))
+      .map((item) => ({
+        name: item.name,
+        path: String(item.path || "").replace(/^\/+/, ""),
+      }));
+  }
+
+  async function githubCommitTimesForPath(gh, filePath) {
+    const u = encodeURIComponent(String(gh.user || "").trim());
+    const r = encodeURIComponent(String(gh.repo || "").trim());
+    const br = encodeURIComponent(String(gh.branch || "main").trim());
+    const pathEnc = String(filePath || "")
+      .replace(/^\/+/, "")
+      .split("/")
+      .filter(Boolean)
+      .map((s) => encodeURIComponent(s))
+      .join("/");
+    let page = 1;
+    const perPage = 100;
+    let latest = null;
+    let oldest = null;
+    for (;;) {
+      const url = `https://api.github.com/repos/${u}/${r}/commits?path=${pathEnc}&per_page=${perPage}&page=${page}&ref=${br}`;
+      const res = await githubApiGet(url);
+      if (!res.ok) return { created: null, updated: null };
+      const arr = await res.json();
+      if (!Array.isArray(arr) || arr.length === 0) break;
+      if (page === 1) {
+        const c0 = arr[0] && arr[0].commit && arr[0].commit.committer;
+        if (c0 && c0.date) latest = c0.date;
+      }
+      const last = arr[arr.length - 1];
+      const cl = last && last.commit && last.commit.committer;
+      if (cl && cl.date) oldest = cl.date;
+      if (arr.length < perPage) break;
+      page++;
+    }
+    return { created: oldest, updated: latest };
+  }
+
+  function applyManifestSiteFields(manifest) {
+    if (!manifest || typeof manifest !== "object") return;
+    if (typeof manifest.blogName === "string" && manifest.blogName.trim()) {
+      window.blogConfig.blogName = manifest.blogName.trim();
+    }
+    if (typeof manifest.blogDescription === "string") {
+      window.blogConfig.blogDescription = manifest.blogDescription;
+    }
+    if (typeof manifest.heroHighlight === "string" && manifest.heroHighlight.trim()) {
+      window.blogConfig.heroHighlight = manifest.heroHighlight.trim();
+    }
+  }
+
+  function mergeTagsFromJsonMap(post, tagsMap) {
+    if (!tagsMap || typeof tagsMap !== "object") return;
+    if (!Object.prototype.hasOwnProperty.call(tagsMap, post.slug)) return;
+    post.tags = tagsFromMapEntry(tagsMap[post.slug]);
+  }
+
+  async function bumpArticleViewCount(slug) {
+    const el = document.getElementById("article-view-count");
+    if (!el) return;
+    const gh = window.blogConfig.github;
+    if (!gh || !gh.viewCounterEnabled) {
+      el.textContent = "—";
+      return;
+    }
+    const ns = `${gh.user}-${gh.repo}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+    const key = String(slug || "post").replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 120);
+    const sessKey = `minimal_blog_viewhit:${ns}:${key}`;
+    try {
+      let countVal = null;
+      if (sessionStorage.getItem(sessKey)) {
+        const res = await fetch(
+          `https://api.countapi.xyz/get/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`
+        );
+        if (res.ok) {
+          const j = await res.json();
+          countVal = j.value;
+        }
+      } else {
+        sessionStorage.setItem(sessKey, "1");
+        const res = await fetch(
+          `https://api.countapi.xyz/hit/${encodeURIComponent(ns)}/${encodeURIComponent(key)}`
+        );
+        if (res.ok) {
+          const j = await res.json();
+          countVal = j.value;
+        }
+      }
+      el.textContent = countVal != null ? String(countVal) : "—";
+    } catch {
+      el.textContent = "—";
+    }
+  }
+
   async function loadBlogDataSource() {
     const gh = window.blogConfig.github;
     blogDataLoadState = { ok: true, error: null, source: "embedded" };
@@ -431,43 +656,107 @@ body {
       return;
     }
 
-    const path = String(gh.manifestPath || "content/manifest.json").trim();
-    const url = rawContentUrl(path);
+    const manifestPath = String(gh.manifestPath || "content/manifest.json").trim();
+    let manifest = null;
+    try {
+      const mRes = await githubFetch(rawContentUrl(manifestPath));
+      if (mRes.ok) manifest = await mRes.json();
+    } catch (_) {
+      /* ignore */
+    }
+    if (manifest) applyManifestSiteFields(manifest);
+
+    let tagsMap = {};
+    try {
+      tagsMap = await fetchTagsMapJson(gh);
+    } catch (_) {
+      tagsMap = {};
+    }
+
+    if (gh.autoDiscoverPosts) {
+      try {
+        const postsDir = String(gh.postsPath || "content/posts").trim();
+        const files = await githubListMarkdownInDir(gh, postsDir);
+        const posts = await asyncPool(2, files, async ({ path: filePath, name }) => {
+          const slug = String(name || "")
+            .replace(/\.md$/i, "")
+            .trim();
+          const times = await githubCommitTimesForPath(gh, filePath);
+          const rawRes = await githubFetch(rawContentUrl(filePath));
+          const text = rawRes.ok ? await rawRes.text() : "";
+          const updatedYmd = isoToYMD(times.updated) || isoToYMD(times.created) || "";
+          const post = {
+            slug: slug || "untitled",
+            title: prettifySlugAsTitle(slug),
+            date: updatedYmd,
+            _githubCreated: times.created,
+            _githubUpdated: times.updated,
+            tags: tagsFromMapEntry(tagsMap[slug]),
+            cover: null,
+            excerpt: "",
+            body: "",
+            _githubFile: filePath,
+          };
+          if (text) {
+            applyMarkdownToPost(post, text, {
+              ignoreTags: true,
+              preserveGithubDates: true,
+              freezeSlug: true,
+            });
+            post.date = updatedYmd;
+            post.tags = tagsFromMapEntry(tagsMap[slug]);
+            if (!String(post.excerpt || "").trim() && post.body) {
+              post.excerpt = excerptFromMarkdownBody(text);
+            }
+          }
+          return post;
+        });
+        window.blogData = posts;
+        blogDataLoadState = { ok: true, error: null, source: "github-auto" };
+      } catch (e) {
+        console.error(e);
+        window.blogData = deepClonePosts(embeddedBlogData);
+        blogDataLoadState = {
+          ok: false,
+          error: e && e.message ? e.message : String(e),
+          source: "embedded-fallback",
+        };
+      }
+      return;
+    }
+
+    if (!manifest) {
+      window.blogData = deepClonePosts(embeddedBlogData);
+      blogDataLoadState = {
+        ok: false,
+        error: "无法拉取 manifest",
+        source: "embedded-fallback",
+      };
+      return;
+    }
 
     try {
-      const res = await githubFetch(url);
-      if (!res.ok) throw new Error(`无法拉取 manifest（HTTP ${res.status}）`);
-      const manifest = await res.json();
-      if (typeof manifest.blogName === "string" && manifest.blogName.trim()) {
-        window.blogConfig.blogName = manifest.blogName.trim();
-      }
-      if (typeof manifest.blogDescription === "string") {
-        window.blogConfig.blogDescription = manifest.blogDescription;
-      }
-      if (typeof manifest.heroHighlight === "string" && manifest.heroHighlight.trim()) {
-        window.blogConfig.heroHighlight = manifest.heroHighlight.trim();
-      }
-
       const list = Array.isArray(manifest.posts) ? manifest.posts : [];
       window.blogData = list
         .filter((item) => String(item.file || "").trim() && String(item.slug || "").trim())
         .map((item) => {
-        const tags = Array.isArray(item.tags)
-          ? item.tags
-          : typeof item.tags === "string"
-            ? item.tags.split(/,\s*/).filter(Boolean)
-            : [];
-        return {
-          slug: String(item.slug || "").trim() || "untitled",
-          title: (item.title != null && String(item.title)) || String(item.slug || "未命名"),
-          date: String(item.date || "").trim(),
-          tags,
-          cover: item.cover != null ? item.cover : null,
-          excerpt: String(item.excerpt || "").trim(),
-          body: "",
-          _githubFile: String(item.file || "").trim(),
-        };
-      });
+          const tags = Array.isArray(item.tags)
+            ? item.tags
+            : typeof item.tags === "string"
+              ? item.tags.split(/,\s*/).filter(Boolean)
+              : [];
+          return {
+            slug: String(item.slug || "").trim() || "untitled",
+            title: (item.title != null && String(item.title)) || String(item.slug || "未命名"),
+            date: String(item.date || "").trim(),
+            tags,
+            cover: item.cover != null ? item.cover : null,
+            excerpt: String(item.excerpt || "").trim(),
+            body: "",
+            _githubFile: String(item.file || "").trim(),
+          };
+        });
+      window.blogData.forEach((post) => mergeTagsFromJsonMap(post, tagsMap));
       blogDataLoadState = { ok: true, error: null, source: "github" };
     } catch (e) {
       console.error(e);
@@ -481,7 +770,12 @@ body {
   }
 
   function sortedPosts() {
-    return [...window.blogData].sort((a, b) => (a.date < b.date ? 1 : -1));
+    return [...window.blogData].sort((a, b) => {
+      const da = a.date || "";
+      const db = b.date || "";
+      if (da === db) return String(a.slug || "").localeCompare(String(b.slug || ""));
+      return da < db ? 1 : -1;
+    });
   }
 
   function getPost(slug) {
@@ -674,6 +968,10 @@ body {
   const inputGithubRepo = document.getElementById("setting-github-repo");
   const inputGithubBranch = document.getElementById("setting-github-branch");
   const inputGithubManifest = document.getElementById("setting-github-manifest");
+  const chkGithubAutodiscover = document.getElementById("setting-github-autodiscover");
+  const inputGithubPostsPath = document.getElementById("setting-github-posts-path");
+  const inputGithubTagsJson = document.getElementById("setting-github-tags-json");
+  const chkGithubViewCounter = document.getElementById("setting-github-view-counter");
   const inputGithubToken = document.getElementById("setting-github-token");
 
   let routeFadeTimer = null;
@@ -755,12 +1053,18 @@ body {
         const tags = (p.tags || [])
           .map((t) => `<span class="tag-pill">${escapeHtml(t)}</span>`)
           .join("");
+        const dateLine =
+          p._githubCreated || p._githubUpdated
+            ? `<span>上传 ${escapeHtml(
+                formatDisplayDate(p._githubCreated)
+              )}</span><span>更新 ${escapeHtml(
+                formatDisplayDate(p._githubUpdated)
+              )}</span>`
+            : `<time datetime="${escapeHtml(p.date)}">${escapeHtml(parseDate(p.date))}</time>`;
         return `<a href="#/post/${encodeURIComponent(p.slug)}" class="post-card">
           ${thumb}
           <div class="post-card__body">
-            <div class="post-card__meta"><time datetime="${escapeHtml(
-              p.date
-            )}">${escapeHtml(parseDate(p.date))}</time><span>${mins} 分钟阅读</span></div>
+            <div class="post-card__meta">${dateLine}<span>${mins} 分钟阅读</span></div>
             <h2 class="post-card__title">${escapeHtml(p.title)}</h2>
             <p class="post-card__excerpt">${escapeHtml(ex)}</p>
             <div class="post-card__tags">${tags}</div>
@@ -776,8 +1080,16 @@ body {
       : "";
 
     const ghBanner =
-      blogDataLoadState.source === "github"
-        ? `<p class="github-source-banner" role="status">当前文章列表来自 GitHub 仓库 <strong>${escapeHtml(
+      blogDataLoadState.source === "github" || blogDataLoadState.source === "github-auto"
+        ? `<p class="github-source-banner" role="status">${
+            blogDataLoadState.source === "github-auto"
+              ? `已自动读取 <strong>${escapeHtml(
+                  String(window.blogConfig.github.postsPath || "content/posts").trim()
+                )}</strong> 下全部 Markdown；上传/更新时间为 GitHub 提交记录；标签在 <strong>${escapeHtml(
+                  String(window.blogConfig.github.tagsMapPath || "content/tags.json").trim()
+                )}</strong> 配置。仓库 `
+              : "当前文章列表来自 GitHub 仓库 "
+          }<strong>${escapeHtml(
             String(window.blogConfig.github.user || "").trim()
           )}</strong>/<strong>${escapeHtml(
             String(window.blogConfig.github.repo || "").trim()
@@ -820,9 +1132,13 @@ body {
     }
 
     if (post._githubFile && !String(post.body || "").trim()) {
+      const mdOpts =
+        blogDataLoadState.source === "github-auto"
+          ? { ignoreTags: true, preserveGithubDates: true, freezeSlug: true }
+          : {};
       const cached = loadBodyCache(slug);
       if (cached) {
-        applyMarkdownToPost(post, cached);
+        applyMarkdownToPost(post, cached, mdOpts);
       } else {
         viewRoot.innerHTML = `<div class="empty-state"><p class="loading-line">正在从 GitHub 加载正文…</p><p class="text-muted">${escapeHtml(
           post.title
@@ -833,7 +1149,7 @@ body {
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const text = await res.text();
           saveBodyCache(slug, text);
-          applyMarkdownToPost(post, text);
+          applyMarkdownToPost(post, text, mdOpts);
         } catch (e) {
           console.error(e);
           viewRoot.innerHTML = `<div class="empty-state"><p>无法加载该文章正文。</p><p>${escapeHtml(
@@ -859,10 +1175,17 @@ body {
     const { html, toc } = parseMarkdown(post.body);
     const mins = readingMinutesFromMarkdown(post.body);
     const metaTags = (post.tags || []).map((t) => escapeHtml(t)).join(" · ");
-
     const coverHtml = post.cover
       ? `<figure class="article-cover"><img src="${escapeHtml(post.cover)}" alt="" /></figure>`
       : "";
+    const gitTimeLine =
+      post._githubCreated || post._githubUpdated
+        ? `<p class="article-hero__submeta"><span>上传 ${escapeHtml(
+            formatDisplayDate(post._githubCreated)
+          )}</span><span class="dot">·</span><span>更新 ${escapeHtml(
+            formatDisplayDate(post._githubUpdated)
+          )}</span><span class="dot">·</span><span>浏览 <strong id="article-view-count">…</strong></span></p>`
+        : `<p class="article-hero__submeta"><span>浏览 <strong id="article-view-count">…</strong></span></p>`;
 
     const tocSidebar = buildTocHtml(toc, "sidebar");
     const tocMobile = buildTocHtml(toc, "mobile");
@@ -878,6 +1201,7 @@ body {
             <span>${mins} 分钟阅读</span>
             ${metaTags ? `<span>${metaTags}</span>` : ""}
           </div>
+          ${gitTimeLine}
         </header>
         ${coverHtml}
         <div class="prose">${html}</div>
@@ -905,6 +1229,7 @@ body {
     readingBar.classList.add("is-active");
     attachScrollListeners();
     setupTocScrollSpy(toc);
+    void bumpArticleViewCount(slug);
     requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
@@ -1126,6 +1451,10 @@ body {
     if (inputGithubRepo) inputGithubRepo.value = gh.repo || "";
     if (inputGithubBranch) inputGithubBranch.value = gh.branch || "main";
     if (inputGithubManifest) inputGithubManifest.value = gh.manifestPath || "content/manifest.json";
+    if (chkGithubAutodiscover) chkGithubAutodiscover.checked = !!gh.autoDiscoverPosts;
+    if (inputGithubPostsPath) inputGithubPostsPath.value = gh.postsPath || "content/posts";
+    if (inputGithubTagsJson) inputGithubTagsJson.value = gh.tagsMapPath || "content/tags.json";
+    if (chkGithubViewCounter) chkGithubViewCounter.checked = gh.viewCounterEnabled !== false;
     if (inputGithubToken) {
       inputGithubToken.value = "";
       inputGithubToken.placeholder = loadPrefs().githubToken
@@ -1155,6 +1484,22 @@ body {
           typeof p.github.manifestPath === "string" && p.github.manifestPath.trim()
             ? p.github.manifestPath.trim()
             : window.blogConfig.github.manifestPath,
+        autoDiscoverPosts:
+          typeof p.github.autoDiscoverPosts === "boolean"
+            ? p.github.autoDiscoverPosts
+            : window.blogConfig.github.autoDiscoverPosts,
+        postsPath:
+          typeof p.github.postsPath === "string" && p.github.postsPath.trim()
+            ? p.github.postsPath.trim()
+            : window.blogConfig.github.postsPath,
+        tagsMapPath:
+          typeof p.github.tagsMapPath === "string" && p.github.tagsMapPath.trim()
+            ? p.github.tagsMapPath.trim()
+            : window.blogConfig.github.tagsMapPath,
+        viewCounterEnabled:
+          typeof p.github.viewCounterEnabled === "boolean"
+            ? p.github.viewCounterEnabled
+            : window.blogConfig.github.viewCounterEnabled,
       });
     }
   }
@@ -1197,12 +1542,17 @@ body {
       inputDesc.value.trim() || DEFAULT_CONFIG.blogDescription;
     window.blogConfig.themeMode = selectTheme.value;
     window.blogConfig.github = {
+      ...window.blogConfig.github,
       enabled: !!(chkGithub && chkGithub.checked),
       user: inputGithubUser ? inputGithubUser.value.trim() : "",
       repo: inputGithubRepo ? inputGithubRepo.value.trim() : "",
       branch: (inputGithubBranch && inputGithubBranch.value.trim()) || "main",
       manifestPath:
         (inputGithubManifest && inputGithubManifest.value.trim()) || "content/manifest.json",
+      autoDiscoverPosts: !!(chkGithubAutodiscover && chkGithubAutodiscover.checked),
+      postsPath: (inputGithubPostsPath && inputGithubPostsPath.value.trim()) || "content/posts",
+      tagsMapPath: (inputGithubTagsJson && inputGithubTagsJson.value.trim()) || "content/tags.json",
+      viewCounterEnabled: !chkGithubViewCounter ? true : !!chkGithubViewCounter.checked,
     };
 
     const prev = loadPrefs();

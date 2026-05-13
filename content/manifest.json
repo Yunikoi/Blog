@@ -1,15 +1,5 @@
 {
   "blogName": "纸间",
-  "blogDescription": "文章来自本仓库的 Markdown，推送到 GitHub 后自动更新。",
-  "posts": [
-    {
-      "slug": "welcome-from-github",
-      "title": "这是一篇来自 GitHub 的文章",
-      "date": "2026-05-10",
-      "tags": ["GitHub", "博客"],
-      "cover": null,
-      "excerpt": "启用「从 GitHub 加载」后，站点会读取本仓库中的 manifest 与 Markdown 文件渲染正文。",
-      "file": "content/posts/welcome-from-github.md"
-    }
-  ]
+  "blogDescription": "文章来自本仓库 Markdown；开启自动扫描后无需在 manifest 中逐条登记文章。标签请在 content/tags.json 中配置。",
+  "posts": []
 }
