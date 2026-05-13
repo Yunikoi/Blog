@@ -1,20 +1,6 @@
-import fs from "fs/promises";
 import path from "path";
 import { parseFile } from "music-metadata";
-
-const MUSIC_DIR = path.join(process.cwd(), "public", "music");
-
-function safeResolveFile(raw: string): string | null {
-  let name: string;
-  try {
-    name = decodeURIComponent(raw).trim();
-  } catch {
-    return null;
-  }
-  if (!name || name.includes("..") || /[/\\]/.test(name) || name.length > 220) return null;
-  if (!/\.mp3$/i.test(name)) return null;
-  return path.join(MUSIC_DIR, name);
-}
+import { resolveMusicFilePath } from "@/lib/music-public";
 
 async function fetchItunesArtwork(artist: string, title: string): Promise<string | null> {
   const q = [artist, title].filter(Boolean).join(" ").trim();
@@ -53,7 +39,7 @@ async function fetchLrclibLyrics(artist: string, title: string, durationSec?: nu
   if (!q.trim()) return null;
   res = await fetch(`https://lrclib.net/api/search?q=${encodeURIComponent(q)}&limit=3`, { next: { revalidate: 3600 } });
   if (!res.ok) return null;
-  const arr = (await res.json()) as { syncedLyrics?: string; plainLyrics?: string; artistName?: string; trackName?: string }[];
+  const arr = (await res.json()) as { syncedLyrics?: string; plainLyrics?: string }[];
   if (!Array.isArray(arr) || !arr.length) return null;
   const pick = arr[0];
   if (pick.syncedLyrics?.trim()) return pick.syncedLyrics;
@@ -66,14 +52,8 @@ export async function GET(req: Request) {
   const f = url.searchParams.get("f");
   if (!f) return Response.json({ error: "missing f" }, { status: 400 });
 
-  const full = safeResolveFile(f);
-  if (!full) return Response.json({ error: "bad file" }, { status: 400 });
-
-  try {
-    await fs.access(full);
-  } catch {
-    return Response.json({ error: "not found" }, { status: 404 });
-  }
+  const full = await resolveMusicFilePath(f);
+  if (!full) return Response.json({ error: "not found" }, { status: 404 });
 
   try {
     const meta = await parseFile(full);

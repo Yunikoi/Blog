@@ -186,7 +186,8 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
       <div className="music-player music-player--empty" role="region" aria-label="音乐播放器">
         <div className="music-player__inner">
           <p className="music-player__empty-hint">
-            将 <strong>.mp3</strong> 放入仓库 <code>web/public/music/</code> 并重新部署；播放器会自动扫描并尝试从 LRCLIB 匹配歌词、读取文件内嵌封面。
+            将 <strong>.mp3</strong> 放入 <code>web/public/music/</code>（若从仓库根目录运行开发服务器，亦可使用{" "}
+            <code>public/music/</code>）并提交后重新部署；本地请从 <code>web</code> 目录执行 <code>npm run dev</code>。
           </p>
         </div>
       </div>

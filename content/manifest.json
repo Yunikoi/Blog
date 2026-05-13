@@ -1,5 +1,4 @@
 {
-  "blogName": "纸间",
-  "blogDescription": "文章来自本仓库 Markdown；开启自动扫描后无需在 manifest 中逐条登记文章。标签请在 content/tags.json 中配置。",
+  "blogName": "Yuni",
   "posts": []
 }
