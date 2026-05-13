@@ -616,6 +616,42 @@ button {
   font-weight: 600;
 }
 
+.prose .table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+}
+
+.prose table.md-table {
+  width: 100%;
+  min-width: 320px;
+  border-collapse: collapse;
+  font-size: 0.88em;
+}
+
+.prose table.md-table th,
+.prose table.md-table td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose table.md-table th {
+  background: color-mix(in srgb, var(--bg-elevated) 88%, var(--accent-soft));
+  font-weight: 600;
+  color: var(--text);
+}
+
+.prose hr.md-hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
 .prose p {
   margin: 0 0 1.25rem;
   color: color-mix(in srgb, var(--text) 92%, var(--text-muted));

@@ -791,6 +791,11 @@ body {
   /* ---------- markdown (subset) ---------- */
   function inlineFormat(text) {
     let s = escapeHtml(text);
+    s = s.replace(
+      /\[([^\]]+)\]\(#([^)\s]+)\)/g,
+      (_, label, frag) =>
+        `<a href="#${escapeHtml(frag)}" class="md-internal-link">${escapeHtml(label)}</a>`
+    );
     s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
     s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
     s = s.replace(/\*([^*]+)\*/g, "<em>$1</em>");
@@ -803,6 +808,28 @@ body {
       '<img src="$2" alt="$1" loading="lazy" />'
     );
     return s;
+  }
+
+  function slugifyHeadingId(raw) {
+    let x = String(raw || "").trim();
+    if (!x) return "";
+    x = x.replace(/\s+/g, "-");
+    return x.replace(/[^\w\u4e00-\u9fff.-]/g, "");
+  }
+
+  function splitMarkdownTableRow(line) {
+    const t = line.trim().replace(/\|{2,}/g, "|");
+    if (!t.includes("|")) return null;
+    const inner = t.replace(/^\|/, "").replace(/\|\s*$/, "");
+    if (!inner.includes("|")) return null;
+    const cells = inner.split("|").map((c) => c.trim());
+    return cells.length >= 2 ? cells : null;
+  }
+
+  function isMarkdownTableSeparatorRow(line) {
+    const cells = splitMarkdownTableRow(line);
+    if (!cells) return false;
+    return cells.every((c) => /^:?-+:?$/.test(c.replace(/\s/g, "")));
   }
 
   function parseMarkdown(md) {
@@ -839,16 +866,71 @@ body {
         continue;
       }
 
+      if (/^(?:\*[\t ]*){3,}\s*$/.test(line) || /^(?:-[\t ]*){3,}\s*$/.test(line)) {
+        blocks.push({ type: "hr" });
+        i++;
+        continue;
+      }
+
       if (/^#{1,6}\s+/.test(line)) {
-        const m = line.match(/^(#{1,6})\s+(.*)$/);
-        const level = m[1].length;
-        const raw = m[2].trim();
-        const id = "section-" + ++tocIdx;
+        const hm = line.match(/^(#{1,6})\s+(.*?)(\s+\{#([^}]+)\})?\s*$/);
+        let level;
+        let raw;
+        let id;
+        if (hm) {
+          level = hm[1].length;
+          raw = (hm[2] || "").trim();
+          const customRaw = hm[4] != null ? String(hm[4]).trim() : "";
+          const customId = customRaw ? slugifyHeadingId(customRaw) : "";
+          id = customId || "section-" + ++tocIdx;
+        } else {
+          const m = line.match(/^(#{1,6})\s+(.*)$/);
+          level = m[1].length;
+          raw = m[2].trim();
+          id = "section-" + ++tocIdx;
+        }
         if (level === 2 || level === 3) {
           toc.push({ id, text: raw.replace(/\*\*|\*/g, ""), level });
         }
         blocks.push({ type: "heading", level, text: raw, id });
         i++;
+        continue;
+      }
+
+      const maybeCells = splitMarkdownTableRow(line);
+      if (maybeCells && !isMarkdownTableSeparatorRow(line)) {
+        const tableLines = [];
+        while (i < lines.length) {
+          const L = lines[i];
+          if (L.trim() === "") break;
+          if (isMarkdownTableSeparatorRow(L)) {
+            tableLines.push(L);
+            i++;
+            continue;
+          }
+          if (splitMarkdownTableRow(L)) {
+            tableLines.push(L);
+            i++;
+            continue;
+          }
+          break;
+        }
+        const rowCells = [];
+        for (const tl of tableLines) {
+          if (isMarkdownTableSeparatorRow(tl)) continue;
+          const c = splitMarkdownTableRow(tl);
+          if (c) rowCells.push(c);
+        }
+        const sepIdx = tableLines.findIndex((tl) => isMarkdownTableSeparatorRow(tl));
+        let header = null;
+        let bodyRows = rowCells;
+        if (sepIdx !== -1 && sepIdx === 1 && rowCells.length >= 1) {
+          header = rowCells[0];
+          bodyRows = rowCells.slice(1);
+        } else if (sepIdx === 0 && rowCells.length) {
+          bodyRows = rowCells;
+        }
+        blocks.push({ type: "table", header, rows: bodyRows });
         continue;
       }
 
@@ -863,7 +945,10 @@ body {
         lines[i].trim() !== "" &&
         !lines[i].startsWith("```") &&
         !lines[i].startsWith(">") &&
-        !/^#{1,6}\s+/.test(lines[i])
+        !/^#{1,6}\s+/.test(lines[i]) &&
+        !/^(?:\*[\t ]*){3,}\s*$/.test(lines[i]) &&
+        !/^(?:-[\t ]*){3,}\s*$/.test(lines[i]) &&
+        !(splitMarkdownTableRow(lines[i]) && !isMarkdownTableSeparatorRow(lines[i]))
       ) {
         para.push(lines[i]);
         i++;
@@ -882,9 +967,29 @@ body {
         )}</button></div>`;
       } else if (b.type === "quote") {
         html += `<blockquote><p>${inlineFormat(b.text)}</p></blockquote>`;
+      } else if (b.type === "hr") {
+        html += `<hr class="md-hr" />`;
       } else if (b.type === "heading") {
         const tag = "h" + Math.min(6, Math.max(1, b.level));
         html += `<${tag} id="${escapeHtml(b.id)}">${inlineFormat(b.text)}</${tag}>`;
+      } else if (b.type === "table") {
+        html += '<div class="table-wrap"><table class="md-table">';
+        if (b.header && b.header.length) {
+          html += "<thead><tr>";
+          for (const c of b.header) {
+            html += `<th>${inlineFormat(c)}</th>`;
+          }
+          html += "</tr></thead>";
+        }
+        html += "<tbody>";
+        for (const row of b.rows || []) {
+          html += "<tr>";
+          for (const c of row) {
+            html += `<td>${inlineFormat(c)}</td>`;
+          }
+          html += "</tr>";
+        }
+        html += "</tbody></table></div>";
       } else if (b.type === "p") {
         const parts = b.text.split(/\n{2,}/);
         for (const part of parts) {
@@ -917,6 +1022,36 @@ body {
     });
   }
 
+  function bindInArticleFragmentNavigation(root) {
+    root.querySelectorAll("a[href]").forEach((a) => {
+      const href = a.getAttribute("href") || "";
+      if (href.startsWith("#/")) return;
+
+      const tid = a.getAttribute("data-toc-id");
+      if (tid || (href.startsWith("#") && href.length > 1)) {
+        a.addEventListener("click", (e) => {
+          if (tid) {
+            e.preventDefault();
+            const el = document.getElementById(tid);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+          }
+          const raw = href.slice(1);
+          let el = document.getElementById(raw);
+          if (!el) {
+            try {
+              el = document.getElementById(decodeURIComponent(raw));
+            } catch (_) {
+              el = null;
+            }
+          }
+          e.preventDefault();
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+    });
+  }
+
   function buildTocHtml(toc, variant) {
     if (!toc.length) return "";
     if (variant === "sidebar") {
@@ -925,7 +1060,7 @@ body {
         toc
           .map(
             (t) =>
-              `<a href="#${escapeHtml(t.id)}" data-toc-id="${escapeHtml(
+              `<a href="#" data-toc-id="${escapeHtml(
                 t.id
               )}" style="padding-left:${(t.level - 2) * 0.55 + 0.5}rem">${escapeHtml(
                 t.text
@@ -938,7 +1073,7 @@ body {
     const items = toc
       .map(
         (t) =>
-          `<li style="margin-left:${(t.level - 2) * 0.75}rem"><a href="#${escapeHtml(
+          `<li style="margin-left:${(t.level - 2) * 0.75}rem"><a href="#" data-toc-id="${escapeHtml(
             t.id
           )}">${escapeHtml(t.text)}</a></li>`
       )
@@ -1226,6 +1361,7 @@ body {
     `;
 
     enhanceCodeCopy(viewRoot);
+    bindInArticleFragmentNavigation(viewRoot);
     readingBar.classList.add("is-active");
     attachScrollListeners();
     setupTocScrollSpy(toc);
@@ -1237,7 +1373,7 @@ body {
 
   function setupTocScrollSpy(toc) {
     if (!toc.length) return;
-    const links = [...viewRoot.querySelectorAll('.toc-panel a[data-toc-id], .toc-mobile a[href^="#"]')];
+    const links = [...viewRoot.querySelectorAll(".toc-panel a[data-toc-id], .toc-mobile a[data-toc-id]")];
     const headings = toc.map((t) => document.getElementById(t.id)).filter(Boolean);
     if (!headings.length) return;
 
@@ -1249,8 +1385,8 @@ body {
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         const id = (visible[0] && visible[0].target.id) || headings[0].id;
         links.forEach((a) => {
-          const href = a.getAttribute("href") || "";
-          const match = href === "#" + id;
+          const tid = a.getAttribute("data-toc-id") || "";
+          const match = tid === id;
           a.classList.toggle("is-active", match);
         });
       },
