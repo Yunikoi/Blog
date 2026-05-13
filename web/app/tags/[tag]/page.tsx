@@ -22,7 +22,10 @@ export default async function TagDetailPage({ params }: Props) {
           {posts.map((p) => (
             <li key={p.slug}>
               <Link href={`/posts/${encodeURIComponent(p.slug)}`}>{p.title}</Link>
-              <div className="meta">{p.date || ""}</div>
+              <div className="meta">
+                {p.date || ""}
+                {p.updated && p.updated !== p.date ? ` · 更新 ${p.updated}` : ""}
+              </div>
             </li>
           ))}
         </ul>

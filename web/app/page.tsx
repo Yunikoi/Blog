@@ -20,11 +20,17 @@ export default async function HomePage() {
               <Link href={`/posts/${encodeURIComponent(p.slug)}`}>{p.title}</Link>
               <div className="meta">
                 {p.column ? <span className="post-col-badge">{p.column}</span> : null}
-                {p.column && (p.date || p.tags?.length) ? <span> · </span> : null}
+                {p.column && (p.date || p.updated || p.tags?.length) ? <span> · </span> : null}
                 {p.date ? <span>{p.date}</span> : null}
-                {p.tags?.length ? (
+                {p.updated && p.updated !== p.date ? (
                   <span>
                     {p.date ? " · " : null}
+                    更新 {p.updated}
+                  </span>
+                ) : null}
+                {p.tags?.length ? (
+                  <span>
+                    {p.date || p.updated ? " · " : null}
                     {p.tags.join(" · ")}
                   </span>
                 ) : null}

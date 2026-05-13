@@ -16,7 +16,10 @@ export default function HashScroll() {
       } catch {
         /* keep raw */
       }
-      const el = document.getElementById(id);
+      let el = document.getElementById(id);
+      if (!el && typeof CSS !== "undefined" && typeof CSS.escape === "function") {
+        el = document.querySelector(`[id="${CSS.escape(id)}"]`);
+      }
       requestAnimationFrame(() => el?.scrollIntoView({ behavior: "smooth", block: "start" }));
     };
     run();

@@ -9,7 +9,10 @@ export default function SiteProfile({ profile }: { profile: SiteProfile }) {
   if (!name && !bio && !avatar && links.length === 0) {
     return (
       <section className="site-profile site-profile--empty">
-        <p className="site-profile__hint">在 <code>content/site.json</code> 填写头像、简介与社交链接。</p>
+        <p className="site-profile__hint">
+          在 <code>content/site.json</code> 的 <code>profile.avatar</code> 填图片地址：可用图床 URL，或把图片放在{" "}
+          <code>web/public/</code> 下并填 <code>/文件名.jpg</code>（例如 <code>/avatar.jpg</code>）。
+        </p>
       </section>
     );
   }

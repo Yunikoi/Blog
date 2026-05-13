@@ -1,17 +1,26 @@
-import type { TocItem } from "@/lib/markdown-toc";
+import type { TocTreeNode } from "@/lib/markdown-toc";
 
-export default function PostToc({ items }: { items: TocItem[] }) {
-  if (!items.length) return null;
+function TocBranch({ nodes, depth }: { nodes: TocTreeNode[]; depth?: number }) {
+  if (!nodes.length) return null;
+  const d = depth ?? 0;
+  return (
+    <ul className={d === 0 ? "post-toc__list post-toc__list--root" : "post-toc__nest"}>
+      {nodes.map((n) => (
+        <li key={n.id} className="post-toc__node">
+          <a href={`#${encodeURIComponent(n.id)}`}>{n.text}</a>
+          {n.children.length > 0 ? <TocBranch nodes={n.children} depth={d + 1} /> : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default function PostToc({ tree }: { tree: TocTreeNode[] }) {
+  if (!tree.length) return null;
   return (
     <nav className="post-toc" aria-label="本页目录">
       <p className="post-toc__title">目录</p>
-      <ul className="post-toc__list">
-        {items.map((item, i) => (
-          <li key={`toc-${i}-${item.id}`} className={`post-toc__item post-toc__item--d${item.depth}`}>
-            <a href={`#${item.id}`}>{item.text}</a>
-          </li>
-        ))}
-      </ul>
+      <TocBranch nodes={tree} />
     </nav>
   );
 }

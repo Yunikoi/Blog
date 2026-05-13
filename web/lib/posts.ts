@@ -29,6 +29,8 @@ export type PostMeta = {
   slug: string;
   title: string;
   date?: string;
+  /** 修改 / 更新时间，来自 frontmatter：updated / modified / 更新 / dateModified */
+  updated?: string;
   tags: string[];
   excerpt?: string;
   /** 专栏：来自 frontmatter 的 column / series / 专栏 */
@@ -53,6 +55,18 @@ function pickColumn(data: Record<string, unknown>): string | undefined {
   const c = data.column ?? data.series ?? data["专栏"];
   if (typeof c === "string" && c.trim()) return c.trim();
   return undefined;
+}
+
+function pickUpdated(data: Record<string, unknown>): string | undefined {
+  return normalizeFrontmatterDate(
+    data.updated ?? data.modified ?? data["更新"] ?? data.dateModified ?? data.lastmod
+  );
+}
+
+function latestActivityKey(p: Pick<PostMeta, "date" | "updated">): string {
+  const d = p.date || "";
+  const u = p.updated || "";
+  return u > d ? u : d;
 }
 
 /** frontmatter 的 tags 与 tags.json 合并（去重）；支持 `tags: 单个` 或 YAML 数组 */
@@ -119,7 +133,7 @@ export async function listPosts(): Promise<PostMeta[]> {
   const tagsMap = await readTagsMap();
   let names: string[] = [];
   try {
-    names = (await fs.readdir(POSTS_DIR)).filter((f) => f.endsWith(".md"));
+    names = (await fs.readdir(POSTS_DIR)).filter((f) => /\.md$/i.test(f));
   } catch {
     return [];
   }
@@ -132,6 +146,7 @@ export async function listPosts(): Promise<PostMeta[]> {
       const { data, content } = matter(raw);
       const title = (data.title as string) || slug;
       const date = normalizeFrontmatterDate(data.date);
+      const updated = pickUpdated(data as Record<string, unknown>);
       const excerpt =
         (data.excerpt as string) ||
         content.replace(/^---[\s\S]*?---\s*/m, "").slice(0, 160).replace(/\s+/g, " ").trim();
@@ -139,6 +154,7 @@ export async function listPosts(): Promise<PostMeta[]> {
         slug,
         title,
         date,
+        updated,
         tags: mergePostTags(data as Record<string, unknown>, tagsMap[slug] || []),
         excerpt,
         column: pickColumn(data),
@@ -147,7 +163,7 @@ export async function listPosts(): Promise<PostMeta[]> {
       console.error("[listPosts] skip file", file, e instanceof Error ? e.message : e);
     }
   }
-  posts.sort((a, b) => dateSortKey(b.date).localeCompare(dateSortKey(a.date)));
+  posts.sort((a, b) => latestActivityKey(b).localeCompare(latestActivityKey(a), "zh-CN"));
   return posts;
 }
 
@@ -175,6 +191,7 @@ export async function getPost(rawSlug: string): Promise<PostWithBody | null> {
       slug,
       title: (data.title as string) || slug,
       date: normalizeFrontmatterDate(data.date),
+      updated: pickUpdated(data),
       tags: mergePostTags(data, tagsMap[slug] || []),
       column: pickColumn(data),
       showToc: data.toc !== false,

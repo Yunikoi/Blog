@@ -8,6 +8,7 @@ export function getContentDir(): string {
   const cwd = process.cwd();
   const candidates = [
     path.join(cwd, "content"),
+    path.join(cwd, "web", "content"),
     path.join(cwd, "..", "content"),
   ];
   for (const c of candidates) {
