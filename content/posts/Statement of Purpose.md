@@ -1,0 +1,15 @@
+**Statement of Purpose**
+
+My research interest lies in human-centered sensing systems under real-world psychological and behavioral constraints. In many real-life scenarios, especially in family care contexts, sensing technologies must balance reliability with user acceptance. Explicit monitoring devices, such as dedicated wearables, may introduce psychological burden or resistance, particularly among older adults. This motivates my interest in designing sensing systems that are both unobtrusive and effective.
+
+To explore this problem, I have been developing a project series named *Sentio*, which evolves through multiple stages toward more practical and human-centric sensing solutions. In the initial stage (Sentio 1.0), I implemented a basic fall detection system using threshold-based acceleration signals, combined with alerting and location-sharing functionalities. While functional, this approach revealed limitations in real-world deployment, particularly the ambiguity between actual falls and other high-intensity movements.
+
+In response, I am currently developing Sentio 2.0, which reframes fall detection as a problem of ambiguity in smartphone-based sensing. This system introduces a dual-track mechanism that combines inertial measurement unit (IMU) data with barometric signals, leveraging cross-modal temporal consistency to improve robustness. Instead of relying solely on peak acceleration, the system incorporates contextual information such as height changes and posture transitions. Through this process, I have gained hands-on experience in time-series data processing, feature engineering, and basic machine learning methods, as well as a deeper understanding of how real-world constraints affect sensing system design.
+
+Looking forward, I plan to extend this work to Sentio 3.0, which explores device-free sensing approaches for scenarios where smartphones are not consistently carried, such as in indoor environments like bathrooms. By incorporating environmental signals such as WiFi-based sensing, I aim to investigate how ubiquitous sensing systems can operate beyond direct device dependency. This progression reflects my broader research goal: to design sensing systems that seamlessly integrate into daily life while maintaining both technical reliability and psychological acceptability.
+
+I am particularly interested in pursuing doctoral research in areas related to ubiquitous computing, mobile sensing, and human-centered AI systems. I am eager to further develop my ability to define research problems, design system-level solutions, and validate them through empirical studies. I believe that a PhD program will provide the rigorous training and collaborative environment necessary to deepen my research capabilities.
+
+With a solid academic foundation (GPA 3.5/4.0) and ongoing efforts to prepare my work for publication, I am committed to continuing my development as a researcher. I would be honored to contribute to ongoing research in this field and to further explore the intersection of sensing technology and human-centered design.
+
+Thank you for your consideration.
