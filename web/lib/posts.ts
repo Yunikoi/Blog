@@ -31,7 +31,29 @@ export type PostMeta = {
   date?: string;
   tags: string[];
   excerpt?: string;
+  /** 专栏：来自 frontmatter 的 column / series / 专栏 */
+  column?: string;
 };
+
+/** 路由里的 slug（支持中文文件名）；禁止路径穿越 */
+export function parsePostSlugParam(raw: string): string | null {
+  let s: string;
+  try {
+    s = decodeURIComponent(raw);
+  } catch {
+    return null;
+  }
+  s = s.trim();
+  if (!s || s.length > 240) return null;
+  if (s.includes("..") || /[\\/]/.test(s)) return null;
+  return s;
+}
+
+function pickColumn(data: Record<string, unknown>): string | undefined {
+  const c = data.column ?? data.series ?? data["专栏"];
+  if (typeof c === "string" && c.trim()) return c.trim();
+  return undefined;
+}
 
 async function readTagsMap(): Promise<Record<string, string[]>> {
   const { TAGS_FILE } = paths();
@@ -103,6 +125,7 @@ export async function listPosts(): Promise<PostMeta[]> {
         date,
         tags: tagsMap[slug] || [],
         excerpt,
+        column: pickColumn(data),
       });
     } catch (e) {
       console.error("[listPosts] skip file", file, e);
@@ -112,11 +135,13 @@ export async function listPosts(): Promise<PostMeta[]> {
   return posts;
 }
 
-export async function getPost(slug: string) {
+export type PostWithBody = PostMeta & { content: string };
+
+export async function getPost(rawSlug: string): Promise<PostWithBody | null> {
+  const slug = parsePostSlugParam(rawSlug);
+  if (!slug) return null;
   const { POSTS_DIR } = paths();
-  const safe = slug.replace(/[^a-zA-Z0-9._-]/g, "");
-  if (safe !== slug) return null;
-  const full = path.join(POSTS_DIR, `${safe}.md`);
+  const full = path.join(POSTS_DIR, `${slug}.md`);
   try {
     const raw = await fs.readFile(full, "utf8");
     let data: Record<string, unknown> = {};
@@ -131,10 +156,11 @@ export async function getPost(slug: string) {
     }
     const tagsMap = await readTagsMap();
     return {
-      slug: safe,
-      title: (data.title as string) || safe,
+      slug,
+      title: (data.title as string) || slug,
       date: normalizeFrontmatterDate(data.date),
-      tags: tagsMap[safe] || [],
+      tags: tagsMap[slug] || [],
+      column: pickColumn(data),
       content,
     };
   } catch {
@@ -142,8 +168,13 @@ export async function getPost(slug: string) {
   }
 }
 
-export async function listPostsByTag(tag: string): Promise<PostMeta[]> {
-  const t = String(tag || "").trim();
+export async function listPostsByTag(rawTag: string): Promise<PostMeta[]> {
+  let t: string;
+  try {
+    t = decodeURIComponent(rawTag).trim();
+  } catch {
+    return [];
+  }
   if (!t) return [];
   const all = await listPosts();
   return all.filter((p) => (p.tags || []).includes(t));

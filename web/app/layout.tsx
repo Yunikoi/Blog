@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
+import SiteProfile from "@/components/SiteProfile";
+import TagTree from "@/components/TagTree";
+import MusicPlayer from "@/components/MusicPlayer";
+import { getSiteExtra } from "@/lib/site";
+import { allTags } from "@/lib/posts";
+import { buildTagTrie } from "@/lib/tag-tree";
 
 export const dynamic = "force-dynamic";
 
@@ -13,12 +19,22 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const [extra, tags] = await Promise.all([getSiteExtra(), allTags()]);
+  const trie = buildTagTrie(tags);
+
   return (
     <html lang="zh-CN">
       <body className="body">
         <SiteHeader />
-        <main className="main-shell">{children}</main>
+        <div className="app-body">
+          <aside className="site-aside">
+            <SiteProfile profile={extra.profile} />
+            <TagTree nodes={trie} />
+          </aside>
+          <main className="main-shell">{children}</main>
+        </div>
+        <MusicPlayer enabled={extra.music.enabled} playlist={extra.music.playlist} />
       </body>
     </html>
   );

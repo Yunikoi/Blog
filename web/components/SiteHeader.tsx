@@ -13,7 +13,6 @@ export default async function SiteHeader() {
           <Link href="/">首页</Link>
           <Link href="/tags">标签</Link>
           <Link href="/about">关于</Link>
-          <Link href="/feed.xml">RSS</Link>
         </nav>
       </div>
     </header>

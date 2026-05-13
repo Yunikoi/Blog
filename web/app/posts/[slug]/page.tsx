@@ -24,6 +24,8 @@ export default async function PostPage({ params }: Props) {
       <article className="prose">
         <h1 style={{ marginTop: 0 }}>{post.title}</h1>
         <p className="meta">
+          {post.column ? <span className="post-col-badge">{post.column}</span> : null}
+          {post.column && (post.date || post.tags?.length) ? <span> · </span> : null}
           {post.date || ""}
           {post.tags?.length ? ` · ${post.tags.join(" · ")}` : ""}
         </p>

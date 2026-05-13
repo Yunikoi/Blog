@@ -15,18 +15,29 @@ export default async function HomePage() {
       <h1 className="page-title">文章</h1>
       <ul className="post-list">
         {posts.map((p) => (
-          <li key={p.slug}>
-            <Link href={`/posts/${encodeURIComponent(p.slug)}`}>{p.title}</Link>
-            <div className="meta">
-              {p.date ? <span>{p.date}</span> : null}
-              {p.tags?.length ? (
-                <span>
-                  {p.date ? " · " : null}
-                  {p.tags.join(" · ")}
-                </span>
-              ) : null}
+          <li key={p.slug} className="post-card-wrap">
+            <div className="post-card-main">
+              <Link href={`/posts/${encodeURIComponent(p.slug)}`}>{p.title}</Link>
+              <div className="meta">
+                {p.column ? <span className="post-col-badge">{p.column}</span> : null}
+                {p.column && (p.date || p.tags?.length) ? <span> · </span> : null}
+                {p.date ? <span>{p.date}</span> : null}
+                {p.tags?.length ? (
+                  <span>
+                    {p.date ? " · " : null}
+                    {p.tags.join(" · ")}
+                  </span>
+                ) : null}
+              </div>
+              {p.excerpt ? <p className="post-excerpt-inline">{p.excerpt}</p> : null}
             </div>
-            {p.excerpt ? <p style={{ color: "var(--muted)", fontSize: "0.95rem", margin: "0.5rem 0 0" }}>{p.excerpt}</p> : null}
+            {p.excerpt ? (
+              <div className="post-card-pop" role="tooltip">
+                {p.column ? <div className="post-card-pop__col">{p.column}</div> : null}
+                <p className="post-card-pop__text">{p.excerpt}</p>
+                <span className="post-card-pop__more">点击查看全文 →</span>
+              </div>
+            ) : null}
           </li>
         ))}
       </ul>
