@@ -3,6 +3,18 @@ import path from "path";
 import matter from "gray-matter";
 import { getContentDir } from "@/lib/content-dir";
 
+/** gray-matter 会把 YAML 日期解析成 Date，排序/字符串化前统一成 YYYY-MM-DD 或原字符串 */
+function normalizeFrontmatterDate(value: unknown): string | undefined {
+  if (value == null || value === "") return undefined;
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) return undefined;
+    return value.toISOString().slice(0, 10);
+  }
+  if (typeof value === "string") return value.trim() || undefined;
+  if (typeof value === "number") return String(value);
+  return String(value);
+}
+
 function paths() {
   const CONTENT_DIR = getContentDir();
   return {
@@ -72,7 +84,7 @@ export async function listPosts(): Promise<PostMeta[]> {
       const raw = await fs.readFile(full, "utf8");
       const { data, content } = matter(raw);
       const title = (data.title as string) || slug;
-      const date = (data.date as string) || undefined;
+      const date = normalizeFrontmatterDate(data.date);
       const excerpt =
         (data.excerpt as string) ||
         content.replace(/^---[\s\S]*?---\s*/m, "").slice(0, 160).replace(/\s+/g, " ").trim();
@@ -87,7 +99,7 @@ export async function listPosts(): Promise<PostMeta[]> {
       console.error("[listPosts] skip file", file, e);
     }
   }
-  posts.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  posts.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
   return posts;
 }
 
@@ -112,7 +124,7 @@ export async function getPost(slug: string) {
     return {
       slug: safe,
       title: (data.title as string) || safe,
-      date: (data.date as string) || undefined,
+      date: normalizeFrontmatterDate(data.date),
       tags: tagsMap[safe] || [],
       content,
     };
