@@ -32,7 +32,7 @@ export default function LayoutChrome({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     if (anim === "none") return;
-    const id = window.setTimeout(() => setAnim("none"), 680);
+    const id = window.setTimeout(() => setAnim("none"), 420);
     return () => window.clearTimeout(id);
   }, [anim]);
 
