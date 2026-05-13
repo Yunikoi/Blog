@@ -67,6 +67,15 @@ export async function getSiteInfo() {
   };
 }
 
+/** 排序用：兼容 string / Date / 其它（防止 gray-matter 或类型漂移导致 runtime 非字符串） */
+function dateSortKey(value: unknown): string {
+  if (value == null || value === "") return "";
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? "" : value.toISOString().slice(0, 10);
+  }
+  return String(value);
+}
+
 export async function listPosts(): Promise<PostMeta[]> {
   const { POSTS_DIR } = paths();
   const tagsMap = await readTagsMap();
@@ -99,7 +108,7 @@ export async function listPosts(): Promise<PostMeta[]> {
       console.error("[listPosts] skip file", file, e);
     }
   }
-  posts.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  posts.sort((a, b) => dateSortKey(b.date).localeCompare(dateSortKey(a.date)));
   return posts;
 }
 
@@ -144,7 +153,7 @@ export async function allTags(): Promise<string[]> {
   const posts = await listPosts();
   const set = new Set<string>();
   posts.forEach((p) => (p.tags || []).forEach((t) => set.add(t)));
-  return [...set].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  return [...set].sort((a, b) => String(a).localeCompare(String(b), "zh-CN"));
 }
 
 export function publicSiteOrigin(): string {
