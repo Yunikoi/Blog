@@ -1,9 +1,15 @@
-import fs from "fs";
 import path from "path";
+import fs from "fs";
 
-/** 支持从 `web/` 或仓库根目录运行 Next（cwd 不同） */
+/**
+ * 优先使用 web/content（由 prebuild/predev 从仓库根同步），否则回退到 ../content。
+ */
 export function getContentDir(): string {
-  const candidates = [path.join(process.cwd(), "content"), path.join(process.cwd(), "..", "content")];
+  const cwd = process.cwd();
+  const candidates = [
+    path.join(cwd, "content"),
+    path.join(cwd, "..", "content"),
+  ];
   for (const c of candidates) {
     try {
       if (fs.existsSync(path.join(c, "manifest.json"))) return c;

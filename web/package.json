@@ -2,7 +2,9 @@
   "name": "blog-web",
   "private": true,
   "scripts": {
+    "predev": "node ./scripts/sync-content.mjs",
     "dev": "next dev",
+    "prebuild": "node ./scripts/sync-content.mjs",
     "build": "next build",
     "start": "next start"
   },

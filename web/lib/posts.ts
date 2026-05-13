@@ -66,22 +66,26 @@ export async function listPosts(): Promise<PostMeta[]> {
   }
   const posts: PostMeta[] = [];
   for (const file of names) {
-    const slug = file.replace(/\.md$/i, "");
-    const full = path.join(POSTS_DIR, file);
-    const raw = await fs.readFile(full, "utf8");
-    const { data, content } = matter(raw);
-    const title = (data.title as string) || slug;
-    const date = (data.date as string) || undefined;
-    const excerpt =
-      (data.excerpt as string) ||
-      content.replace(/^---[\s\S]*?---\s*/m, "").slice(0, 160).replace(/\s+/g, " ").trim();
-    posts.push({
-      slug,
-      title,
-      date,
-      tags: tagsMap[slug] || [],
-      excerpt,
-    });
+    try {
+      const slug = file.replace(/\.md$/i, "");
+      const full = path.join(POSTS_DIR, file);
+      const raw = await fs.readFile(full, "utf8");
+      const { data, content } = matter(raw);
+      const title = (data.title as string) || slug;
+      const date = (data.date as string) || undefined;
+      const excerpt =
+        (data.excerpt as string) ||
+        content.replace(/^---[\s\S]*?---\s*/m, "").slice(0, 160).replace(/\s+/g, " ").trim();
+      posts.push({
+        slug,
+        title,
+        date,
+        tags: tagsMap[slug] || [],
+        excerpt,
+      });
+    } catch (e) {
+      console.error("[listPosts] skip file", file, e);
+    }
   }
   posts.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   return posts;
@@ -94,7 +98,16 @@ export async function getPost(slug: string) {
   const full = path.join(POSTS_DIR, `${safe}.md`);
   try {
     const raw = await fs.readFile(full, "utf8");
-    const { data, content } = matter(raw);
+    let data: Record<string, unknown> = {};
+    let content = raw;
+    try {
+      const parsed = matter(raw);
+      data = parsed.data as Record<string, unknown>;
+      content = parsed.content;
+    } catch (e) {
+      console.error("[getPost] matter failed", slug, e);
+      return null;
+    }
     const tagsMap = await readTagsMap();
     return {
       slug: safe,
