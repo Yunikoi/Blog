@@ -1,5 +1,7 @@
 import type { TocTreeNode } from "@/lib/markdown-toc";
 
+import PostTocLyrics from "@/components/PostTocLyrics";
+
 function TocBranch({ nodes, depth }: { nodes: TocTreeNode[]; depth?: number }) {
   if (!nodes.length) return null;
   const d = depth ?? 0;
@@ -20,7 +22,10 @@ export default function PostToc({ tree }: { tree: TocTreeNode[] }) {
   return (
     <nav className="post-toc" aria-label="本页目录">
       <p className="post-toc__title">目录</p>
-      <TocBranch nodes={tree} />
+      <div className="post-toc__tree-wrap">
+        <TocBranch nodes={tree} />
+      </div>
+      <PostTocLyrics />
     </nav>
   );
 }

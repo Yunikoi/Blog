@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { activeLrcIndex, parseLrc, type LrcLine } from "@/lib/lrc";
 import type { MusicTrack } from "@/lib/site";
 import type { PublicMusicTrack } from "@/lib/music-public";
+import { emptyMusicLyricsView, useMusicLyrics } from "@/components/MusicLyricsProvider";
 
 type Merged = {
   title: string;
@@ -22,7 +23,7 @@ type Props = {
 
 export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks = [] }: Props) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+  const lyricsCtx = useMusicLyrics();
 
   const [remoteLibrary, setRemoteLibrary] = useState<PublicMusicTrack[] | null>(null);
 
@@ -50,7 +51,6 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
   const [playing, setPlaying] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [t, setT] = useState(0);
-  const [lyricsOpen, setLyricsOpen] = useState(true);
   const [lrcLines, setLrcLines] = useState<LrcLine[]>([]);
   const [plainLyrics, setPlainLyrics] = useState<string | null>(null);
   const [lrcErr, setLrcErr] = useState<string | null>(null);
@@ -80,10 +80,6 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
 
   const track = merged[idx];
   const src = track?.src ?? "";
-
-  useEffect(() => {
-    lineRefs.current = [];
-  }, [lrcLines, plainLyrics]);
 
   useEffect(() => {
     const el = audioRef.current;
@@ -177,10 +173,21 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
   const activeIdx = lrcLines.length ? activeLrcIndex(lrcLines, t) : -1;
 
   useEffect(() => {
-    if (activeIdx < 0) return;
-    const el = lineRefs.current[activeIdx];
-    el?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-  }, [activeIdx]);
+    if (!lyricsCtx) return;
+    if (!merged.length) {
+      lyricsCtx.setLyricsView(emptyMusicLyricsView);
+      return;
+    }
+    lyricsCtx.setLyricsView({
+      hasTracks: true,
+      lrcLines,
+      plainLyrics,
+      activeLineIndex: activeIdx,
+      lrcErr,
+      lyricsReady,
+      metaHint,
+    });
+  }, [lyricsCtx, merged.length, lrcLines, plainLyrics, activeIdx, lrcErr, lyricsReady, metaHint]);
 
   const hasAnyTrack = merged.length > 0;
 
@@ -220,51 +227,8 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
     <div className="music-player" role="region" aria-label="音乐播放器">
       <audio ref={audioRef} preload="metadata" onTimeUpdate={onTimeUpdate} onEnded={() => next()} />
 
-      <div className={`music-player__lyrics-wrap${lyricsOpen ? " is-open" : ""}`}>
-        <button
-          type="button"
-          className="music-player__lyrics-toggle"
-          onClick={() => setLyricsOpen((o) => !o)}
-          aria-expanded={lyricsOpen}
-        >
-          歌词 / 封面 {lyricsOpen ? "▼" : "▶"}
-        </button>
-        {lyricsOpen ? (
-          <div className="music-player__lyrics-panel">
-            {coverUrl ? (
-              <div className="music-player__cover-wrap">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={coverUrl} alt="" className="music-player__cover" width={120} height={120} />
-              </div>
-            ) : null}
-            <div className="music-player__lyrics" role="log" aria-live="polite">
-              {metaHint ? <p className="music-player__meta-hint">{metaHint}</p> : null}
-              {lrcErr ? <p className="music-player__lyrics-err">{lrcErr}</p> : null}
-              {!lrcErr && lyricsReady && lrcLines.length === 0 && !plainLyrics ? (
-                <p className="music-player__lyrics-empty">暂无歌词（可检查 MP3 内嵌歌手/歌名是否便于匹配）</p>
-              ) : null}
-              {!lrcErr && !lyricsReady && lrcLines.length === 0 && !plainLyrics ? (
-                <p className="music-player__lyrics-empty">正在加载歌词…</p>
-              ) : null}
-              {plainLyrics && !lrcLines.length ? <pre className="music-player__plain">{plainLyrics}</pre> : null}
-              {lrcLines.map((line, i) => (
-                <p
-                  key={`${line.time}-${i}`}
-                  ref={(el) => {
-                    lineRefs.current[i] = el;
-                  }}
-                  className={`music-player__lyrics-line${i === activeIdx ? " music-player__lyrics-line--active" : ""}`}
-                >
-                  {line.text}
-                </p>
-              ))}
-            </div>
-          </div>
-        ) : null}
-      </div>
-
       <div className="music-player__inner">
-        {coverUrl && !lyricsOpen ? (
+        {coverUrl ? (
           <div className="music-player__thumb">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={coverUrl} alt="" width={40} height={40} />
