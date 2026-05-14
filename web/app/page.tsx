@@ -35,13 +35,6 @@ export default async function HomePage() {
               </div>
               {p.excerpt ? <p className="post-excerpt-inline">{p.excerpt}</p> : null}
             </div>
-            {p.excerpt ? (
-              <div className="post-card-pop" role="tooltip">
-                {p.column ? <div className="post-card-pop__col">{p.column}</div> : null}
-                <p className="post-card-pop__text">{p.excerpt}</p>
-                <span className="post-card-pop__more">点击查看全文 →</span>
-              </div>
-            ) : null}
           </li>
         ))}
       </ul>

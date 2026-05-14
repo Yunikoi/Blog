@@ -528,57 +528,6 @@ a {
 
 .post-card-wrap {
   position: relative;
-  z-index: 0;
-}
-
-.post-card-wrap:hover {
-  z-index: 8;
-}
-
-.post-card-pop {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  margin-top: 0.35rem;
-  z-index: 20;
-  padding: 1rem;
-  border-radius: var(--radius-sm, 8px);
-  border: 1px solid var(--border);
-  background: var(--bg);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-}
-
-.post-card-pop__col {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.35rem;
-}
-
-.post-card-pop__text {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.55;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.post-card-pop__more {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.78rem;
-  color: var(--accent);
-}
-
-@media (min-width: 900px) {
-  .post-card-wrap:hover .post-card-pop {
-    display: block;
-  }
 }
 
 .post-excerpt-inline {

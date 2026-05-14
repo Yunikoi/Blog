@@ -80,6 +80,13 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
 
   const track = merged[idx];
   const src = track?.src ?? "";
+  /** 应用内曲目对象每轮渲染都是新引用，勿把 `track` 放进 effect 依赖，否则会无休止请求 meta */
+  const lyricsFetchKey = track
+    ? `${idx}\0${src}\0${track.filename ?? ""}\0${track.lrcUrl ?? ""}\0${track.lrcText ?? ""}`
+    : "";
+
+  const mergedRef = useRef(merged);
+  mergedRef.current = merged;
 
   useEffect(() => {
     const el = audioRef.current;
@@ -100,21 +107,23 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
 
   useEffect(() => {
     let cancelled = false;
+    const tr = mergedRef.current[idx];
+
     async function load() {
-      if (!track) {
+      if (!tr) {
         setLyricsReady(true);
         return;
       }
-      if (track.lrcText) {
-        const lines = parseLrc(track.lrcText);
+      if (tr.lrcText) {
+        const lines = parseLrc(tr.lrcText);
         if (lines.length) setLrcLines(lines);
-        else if (track.lrcText.trim()) setPlainLyrics(track.lrcText.trim());
+        else if (tr.lrcText.trim()) setPlainLyrics(tr.lrcText.trim());
         setLyricsReady(true);
         return;
       }
-      if (track.lrcUrl) {
+      if (tr.lrcUrl) {
         try {
-          const res = await fetch(track.lrcUrl, { credentials: "omit" });
+          const res = await fetch(tr.lrcUrl, { credentials: "omit" });
           if (!res.ok) throw new Error(String(res.status));
           const text = await res.text();
           if (cancelled) return;
@@ -128,9 +137,9 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
         }
         return;
       }
-      if (track.filename) {
+      if (tr.filename) {
         try {
-          const res = await fetch(`/api/music/meta?f=${encodeURIComponent(track.filename)}`);
+          const res = await fetch(`/api/music/meta?f=${encodeURIComponent(tr.filename)}`);
           if (!res.ok) throw new Error(String(res.status));
           const j = (await res.json()) as {
             artist?: string | null;
@@ -162,7 +171,7 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
     return () => {
       cancelled = true;
     };
-  }, [track]);
+  }, [lyricsFetchKey]);
 
   const onTimeUpdate = useCallback(() => {
     const el = audioRef.current;
