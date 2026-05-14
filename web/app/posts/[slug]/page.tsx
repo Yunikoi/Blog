@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
-import PostToc from "@/components/PostToc";
+import PostTocPortal from "@/components/PostTocPortal";
 import HashScroll from "@/components/HashScroll";
 import { buildTocTree, extractToc } from "@/lib/markdown-toc";
 import { getPost } from "@/lib/posts";
@@ -28,13 +28,12 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className={`wrap post-article-wrap${hasToc ? " post-article-wrap--with-toc" : ""}`}>
+      {hasToc ? <PostTocPortal tree={tocTree} /> : null}
       <p className="meta">
         <Link href="/">← 返回首页</Link>
       </p>
       <HashScroll />
-      <div className={hasToc ? "post-article-grid" : undefined}>
-        {hasToc ? <PostToc tree={tocTree} /> : null}
-        <article className={`prose post-article-main${hasToc ? "" : " post-article-main--full"}`}>
+      <article className={`prose post-article-main post-article-main--full`}>
           <header className="post-article-head">
             <h1>{post.title}</h1>
             <p className="meta">
@@ -58,8 +57,7 @@ export default async function PostPage({ params }: Props) {
           <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
             {post.content}
           </ReactMarkdown>
-        </article>
-      </div>
+      </article>
     </div>
   );
 }

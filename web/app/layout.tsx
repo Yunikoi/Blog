@@ -33,11 +33,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="body">
         <LayoutChrome>
           <SiteHeader />
-          <div className="app-body">
-            <MainShellTransition>{children}</MainShellTransition>
-            <aside className="site-aside">
+          <div className="app-body app-body--3col">
+            <aside className="site-aside site-aside--left">
               <SiteProfile profile={extra.profile} />
+            </aside>
+            <MainShellTransition>{children}</MainShellTransition>
+            <aside className="site-aside site-aside--right">
               <TagTree nodes={trie} />
+              <div id="post-toc-slot" className="post-toc-slot" />
             </aside>
           </div>
         </LayoutChrome>

@@ -1,3 +1,5 @@
+"use client";
+
 import type { TocTreeNode } from "@/lib/markdown-toc";
 
 import PostTocLyrics from "@/components/PostTocLyrics";
