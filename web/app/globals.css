@@ -85,25 +85,27 @@ html {
 
 .main-shell__page {
   min-height: 100%;
-  animation: mainShellBlurIn 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 路由切换：仅透明度 + 微小位移，不用 filter（避免合成层/点击异常与明显卡顿） */
+.main-shell__page--enter {
+  animation: mainShellSoftIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .main-shell__page {
+  .main-shell__page--enter {
     animation: none;
   }
 }
 
-@keyframes mainShellBlurIn {
+@keyframes mainShellSoftIn {
   from {
-    opacity: 0;
-    filter: blur(12px);
-    transform: translateY(12px) scale(0.99);
+    opacity: 0.45;
+    transform: translateY(5px);
   }
   to {
     opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -515,6 +517,11 @@ a {
 
 .post-card-wrap {
   position: relative;
+  z-index: 0;
+}
+
+.post-card-wrap:hover {
+  z-index: 8;
 }
 
 .post-card-pop {

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { allTags } from "@/lib/posts";
 
-export const dynamic = "force-dynamic";
-
 export default async function TagsPage() {
   const tags = await allTags();
   return (

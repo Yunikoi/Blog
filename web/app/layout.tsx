@@ -12,8 +12,6 @@ import { getSiteExtra } from "@/lib/site";
 import { allTags } from "@/lib/posts";
 import { buildTagTrie } from "@/lib/tag-tree";
 
-export const dynamic = "force-dynamic";
-
 export async function generateMetadata(): Promise<Metadata> {
   const { getSiteInfo } = await import("@/lib/posts");
   const { blogName, blogDescription } = await getSiteInfo();

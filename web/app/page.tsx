@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { getSiteInfo, listPosts } from "@/lib/posts";
 
-export const dynamic = "force-dynamic";
-
 export default async function HomePage() {
   const { blogDescription } = await getSiteInfo();
   const posts = await listPosts();

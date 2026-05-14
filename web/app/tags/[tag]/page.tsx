@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { listPostsByTag } from "@/lib/posts";
 
-export const dynamic = "force-dynamic";
-
 type Props = { params: { tag: string } };
 
 export default async function TagDetailPage({ params }: Props) {

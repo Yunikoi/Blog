@@ -8,6 +8,8 @@ import HashScroll from "@/components/HashScroll";
 import { buildTocTree, extractToc } from "@/lib/markdown-toc";
 import { getPost } from "@/lib/posts";
 
+export const revalidate = 60;
+
 type Props = { params: { slug: string } };
 
 export async function generateMetadata({ params }: Props) {
