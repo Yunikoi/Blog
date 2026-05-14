@@ -34,11 +34,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <LayoutChrome>
           <SiteHeader />
           <div className="app-body">
+            <MainShellTransition>{children}</MainShellTransition>
             <aside className="site-aside">
               <SiteProfile profile={extra.profile} />
               <TagTree nodes={trie} />
             </aside>
-            <MainShellTransition>{children}</MainShellTransition>
           </div>
         </LayoutChrome>
         <MusicPlayer

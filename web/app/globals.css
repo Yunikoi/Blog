@@ -273,9 +273,9 @@ a {
 
 @media (min-width: 960px) {
   .app-body {
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 1.5rem;
-    padding: 0 max(1.25rem, env(safe-area-inset-right)) min(40vh, 340px) 0;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 1rem;
+    padding: 0 0 min(40vh, 340px) max(1rem, env(safe-area-inset-left));
     align-items: start;
   }
 }
@@ -289,9 +289,10 @@ a {
   .site-aside {
     position: sticky;
     top: calc(3.25rem + 0.5rem);
-    padding: 0 0 1rem max(1.25rem, env(safe-area-inset-left));
+    padding: 0 max(0.65rem, env(safe-area-inset-right)) 0.75rem 0.85rem;
     border-bottom: none;
-    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-right: none;
     max-height: calc(100vh - 5rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -299,7 +300,12 @@ a {
 }
 
 .site-profile {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.site-profile--empty {
+  text-align: center;
 }
 
 .site-profile--empty .site-profile__hint {
@@ -309,49 +315,55 @@ a {
 }
 
 .site-profile__avatar {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.55rem;
   border: 1px solid var(--border);
 }
 
 .site-profile__avatar--placeholder {
+  margin-left: auto;
+  margin-right: auto;
   background: var(--border);
 }
 
 .site-profile__name {
-  margin: 0 0 0.35rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.3rem;
+  font-size: 1.02rem;
 }
 
 .site-profile__bio {
-  margin: 0 0 0.75rem;
-  font-size: 0.85rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.82rem;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .site-profile__links {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .site-profile__links li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
 }
 
 .tag-tree__title {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
 }
 
 .tag-tree__empty {

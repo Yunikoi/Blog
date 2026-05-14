@@ -102,6 +102,40 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
     setCoverUrl(null);
     setMetaHint(null);
     setLyricsReady(false);
+
+    let cancelled = false;
+
+    const tryAutoplay = () => {
+      if (cancelled) return;
+      void el.play().then(
+        () => setPlaying(true),
+        (err: unknown) => {
+          if (cancelled) return;
+          setPlaying(false);
+          const name = err instanceof DOMException ? err.name : "";
+          // 多数浏览器禁止「未与用户交互」自动带声播放，不当作解码错误提示
+          if (name !== "NotAllowedError") {
+            setErr("无法播放该音频文件");
+          }
+        }
+      );
+    };
+
+    const onCanPlay = () => {
+      if (cancelled) return;
+      tryAutoplay();
+    };
+
+    if (el.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+      queueMicrotask(onCanPlay);
+    } else {
+      el.addEventListener("canplay", onCanPlay, { once: true });
+    }
+
+    return () => {
+      cancelled = true;
+      el.removeEventListener("canplay", onCanPlay);
+    };
   }, [src, idx]);
 
   useEffect(() => {
@@ -234,7 +268,8 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
     <div className="music-player" role="region" aria-label="音乐播放器">
       <audio
         ref={audioRef}
-        preload="metadata"
+        preload="auto"
+        playsInline
         onTimeUpdate={onTimeUpdate}
         onEnded={() => next()}
         onError={() => {
