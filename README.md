@@ -1,14 +1,41 @@
 # Minimal Personal Blog · 极简个人博客
 
-**English:** A calm, reading-focused personal blog built with **vanilla HTML, CSS, and JavaScript**—no frameworks. Optional **GitHub-backed** content (manifest + Markdown) and **GitHub Pages** deployment.
+This repository contains **two** ways to use the same Markdown-centric content:
 
-**中文：** 面向阅读的极简个人博客，**纯 HTML / CSS / JavaScript**，无前端框架。支持可选的 **GitHub 文章源**（清单 + Markdown）以及 **GitHub Pages** 部署。
+1. **Classic static site** at the repo root: **vanilla HTML, CSS, and JavaScript** with a hash router—matches the default **GitHub Pages** workflow (`.github/workflows/pages.yml` publishes the repo root).
+2. **Next.js 14 app** in **`web/`** (App Router): home, posts with optional TOC, tag tree, About page, optional footer music, and synced content from the root **`content/`** folder.
+
+**中文：** 仓库里有两套界面共用 **`content/`** 里的文章与配置：根目录 **纯静态** 博客（适合当前 Pages 工作流），以及 **`web/`** 下的 **Next.js** 阅读站（侧栏简介、标签树、目录与歌词区、路由模糊转场等）。编辑内容请以仓库根目录 **`content/`** 为准；Next 在 `npm run dev` / `npm run build` 时会把其复制到 `web/content/`（勿在 `web/content/` 长期手写）。
+
+---
+
+## Next.js app (`web/`)
+
+### Features
+
+- **Content sync:** `web/scripts/sync-content.mjs` copies `../content` → `web/content` before dev/build (`predev` / `prebuild` in `web/package.json`).
+- **Config files (root `content/`):** `manifest.json` — `blogName`, `blogDescription` (About page + site metadata; multi-line OK), `posts[]`; `site.json` — profile (name, bio, avatar path as URL e.g. `/photo.jpg`), links, optional `music` playlist; Markdown bodies in `posts/`.
+- **Reading UX:** Sticky TOC on wide screens; current lyric line in the TOC panel when a post has a TOC; soft **blur / fade** transition on the main pane when changing routes (`prefers-reduced-motion` disables it); semi-transparent bottom player.
+
+### Run locally
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Production: `npm run build` then `npm run start`.
+
+### Deploy note
+
+GitHub Actions in this repo deploys the **static root** to Pages. Host **`web/`** on a Node-compatible platform (e.g. Vercel) if you want the Next app in production.
 
 ---
 
 ## English
 
-### Features
+### Features (classic static site at repo root)
 
 - **UI:** Generous whitespace, system / Inter typography, accent color, card list with subtle hover, light / dark theme (auto or manual), smooth theme transitions, `localStorage` for preferences.
 - **Routing:** Hash-based SPA (`#/`, `#/post/slug`, `#/about`, `#/tags`, `#/tags/tag`) without full page reloads; ~200 ms view transitions.
@@ -20,14 +47,22 @@
 
 ```text
 Blog/
-├── index.html          # Shell + settings panel
-├── css/styles.css      # Layout, theme tokens, components
-├── js/app.js           # Router, markdown, GitHub fetch, theme
-├── content/
-│   ├── manifest.json   # Post index (when using GitHub)
-│   └── posts/*.md      # Markdown bodies
+├── content/                 # Shared: manifest, site profile, posts (source of truth for Next sync)
+│   ├── manifest.json      # blogName, blogDescription, posts[]
+│   ├── site.json          # Optional: profile + music (used by Next app)
+│   └── posts/*.md
+├── web/                     # Next.js 14 app
+│   ├── app/                 # Routes, layout, globals.css
+│   ├── components/
+│   ├── lib/
+│   ├── public/              # Static assets (e.g. public/music/*.mp3, avatar image)
+│   ├── scripts/sync-content.mjs
+│   └── package.json
+├── index.html               # Classic static shell + settings
+├── css/styles.css
+├── js/app.js
 └── .github/workflows/
-    └── pages.yml       # GitHub Actions → Pages
+    └── pages.yml            # Deploys repo root (static site) to GitHub Pages
 ```
 
 ### Run locally
@@ -38,18 +73,20 @@ Open `index.html` in a browser, or serve the folder (recommended):
 npx --yes serve .
 ```
 
+The **Next.js** reader lives in `web/`; run `cd web && npm install && npm run dev` (see **Next.js app** at the top of this file).
+
 ### Use GitHub as the content source
 
 1. Push this repository (or your fork) to GitHub **as a public repo** (or use a PAT for private repos).
 2. Edit `content/manifest.json` (post metadata + `file` paths) and add Markdown under `content/posts/`.
 3. On the site, open **简易设置** at the bottom: enable **从 GitHub 加载**, enter **username**, **repository**, **branch** (e.g. `main`), and **manifest path** (default `content/manifest.json`), then save.
 
-`manifest.json` shape:
+`manifest.json` shape (valid JSON: commas between every pair; `blogDescription` can use `\n` for line breaks on the Next About page):
 
 ```json
 {
   "blogName": "Your site name",
-  "blogDescription": "One-line description",
+  "blogDescription": "First paragraph.\n\nSecond paragraph after a blank line.",
   "posts": [
     {
       "slug": "my-post",
@@ -102,7 +139,9 @@ No license file is bundled; add one in your fork if you need explicit terms.
 
 ## 中文说明
 
-### 功能概览
+Next.js 版功能、本地运行与部署说明见上文 **「Next.js app (`web/`)」** 一节；以下为根目录 **静态版** 说明。
+
+### 功能概览（根目录静态站）
 
 - **界面：** 留白、系统字体与 Inter、单一强调色、卡片列表与悬停微动效、浅色 / 深色 / 跟随系统、主题色过渡、`localStorage` 保存偏好。
 - **路由：** Hash 单页（`#/`, `#/post/文章slug`, `#/about`, `#/tags`, `#/tags/标签`），无整页刷新，视图切换约 200 ms 淡入淡出。
@@ -112,7 +151,7 @@ No license file is bundled; add one in your fork if you need explicit terms.
 
 ### 目录结构
 
-见上文 **Project layout** 一节（与英文一致）。
+见上文 **Project layout**（含 `web/` 与根目录静态文件）。内容统一维护在根目录 **`content/`**；Next 构建前会同步到 `web/content/`。
 
 ### 本地运行
 
@@ -122,13 +161,15 @@ No license file is bundled; add one in your fork if you need explicit terms.
 npx --yes serve .
 ```
 
+Next.js 阅读站在 **`web/`** 目录：`cd web`，执行 `npm install` 与 `npm run dev`（详见文件开头的 **Next.js app** 一节）。
+
 ### 使用 GitHub 管理文章
 
 1. 将本仓库推送到 GitHub（公开仓库最省事；私有仓库需在设置里填写 **Token**）。
 2. 编辑根目录下的 `content/manifest.json` 维护文章列表，在 `content/posts/` 下新增或修改 `.md` 正文。
 3. 在网站页脚打开 **简易设置**：勾选 **从 GitHub 加载**，填写 **用户名、仓库名、分支**（如 `main`）、**manifest 路径**（默认 `content/manifest.json`），保存。
 
-`manifest.json` 中每一项需包含 **`slug`** 与 **`file`**（相对仓库根的路径）。正文支持可选 **YAML 头信息**（`title`、`date`、`tags`、`slug`、`cover`、`excerpt` 等），与 manifest 字段会合并使用。
+`manifest.json` 中每一项需包含 **`slug`** 与 **`file`**（相对仓库根的路径）。顶层 **`blogDescription`** 用于 Next 的 **关于** 页（可多行）；**`blogName`** 为站名。正文支持可选 **YAML 头信息**（`title`、`date`、`tags`、`slug`、`cover`、`excerpt` 等），与 manifest 字段会合并使用。头像与外链等见 **`content/site.json`**（主要由 Next 侧栏使用）。
 
 ### 部署到 GitHub Pages
 
