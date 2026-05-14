@@ -225,7 +225,16 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
 
   return (
     <div className="music-player" role="region" aria-label="音乐播放器">
-      <audio ref={audioRef} preload="metadata" onTimeUpdate={onTimeUpdate} onEnded={() => next()} />
+      <audio
+        ref={audioRef}
+        preload="metadata"
+        onTimeUpdate={onTimeUpdate}
+        onEnded={() => next()}
+        onError={() => {
+          setPlaying(false);
+          setErr("无法播放该音频文件");
+        }}
+      />
 
       <div className="music-player__inner">
         {coverUrl ? (

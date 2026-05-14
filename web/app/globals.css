@@ -403,6 +403,16 @@ a {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.05);
+  /* 全宽条上只有中间一条在视觉上可点；未设 pointer-events 时透明区域会挡住正文链接 */
+  pointer-events: none;
+}
+
+.music-player > audio {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .music-player__inner {
@@ -415,6 +425,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
+  pointer-events: auto;
 }
 
 .music-player__meta {

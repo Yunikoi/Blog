@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 
 export type PublicMusicTrack = {
-  /** URL 路径，已编码文件名 */
+  /** 音频 URL（扫描结果一般为 `/api/music/file?f=…`） */
   src: string;
   /** 展示用（去掉 .mp3） */
   title: string;
@@ -60,7 +60,8 @@ export async function listPublicMusicTracks(): Promise<PublicMusicTrack[]> {
       byFile.set(name, {
         filename: name,
         title: name.replace(/\.mp3$/i, ""),
-        src: `/music/${encodeURIComponent(name)}`,
+        /** 经 API 输出，避免静态 `/music/` + 编码在部分浏览器/系统下 404 或无法解码 */
+        src: `/api/music/file?f=${encodeURIComponent(name)}`,
       });
     }
   }
