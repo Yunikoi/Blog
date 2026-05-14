@@ -176,6 +176,11 @@ html {
   padding: 2rem 1.25rem 4rem;
 }
 
+/* 有目录的文章页：加宽容器，目录在左、正文在中间占满剩余列 */
+.post-article-wrap--with-toc.wrap {
+  max-width: min(1180px, 96vw);
+}
+
 a {
   color: var(--accent);
 }
@@ -555,15 +560,15 @@ a {
 
 @media (min-width: 880px) {
   .post-article-wrap--with-toc .post-article-grid {
-    grid-template-columns: minmax(0, 1fr) 220px;
+    grid-template-columns: 220px minmax(0, 1fr);
     align-items: start;
+    gap: 1.5rem;
   }
 }
 
 .post-toc {
   position: sticky;
   top: calc(3.25rem + 0.75rem);
-  order: 2;
   display: flex;
   flex-direction: column;
   padding: 0.75rem 0.85rem;
@@ -577,8 +582,33 @@ a {
 }
 
 .post-article-main {
-  order: 1;
   min-width: 0;
+}
+
+.post-article-head {
+  text-align: center;
+  margin: 0 0 2rem;
+  padding: 0 0.5rem;
+}
+
+.post-article-head h1 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.post-article-head .meta {
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15em 0.25em;
+}
+
+.post-article-main > :not(.post-article-head) {
+  text-align: left;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -33,30 +33,32 @@ export default async function PostPage({ params }: Props) {
       </p>
       <HashScroll />
       <div className={hasToc ? "post-article-grid" : undefined}>
+        {hasToc ? <PostToc tree={tocTree} /> : null}
         <article className={`prose post-article-main${hasToc ? "" : " post-article-main--full"}`}>
-          <h1 style={{ marginTop: 0 }}>{post.title}</h1>
-          <p className="meta">
-            {post.column ? <span className="post-col-badge">{post.column}</span> : null}
-            {post.column && (post.date || post.updated || post.tags?.length) ? <span> · </span> : null}
-            {post.date ? <span>{post.date}</span> : null}
-            {post.updated && post.updated !== post.date ? (
-              <span>
-                {post.date ? " · " : null}
-                更新 {post.updated}
-              </span>
-            ) : null}
-            {post.tags?.length ? (
-              <span>
-                {post.date || post.updated ? " · " : null}
-                {post.tags.join(" · ")}
-              </span>
-            ) : null}
-          </p>
+          <header className="post-article-head">
+            <h1>{post.title}</h1>
+            <p className="meta">
+              {post.column ? <span className="post-col-badge">{post.column}</span> : null}
+              {post.column && (post.date || post.updated || post.tags?.length) ? <span> · </span> : null}
+              {post.date ? <span>{post.date}</span> : null}
+              {post.updated && post.updated !== post.date ? (
+                <span>
+                  {post.date ? " · " : null}
+                  更新 {post.updated}
+                </span>
+              ) : null}
+              {post.tags?.length ? (
+                <span>
+                  {post.date || post.updated ? " · " : null}
+                  {post.tags.join(" · ")}
+                </span>
+              ) : null}
+            </p>
+          </header>
           <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
             {post.content}
           </ReactMarkdown>
         </article>
-        {hasToc ? <PostToc tree={tocTree} /> : null}
       </div>
     </div>
   );
