@@ -87,9 +87,9 @@ html {
   min-height: 100%;
 }
 
-/* 路由切换：仅透明度 + 微小位移，不用 filter（避免合成层/点击异常与明显卡顿） */
+/* 路由切换：轻量模糊 + 淡入；歌词状态已迁出 React Context，避免整页重渲染导致 Link 失效 */
 .main-shell__page--enter {
-  animation: mainShellSoftIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: mainShellSoftIn 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -100,11 +100,13 @@ html {
 
 @keyframes mainShellSoftIn {
   from {
-    opacity: 0.45;
-    transform: translateY(5px);
+    opacity: 0.28;
+    filter: blur(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
+    filter: blur(0);
     transform: translateY(0);
   }
 }

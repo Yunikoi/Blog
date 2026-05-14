@@ -1,15 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useMusicLyrics } from "./MusicLyricsProvider";
+import { useMusicLyricsView } from "@/lib/music-lyrics-store";
 
 export default function PostTocLyrics() {
-  const ctx = useMusicLyrics();
+  const view = useMusicLyricsView();
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-  if (!ctx) return null;
-
-  const { view } = ctx;
   const { hasTracks, lrcLines, plainLyrics, activeLineIndex, lrcErr, lyricsReady, metaHint } = view;
 
   useEffect(() => {

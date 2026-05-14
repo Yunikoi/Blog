@@ -6,7 +6,6 @@ import TagTree from "@/components/TagTree";
 import { listPublicMusicTracks } from "@/lib/music-public";
 import MainShellTransition from "@/components/MainShellTransition";
 import LayoutChrome from "@/components/LayoutChrome";
-import MusicLyricsProvider from "@/components/MusicLyricsProvider";
 import MusicPlayer from "@/components/MusicPlayer";
 import { getSiteExtra } from "@/lib/site";
 import { allTags } from "@/lib/posts";
@@ -32,23 +31,21 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="zh-CN">
       <body className="body">
-        <MusicLyricsProvider>
-          <LayoutChrome>
-            <SiteHeader />
-            <div className="app-body">
-              <aside className="site-aside">
-                <SiteProfile profile={extra.profile} />
-                <TagTree nodes={trie} />
-              </aside>
-              <MainShellTransition>{children}</MainShellTransition>
-            </div>
-          </LayoutChrome>
-          <MusicPlayer
-            useServerPlaylist={extra.music.enabled}
-            playlist={extra.music.playlist}
-            publicTracks={publicTracks}
-          />
-        </MusicLyricsProvider>
+        <LayoutChrome>
+          <SiteHeader />
+          <div className="app-body">
+            <aside className="site-aside">
+              <SiteProfile profile={extra.profile} />
+              <TagTree nodes={trie} />
+            </aside>
+            <MainShellTransition>{children}</MainShellTransition>
+          </div>
+        </LayoutChrome>
+        <MusicPlayer
+          useServerPlaylist={extra.music.enabled}
+          playlist={extra.music.playlist}
+          publicTracks={publicTracks}
+        />
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { activeLrcIndex, parseLrc, type LrcLine } from "@/lib/lrc";
 import type { MusicTrack } from "@/lib/site";
 import type { PublicMusicTrack } from "@/lib/music-public";
-import { emptyMusicLyricsView, useMusicLyrics } from "@/components/MusicLyricsProvider";
+import { emptyMusicLyricsView, setMusicLyricsView } from "@/lib/music-lyrics-store";
 
 type Merged = {
   title: string;
@@ -23,7 +23,6 @@ type Props = {
 
 export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks = [] }: Props) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const lyricsCtx = useMusicLyrics();
 
   const [remoteLibrary, setRemoteLibrary] = useState<PublicMusicTrack[] | null>(null);
 
@@ -182,12 +181,11 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
   const activeIdx = lrcLines.length ? activeLrcIndex(lrcLines, t) : -1;
 
   useEffect(() => {
-    if (!lyricsCtx) return;
     if (!merged.length) {
-      lyricsCtx.setLyricsView(emptyMusicLyricsView);
+      setMusicLyricsView(emptyMusicLyricsView);
       return;
     }
-    lyricsCtx.setLyricsView({
+    setMusicLyricsView({
       hasTracks: true,
       lrcLines,
       plainLyrics,
@@ -196,7 +194,7 @@ export default function MusicPlayer({ useServerPlaylist, playlist, publicTracks 
       lyricsReady,
       metaHint,
     });
-  }, [lyricsCtx, merged.length, lrcLines, plainLyrics, activeIdx, lrcErr, lyricsReady, metaHint]);
+  }, [merged.length, lrcLines, plainLyrics, activeIdx, lrcErr, lyricsReady, metaHint]);
 
   const hasAnyTrack = merged.length > 0;
 
