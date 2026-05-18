@@ -966,3 +966,143 @@ column: 学习笔记
 #### skull：头骨
 
 #### find out：查明；弄清；发现；获知
+
+## 0518
+
+#### as far as：表距离：远至；一直到… 为止 | 表范围 / 程度：就… 而言；据…；在… 范围内
+
+#### etc. ：等等；诸如此类
+
+#### sculpt：雕刻；塑造；雕琢
+
+#### endow：**天赋 / 特质上：赋予、天生具备**（雅思最高频）
+
+> **endow sb. with sth.** 赋予某人某物（天赋、能力、特质）
+>
+> - Nature has endowed humans with wisdom.
+>
+>   大自然赋予人类智慧。
+>
+> **be endowed with** 天生拥有；与生俱来（写作高分）
+
+#### neural：神经的（人体神经、大脑神经） | **neural network 神经网络**（科技 / 人工智能高频）
+
+#### vary：改变
+
+#### presumably：大概；想必；据推测；很可能
+
+#### dynamic：动态的
+
+#### pitch：球场 | 音调 | 投掷
+
+#### propensity： 倾向；习性；偏好；天性
+
+#### irrespective：不顾的；不考虑的；无关的
+
+> **irrespective of** 不管；不顾；不受… 影响（雅思写作黄金短语）
+
+#### correlate：有联系
+
+#### approach：**方法；途径；方式** = way/method（高分替换） | **着手处理；探讨**（写作最高频） 靠近；走近
+
+> approachable adj. 平易近人的；可接近的
+>
+> approaching adj. 即将到来的
+
+#### get anywhere：有进展；有所成就；取得成效
+
+#### get more out of：从… 中收获更多；充分利用；吃透；获益良多
+
+#### assimilate：**同化；融入（社会 / 文化）**（雅思最高频） | 吸收；消化（知识、信息）
+
+#### tissue：生物组织 | 纸巾
+
+#### issue：**问题；议题；争论点**（写作 / 阅读主力） | 发布；发行；颁布
+
+#### representation：代表；代理；代言人 | **表现；描绘；呈现**（雅思阅读 / 写作高频）
+
+#### rebuttal：反驳；驳斥；辩驳
+
+#### factual：事实的；真实的；确凿的
+
+#### to say the least：至少可以说；毫不夸张地说；退一步讲
+
+#### acclaim：称赞
+
+#### stern：严厉的
+
+#### inborn：天生的
+
+#### innate：天生的；与生俱来的；先天的
+
+#### cognitive：认知的；认识能力的
+
+#### criminal：罪犯
+
+#### tuition：学费；授课，辅导
+
+#### periphery：外围|边缘
+
+#### destination：目的地
+
+#### indigenous：本土的
+
+#### mesh： 网；网状物；网眼 | 啮合；契合；协调；磨合
+
+> mesh with 与… 契合 / 协调
+>
+> mesh well 相处融洽、完美适配
+>
+> ideas mesh 想法合拍
+
+#### acknowledgement：承认 | 认可
+
+#### scape：花葶；柄；茎
+
+> **escape** v./n. 逃跑；逃避
+>
+> **landscape** n. 风景；景观
+>
+> **seascape** n. 海景
+>
+> **cityscape** n. 城市风貌
+>
+> **scapegoat** n. 替罪羊
+
+#### linger：逗留；徘徊；萦绕不散；迟迟不散
+
+#### brutal：残暴的；野蛮的；残酷的；无情的
+
+#### skateboard：滑板
+
+#### fusion：融合
+
+> fuse v. 融合；熔合
+>
+> fused adj. 融合在一起的
+>
+> fusible adj. 可熔的
+
+#### curated：adj. 精心挑选的；精选策划的
+
+#### albeit：**含义**：**虽然；尽管；即使**
+
+#### peculiarity：独特之处；特质；怪癖；奇异特点
+
+#### idiosyncrasy：习性；癖好；独特特质；怪脾气
+
+#### formative：形成的；塑造性格的；成长关键期的
+
+#### underlying：潜在的；根本的；隐含的；表层之下的	
+
+#### condescending：居高临下的；傲慢的；屈尊俯就的
+
+#### hint：暗示
+
+#### culminate：最终达到；以… 告终； culminate in 最终酿成
+
+#### colony：殖民地 | 群体
+
+#### chart：图表 | 绘制
+
+#### column：专栏
