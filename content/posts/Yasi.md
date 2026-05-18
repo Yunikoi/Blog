@@ -1045,7 +1045,7 @@ column: 学习笔记
 
 #### destination：目的地
 
-#### indigenous：本土的
+#### indigenous：本土的，原住民的
 
 #### mesh： 网；网状物；网眼 | 啮合；契合；协调；磨合
 
@@ -1085,7 +1085,7 @@ column: 学习笔记
 
 #### curated：adj. 精心挑选的；精选策划的
 
-#### albeit：**含义**：**虽然；尽管；即使**
+#### albeit：**虽然；尽管；即使**
 
 #### peculiarity：独特之处；特质；怪癖；奇异特点
 

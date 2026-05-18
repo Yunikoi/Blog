@@ -12,6 +12,7 @@ export default async function SiteHeader() {
         <nav className="site-nav" aria-label="主导航">
           <Link href="/">首页</Link>
           <Link href="/tags">标签</Link>
+          <Link href="/quiz">背单词</Link>
           <Link href="/about">关于</Link>
         </nav>
       </div>
