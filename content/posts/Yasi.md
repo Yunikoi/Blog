@@ -34,9 +34,6 @@ column: 学习笔记
 > - employ：v. 雇用；聘用
 > - adopt：v. 呈现；采纳；接受
 >
-> ##### 例句
->
-> Many young people are willing to take on extra responsibilities at work.
 
 ## 0504
 
