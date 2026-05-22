@@ -1531,3 +1531,86 @@ column: 学习笔记
 #### dweller：居民；居住者
 
 > dwell v. 居住；dwell on 纠结于 | dwelling n. 住宅
+
+
+#### sugar cane：甘蔗
+
+> sugarcane n. 甘蔗（常连写）
+
+#### pest：害虫；有害生物；讨厌的人
+
+> pest control 害虫防治 | pestilent adj. 有害的；讨厌的
+
+#### larva：幼虫
+
+> larvae n. 幼虫（复数）| larval adj. 幼虫的
+
+#### pesticide：杀虫剂；农药
+
+> pest n. 害虫 | -cide 杀…剂 | pesticidal adj. 杀虫的
+
+#### predatory：捕食性的；掠夺性的；以捕食为生的
+
+> predator n. 捕食者；掠夺者 | prey n./v. 猎物；捕食
+
+#### parasitic：寄生的；寄生性的；靠他人为生的
+
+> parasite n. 寄生虫；寄生者 | parasitism n. 寄生现象
+
+#### gaining control：取得控制；逐渐控制住（局面 / 虫害）
+
+> gain control of / over 控制… | under control 得到控制
+
+#### agent：剂；媒介；实施者；生物防治因子（biological control agent）
+
+> agency n. 机构；作用 | agential 起作用的（少用，阅读认识即可）
+
+#### toad：蟾蜍；癞蛤蟆
+
+> cane toad 蔗蟾（澳洲引种防治害虫的著名案例）
+
+#### exotic：外来的；异国的；奇异的
+
+> exotic species 外来物种 | exotica n. 奇珍异物
+
+#### cactus moth：仙人掌蛾（=Cactoblastis moth，引种防治仙人掌的经典案例）
+
+> cactus n. 仙人掌 | moth n. 蛾
+
+#### Argentina：阿根廷（南美国家；文中常作引种昆虫来源地）
+
+#### argument：论点；争论；理由
+
+> argue v. 争论；主张 | argumentative adj. 好争辩的
+
+#### rebuke：斥责；指责；谴责 | 斥责；训斥
+
+> rebuke sb. for sth. 因… 斥责某人
+
+#### eminent：杰出的；著名的；显赫的
+
+> eminence n. 杰出；显赫 | pre-eminent adj. 卓越的；首屈一指的
+
+#### decidedly：明确地；显然；坚决地
+
+> decide v. 决定 | decisive adj. 决定性的；果断的 | decision n.
+
+#### infestation：侵扰；大批滋生；（害虫 / 病害）爆发
+
+> infest v. 大批滋生；侵扰 | infested adj. 受侵扰的；虫害严重的
+
+#### swelling：肿胀；膨胀；隆起
+
+> swell v. 肿胀；膨胀；增多 | swollen adj. 肿胀的
+
+#### squirt：喷射；喷出 | 喷射；少量液体
+
+> squirt out 喷出
+
+#### venom：毒液；恶意
+
+> venomous adj. 有毒的；恶毒的 | envenom v. 使带毒（少用）
+
+#### lizard：蜥蜴
+
+> reptile n. 爬行动物（阅读分类常考）
