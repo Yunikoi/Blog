@@ -277,6 +277,8 @@ column: 学习笔记
 > ##### ZXZ 阅读例句
 >
 > - **104. P3 - Star Performers 明星员工**：There is a lot of evidence on this point, and it is useful to highlight some of the most pertinent arguments.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：This success added strength to the argument that biological control was the answer to the sugar cane industry’s pest problems.
 
 
 #### inadequacy：不足；欠缺；短缺
@@ -414,6 +416,11 @@ column: 学习笔记
 #### antiquity：古代；远古；上古时期
 
 #### toxic：有毒的 | 负能量的
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：It is estimated that today as many as a hundred million cane toads form a toxic infestation which is slowly spreading throughout the land.
+
 
 #### volatile：易挥发的
 
@@ -1066,6 +1073,8 @@ column: 学习笔记
 > ##### ZXZ 阅读例句
 >
 > - **211. P1 - Ahead of its time 新西兰头骨**：Of course, a skull of this age wasn’t particularly unusual in New Zealand.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：This, of course, cane toads could not do.
 
 
 #### stifle：**忍住、抑制**（笑、喷嚏、哈欠、眼泪、情绪）
@@ -1272,6 +1281,8 @@ column: 学习笔记
 > ##### ZXZ 阅读例句
 >
 > - **2. P1 - A survivor’s story 新西兰猫头鹰**：The use of pesticides is another possible threat to the owls, though not a direct one.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Modern pesticides were not developed until the 1940s, so farmers had to use what was available at the time.
 
 
 #### culprit：罪犯；肇事者；元凶；起因
@@ -1408,6 +1419,8 @@ column: 学习笔记
 > ##### ZXZ 阅读例句
 >
 > - **2. P1 - A survivor’s story 新西兰猫头鹰**：A survivor’s story One native bird in New Zealand that has managed to survive the introduction of non-native species As an island country with a fauna dominated by birds, New Zealand was once home to an owl species which is now extinct, the laughing owl, named for its distinctive cry.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Cane toads compete with native Australian fauna for food, and eat the eggs and young of ground-nesting birds.
 
 
 #### flora：植物群
@@ -1890,6 +1903,11 @@ column: 学习笔记
 
 #### opponent：对手；竞争者；反对者；敌手
 
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Prior to their introduction in Australia, there had been very few opponents and only one made his views public.
+
+
 #### tenancy：租赁；租用
 
 > tenant n. 租客；承租人
@@ -1997,6 +2015,8 @@ column: 学习笔记
 #### agent：剂；媒介；代理人；因素
 
 > ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Common practice was to release these introduced agents into new environments, the expectation being that they would destroy resident pests.
 >
 > - **4. P1 - Ambergris 龙涎香**：Ambergris itself is pleasantly aromatic, especially when warmed, and it was also highly valued as a fixing agent in the making of perfume, since it enabled a scent to retain its fragrance for much longer than might otherwise have been possible.
 
@@ -2448,6 +2468,11 @@ column: 学习笔记
 
 #### sold：售出的；卖完的（be sold out 售罄）
 
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：For example, in 19th- century France toads were sold to gardeners at markets in Paris to eat insect pests in their gardens.
+
+
 #### resolution：决心；决议；分辨率；解决
 
 > ##### ZXZ 阅读例句
@@ -2641,3 +2666,184 @@ column: 学习笔记
 
 
 > dwell v. 居住；dwell on 纠结于 | dwelling n. 住宅
+
+
+#### sugar cane：甘蔗
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Australia’s cane toad problem How a toad introduced in Australia to control pests has itself become a pest In the north of Australia there are many sugar cane plantations, which early in the 20th century were being damaged by a particular pest.
+
+
+> sugarcane n. 甘蔗（常连写）
+
+#### pest：害虫；有害生物；讨厌的人
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Australia’s cane toad problem How a toad introduced in Australia to control pests has itself become a pest In the north of Australia there are many sugar cane plantations, which early in the 20th century were being damaged by a particular pest.
+
+
+> pest control 害虫防治 | pestilent adj. 有害的；讨厌的
+
+#### larva：幼虫
+
+> larvae n. 幼虫（复数）| larval adj. 幼虫的
+
+#### pesticide：杀虫剂；农药
+
+> ##### ZXZ 阅读例句
+>
+> - **2. P1 - A survivor’s story 新西兰猫头鹰**：The use of pesticides is another possible threat to the owls, though not a direct one.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Modern pesticides were not developed until the 1940s, so farmers had to use what was available at the time.
+
+
+> pest n. 害虫 | -cide 杀…剂 | pesticidal adj. 杀虫的
+
+#### predatory：捕食性的；掠夺性的；以捕食为生的
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Farmers already used some forms of biological pest control in the form of predatory and parasitic wasps and flies, insect-eating birds, and plants from different regions or countries to control pests.
+
+
+> predator n. 捕食者；掠夺者 | prey n./v. 猎物；捕食
+
+#### parasitic：寄生的；寄生性的；靠他人为生的
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Farmers already used some forms of biological pest control in the form of predatory and parasitic wasps and flies, insect-eating birds, and plants from different regions or countries to control pests.
+
+
+> parasite n. 寄生虫；寄生者 | parasitism n. 寄生现象
+
+#### gaining control：取得控制；逐渐控制住（局面 / 虫害）
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：13 In many places cane toads are gaining control of the habitats of Australian fauna.
+
+
+> gain control of / over 控制… | under control 得到控制
+
+#### agent：剂；媒介；实施者；生物防治因子（biological control agent）
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Common practice was to release these introduced agents into new environments, the expectation being that they would destroy resident pests.
+>
+> - **4. P1 - Ambergris 龙涎香**：Ambergris itself is pleasantly aromatic, especially when warmed, and it was also highly valued as a fixing agent in the making of perfume, since it enabled a scent to retain its fragrance for much longer than might otherwise have been possible.
+
+
+> agency n. 机构；作用 | agential 起作用的（少用，阅读认识即可）
+
+#### toad：蟾蜍；癞蛤蟆
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Australia’s cane toad problem How a toad introduced in Australia to control pests has itself become a pest In the north of Australia there are many sugar cane plantations, which early in the 20th century were being damaged by a particular pest.
+
+
+> cane toad 蔗蟾（澳洲引种防治害虫的著名案例）
+
+#### exotic：外来的；异国的；奇异的
+
+> ##### ZXZ 阅读例句
+>
+> - **1. P1 - A Brief History of Tea 茶叶简史**：Tea remained popular in France for only about fifty years, being replaced by a preference for wine, chocolate and exotic coffees.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：For example, in 1926 there had been a highly successful prevention of the increase of the exotic prickly-pear cactus by the introduction of a moth from Argentina.
+
+
+> exotic species 外来物种 | exotica n. 奇珍异物
+
+#### cactus moth：仙人掌蛾（=Cactoblastis moth，引种防治仙人掌的经典案例）
+
+> cactus n. 仙人掌 | moth n. 蛾
+
+#### Argentina：阿根廷（南美国家；文中常作引种昆虫来源地）
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：For example, in 1926 there had been a highly successful prevention of the increase of the exotic prickly-pear cactus by the introduction of a moth from Argentina.
+
+
+#### argument：论点；争论；理由
+
+> ##### ZXZ 阅读例句
+>
+> - **104. P3 - Star Performers 明星员工**：There is a lot of evidence on this point, and it is useful to highlight some of the most pertinent arguments.
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：This success added strength to the argument that biological control was the answer to the sugar cane industry’s pest problems.
+
+
+> argue v. 争论；主张 | argumentative adj. 好争辩的
+
+#### rebuke：斥责；指责；谴责 | 斥责；训斥
+
+> rebuke sb. for sth. 因… 斥责某人
+
+#### eminent：杰出的；著名的；显赫的
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：However, Froggatt’s peers rebuked him and eminent scientists branded his views ‘decidedly pessimistic’.
+
+
+> eminence n. 杰出；显赫 | pre-eminent adj. 卓越的；首屈一指的
+
+#### decidedly：明确地；显然；坚决地
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：However, Froggatt’s peers rebuked him and eminent scientists branded his views ‘decidedly pessimistic’.
+
+
+> decide v. 决定 | decisive adj. 决定性的；果断的 | decision n.
+
+#### infestation：侵扰；大批滋生；（害虫 / 病害）爆发
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：It is estimated that today as many as a hundred million cane toads form a toxic infestation which is slowly spreading throughout the land.
+
+
+> infest v. 大批滋生；侵扰 | infested adj. 受侵扰的；虫害严重的
+
+#### swelling：肿胀；膨胀；隆起
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：They have large swellings on each shoulder from which they squirt poison when they are threatened.
+
+
+> swell v. 肿胀；膨胀；增多 | swollen adj. 肿胀的
+
+#### squirt：喷射；喷出 | 喷射；少量液体
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：They have large swellings on each shoulder from which they squirt poison when they are threatened.
+
+
+> squirt out 喷出
+
+#### venom：毒液；恶意
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：This venom contains 14 different chemicals, but they do not appear to be harmful to humans as no-one has died in Australia from cane toad poison.
+
+
+> venomous adj. 有毒的；恶毒的 | envenom v. 使带毒（少用）
+
+#### lizard：蜥蜴
+
+> ##### ZXZ 阅读例句
+>
+> - **216. P1 - Australia’s cane toad problem 澳洲蟾蜍**：Until recently there was no understanding of the toxicity of cane toad poison, but it is now clear that freshwater crocodiles, goannas (large lizards) and dingoes (wild dogs) have died after eating cane toads.
+
+
+> reptile n. 爬行动物（阅读分类常考）
