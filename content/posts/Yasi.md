@@ -1201,3 +1201,333 @@ column: 学习笔记
 #### tidy： 整洁的；井然有序的；可观的，数额不小的 | 整理；收拾；使整洁
 
 #### backlash：**强烈反对；集体抵制；舆论反弹**（雅思最高频）
+
+## 0522
+
+#### yet：**还；尚；仍然**（not yet / as yet 尚未） | **但是；然而**（= but / nevertheless，较正式） | **甚至；更**（强调，yet another / yet more）
+
+> ##### 高频搭配（雅思）
+>
+> - **not yet** 还没有；尚未
+> - **as yet** 到目前为止（尚）——书面 / 学术高频
+> - **and yet** 然而；可是
+> - **have yet to do** 尚未做某事（= have not done sth. yet）
+>
+> ##### 辨析
+>
+> - **yet** vs **still**：yet 多用于否定句、疑问句；still 肯定句表「仍」更自然
+> - **yet** vs **but**：yet 更书面，常放句首或句中：*Yet, the problem remains.*
+
+#### vacuum：真空 | v. 用吸尘器清扫；抽空
+
+#### submerged：淹没的；浸没的；水下的
+
+#### bell：钟；铃；钟形物
+
+#### salinity：盐度；含盐量
+
+#### elusive：难以捉摸的；难以获得的；逃避的
+
+#### rainfall：降雨量；降雨
+
+#### acoustically：声学上；在声学方面
+
+> acoustic adj. 声学的；听觉的 | acoustics n. 声学
+
+#### waxy：蜡状的；像蜡的
+
+#### grey：灰色的；灰暗的 | 灰色
+
+#### aphrodisiac：催情的；壮阳的 | 催情剂
+
+#### aromatic：芳香的；芬芳的
+
+#### agent：剂；媒介；代理人；因素
+
+#### lump：块；团；肿块 | 把… 归并为一类；结块
+
+#### temperate：温带的；温和的；节制的
+
+#### tropical：热带的
+
+#### popular：流行的；受欢迎的；大众的
+
+#### mineralogist：矿物学家
+
+#### succinite：琥珀脂；琥珀酸树脂（succinic 琥珀相关）
+
+> succinic adj. 琥珀的；丁二酸的
+
+#### resin：树脂；松香
+
+#### scorn：蔑视；鄙视 | 轻蔑；嘲笑
+
+> scornful adj. 轻蔑的 | scornfully adv.
+
+#### brittle：易碎的；脆弱的；尖利的（声音）
+
+#### bead：珠子；水珠；念珠
+
+#### sperm：精子；精液
+
+#### sperm whale：抹香鲸
+
+#### vomit：呕吐 | 呕吐物
+
+#### swallow：吞下；咽下 | 燕子
+
+#### prey：猎物 | 捕食；折磨
+
+> predator n. 捕食者 | predatory adj. 捕食性的
+
+#### squid：鱿鱼；乌贼
+
+#### beak：鸟喙；喙状嘴；（鱿鱼等）角质嘴
+
+#### irritate：刺激；使恼怒；使不适
+
+> irritation n. 刺激；恼怒 | irritant n./adj. 刺激物；刺激性的
+
+#### intestine：肠；肠道
+
+> intestinal adj. 肠道的
+
+#### foul：恶臭的；肮脏的；犯规的 | 弄脏；玷污
+
+#### secretion：分泌；分泌物
+
+> secrete v. 分泌 | secretory adj. 分泌的
+
+#### pathological：病理学的；病态的；异常的
+
+> pathology n. 病理学 | pathologist n. 病理学家
+
+#### embed：嵌入；埋入；使深植
+
+#### regale：款待；盛情招待；使愉悦
+
+#### inglorious：不光彩的；可耻的；默默无闻的
+
+#### bowel：肠；肠道；内部
+
+#### ruthlessly：无情地；冷酷地；残忍地
+
+> ruthless adj. 无情的；残忍的 | ruthlessness n.
+
+#### pursue：追求；从事；追赶；继续探讨
+
+> pursuit n. 追求；追赶；爱好
+
+#### imposition：强加；征收；负担
+
+> impose v. 强加；征收
+
+#### extract：提取；摘录 | 提取物；精华
+
+> extraction n. 提取；拔出
+
+#### carcass：（动物）尸体；残骸
+
+#### by-product：副产品；附带结果
+
+#### petroleum：石油
+
+#### supplant：取代；代替；排挤
+
+#### synthetic：合成的；人造的 | 合成物
+
+> synthesise / synthesize v. 合成 | synthesis n. 合成
+
+#### tide：潮汐；潮流；趋势
+
+> tidal adj. 潮汐的
+
+#### beachcomber：海滩拾荒者；在海滩捡漂流物的人
+
+#### reclaim：收回；开垦；回收；改造（荒地）
+
+> reclamation n. 开垦；回收
+
+#### regain：重新获得；恢复
+
+#### be set to：即将；注定；准备做
+
+#### neither：两者都不 | 也不
+
+> neither…nor… 既不… 也不…
+
+#### drop off：下降；减少；让… 下车；睡着
+
+#### barge：驳船；游艇 | 闯入；强行进入
+
+#### novice：新手；初学者
+
+#### specifically：具体地；明确地；专门地
+
+#### suppose：假设；认为；猜想
+
+> supposition n. 假定 | supposedly adv. 据称
+
+#### maritime：海事的；海运的；沿海的
+
+#### exposure：暴露；接触；曝光；敞口
+
+> expose v. 暴露；使接触 | exposed adj. 暴露的
+
+#### billowing：翻腾的；鼓起的；汹涌的
+
+> billow v./n. 翻腾；巨浪
+
+#### amend：修正；修订（法律、文件）
+
+> amendment n. 修正案 | amendable adj.
+
+#### devise：设计；发明；策划
+
+> device n. 装置；手段
+
+#### contribute：贡献；捐助；促成；撰稿
+
+> contribution n. 贡献；捐款 | contributor n.
+
+#### withdraw：撤回；提取（款）；退出
+
+> withdrawal n. 撤回；提款
+
+#### reinstate：恢复（职位）；使复原
+
+#### precast：预制的；预浇铸的
+
+> precast concrete 预制混凝土
+
+#### be referred to as：被称为；被视作
+
+#### ceramic tile：瓷砖；陶瓷砖
+
+> ceramic adj./n. 陶瓷的；陶瓷制品
+
+#### clad：覆盖… 的；包裹… 的（be clad in / with）
+
+#### granite：花岗岩
+
+#### venue：场地；举办地；场馆
+
+#### grand：宏伟的；盛大的；重大的
+
+#### cathedral：大教堂
+
+#### prestigious：有声望的；著名的
+
+#### acoustic：声学的；听觉的；原声的（音乐）
+
+> acoustics n. 声学 | acoustically adv.
+
+#### ascend：上升；攀登；晋升
+
+> ascent n. 上升；上坡 | ascending adj.
+
+#### integrity：正直；诚信；完整（性）
+
+#### colonnade：柱廊
+
+> column n. 圆柱；专栏
+
+#### foyer：门厅；休息厅；（剧院）前厅
+
+#### dumpling：饺子；汤团
+
+#### spreadsheet：电子表格
+
+#### nagging：唠叨的；烦人的；持续的（疼痛等）
+
+> nag v. 唠叨；烦扰
+
+#### hustle：催促；推搡；忙碌奔波 | 忙碌； hustle and bustle
+
+#### boulder：巨石；大圆石
+
+#### show up to：出现在；出席（= show up at / for）
+
+#### sold：售出的；卖完的（be sold out 售罄）
+
+#### resolution：决心；决议；分辨率；解决
+
+#### look nothing like：完全不像；与… 毫无相似之处
+
+#### plainly：清楚地；显然；朴素地
+
+#### lay out：布置；陈列；阐述；花费
+
+#### penchant：嗜好；倾向；爱好（a penchant for）
+
+#### fiddle：摆弄；瞎鼓捣 | 小提琴
+
+#### scorching：灼热的；酷热的；尖刻的
+
+#### outback：（澳大利亚）内陆；偏远乡野
+
+#### regional：地区的；区域性的
+
+#### airborne：空运的；空气传播的；空中的
+
+#### preventative：预防性的 | 预防药
+
+> prevent v. 预防 | prevention n. 预防 | preventive adj.
+
+#### present：当前的；出席的 | 呈现；提交 | 礼物
+
+> presentation n. 展示；陈述 | presently adv. 目前；不久
+
+#### disparate：截然不同的；无法比较的；异质的
+
+#### put up with：忍受；容忍（= tolerate / bear）
+
+#### Consequently：因此；所以（= therefore / hence，较正式）
+
+> consequent adj. 随之发生的 | consequence n. 后果
+
+#### gum：口香糖；树胶；牙龈
+
+#### all-rounder：全能型选手；多面手
+
+#### refer：提到；查阅；转诊； refer to 指称
+
+> reference n. 参考；提及 | referral n. 转诊
+
+#### denture：假牙；义齿
+
+> dental adj. 牙齿的 | dentist n. 牙医
+
+#### chronic：慢性的；长期的；惯性的
+
+> chronically adv. | chronic disease 慢性病
+
+#### in turn：依次；转而；反过来
+
+#### folk：民间的；人们；民俗
+
+> folklore n. 民间传说 | folks n. 人们（口语）
+
+#### hygiene：卫生；保健
+
+> hygienic adj. 卫生的 | hygienist n. 卫生工作者
+
+#### counterpart：对应的人（或物）；职务相当者
+
+#### grant：授予；同意；拨款 | 拨款；补助金
+
+> grantee n. 受赠人 | granting n.
+
+#### floss：牙线 | 用牙线清洁
+
+#### mouthguard：护齿套；口护具
+
+#### rugby：英式橄榄球
+
+#### fluoride：氟化物
+
+> fluoridation n. 氟化处理
+
+#### dweller：居民；居住者
+
+> dwell v. 居住；dwell on 纠结于 | dwelling n. 住宅
