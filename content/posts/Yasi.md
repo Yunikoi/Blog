@@ -1620,3 +1620,231 @@ column: 学习笔记
 > break new ground 开辟新领域；取得突破 | ground-breaking research 突破性研究（写作替换 *innovative / pioneering*）
 >
 > ground n. 地面；领域 | break v. 打破；突破
+
+## 0524
+
+#### ravage：蹂躏；毁坏；劫掠 | 破坏；浩劫（名词）
+
+> ravages n. 破坏；蹂躏的后果 | ravaged adj. 遭蹂躏的
+
+#### wreathe：环绕；缠绕；笼罩（smoke wreathed the hills）
+
+> wreath n. 花环；花圈；环状物
+
+#### impede：阻碍；妨碍；阻止
+
+> impediment n. 障碍；妨碍 | impedimenta n. 行装；装备（阅读偶见）
+
+#### precedent：先例；判例；惯例
+
+> unprecedented adj. 前所未有的 | precede v. 先于；在… 之前
+
+#### lofty：极高的；巍峨的；崇高的；高傲的
+
+> loft n. 阁楼 | loftiness n. 高尚；高傲
+
+#### fridge：冰箱（= refrigerator，口语）
+
+> refrigerator n. 冰箱 | refrigerant n. 制冷剂 | refrigeration n. 冷藏
+
+#### scratch：抓；刮；划伤 | _scratch the surface_ 浅尝辄止
+
+> scratchy adj. 刺耳的；扎人的
+
+#### nitrogen：氮；氮气
+
+> nitrate n. 硝酸盐 | nitrogenous adj. 含氮的
+
+#### sieve：筛子 | 筛；过滤
+
+> sift v. 筛；细查
+
+#### spiral：螺旋；螺旋形 | 螺旋式上升 / 下降；急剧恶化
+
+> spiral staircase 螺旋楼梯 | downward spiral 恶性循环
+
+#### mercenary：雇佣兵 | 唯利是图的；贪财的
+
+> mercy n. 仁慈 | merciful adj. 仁慈的
+
+#### utensil：器具；用具（尤指厨房用具）
+
+> kitchen utensils 厨具
+
+#### back then：那时；当时；在过去那个时候
+
+#### well：井 | 好；出色地 | **那么；好吧**（话语标记） | **涌出**（液体 well up）
+
+> wellbeing n. 健康；幸福 | wellness n. 健康
+
+#### relic：遗物；遗迹；文物；遗风
+
+> relics n. 遗迹；残片
+
+#### churn：搅动；翻搅；（奶）搅拌制黄油 | 剧烈动荡；大量产生
+
+> churn out 大量炮制（文章、产品）
+
+#### Swedish：瑞典的；瑞典人；瑞典语
+
+> Sweden n. 瑞典 | Swede n. 瑞典人
+
+#### currency：货币；流通 | 流行；盛行（观点、话题）
+
+> current adj. 当前的；流通的 | currently adv. 目前
+
+#### flourish：繁荣；兴旺；茂盛 | 挥舞；炫耀；华丽辞藻
+
+> flourishing adj. 繁荣的 | flour n. 面粉（同根不同义，勿混）
+
+#### scene：场景；现场；景象 | 场面；领域（the music scene）
+
+> scenic adj. 风景优美的 | scenery n. 风景；布景
+
+#### unearth：发掘；出土；揭露；发现
+
+> earth n. 地球；泥土 | earthly adj. 尘世的
+
+#### extend across：横跨；延伸至；遍及
+
+> extend v. 延伸；延长；扩大 | extension n. 延伸；延期；分机 | extensive adj. 广泛的
+
+#### wisdom：智慧；学问；明智
+
+> wise adj. 明智的 | wisely adv. 明智地
+
+#### obstacle：障碍；妨碍物
+
+> obstruct v. 阻挡；妨碍 | obstruction n. 障碍；梗阻
+
+#### mildly：轻微地；温和地；略带… 地
+
+> mild adj. 温和的；轻微的 | mildness n. 温和
+
+#### statue：雕像；塑像
+
+> statuary n. 雕像（总称）| statuette n. 小雕像
+
+#### gate：大门；闸门；登机口 | 门票收入（gate receipts）
+
+#### more so than：比… 更甚；尤其如此（用于比较，强调前者更突出）
+
+#### Bronze Age BC：青铜时代（公元前）（考古 / 历史阅读）
+
+> bronze n. 青铜 | bronzed adj. 古铜色的 | BC = Before Christ 公元前
+
+#### fineness：精细度；纯度；纤细
+
+> fine adj. 精细的；好的 | finely adv. 精细地；轻微地 | refine v. 精炼
+
+#### continental：大陆的；欧洲大陆的 | 大陆性的（气候）
+
+> continent n. 大陆；洲 | continental shelf 大陆架
+
+#### weaver：织工；织布者
+
+> weave v. 编织；编造（故事）| weaving n. 编织
+
+#### Belgium：比利时
+
+> Belgian adj./n. 比利时的；比利时人
+
+#### prosperity：繁荣；兴旺；富足
+
+> prosper v. 繁荣；成功 | prosperous adj. 繁荣的
+
+#### overshadow：使黯然失色；遮蔽；掩盖
+
+> shadow n. 阴影 | overshadowed adj. 被掩盖的
+
+#### devastation：毁坏；毁灭；浩劫
+
+> devastate v. 摧毁；使震惊 | devastating adj. 毁灭性的；极具冲击的
+
+#### arable：可耕种的；适于耕作的
+
+> arable land 耕地 | agriculture n. 农业
+
+#### pasture：牧场；草地 | 放牧
+
+> pastoral adj. 田园的；牧场的 | graze v. 放牧
+
+#### dye：染料 | 给… 染色
+
+> dyer n. 染工 | dyed adj. 染色的
+
+#### latter：后者（the latter）| 后期的；末尾的
+
+> the latter 后者（与 the former 前者相对）| latter-day 现代的；后期的
+
+#### compact：紧凑的；小巧的；坚实的 | 压缩；协定
+
+> compaction n. 压实 | compactly adv. 紧凑地
+
+#### firm：公司；商行 | 坚固的；坚定的 | 稳固地
+
+> firmly adv. 坚定地 | firmness n. 坚定
+
+#### village：村庄；乡村
+
+> villager n. 村民 | rural adj. 乡村的
+
+#### worsted：精纺毛线；精纺毛织物
+
+> worsted yarn 精纺纱（纺织史 / 产业阅读）
+
+#### persecute：迫害；骚扰；为难
+
+> persecution n. 迫害 | persecutor n. 迫害者
+
+#### sought：seek 的过去式 / 过去分词：寻找；寻求；试图
+
+> seek v. 寻找；寻求 | seeker n. 寻求者
+
+#### refuge：避难；庇护；避难所
+
+> refugee n. 难民 | take refuge 避难
+
+#### comprised：comprise 的过去式：包含；由… 组成
+
+> comprise v. 包含；组成 | be comprised of = consist of（较正式）
+
+#### Radical：激进的；根本的 | 激进分子；根号（数学另义）
+
+> radically adv. 根本地；激进地 | radicalism n. 激进主义
+
+#### take shape：成形；初具规模；逐渐明朗
+
+> shape n. 形状；状况 | take form 类似用法
+
+#### stem from：源于；来自；起源于
+
+> stem n. 茎；词干；源头 | stem cell 干细胞
+
+#### revival：复兴；复苏；重演
+
+> revive v. 复兴；苏醒 | revivable adj. 可复兴的
+
+#### supersede：取代；替代；淘汰
+
+> supersession n. 取代 | superseded adj. 被取代的
+
+#### unrest：动荡；不安；骚乱
+
+> rest n./v. 休息 | restless adj. 不安的
+
+#### rioter：暴徒；闹事者
+
+> riot n./v. 暴乱；骚乱 | riotous adj. 骚乱的；喧闹的
+
+#### band：乐队；带子；一群 | 用带绑；联合（band together）
+
+> bandage n. 绷带 | bandwidth n. 带宽
+
+#### fear：恐惧；担心 | 害怕
+
+> fearful adj. 可怕的；担心的 | fearless adj. 无畏的 | feared adj. 令人畏惧的
+
+#### split off：分离出去；分裂出来；拆出（独立分支 / 部门 / 地区）
+
+> split v. 分裂；分开；分担 | split up 分手；拆散 | split from 从… 分离

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""从 ZXZ 阅读 PDF 为 Yasi 词条补充例句，生成新 posts 文件。"""
+"""从 ZXZ 阅读 PDF 为 Yasi 词条补充例句，生成 Yasi-ZXZ-阅读例句.md（不含词根/衍生批量块）。"""
 from __future__ import annotations
 
 import re
@@ -53,21 +53,19 @@ def word_pattern(term: str) -> re.Pattern[str]:
 def find_sentences(term: str, corpus: list[tuple[str, str]], max_per_pdf: int = 1, max_total: int = 3) -> list[tuple[str, str]]:
     patterns = [word_pattern(term)]
     if " " not in term and not term.endswith("s"):
-        patterns.append(word_pattern(term + "s"))  # mineralogist → mineralogists
+        patterns.append(word_pattern(term + "s"))
 
     found: list[tuple[str, str]] = []
-    seen_sents: set[str] = set()
+    seen: set[str] = set()
     for pdf_name, text in corpus:
         count = 0
         for raw in SENT_SPLIT.split(text):
             s = raw.strip()
-            if len(s) < 20 or len(s) > 600:
-                continue
-            if s in seen_sents:
+            if len(s) < 20 or len(s) > 600 or s in seen:
                 continue
             if any(p.search(s) for p in patterns):
                 found.append((pdf_name, s))
-                seen_sents.add(s)
+                seen.add(s)
                 count += 1
                 if count >= max_per_pdf:
                     break
@@ -76,7 +74,7 @@ def find_sentences(term: str, corpus: list[tuple[str, str]], max_per_pdf: int = 
     return found[:max_total]
 
 
-def enrich_content(lines: list[str], corpus: list[tuple[str, str]]) -> list[str]:
+def enrich_content(lines: list[str], corpus: list[tuple[str, str]]) -> tuple[list[str], int]:
     out: list[str] = []
     i = 0
     matched = 0
@@ -92,7 +90,7 @@ def enrich_content(lines: list[str], corpus: list[tuple[str, str]]) -> list[str]
                 out.append("> ##### ZXZ 阅读例句")
                 for pdf_name, sent in hits:
                     short = pdf_name.replace(".pdf", "")
-                    out.append(f">")
+                    out.append(">")
                     out.append(f"> - **{short}**：{sent}")
                 out.append("")
         i += 1
@@ -112,8 +110,6 @@ def main() -> None:
 
     raw = SRC.read_text(encoding="utf-8")
     lines = raw.splitlines()
-
-    # 更新 frontmatter title
     new_lines: list[str] = []
     for line in lines:
         if line.startswith("title:"):
@@ -128,7 +124,6 @@ def main() -> None:
         "> 本文件由 `Yasi.md` 复制生成，并与 `D:\\Study\\英语\\雅思\\ZXZ阅读` 下 PDF 对照：在原文中找到该词的，在词条下补充 **ZXZ 阅读例句**（摘自对应 PDF 正文）。",
         "",
     ]
-    # 在首个 ## 节前插入说明
     body, matched = enrich_content(new_lines, corpus)
     out_lines: list[str] = []
     inserted = False

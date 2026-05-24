@@ -2847,3 +2847,9 @@ column: 学习笔记
 
 
 > reptile n. 爬行动物（阅读分类常考）
+
+#### groundbreaking：开创性的；突破性的；开创先河地（adj. / 可作名词性用法指「突破性进展」）
+
+> break new ground 开辟新领域；取得突破 | ground-breaking research 突破性研究（写作替换 *innovative / pioneering*）
+>
+> ground n. 地面；领域 | break v. 打破；突破
