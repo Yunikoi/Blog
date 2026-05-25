@@ -6,6 +6,7 @@ node_modules
 content
 # 背单词学习进度（本机后端，已改用浏览器 localStorage；API 可选）
 data
+web/data
 # 构建时生成，predev/prebuild 会重建
 public/quiz-bank.json
 

@@ -1848,3 +1848,233 @@ column: 学习笔记
 #### split off：分离出去；分裂出来；拆出（独立分支 / 部门 / 地区）
 
 > split v. 分裂；分开；分担 | split up 分手；拆散 | split from 从… 分离
+
+## 0525
+
+#### depict：描绘；描述；刻画
+
+> depiction n. 描绘；描写 | depictive adj. 描写的（少用）
+
+#### Egyptian：埃及的；埃及人（的）
+
+> Egypt n. 埃及 | Egyptian art / tomb 埃及艺术 / 墓葬（阅读常考）
+
+#### grave：坟墓；墓穴；严重的；严肃的
+
+> gravesite n. 墓地 | gravely adv. 严重地；严肃地（同形异义，阅读注意语境）
+
+#### cherish：珍爱；珍视；怀有（希望、感情）
+
+> cherished adj. 珍爱的；珍视的 | cherishment n. 珍爱（少用）
+
+#### ivory：象牙；象牙色；象牙制品
+
+> ivory carving 象牙雕刻 | illegal ivory trade 非法象牙贸易（环境 / 保护类阅读）
+
+#### lifelike：栩栩如生的；逼真的
+
+> life n. 生命 | -like 像… 的 | likeness n. 相似；肖像
+
+#### movable：可移动的；活动的（财产）
+
+> move v. 移动 | movement n. 运动；动向 | immovable adj. 不可移动的
+
+#### hub：中心；枢纽；集线器（科技义）
+
+> hub airport 枢纽机场 | cultural hub 文化中心
+
+#### stump：树桩；残余部分；绊倒；难住（sb.）| 游说 stump（政治，阅读偶见）
+
+> stumped adj. 被难住的 | stumpy adj. 矮胖的
+
+#### clothespin：晾衣夹；衣夹（美式拼写 clothes pin）
+
+> clothes n. 衣服 | pin n. 别针；夹子
+
+#### collective：集体的；共同的；集体（n.）
+
+> collectively adv. 共同地；集体地 | collect v. 收集 | collection n. 收藏；收集
+
+#### composition：构成；成分；作文；乐曲；构图；（艺术）作品
+
+> compose v. 组成；创作；作曲 | compositional adj. 构成的；作曲的
+
+#### pulped：pulped = pulp 的过去式 / 分词：打成纸浆；制成浆状
+
+> pulp n. 纸浆；果肉 | pulp v. 打成浆 | pulping n. 制浆
+
+#### recipe：食谱；配方；方法；秘诀
+
+> recipe for success 成功之道（写作搭配）
+
+#### rag：破布；碎布；抹布；（制）破布纸
+
+> rag paper 破布纸 / 棉纸（造纸史阅读）| ragged adj. 破烂的
+
+#### Civil War：内战（特指美国南北战争时常大写）
+
+> civil adj. 公民的；民用的；文明的 | civil war 内战（泛指）
+
+#### churn：搅拌；翻腾；（奶油）搅制；搅动；大量产生
+
+> churn out 大量炮制（文章、产品）| churning adj. 翻腾的
+
+#### flammability：可燃性；易燃性
+
+> flammable adj. 易燃的 | inflammable adj. 易燃的（易混： inflammable 也为易燃）| flame n. 火焰
+
+#### resembled：resemble 的过去式 / 过去分词：像；与… 相似
+
+> resemble v. 像；类似 | resemblance n. 相似；相像 | resembling adj. 相似的
+
+#### wigs：wig 的复数：假发
+
+> wig n. 假发 | wear a wig 戴假发（历史肖像 / 博物馆展品阅读）
+
+## 0526
+
+#### porcelain：瓷器；瓷制的；精美的
+
+> porcelain ware 瓷器 | bone china 骨瓷（阅读陶瓷史常考）
+
+#### kiln：窑；炉（烧陶瓷、砖等）
+
+> brick kiln 砖窑 | fire in a kiln 入窑烧制
+
+#### glazed：glaze 的过去式 / 分词：上釉；使光滑 | 上釉的；光滑的；玻璃似的
+
+> glaze n./v. 釉；上釉 | glazed pottery 上釉陶器 | double-glazed windows 双层玻璃窗（建筑阅读另义）
+
+#### realistic：现实的；逼真的；务实的
+
+> realism n. 现实主义；真实 | realist n. 现实主义者 | realistically adv. 现实地；逼真地 | lifelike adj. 栩栩如生的（近义）
+
+#### subset：子集；子群体；一部分
+
+> set n. 集合；一组 | sub- 下级的；部分的 | a subset of … … 的一部分 / 子集（数学、统计、分类阅读高频）
+
+## 0527
+
+#### clouds of dust：尘土飞扬；大片尘云（原文 clouds of dust / it 指尘云）
+
+> dust cloud 尘云 | dust storm 尘暴（侵蚀、干旱地区阅读）
+
+#### barren：贫瘠的；不结果实的；无益的
+
+> barren land 荒地 | barrenness n. 贫瘠
+
+#### sediment：沉积物；沉淀物
+
+> sedimentary adj. 沉积的 | sedimentation n. 沉积作用
+
+#### atmospheric：大气的；大气层的
+
+> atmosphere n. 大气；氛围 | atmospherically adv.
+
+#### millennia：millennium 的复数：一千年；千年期
+
+> millennium n. 千年 | millennial adj. 千年的
+
+#### shot up：急剧上升；猛涨；迅速长高
+
+> shoot up 蹿升；迅速成长（同义短语）
+
+#### erosion：侵蚀；腐蚀；流失
+
+> erode v. 侵蚀；腐蚀 | erosive adj. 侵蚀的 | soil erosion 水土流失（本篇核心）
+
+#### ill-equipped：装备不足的；准备不足的；能力不足的
+
+> equip v. 装备 | equipment n. 设备 | be ill-equipped for/to 对… 准备不足
+
+#### graze：放牧；吃草；擦伤 | 放牧
+
+> grazing n. 放牧 | grazer n. 食草动物
+
+#### bison：野牛；（北美）美洲野牛
+
+> buffalo n. 水牛；野牛（近义，地域有别）
+
+#### antelope：羚羊
+
+> antelopes 复数 | pronghorn 叉角羚（北美阅读偶见）
+
+#### roam：漫游；闲逛；流浪
+
+> roaming adj. 漫游的 | roamer n. 流浪者
+
+#### manured：manure 的过去式 / 分词：施肥 | 粪肥；肥料
+
+> manure v./n. 施粪肥；肥料 | manured soil 施过肥的土壤
+
+#### livestock：牲畜；家畜
+
+> live stock 活畜 | cattle / sheep 等（上下文）
+
+#### strip：剥去；剥夺；条状 | 狭长地带；带状
+
+> strip vegetation 清除植被（导致侵蚀）| strip of land 狭长地带
+
+#### hoof：蹄（hoove 为变体 / 误拼，常用 hoof / hooves）
+
+> hooves 复数 | puncture 刺穿（与 hooves 搭配：蹄子踩穿地表硬壳）
+
+#### puncture：刺穿；穿孔；刺破
+
+> puncture the crust 刺穿表层硬壳（本篇：牲畜踩坏土壤表层）
+
+#### crust：外壳；硬壳；地壳；面包皮
+
+> earth's crust 地壳 | soil crust 土壤结皮 / 表层硬壳
+
+#### desert：沙漠；荒漠 | 遗弃；擅离
+
+> desertification n. 荒漠化 | deserted adj. 荒废的
+
+#### bubble：泡；泡沫；气泡 | 冒泡；迅速上涨（prices bubble）
+
+> soil bubbles 土壤鼓包 / 起泡（阅读具体语境以原文为准）
+
+#### pasture：牧场；草地；放牧
+
+> pasturage n. 牧草；放牧 | put out to pasture 放牧；使退隐
+
+#### ranch：大牧场；牧场；经营牧场
+
+> rancher n. 牧场主 | ranching n. 牧场业
+
+#### speculator：投机者；投机商
+
+> speculate v. 投机；推测 | speculation n. 投机；推测
+
+#### incentive：激励；动机；诱因
+
+> incentivize v. 激励（AmE）| provide incentives 提供激励
+
+#### protect：保护；防护
+
+> protection n. 保护 | protective adj. 保护的 | protected area 保护区
+
+#### carcass：（动物）尸体；残骸
+
+> carcass disposal 尸体处理（生态 / 牧场阅读）
+
+#### barbed：带刺的（原文 barbe 多指 barbed wire 带刺铁丝网）
+
+> barbed wire 带刺铁丝网 | barb n. 倒钩；刺
+
+#### sought to：seek to 的过去式：试图；力求；寻求
+
+> seek v. 寻找；寻求 | seek to do 试图做…
+
+#### snowfield：雪原；雪场
+
+> snow field 雪野 | snow-covered 被雪覆盖的
+
+#### sprinkling：少量；洒；点缀 | 洒；下稀疏小雨
+
+> sprinkle v./n. 洒；少量 | a sprinkling of 少量的…
+
+#### glaciers：glacier 的复数：冰川
+
+> glacial adj. 冰川的；冰冷的 | glaciation n. 冰川作用

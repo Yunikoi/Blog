@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:lan": "next dev -H 0.0.0.0",
     "prebuild": "node ./scripts/sync-content.mjs && node ./scripts/build-quiz-bank.mjs",
+    "build:shengjing": "python ./scripts/build-shengjing-vocab.py",
     "build": "next build",
     "start": "next start"
   },
