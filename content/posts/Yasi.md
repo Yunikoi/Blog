@@ -2106,3 +2106,23 @@ column: 学习笔记
 #### chest：胸；胸部；箱子；柜子
 
 > chest of drawers 五斗柜 | treasure chest 宝箱 | chest pain 胸痛（医学阅读）
+
+#### ecosystem：生态系统
+
+> ecological adj. 生态的 | ecology n. 生态学 | ecosystem services 生态系统服务
+
+#### seashore：海滨；海岸
+
+> shore n. 岸 | seaside 海边 | coastal adj. 沿海的
+
+#### density：密度；稠密；浓度
+
+> dense adj. 稠密的；密集的 | densely adv. 稠密地 | population density 人口密度
+
+#### credited：credit 的过去式 / 分词：把… 归功于；认为… 有… | 记入贷方
+
+> credit A with B / credit B to A 把 B 归功于 A | be credited as 被誉为…
+
+#### run-off：径流； runoff；决选（选举）；流出物
+
+> surface runoff 地表径流 | agricultural runoff 农业径流（污染、生态阅读高频）
