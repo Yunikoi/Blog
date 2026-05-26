@@ -2078,3 +2078,31 @@ column: 学习笔记
 #### glaciers：glacier 的复数：冰川
 
 > glacial adj. 冰川的；冰冷的 | glaciation n. 冰川作用
+
+#### intrigue：激起兴趣；迷住 | 阴谋； intrigue；暧昧关系
+
+> intriguing adj. 引人入胜的；神秘的 | intrigued adj. 被迷住的 | intriguer n. 阴谋家（少用）
+
+#### meditation：冥想；沉思；冥想练习
+
+> meditate v. 冥想；沉思 | meditative adj. 冥想的；沉思的 | meditation practice 冥想练习
+
+#### is given to：倾向于；习惯于（= be inclined to / tend to，后接动名词）
+
+> be given to doing sth. 倾向于做某事；有做某事的习惯 | He is given to meditation. 他惯于冥想 / 他常冥想。
+
+#### duplicate：复制；重复 | 副本；复制品；重复的
+
+> duplication n. 复制；重复 | duplicative adj. 重复的 | duplicate copy 副本（冗余说法，阅读认识即可）
+
+#### boisterous：喧闹的；狂暴的；（人）精力旺盛的
+
+> boisterously adv. 喧闹地 | boisterousness n. 喧闹
+
+#### embellished：embellish 的过去式 / 分词：装饰；润色；添枝加叶
+
+> embellish v. 装饰；美化（叙述）| embellishment n. 装饰；润饰
+
+#### chest：胸；胸部；箱子；柜子
+
+> chest of drawers 五斗柜 | treasure chest 宝箱 | chest pain 胸痛（医学阅读）
