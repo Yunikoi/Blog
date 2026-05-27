@@ -2126,3 +2126,77 @@ column: 学习笔记
 #### run-off：径流； runoff；决选（选举）；流出物
 
 > surface runoff 地表径流 | agricultural runoff 农业径流（污染、生态阅读高频）
+
+## 0528
+
+#### army：军队；陆军；大批
+
+> armament n. 军备 | militarize v. 军事化
+
+#### reign：统治；在位时期 | 统治；盛行
+
+> reign over 统治… | reigning adj. 在位的；现行的
+
+#### excavated：excavate 的过去式 / 分词：挖掘；发掘
+
+> excavation n. 挖掘；发掘现场 | excavator n. 挖掘机；发掘者
+
+#### erected：erect 的过去式 / 分词：竖立；建立；搭建
+
+> erect v./adj. 竖立；直立的 | erection n. 建立；竖立（正式）
+
+#### assembly：集会；议会；装配；组装
+
+> assemble v. 集合；组装 | assembly line 装配线
+
+#### military：军事的；军队的 | 军队（the military）
+
+> militaristic adj. 军国主义的 | militarily adv. 在军事上
+
+#### demolished：demolish 的过去式 / 分词：拆除；摧毁；推翻
+
+> demolition n. 拆除；毁坏 | demolish a building 拆毁建筑
+
+#### interpret：解释；口译；演绎（原文 interprete 为拼写变体）
+
+> interpretation n. 解释；演绎 | interpreter n. 口译员 | misinterpret v. 误解
+
+#### plausibly：plausible 的副词：似乎有理地；可信地
+
+> plausible adj. 貌似合理的；可信的 | plausibility n. 合理性
+
+#### chieftain：酋长；首领；族长
+
+> chief n./adj. 首领；主要的 | chieftaincy n. 酋长地位
+
+#### inscription：铭文；题字；刻字
+
+> inscribe v. 题写；镌刻 | inscribed adj. 刻有文字的
+
+#### commemorating：commemorate 的现在分词 / 分词：纪念；庆贺
+
+> commemorate v. 纪念 | commemoration n. 纪念活动 | commemorative adj. 纪念性的
+
+#### dedicated to：献给；致力于；专门用于
+
+> dedicate A to B 把 A 献给 B；致力于 B | dedication n. 奉献；题词
+
+#### execute：执行；实施；处决；演奏（乐曲）
+
+> execution n. 执行；处决 | executive n./adj. 高管；执行的
+
+#### preceding：在前的；前述的；先于
+
+> precede v. 先于；领先 | precedent n. 先例 | unprecedented adj. 前所未有的
+
+#### outlast：比… 活得久；比… 持久
+
+> outlive v. 比… 活得长（近义）| last v. 持续
+
+#### subdivide：再分；细分
+
+> subdivision n. 细分；分部 | sub- 再… | divide v. 划分
+
+#### dismantle：拆除；拆开；逐步废除
+
+> dismantling n. 拆除 | dismantle a structure 拆除结构
