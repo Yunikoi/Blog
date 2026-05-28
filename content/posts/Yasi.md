@@ -1797,17 +1797,17 @@ column: 学习笔记
 
 > persecution n. 迫害 | persecutor n. 迫害者
 
-#### sought：seek 的过去式 / 过去分词：寻找；寻求；试图
+#### seek：寻找；寻求；试图
 
-> seek v. 寻找；寻求 | seeker n. 寻求者
+> seeker n. 寻求者 | seek out 找出
 
 #### refuge：避难；庇护；避难所
 
 > refugee n. 难民 | take refuge 避难
 
-#### comprised：comprise 的过去式：包含；由… 组成
+#### comprise：包含；由… 组成
 
-> comprise v. 包含；组成 | be comprised of = consist of（较正式）
+> be comprised of = consist of（较正式）
 
 #### Radical：激进的；根本的 | 激进分子；根号（数学另义）
 
@@ -1899,9 +1899,9 @@ column: 学习笔记
 
 > compose v. 组成；创作；作曲 | compositional adj. 构成的；作曲的
 
-#### pulped：pulped = pulp 的过去式 / 分词：打成纸浆；制成浆状
+#### pulp：纸浆；果肉 | 打成纸浆；制成浆状
 
-> pulp n. 纸浆；果肉 | pulp v. 打成浆 | pulping n. 制浆
+> pulping n. 制浆 | pulpy adj. 纸浆状的
 
 #### recipe：食谱；配方；方法；秘诀
 
@@ -1923,13 +1923,13 @@ column: 学习笔记
 
 > flammable adj. 易燃的 | inflammable adj. 易燃的（易混： inflammable 也为易燃）| flame n. 火焰
 
-#### resembled：resemble 的过去式 / 过去分词：像；与… 相似
+#### resemble：像；与… 相似
 
-> resemble v. 像；类似 | resemblance n. 相似；相像 | resembling adj. 相似的
+> resemblance n. 相似；相像 | resembling adj. 相似的
 
-#### wigs：wig 的复数：假发
+#### wig：假发
 
-> wig n. 假发 | wear a wig 戴假发（历史肖像 / 博物馆展品阅读）
+> wear a wig 戴假发（历史肖像 / 博物馆展品阅读）
 
 ## 0526
 
@@ -1941,9 +1941,9 @@ column: 学习笔记
 
 > brick kiln 砖窑 | fire in a kiln 入窑烧制
 
-#### glazed：glaze 的过去式 / 分词：上釉；使光滑 | 上釉的；光滑的；玻璃似的
+#### glaze：釉 | 上釉；使光滑
 
-> glaze n./v. 釉；上釉 | glazed pottery 上釉陶器 | double-glazed windows 双层玻璃窗（建筑阅读另义）
+> glazed pottery 上釉陶器 | double-glazed windows 双层玻璃窗（建筑阅读另义）
 
 #### realistic：现实的；逼真的；务实的
 
@@ -1971,9 +1971,9 @@ column: 学习笔记
 
 > atmosphere n. 大气；氛围 | atmospherically adv.
 
-#### millennia：millennium 的复数：一千年；千年期
+#### millennium：一千年；千年期
 
-> millennium n. 千年 | millennial adj. 千年的
+> millennia 复数 | millennial adj. 千年的
 
 #### shot up：急剧上升；猛涨；迅速长高
 
@@ -2003,9 +2003,9 @@ column: 学习笔记
 
 > roaming adj. 漫游的 | roamer n. 流浪者
 
-#### manured：manure 的过去式 / 分词：施肥 | 粪肥；肥料
+#### manure：粪肥；肥料 | 施肥
 
-> manure v./n. 施粪肥；肥料 | manured soil 施过肥的土壤
+> manured soil 施过肥的土壤
 
 #### livestock：牲畜；家畜
 
@@ -2063,9 +2063,9 @@ column: 学习笔记
 
 > barbed wire 带刺铁丝网 | barb n. 倒钩；刺
 
-#### sought to：seek to 的过去式：试图；力求；寻求
+#### seek to：试图；力求；寻求（后接动词原形）
 
-> seek v. 寻找；寻求 | seek to do 试图做…
+> seek to do 试图做…
 
 #### snowfield：雪原；雪场
 
@@ -2075,7 +2075,7 @@ column: 学习笔记
 
 > sprinkle v./n. 洒；少量 | a sprinkling of 少量的…
 
-#### glaciers：glacier 的复数：冰川
+#### glacier：冰川
 
 > glacial adj. 冰川的；冰冷的 | glaciation n. 冰川作用
 
@@ -2099,10 +2099,6 @@ column: 学习笔记
 
 > boisterously adv. 喧闹地 | boisterousness n. 喧闹
 
-#### embellished：embellish 的过去式 / 分词：装饰；润色；添枝加叶
-
-> embellish v. 装饰；美化（叙述）| embellishment n. 装饰；润饰
-
 #### chest：胸；胸部；箱子；柜子
 
 > chest of drawers 五斗柜 | treasure chest 宝箱 | chest pain 胸痛（医学阅读）
@@ -2119,7 +2115,7 @@ column: 学习笔记
 
 > dense adj. 稠密的；密集的 | densely adv. 稠密地 | population density 人口密度
 
-#### credited：credit 的过去式 / 分词：把… 归功于；认为… 有… | 记入贷方
+#### credit：把… 归功于；认为… 有…；信用；学分 | 记入贷方
 
 > credit A with B / credit B to A 把 B 归功于 A | be credited as 被誉为…
 
@@ -2137,13 +2133,13 @@ column: 学习笔记
 
 > reign over 统治… | reigning adj. 在位的；现行的
 
-#### excavated：excavate 的过去式 / 分词：挖掘；发掘
+#### excavate：挖掘；发掘
 
 > excavation n. 挖掘；发掘现场 | excavator n. 挖掘机；发掘者
 
-#### erected：erect 的过去式 / 分词：竖立；建立；搭建
+#### erect：竖立；建立；搭建 | 直立的
 
-> erect v./adj. 竖立；直立的 | erection n. 建立；竖立（正式）
+> erection n. 建立；竖立（正式）
 
 #### assembly：集会；议会；装配；组装
 
@@ -2153,7 +2149,7 @@ column: 学习笔记
 
 > militaristic adj. 军国主义的 | militarily adv. 在军事上
 
-#### demolished：demolish 的过去式 / 分词：拆除；摧毁；推翻
+#### demolish：拆除；摧毁；推翻
 
 > demolition n. 拆除；毁坏 | demolish a building 拆毁建筑
 
@@ -2161,9 +2157,9 @@ column: 学习笔记
 
 > interpretation n. 解释；演绎 | interpreter n. 口译员 | misinterpret v. 误解
 
-#### plausibly：plausible 的副词：似乎有理地；可信地
+#### plausible：貌似合理的；可信的
 
-> plausible adj. 貌似合理的；可信的 | plausibility n. 合理性
+> plausibly adv. 似乎有理地 | plausibility n. 合理性
 
 #### chieftain：酋长；首领；族长
 
@@ -2173,9 +2169,9 @@ column: 学习笔记
 
 > inscribe v. 题写；镌刻 | inscribed adj. 刻有文字的
 
-#### commemorating：commemorate 的现在分词 / 分词：纪念；庆贺
+#### commemorate：纪念；庆贺
 
-> commemorate v. 纪念 | commemoration n. 纪念活动 | commemorative adj. 纪念性的
+> commemoration n. 纪念活动 | commemorative adj. 纪念性的
 
 #### dedicated to：献给；致力于；专门用于
 
