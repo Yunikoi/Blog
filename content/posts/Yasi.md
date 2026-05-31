@@ -2196,3 +2196,137 @@ column: 学习笔记
 #### dismantle：拆除；拆开；逐步废除
 
 > dismantling n. 拆除 | dismantle a structure 拆除结构
+
+## 0529
+
+#### asteroid：小行星；陨石
+
+> asteroid belt 小行星带 | meteorite n. 陨石（坠入大气层后）
+
+#### ironic：讽刺的；具有讽刺意味的
+
+> irony n. 讽刺；反讽 | ironically adv. 讽刺地；出人意料地
+
+#### symmetry：对称；匀称；对称性
+
+> symmetrical adj. 对称的 | symmetrically adv. 对称地 | asymmetry n. 不对称
+
+#### subsequent：随后的；后来的；接着的
+
+> subsequently adv. 随后 | subsequence n. 后续（少用）
+
+#### overrun：泛滥；蹂躏；超出（预算 / 时间）| overrun 的过去式 overran
+
+> overran 过去式 | time overrun 工期延误 | cost overrun 成本超支
+
+#### monster：怪物；巨兽；庞然大物 | 巨大的
+
+> monstrous adj. 巨大的；可怕的
+
+#### inherit：继承；遗传；承袭
+
+> inheritance n. 继承；遗产 | inherited adj. 继承的；遗传的 | heir n. 继承人
+
+#### eye blink：眨眼；一眨眼（的时间）
+
+> in the blink of an eye 一眨眼之间 | blink v./n. 眨眼
+
+#### rift valley：裂谷；地堑
+
+> rift n. 裂缝；分裂 | valley n. 山谷 | Great Rift Valley 东非大裂谷（地理阅读）
+
+#### bonus：奖金；额外好处；意外收获
+
+> bonus point 加分 | as a bonus 另外；作为额外好处
+
+#### squishy：软绵绵的；湿软的；没主见的
+
+> squish v. 压扁；挤（拟声）| squash v. 压碎（近义）
+
+#### division of labour：劳动分工；分工
+
+> divide the labour 分工 | labour n. 劳动；劳工（BrE labor）
+
+#### march：行进；游行；三月 | 行军；游行示威；进展
+
+> march on 向前推进 | protest march 抗议游行
+
+#### suggestive：暗示的；引起联想的；挑逗的
+
+> suggest v. 暗示；建议 | suggestion n. 建议；暗示
+
+#### meteorite：陨石；陨星
+
+> meteor n. 流星 | meteoritic adj. 陨石的
+
+#### anomaly：异常；反常现象；畸形
+
+> anomalous adj. 异常的 | anomalies 复数
+
+#### fern：蕨类植物；蕨
+
+> ferns 复数 | fernery n. 蕨园（少用）
+
+#### opportunist：机会主义者；投机分子
+
+> opportunistic adj. 机会主义的 | opportunity n. 机会
+
+#### eruption：喷发；爆发；（疾病 / 情绪）突发
+
+> erupt v. 喷发；爆发 | volcanic eruption 火山喷发
+
+#### set up shop：开业；设摊；在某地落脚经营
+
+> set up 建立；开办 | shop n. 店铺；工坊
+
+#### scour：冲刷；擦洗；搜寻；席卷
+
+> scoured adj. 冲刷过的 | scour the area 搜查某地
+
+#### paradise：天堂；乐园；极乐之地
+
+> paradisiacal adj. 天堂般的（少用）| paradise lost 失乐园（专名）
+
+#### spike：尖峰；猛增；长钉 | 使猛增；用尖物刺
+
+> spike in prices 价格飙升 | a spike in … … 的激增
+
+#### knock out：击倒；淘汰；使昏迷；快速完成
+
+> knockout n. 击倒；极出色的人 / 物（口语）| knock sb. out 击昏某人
+
+#### overlook：俯瞰；忽视；宽容
+
+> overlook a crater 俯瞰火山口 | cannot be overlooked 不可忽视
+
+#### crater：火山口；弹坑；坑
+
+> cratered adj. 布满坑的 | impact crater 撞击坑
+
+#### erode：侵蚀；腐蚀；逐渐削弱
+
+> erosion n. 侵蚀 | eroded adj. 被侵蚀的 | erosive adj. 侵蚀性的
+
+#### alternatively：或者；不然；作为另一种选择
+
+> alternative n./adj. 选择；可供替代的 | on the other hand 另一方面
+
+#### tectonic：地壳构造的；构造的；影响深远的
+
+> tectonic plates 构造板块 | tectonic shift 结构性巨变（比喻）
+
+#### misdate：误标日期；把… 年代搞错
+
+> mis- 错误… | date v./n. 标注日期；年代 | dating n. 年代测定
+
+#### disintegrate：瓦解；碎裂；衰变
+
+> disintegration n. 瓦解 | disintegrated adj. 瓦解的；碎裂的
+
+#### comet：彗星
+
+> cometary adj. 彗星的 | Halley's Comet 哈雷彗星
+
+#### perceptible：可察觉的；看得见的；明显的
+
+> perceive v. 察觉；感知 | perception n. 知觉；看法 | imperceptible adj. 难以察觉的
