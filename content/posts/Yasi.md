@@ -2478,3 +2478,193 @@ column: 学习笔记
 #### provoke：激怒；挑衅；引起；激起
 
 > provocation n. 挑衅 | provocative adj. 挑衅的；煽动的 | provoking adj. 气人的
+
+## 0601
+
+#### female：雌性的；女性的 | 雌性动物；女性
+
+> male n./adj. 雄性；男性 | femininity n. 女性气质
+
+#### calf：小牛（calves 复数）；小腿肚
+
+> calve v. 产犊 | calf muscle 小腿肌
+
+#### refuse：拒绝 | 废物；垃圾（BrE）
+
+> refusal n. 拒绝 | refuse to do 拒绝做…
+
+#### valiant：勇敢的；英勇的
+
+> valiantly adv. 勇敢地 | valour n. 勇气（BrE valor）
+
+#### bull：公牛；看涨者；胡说
+
+> bullish adj. 看涨的；咄咄逼人的 | bull market 牛市
+
+#### posture：姿势；姿态；立场
+
+> postural adj. 姿势的 | good posture 良好体态
+
+#### proud：骄傲的；自豪的；prouder 比较级
+
+> proudly adv. 骄傲地 | pride n. 骄傲；自豪
+
+#### mimic：模仿；模拟 | 模仿者
+
+> mimicry n. 模仿；拟态 | mimick 为常见误拼
+
+#### clash：冲突；碰撞；不协调 | 冲突；碰撞
+
+> clashing adj. 冲突的 | culture clash 文化冲突
+
+#### witness：目击者；证人；证据 | 目击；见证
+
+> eyewitness n. 目击者 | bear witness 作证
+
+#### slam：猛关；猛击； slam dunk 扣篮 | 猛烈批评
+
+> slam the door 摔门 | grand slam 大满贯
+
+#### camouflage：伪装；迷彩 | 伪装；掩饰
+
+> camouflaged adj. 伪装的 | blend in 融入（近义）
+
+#### acacia：金合欢（树）
+
+> acacia tree 金合欢树 | 澳洲等地常见树种
+
+#### spot：地点；斑点；发现 | 看见；弄脏
+
+> spot on 完全正确（口语）| grazing spot 放牧点
+
+#### pluck：拔；摘；弹（弦）| 勇气；内脏（禽类）
+
+> pluck up courage 鼓起勇气
+
+#### thorn：刺；荆棘
+
+> thorny adj. 多刺的；棘手的 | rose thorn 玫瑰刺
+
+#### vertebra：椎骨； vertebrae 复数
+
+> vertebral adj. 椎骨的 | spinal adj. 脊柱的
+
+#### spine：脊柱；书脊；刺
+
+> spinal adj. 脊柱的 | spineless adj. 无脊椎的；没骨气的
+
+#### cardiovascular：心血管的
+
+> cardio- 心脏 | vascular adj. 血管的 | cardiovascular system 心血管系统
+
+#### retrieve：取回；检索；挽回
+
+> retrieval n. 取回；检索 | retriever n. 寻回犬
+
+#### pump：泵；抽水；打气 | 泵
+
+> pump blood 泵血 | heart pump 心脏泵血
+
+#### vein：静脉；血管；矿脉；纹理
+
+> venous adj. 静脉的 | in the same vein 同样意义上
+
+#### bend：弯曲；转弯；屈服 | 弯曲；弯道
+
+> bent adj. 弯曲的 | bend over 弯腰
+
+#### faint：微弱的；模糊的；昏厥的 | 昏厥
+
+> faintly adv. 微弱地 | faint-hearted adj. 胆小的
+
+#### nerve：神经；勇气；胆量
+
+> nervous adj. 紧张的 | nervously adv. | nerve-racking adj. 令人紧张的
+
+#### bite：咬；叮；一口 | 咬；一口
+
+> bite the bullet 咬紧牙关 | snake bite 蛇咬
+
+#### scarce：稀缺的；不足的；罕见的
+
+> scarcely adv. 几乎不 | scarcity n. 稀缺
+
+#### confine：限制；禁闭；局限于
+
+> confinement n. 禁闭；限制 | be confined to 局限于 / 只能…
+
+#### microgravity：微重力；失重状态
+
+> micro- 微 | gravity n. 重力 | zero gravity 零重力
+
+#### atrophy：萎缩；衰退
+
+> atrophied adj. 萎缩的 | muscular atrophy 肌肉萎缩
+
+#### disuse：不用；废弃；缺乏使用
+
+> fall into disuse 逐渐废弃 | dis- 否定 + use
+
+#### kidney：肾；肾脏
+
+> renal adj. 肾的（正式）| kidney failure 肾衰竭
+
+#### vicious：恶毒的；凶猛的；恶性的（cycle）
+
+> vicious circle / cycle 恶性循环 | viciously adv.
+
+#### set in：开始；来临；（坏天气、疾病等）持续下来
+
+> winter set in 入冬 | once fatigue sets in 一旦疲劳袭来
+
+#### anabolic：合成代谢的
+
+> anabolism n. 合成代谢 | anabolic steroid 合成代谢类固醇
+
+#### steroid：类固醇；甾体
+
+> anabolic steroid 合成代谢类固醇 | corticosteroid 皮质类固醇
+
+#### undesirable：不受欢迎的；不合意的 | 不受欢迎的人 / 物
+
+> desire v./n. 想要 | und- 否定
+
+#### conjunction：结合；连词；同时发生
+
+> in conjunction with 与… 结合 / 同时 | conjunct adj. 结合的
+
+#### active：活跃的；主动的；起作用的
+
+> actively adv. | activate v. 激活 | inactive adj. 不活跃的
+
+#### filament：细丝；灯丝；纤维丝
+
+> filamentous adj. 丝状的
+
+#### close in on：逼近；接近；逐渐围住
+
+> close in 逼近 | zero in on 锁定（近义）
+
+#### mount：增加；爬上；安装；发起 | 山；坐骑（mounting 现在分词 / 形容词：不断增加的）
+
+> mounting pressure 不断增加的压力 | mount an attack 发起攻击
+
+#### wean off：使逐渐戒除；使脱离（依赖）
+
+> wean sb. off sth. 使某人逐步戒掉… | weaning n. 断奶；戒除
+
+#### respirator：呼吸器；呼吸机；防毒面具
+
+> respire v. 呼吸 | respiratory adj. 呼吸的 | respiration n. 呼吸
+
+#### by the time：到… 时候；等到… 时（常接从句）
+
+> By the time he arrived, … 等他到时…
+
+#### space suit：宇航服；太空服
+
+> space n. 太空 | suit n. 套装
+
+#### cheat：欺骗；作弊 | 骗子；作弊手段
+
+> cheat on 对… 不忠；考试作弊 | cheater n. 骗子
