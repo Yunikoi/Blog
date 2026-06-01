@@ -95,7 +95,9 @@ column: 学习笔记
 
 #### mass：大量；众多，群众，平民 | 大规模的；大众的；群众性的
 
-#### correctly：正确地；无误地
+#### correct：正确的；对的 | 纠正；改正
+
+> correctly adv. 正确地；无误地
 
 #### property： 财产；资产；地产（最常用） | 特性；性质；属性（学术 / 理科高频）
 
@@ -157,7 +159,9 @@ column: 学习笔记
 
 #### in a similar way to + 名词 / 短语：以与… 相似的方式；类似于…
 
-#### diagonally：adv. **对角地；斜向地**
+#### diagonal：对角的；斜向的 | 对角线
+
+> diagonally adv. 对角地；斜向地
 
 #### handpick：v. **精心挑选；亲自甄选；择优挑选**
 
@@ -165,7 +169,9 @@ column: 学习笔记
 
 > Cities have a great deal to offer in terms of education and employment.
 
-#### unparalleled：无与伦比的；独一无二的；空前的
+#### parallel：平行的；类似的 | 平行线；相似处；纬线
+
+> unparalleled adj. 无与伦比的；空前的
 
 #### disdain：鄙视
 
@@ -245,11 +251,13 @@ column: 学习笔记
 
 #### secrecy：秘密
 
-#### perversely：反常地；悖理地；偏偏（偏要反着来）
+#### perverse：反常的；悖理的；执拗的
+
+> perversely adv. 反常地；偏偏
 
 #### empirical：经验主义的；实证的；以观察 / 实验为依据的
 
-#### intellectuals：intellectual  adj. 智力的；知识的  /  n. 知识分子
+#### intellectual：intellectual  adj. 智力的；知识的  /  n. 知识分子
 
 #### emergent：**新兴的；刚出现的**（雅思阅读 / 写作**科技、经济、社会**高频）
 
@@ -309,7 +317,7 @@ column: 学习笔记
 
 > ##### pandemic 大流行病；outbreak 爆发；plague 瘟疫
 
-#### crossbreeding：杂交
+#### crossbreed：杂交
 
 #### pollinator：传粉
 
@@ -317,7 +325,9 @@ column: 学习笔记
 
 #### deactive：adj. **无效的；非活性的；失活的** | v. (常用 **deactivate**) **停用；关闭；使失效；解除激活**
 
-#### coincidentally：巧合
+#### coincidental：巧合的；同时发生的
+
+> coincidence n. 巧合 | coincidentally adv. 巧合地
 
 #### antiseptic：杀菌的
 
@@ -516,7 +526,9 @@ column: 学习笔记
 
 #### shank：小腿 | （工具、钥匙、锚的）杆身、柄部
 
-#### masterfully：娴熟地
+#### masterful：熟练的；精湛的；有掌控力的
+
+> masterfully adv. 娴熟地
 
 #### superior：更好的
 
@@ -560,7 +572,9 @@ column: 学习笔记
 
 #### exploit：剥削，压榨 | **英勇事迹；壮举；功绩**（阅读文学、历史类）
 
-#### intimately：**亲密地；亲近地**（人际关系） | **密切地；深入地；详尽地**（事物关联、了解程度，**写作阅读高频**）
+#### intimate：亲密的；密切的；私人的 | 知己；密友
+
+> intimately adv. 亲密地；深入地
 
 #### viable: **可行的；行得通的**（方案、计划、办法）| **能存活的；能生长发育的**（生物、生态阅读）
 
@@ -636,7 +650,7 @@ column: 学习笔记
 
 #### boisterous：喧闹的；吵吵闹闹的 | 精力旺盛的；活泼爱闹的
 
-#### corrupted：**腐败的；贪污受贿的**（人 / 政府 / 机构） | **被损坏的；被篡改的；出故障的**（文件、数据、系统、记忆）
+#### corrupt：**腐败的；贪污受贿的**（人 / 政府 / 机构） | **被损坏的；被篡改的；出故障的**（文件、数据、系统、记忆）
 
 #### embellish：装饰；美化 | 修饰（故事、言辞）；添油加醋、夸大
 
@@ -680,7 +694,9 @@ column: 学习笔记
 
 #### provincial：**省的；省级的**（行政区域） | 乡下的；地方的| **眼界狭隘的；守旧土气的**（雅思阅读常考抽象义）
 
-#### briefly：简短地；简要地
+#### brief：简短的；短暂的 | 简报；概要 | 向… 简要说明
+
+> briefly adv. 简短地；简要地
 
 #### cut short:**打断；提前终止**（谈话、会议、行程）
 
@@ -736,7 +752,9 @@ column: 学习笔记
 
 #### inter-yawn：**inter-** 相互、彼此之间 + **yawn** 哈欠 传染性哈欠；互染式打哈欠
 
-#### rarely：很少；难得；不常
+#### rare：稀有的；罕见的；半熟的（肉）
+
+> rarely adv. 很少；难得
 
 #### compensate：补偿；赔偿；弥补
 
@@ -752,7 +770,7 @@ column: 学习笔记
 
 #### nasal：鼻子的，鼻腔的
 
-#### unfulfilling：没有成就感的；无法让人满足的；乏味空虚的
+#### fulfill：没有成就感的；无法让人满足的；乏味空虚的
 
 #### motor：发动机 | **运动的；肌肉运动的**（生理常用）
 
@@ -770,11 +788,11 @@ column: 学习笔记
 
 #### ultrasound：超声波
 
-#### paralysed：瘫痪的；麻痹的
+#### paralyse：瘫痪的；麻痹的
 
 #### startle：惊吓
 
-#### mystified：困惑不解的
+#### mystify：困惑不解的
 
 #### neurologist：神经科医生；神经学家
 
@@ -818,7 +836,9 @@ column: 学习笔记
 
 #### in the presence of：在…… 面前；当着…… 的面；存在…… 的情况下
 
-#### rigidly：严格地；死板地；僵硬地；固执地
+#### rigid：严格的；死板的；坚硬的；固执的
+
+> rigidly adv. 严格地；僵硬地
 
 #### batter：撞击
 
@@ -840,7 +860,7 @@ column: 学习笔记
 
 #### principle： 原理；原则；准则；定律
 
-#### Photosynthesis：光合作用
+#### photosynthesis：光合作用
 
 #### carbohydrate：碳水化合物；糖类
 
@@ -938,7 +958,7 @@ column: 学习笔记
 
 #### stagger：蹒跚；使吃惊
 
-#### bewildering：令人困惑的；使人眼花缭乱的；错综复杂的
+#### bewilder：令人困惑的；使人眼花缭乱的；错综复杂的
 
 #### hamper：妨碍；阻碍；牵制
 
@@ -948,7 +968,7 @@ column: 学习笔记
 
 #### replace：取代；替换；更换；放回原处
 
-#### discoloured：变色的；褪色的；污点斑斑的
+#### discolour：变色的；褪色的；污点斑斑的
 
 #### scrap：碎片；碎屑；少量；废料；吵架 | **v.** 废弃；丢弃；取消；撕碎
 
@@ -986,7 +1006,9 @@ column: 学习笔记
 
 #### vary：改变
 
-#### presumably：大概；想必；据推测；很可能
+#### presume：推定；假定；认为
+
+> presumably adv. 大概；想必 | presumable adj. 可推定的
 
 #### dynamic：动态的
 
@@ -1080,7 +1102,7 @@ column: 学习笔记
 >
 > fusible adj. 可熔的
 
-#### curated：adj. 精心挑选的；精选策划的
+#### curate：adj. 精心挑选的；精选策划的
 
 #### albeit：**虽然；尽管；即使**
 
@@ -1090,9 +1112,13 @@ column: 学习笔记
 
 #### formative：形成的；塑造性格的；成长关键期的
 
-#### underlying：潜在的；根本的；隐含的；表层之下的	
+#### underlie：位于… 之下；构成… 的基础；潜藏于
 
-#### condescending：居高临下的；傲慢的；屈尊俯就的
+> underlying adj. 潜在的；根本的；隐含的
+
+#### condescend：屈尊；俯就；表现得居高临下
+
+> condescending adj. 居高临下的；傲慢的
 
 #### hint：暗示
 
@@ -1144,7 +1170,9 @@ column: 学习笔记
 
 #### potential： **潜在的；可能的**（最高频）
 
-#### untapped：**未开发的；未利用的；蕴藏的**（雅思高分核心义）
+#### tap：轻敲；开发利用；打开（龙头）| 龙头；旋塞
+
+> untapped adj. 未开发的；未利用的 | tap into 利用
 
 #### customary：**习惯的；惯例的**（雅思主考）
 
@@ -1154,7 +1182,9 @@ column: 学习笔记
 
 #### tricky：**难对付的；棘手的；难处理的**（雅思最高频）
 
-#### prevailing：**盛行的；普遍的；主流的**（雅思最高频）
+#### prevail：盛行；获胜；说服（prevail upon）
+
+> prevailing adj. 盛行的；普遍的 | prevalence n. 流行
 
 #### categorisation：分类
 
@@ -1180,9 +1210,13 @@ column: 学习笔记
 
 #### Pacific：太平洋的；平静的；温和的
 
-#### plain：平原 |  朴素的
+#### plain：平原；朴素的；清楚的；普通的 | 平原
 
-#### fairly：**相当；在一定程度上**（表程度） | 公平地；公正地
+> plainly adv. 清楚地；显然 | in plain sight 显而易见
+
+#### fair：公平的；合理的；相当的；晴朗的 | 集市；义卖会
+
+> fairly adv. 相当；公平地
 
 #### no-frills：简约实用的；无多余装饰的；经济型的；精简低配的
 
@@ -1220,7 +1254,7 @@ column: 学习笔记
 
 #### vacuum：真空 | v. 用吸尘器清扫；抽空
 
-#### submerged：淹没的；浸没的；水下的
+#### submerge：淹没的；浸没的；水下的
 
 #### bell：钟；铃；钟形物
 
@@ -1230,9 +1264,9 @@ column: 学习笔记
 
 #### rainfall：降雨量；降雨
 
-#### acoustically：声学上；在声学方面
+#### acoustic：声学的；听觉的；原声的（音乐）
 
-> acoustic adj. 声学的；听觉的 | acoustics n. 声学
+> acoustics n. 声学 | acoustically adv. 声学上
 
 #### waxy：蜡状的；像蜡的
 
@@ -1310,7 +1344,9 @@ column: 学习笔记
 
 #### bowel：肠；肠道；内部
 
-#### ruthlessly：无情地；冷酷地；残忍地
+#### ruthless：无情的；冷酷的；残忍的
+
+> ruthlessly adv. 无情地
 
 > ruthless adj. 无情的；残忍的 | ruthlessness n.
 
@@ -1328,7 +1364,7 @@ column: 学习笔记
 
 #### carcass：（动物）尸体；残骸
 
-#### by-product：副产品；附带结果
+> carcass disposal 尸体处理（生态 / 牧场阅读）
 
 #### petroleum：石油
 
@@ -1362,7 +1398,9 @@ column: 学习笔记
 
 #### novice：新手；初学者
 
-#### specifically：具体地；明确地；专门地
+#### specific：具体的；特定的；专门的
+
+> specifically adv. 具体地；专门地
 
 #### suppose：假设；认为；猜想
 
@@ -1374,7 +1412,7 @@ column: 学习笔记
 
 > expose v. 暴露；使接触 | exposed adj. 暴露的
 
-#### billowing：翻腾的；鼓起的；汹涌的
+#### billow：翻腾的；鼓起的；汹涌的
 
 > billow v./n. 翻腾；巨浪
 
@@ -1418,10 +1456,6 @@ column: 学习笔记
 
 #### prestigious：有声望的；著名的
 
-#### acoustic：声学的；听觉的；原声的（音乐）
-
-> acoustics n. 声学 | acoustically adv.
-
 #### ascend：上升；攀登；晋升
 
 > ascent n. 上升；上坡 | ascending adj.
@@ -1438,7 +1472,7 @@ column: 学习笔记
 
 #### spreadsheet：电子表格
 
-#### nagging：唠叨的；烦人的；持续的（疼痛等）
+#### nag：唠叨的；烦人的；持续的（疼痛等）
 
 > nag v. 唠叨；烦扰
 
@@ -1454,15 +1488,13 @@ column: 学习笔记
 
 #### look nothing like：完全不像；与… 毫无相似之处
 
-#### plainly：清楚地；显然；朴素地
-
 #### lay out：布置；陈列；阐述；花费
 
 #### penchant：嗜好；倾向；爱好（a penchant for）
 
 #### fiddle：摆弄；瞎鼓捣 | 小提琴
 
-#### scorching：灼热的；酷热的；尖刻的
+#### scorch：灼热的；酷热的；尖刻的
 
 #### outback：（澳大利亚）内陆；偏远乡野
 
@@ -1482,9 +1514,9 @@ column: 学习笔记
 
 #### put up with：忍受；容忍（= tolerate / bear）
 
-#### Consequently：因此；所以（= therefore / hence，较正式）
+#### consequence：结果；后果
 
-> consequent adj. 随之发生的 | consequence n. 后果
+> consequently adv. 因此；所以 | consequent adj. 随之发生的
 
 #### gum：口香糖；树胶；牙龈
 
@@ -1591,9 +1623,9 @@ column: 学习笔记
 
 > eminence n. 杰出；显赫 | pre-eminent adj. 卓越的；首屈一指的
 
-#### decidedly：明确地；显然；坚决地
+#### decide：决定；下决心；裁决
 
-> decide v. 决定 | decisive adj. 决定性的；果断的 | decision n.
+> decided adj. 明确的；坚定的 | decidedly adv. 明确地；显然 | decision n. 决定
 
 #### infestation：侵扰；大批滋生；（害虫 / 病害）爆发
 
@@ -1717,7 +1749,9 @@ column: 学习笔记
 
 > obstruct v. 阻挡；妨碍 | obstruction n. 障碍；梗阻
 
-#### mildly：轻微地；温和地；略带… 地
+#### mild：轻微的；温和的；淡的
+
+> mildly adv. 轻微地；温和地
 
 > mild adj. 温和的；轻微的 | mildness n. 温和
 
@@ -2055,13 +2089,7 @@ column: 学习笔记
 
 > protection n. 保护 | protective adj. 保护的 | protected area 保护区
 
-#### carcass：（动物）尸体；残骸
-
-> carcass disposal 尸体处理（生态 / 牧场阅读）
-
-#### barbed：带刺的（原文 barbe 多指 barbed wire 带刺铁丝网）
-
-> barbed wire 带刺铁丝网 | barb n. 倒钩；刺
+#### barb：倒钩；刺 | 带刺的（barbed wire 带刺铁丝网）
 
 #### seek to：试图；力求；寻求（后接动词原形）
 
@@ -2181,9 +2209,9 @@ column: 学习笔记
 
 > execution n. 执行；处决 | executive n./adj. 高管；执行的
 
-#### preceding：在前的；前述的；先于
+#### precede：先于；在… 之前（发生）
 
-> precede v. 先于；领先 | precedent n. 先例 | unprecedented adj. 前所未有的
+> preceding adj. 在前的；前述的 | precedent n. 先例 | unprecedented adj. 前所未有的
 
 #### outlast：比… 活得久；比… 持久
 
@@ -2307,7 +2335,9 @@ column: 学习笔记
 
 > erosion n. 侵蚀 | eroded adj. 被侵蚀的 | erosive adj. 侵蚀性的
 
-#### alternatively：或者；不然；作为另一种选择
+#### alternative：可供选择的；另类的 | 选择；替代品
+
+> alternatively adv. 或者；作为另一种选择
 
 > alternative n./adj. 选择；可供替代的 | on the other hand 另一方面
 
@@ -2330,3 +2360,121 @@ column: 学习笔记
 #### perceptible：可察觉的；看得见的；明显的
 
 > perceive v. 察觉；感知 | perception n. 知觉；看法 | imperceptible adj. 难以察觉的
+
+## 0530
+
+#### practice：实践；练习；惯例；执业（医生 / 律师）
+
+> practise v. 练习；执业（BrE）| practical adj. 实用的 | in practice 实际上
+
+#### expertise：专门知识；专长；专业技能
+
+> expert n. 专家 | expert adj. 熟练的
+
+#### pharmacist：药剂师；药师
+
+> pharmacy n. 药房；药学 | pharmaceutical adj. 制药的
+
+#### herbalist：草药师；卖草药的人
+
+> herb n. 草药 | herbal adj. 草本的 | herbal medicine 草药 / 中医
+
+#### bruise：瘀伤；青肿 | 使瘀伤；挫伤（感情）
+
+> bruised adj. 瘀伤的 | bruising adj. 激烈的；打击惨重的
+
+#### capability：能力；性能；潜力（capabilities 复数）
+
+> capable adj. 有能力的 | incapability n. 无能力
+
+#### alpine：高山的；阿尔卑斯山的
+
+> Alps n. 阿尔卑斯山 | alpine plants 高山植物
+
+#### abrupt：突然的；唐突的；陡峭的
+
+> abruptly adv. 突然地 | abrupt halt 骤然停止
+
+#### halt：停止；中止 | 停止；使停下
+
+> halted 过去式 / 分词 | come to a halt 停下来 | grinding halt 完全停滞
+
+#### agronomist：农学家；农艺师
+
+> agronomy n. 农学 | agro- 农业 | -nomist … 学家
+
+#### disagreement：分歧；不一致；争论
+
+> disagree v. 不同意 | agree v. 同意
+
+#### stock：库存；存货；股票；储备 | 储备；进货（stocked 过去式 / 分词）
+
+> stocked adj. 有存货的；备好的 | stock up 囤货 | out of stock 缺货
+
+#### valuable：有价值的；贵重的；宝贵的
+
+> value n./v. 价值；珍视 | valuation n. 估价 | invaluable adj. 极宝贵的
+
+#### detractor：诽谤者；批评者；贬低者
+
+> detract v. 贬低；分散（注意力）| detect vs detract 勿混
+
+#### petition：请愿；申请书 | 请愿；请求
+
+> petitioned 过去式 / 分词 | petitioner n. 请愿人
+
+#### sum up：总结；概括
+
+> summed up 过去式 / 分词 | summary n. 摘要 | in sum 总之
+
+#### oppose：反对；对抗；与… 相对
+
+> opposing adj. 反对的；对立的 | opposition n. 反对；反对派 | opponent n. 对手
+
+#### obsolete：过时的；废弃的；淘汰的
+
+> obsolescence n. 过时 | become obsolete 被淘汰
+
+#### determine：决定；确定；决心
+
+> determined adj. 坚定的；已决定的 | determination n. 决心 | determinable adj. 可确定的
+
+#### shun：避开；回避；排斥
+
+> shunned 过去式 / 分词 | shun publicity 避风头
+
+#### curriculum：课程；（学校）全部课程（curricula 复数）
+
+> curricular adj. 课程的 | extra-curricular 课外的
+
+#### revive：复兴；复苏；使苏醒
+
+> revival n. 复兴 | revived adj. 复兴的；复活的
+
+#### polytechnic：理工学院；职业技术院校（polytechnics 复数）
+
+> poly- 多 | technic 技术 | 英国历史上 polytechnic 后多并入大学
+
+#### robust：强健的；稳健的；强有力的
+
+> robustly adv. 强有力地 | robust economy 稳健经济
+
+#### export-oriented：出口导向的；以出口为主的
+
+> export n./v. 出口 | orient v. 使面向 | orientation n. 方向；迎新
+
+#### tight：紧的；严格的；拮据的 | 更紧；更严格（tighter 比较级）
+
+> tighten v. 收紧 | tighter controls 更严管控 | tight budget 紧预算
+
+#### ringbark：环剥树皮（使树木枯死）
+
+> ring-bark v. 同义 | bark n. 树皮 | 澳洲等地防侵蚀 / 毁林阅读偶见
+
+#### prohibitive：（价格）高得令人却步的；禁止的
+
+> prohibitively adv. 高得离谱地 | prohibitively expensive 贵得买不起 | prohibit v. 禁止
+
+#### provoke：激怒；挑衅；引起；激起
+
+> provocation n. 挑衅 | provocative adj. 挑衅的；煽动的 | provoking adj. 气人的
