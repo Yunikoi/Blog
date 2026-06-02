@@ -210,8 +210,9 @@ export async function listPostsByTag(rawTag: string): Promise<PostMeta[]> {
     return [];
   }
   if (!t) return [];
+  const { tagMatchesFilter } = await import("@/lib/post-groups");
   const all = await listPosts();
-  return all.filter((p) => (p.tags || []).includes(t));
+  return all.filter((p) => tagMatchesFilter(p.tags || [], t));
 }
 
 export async function allTags(): Promise<string[]> {

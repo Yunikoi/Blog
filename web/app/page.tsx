@@ -1,9 +1,11 @@
-import Link from "next/link";
 import { getSiteInfo, listPosts } from "@/lib/posts";
+import { groupPostsByTags } from "@/lib/post-groups";
+import PostListByTag from "@/components/PostListByTag";
 
 export default async function HomePage() {
   const { blogDescription } = await getSiteInfo();
   const posts = await listPosts();
+  const groups = groupPostsByTags(posts);
 
   return (
     <div className="wrap">
@@ -11,34 +13,8 @@ export default async function HomePage() {
         {blogDescription ? <p className="lead">{blogDescription}</p> : null}
       </header>
       <h1 className="page-title">文章</h1>
-      <ul className="post-list">
-        {posts.map((p) => (
-          <li key={p.slug} className="post-card-wrap">
-            <div className="post-card-main">
-              <Link href={`/posts/${encodeURIComponent(p.slug)}`}>{p.title}</Link>
-              <div className="meta">
-                {p.column ? <span className="post-col-badge">{p.column}</span> : null}
-                {p.column && (p.date || p.updated || p.tags?.length) ? <span> · </span> : null}
-                {p.date ? <span>{p.date}</span> : null}
-                {p.updated && p.updated !== p.date ? (
-                  <span>
-                    {p.date ? " · " : null}
-                    更新 {p.updated}
-                  </span>
-                ) : null}
-                {p.tags?.length ? (
-                  <span>
-                    {p.date || p.updated ? " · " : null}
-                    {p.tags.join(" · ")}
-                  </span>
-                ) : null}
-              </div>
-              {p.excerpt ? <p className="post-excerpt-inline">{p.excerpt}</p> : null}
-            </div>
-          </li>
-        ))}
-      </ul>
-      {posts.length === 0 ? <p style={{ color: "var(--muted)" }}>暂无文章（请确认 content/posts 下有 .md 文件）。</p> : null}
+      <p className="meta">按标签分类；点击分类标题可查看该标签下全部文章。</p>
+      <PostListByTag groups={groups} />
     </div>
   );
 }

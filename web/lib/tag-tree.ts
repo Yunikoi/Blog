@@ -5,7 +5,7 @@ export type TagTrieNode = {
   children: TagTrieNode[];
 };
 
-/** 用标签里的 `/` 或 `／` 拆成多级树，例如 `雅思/口语` */
+/** 用标签里的 `/` 或 `／` 拆成多级树，例如 `雅思/口语`；每级节点均可跳转 */
 export function buildTagTrie(tags: string[]): TagTrieNode[] {
   const root: TagTrieNode[] = [];
 
@@ -13,15 +13,16 @@ export function buildTagTrie(tags: string[]): TagTrieNode[] {
     const parts = tag.split(/[/／]/).map((s) => s.trim()).filter(Boolean);
     if (!parts.length) continue;
     let level = root;
+    let path = "";
     for (let i = 0; i < parts.length; i++) {
       const seg = parts[i];
+      path = path ? `${path}/${seg}` : seg;
       let node = level.find((n) => n.segment === seg);
       if (!node) {
-        node = { segment: seg, fullTag: null, children: [] };
+        node = { segment: seg, fullTag: path, children: [] };
         level.push(node);
-      }
-      if (i === parts.length - 1) {
-        node.fullTag = tag;
+      } else if (!node.fullTag) {
+        node.fullTag = path;
       }
       level = node.children;
     }

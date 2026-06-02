@@ -1,3 +1,10 @@
+---
+title: Statement of Purpose
+date: 2026-03-22
+tags: 申请/文书
+toc: false
+---
+
 **Statement of Purpose**
 
 My research interest lies in human-centered sensing systems under real-world psychological and behavioral constraints. In many real-life scenarios, especially in family care contexts, sensing technologies must balance reliability with user acceptance. Explicit monitoring devices, such as dedicated wearables, may introduce psychological burden or resistance, particularly among older adults. This motivates my interest in designing sensing systems that are both unobtrusive and effective.

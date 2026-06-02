@@ -2,7 +2,7 @@
 title: Yasi-ZXZ 阅读例句
 toc: true
 date: 2026-05-22
-tags: 学习
+tags: 学习/雅思
 column: 学习笔记
 ---
 

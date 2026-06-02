@@ -6,7 +6,7 @@ export default async function TagsPage() {
   return (
     <div className="wrap">
       <h1>标签</h1>
-      <p className="meta">标签来自 <code>content/tags.json</code>，每次请求在服务端重新聚合。</p>
+      <p className="meta">标签来自文章 frontmatter，多级标签可用 <code>/</code> 分隔；点击树或下方链接筛选文章。</p>
       <ul className="tag-cloud">
         {tags.map((t) => (
           <li key={t}>
