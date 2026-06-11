@@ -6,10 +6,10 @@ column: 学习笔记
 toc: true
 ---
 
-# Java 程序设计 · 期末满分攻略（笔试 + 机考）
+# Java 程序设计 · 期末满分攻略（笔考 + 机考）
 
 > **依据**：期末复习要求（多线程、GUI、**流**、**容器**、**String/Math/Object**、**查 API**）+ 课程上机实验（练习一至四、开心农场大作业）  
-> **笔试**：概念辨析、读程序写结果、填空、简答  
+> **笔考（官方）**：仅 **3 种题型** — **问答**、**读程**、**编程**（闭卷纸笔）  
 > **机考**：IDE 或 OJ 编写可运行 Java 程序，重点考 **I/O + 集合 + String 处理**，常附带 **GUI 事件** 或 **多线程**
 
 ---
@@ -17,15 +17,18 @@ toc: true
 ## 目录
 
 - [考点权重总览](#考点权重总览)
-- [一、笔试满分攻略](#一笔试满分攻略)
-  - [题型总览](#题型总览)
+- [一、笔考满分攻略](#一笔考满分攻略)
+  - [笔考题型总览（仅 3 种）](#笔考题型总览仅-3-种)
+  - [题型1：问答](#题型1问答)
+  - [题型2：读程](#题型2读程)
+  - [题型3：编程](#题型3编程)
   - [模块1：String / Math / Object（★★★）](#模块1string--math--object)
   - [模块2：容器类 Collection Framework（★★★）](#模块2容器类-collection-framework)
   - [模块3：Java 流 I/O（★★★）](#模块3java-流-io)
   - [模块4：多线程（★★）](#模块4多线程)
   - [模块5：GUI 与事件（★★）](#模块5gui-与事件)
   - [模块6：查阅 API 解题（★★★）](#模块6查阅-api-解题)
-  - [笔试冲刺 Checklist](#笔试冲刺-checklist)
+  - [笔考冲刺 Checklist](#笔考冲刺-checklist)
 - [二、机考满分攻略](#二机考满分攻略)
   - [机考总策略](#机考总策略)
   - [题型速查表](#题型速查表)
@@ -41,34 +44,104 @@ toc: true
 
 ## 考点权重总览
 
-| 优先级 | 模块 | 笔试常见 | 机考常见 |
-|:------:|------|----------|----------|
-| ★★★ | **String / Math / Object** | 读程序输出、方法填空 | 文本清洗、分割、大小写、substring |
-| ★★★ | **容器类** | List/Set/Map 区别、迭代 | ArrayList 增删查、HashMap 计数 |
-| ★★★ | **流 I/O** | 类层次、try-with-resources | 读文件→处理→写文件 |
-| ★★★ | **查 API** | 「用什么类/方法」简答 | 现场搜 JDK 文档完成需求 |
-| ★★ | **多线程** | Thread/Runnable、sleep、同步概念 | 继承 Thread 或 Runnable 后台任务 |
-| ★★ | **GUI** | 事件驱动、匿名类/内部类 | Swing 按钮 + ActionListener |
+| 优先级 | 模块 | 笔考（问答/读程/编程） | 机考常见 |
+|:------:|------|------------------------|----------|
+| ★★★ | **String / Math / Object** | 读程输出；问答 equals/不可变；编程字符串处理 | 文本清洗、分割、大小写、substring |
+| ★★★ | **容器类** | 问答 List/Set/Map；读程集合修改；编程 ArrayList/HashMap | ArrayList 增删查、HashMap 计数 |
+| ★★★ | **流 I/O** | 问答类层次；编程写读文件片段 | 读文件→处理→写文件 |
+| ★★★ | **查 API** | 问答「用什么类/方法」 | 现场搜 JDK 文档完成需求 |
+| ★★ | **多线程** | 问答 start/run；读程线程输出 | 继承 Thread 或 Runnable 后台任务 |
+| ★★ | **GUI** | 问答事件模型、匿名类；编程补监听器 | Swing 按钮 + ActionListener |
 
 **记忆口诀**：**「串容流，查 API；线面 GUI 加分项」**
 
 ---
 
-# 一、笔试满分攻略
+# 一、笔考满分攻略
 
-> 闭卷为主：背熟 **API 签名 + 易错点 + 典型输出题**，GUI/线程以概念和读代码为主。
+> **闭卷纸笔**，官方确认 **只有 3 种题型**，无选择、无单独填空卷面。复习按「问答背概念 → 读程练输出 → 编程默写骨架」三步走。
 
-## 题型总览
+## 笔考题型总览（仅 3 种）
 
-| 题型 | 分值参考 | 拿分关键 |
-|------|----------|----------|
-| 选择题 | 20～30 | 容器区别、流类选用、String 不可变 |
-| 读程序写结果 | 20～30 | String 拼接、引用、集合修改 |
-| 填空 | 10～20 | 补 import、补 API 方法名 |
-| 简答 | 20～30 | 事件模型、线程生命周期、I/O 类图 |
-| 综合设计（少量） | 10～20 | 描述如何用 BufferedReader + ArrayList 读文件 |
+| 题型 | 考什么 | 拿分关键 | 对应模块 |
+|------|--------|----------|----------|
+| **① 问答** | 概念、对比、流程、术语、API 选用 | 分点作答，先定义再举例 | 容器区别、I/O 类图、线程/GUI 概念、查 API |
+| **② 读程** | 给一段 Java 代码，写 **运行结果** 或判断对错 | 逐行跟踪；盯 String/引用、集合修改、线程 | String/Math/Object、容器、多线程 |
+| **③ 编程** | 纸笔写代码（方法/类片段，未必完整 main） | 语法正确、API 用对、边界考虑 | 流读写、集合操作、String 处理、监听器骨架 |
+
+**记忆口诀**：**「问读编，三板斧」** — 问答背、读程算、编程写。
 
 ---
+
+## 题型1：问答
+
+### 答题模板
+
+1. **一句话定义**（是什么）  
+2. **2～4 个要点**（特点 / 区别 / 步骤）  
+3. **一句例子或对比**（加分项）
+
+### 高频问答清单
+
+| 主题 | 典型问法 | 要点 |
+|------|----------|------|
+| String | `==` 与 `equals`？String 与 StringBuilder？ | 引用 vs 内容；不可变 vs 可变 |
+| 容器 | List / Set / Map 区别？ArrayList vs LinkedList？ | 有序可重复 / 不重复 / 键值对；随机访问 vs 链表 |
+| 流 | 字节流与字符流？按行读文本用什么？ | InputStream/OutputStream vs Reader/Writer；BufferedReader |
+| 线程 | `start()` 与 `run()`？为何 GUI 耗时操作要新线程？ | 新线程 vs 普通调用；不阻塞 EDT |
+| GUI | 事件驱动三要素？匿名内部类作用？ | 事件源、事件、监听器；简化监听器实现 |
+| API | 读 txt 每行、统计词频、随机整数用什么？ | BufferedReader、HashMap、Math.random / Random |
+
+> 下文各 **模块** 中的「易错辨析」「问答答题模板」优先用于 **问答** 题。
+
+---
+
+## 题型2：读程
+
+### 解题步骤
+
+1. **圈变量类型**：String 还是引用？集合装的是什么？  
+2. **盯修改点**：`+` 拼接、`add/remove`、`start()` 是否调用  
+3. **手算输出**：不要跳步；`substring` 注意左闭右开  
+4. **检查陷阱**：`==` 与 `equals`、常量池、`split` 正则
+
+### 读程高发陷阱
+
+| 陷阱 | 示例 |
+|------|------|
+| String 不可变 | `s.concat("x")` 不改变 s |
+| 常量池 | 字面量 `==` 可能为 true |
+| 集合引用 | `list.add` 改的是同一对象 |
+| 线程 | 直接 `run()` 不启动新线程 |
+| 异常 | 未捕获时程序终止，后面不执行 |
+
+> 下文 **「经典读程例题」** 专供 **读程** 训练。
+
+---
+
+## 题型3：编程
+
+### 纸笔编程要求
+
+- 常考 **一个方法** 或 **一小段类**（如读文件、遍历 ArrayList、补 `ActionListener`）  
+- **import 可简写** 或只写核心类名（以课堂要求为准）  
+- 必须体现：**try-with-resources**、合理 **异常处理**、正确 **API 名**
+
+### 默写优先级（编程题）
+
+| 优先级 | 默写内容 |
+|--------|----------|
+| P0 | `BufferedReader` 按行读 + `BufferedWriter` 写行 |
+| P0 | `ArrayList` 增删查遍历；`HashMap` put/get/getOrDefault |
+| P0 | `trim` / `split` / `substring` / `parseInt` 组合 |
+| P1 | `ActionListener` 匿名类或 Lambda 骨架 |
+| P1 | `extends Thread` 的 `run()` + `sleep` |
+| P2 | `equals` 重写、`toString` 重写 |
+
+> 下文 **机考模板** 与 **编程** 题同源，纸笔版去掉 `main` 或缩成单方法即可。
+
+---
+
 
 ## 模块1：String / Math / Object
 
@@ -121,7 +194,7 @@ sb.append("c");     // sb 变为 "abc"（可变，循环拼接首选）
 | `hashCode()` | 与地址相关 | **equals 相等则 hashCode 必相等** |
 | `getClass()` | 运行时类型 | 很少改 |
 
-### 经典读程序题
+### 经典读程例题
 
 ```java
 String a = "Hello";
@@ -135,7 +208,7 @@ System.out.println("A,B,C".split(",")[1]); // B
 System.out.println("Java".substring(1, 3)); // av
 ```
 
-### 答题模板（简答）
+### 问答答题模板
 
 > **问：String 与 StringBuilder 区别？**  
 > String **不可变**，频繁 `+` 产生大量临时对象；StringBuilder **可变**，适合循环拼接。  
@@ -195,7 +268,7 @@ for (Map.Entry<String,Integer> e : map.entrySet()) {
 }
 ```
 
-### 易错辨析（选择题常客）
+### 易错辨析（问答常客）
 
 | 对比 | 要点 |
 |------|------|
@@ -221,7 +294,7 @@ rows.get(i).remove(j);                 // 删除
 
 ## 模块3：Java 流 I/O
 
-### 类层次（笔试必背）
+### 类层次（问答必背）
 
 ```
 字节流                          字符流（处理文本）
@@ -244,7 +317,7 @@ OutputStream                    Writer
 | 二进制（图片等） | `FileInputStream` / `FileOutputStream` |
 | 已知编码 UTF-8 | `Files.readAllLines(path, StandardCharsets.UTF_8)`（Java 7+） |
 
-### try-with-resources（机考/笔试都考）
+### try-with-resources（编程 / 机考必考）
 
 ```java
 // 自动关闭 Closeable，比 finally 手动 close 更安全
@@ -349,7 +422,7 @@ public class AutoSaveThread extends Thread {
 }
 ```
 
-**笔试常问**：为什么 GUI 里耗时操作（读大文件）要放 **SwingWorker** 或 **新线程**？  
+**问答常考**：为什么 GUI 里耗时操作（读大文件）要放 **SwingWorker** 或 **新线程**？  
 → **避免阻塞 EDT（事件分发线程）**，否则界面卡死。
 
 ---
@@ -373,7 +446,7 @@ frame.setVisible(true);
 ### 事件处理三种写法（必会）
 
 ```java
-// ① 匿名内部类（笔试最常见）
+// ① 匿名内部类（笔考编程 / 机考最常见）
 button.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -452,16 +525,27 @@ text.toUpperCase();                     // 日志关键字
 
 ---
 
-## 笔试冲刺 Checklist
+## 笔考冲刺 Checklist
 
-- [ ] 写出 ArrayList / HashMap 各 5 个常用方法
-- [ ] 默写 BufferedReader 按行读取完整 try-with-resources
-- [ ] 分清 `==` vs `equals`，String 不可变
-- [ ] `substring` 左闭右开；`split` 正则转义
-- [ ] Thread：`start()` vs `run()`；`sleep` 抛 InterruptedException
-- [ ] 写出 ActionListener 匿名内部类骨架
-- [ ] 说出 List / Set / Map 各一句区别
+**问答**
+
+- [ ] List / Set / Map 各一句区别；ArrayList vs LinkedList
+- [ ] 字节流 vs 字符流；按行读文本用什么类
+- [ ] `start()` vs `run()`；GUI 为何不能阻塞 EDT
 - [ ] Object 三方法：toString / equals / hashCode
+
+**读程**
+
+- [ ] 手算 3 道 String `==` / `equals` / `substring` / `split` 题
+- [ ] 手算 1 道 ArrayList `add/remove` 后 size 与内容
+- [ ] 分清 `concat` 不改变原串、`run()` 不启新线程
+
+**编程**
+
+- [ ] 默写 BufferedReader 按行读取（try-with-resources）
+- [ ] 默写 ArrayList / HashMap 各 5 个常用方法
+- [ ] 默写 ActionListener 匿名内部类或 Lambda 骨架
+- [ ] 能写：读文件 → split → HashMap 计数 → 写回一行结果
 
 ---
 
@@ -730,19 +814,32 @@ public class Main {
 
 ---
 
-## 附：笔试模拟自测（无答案版）
+## 附：笔考模拟自测（按三题型）
+
+### 问答
+
+1. `ArrayList` 和 `LinkedList` 在 **get(i)** 上谁更快？为什么？  
+2. 读文本文件按行，应选 `FileInputStream` 还是 `BufferedReader`？  
+3. `t.start()` 和 `t.run()` 区别？  
+4. `ActionListener` 在事件模型中是什么角色？  
+5. `HashMap` 的 key 重复 `put` 会怎样？
+
+### 读程
 
 1. `new String("a") == new String("a")` 结果？  
 2. `"1,2,3".split(",").length` 等于几？  
-3. `ArrayList` 和 `LinkedList` 在 **get(i)** 上谁更快？  
-4. 读文本文件按行，应选 `FileInputStream` 还是 `BufferedReader`？  
-5. `t.start()` 和 `t.run()` 区别？  
-6. `ActionListener` 属于观察者模式中的什么角色？  
-7. `HashMap` 的 key 重复 `put` 会怎样？  
-8. 如何让 `FileWriter` **追加** 而不是覆盖？
+3. `"Java".substring(1, 3)` 输出什么？
 
-> 参考答案：1 false  2 3  3 ArrayList  4 BufferedReader  5 start 新线程，run 普通方法  6 监听器  7 覆盖旧 value  8 `new FileWriter(file, true)`
+### 编程
+
+1. 写一个方法：从 `input.txt` 按行读取，去掉空行，写入 `output.txt`。  
+2. 写一个方法：统计 `String[] words` 中各单词出现次数，返回 `HashMap<String,Integer>`。  
+3. 为 `JButton btn` 添加点击后在 `JTextArea area` 追加一行文本的监听器（匿名内部类）。
+
+> **参考答案（问答）**：1 ArrayList，数组随机访问 O(1)  2 BufferedReader  3 start 新线程，run 普通方法  4 监听器  5 覆盖旧 value  
+> **读程**：1 false  2 3  3 `av`  
+> **编程**：见上文 [模板1](#模板1文件读写--string-解析)、[模板2](#模板2arraylist--hashmap-统计)、[模板3](#模板3swing-按钮事件--匿名类)
 
 ---
 
-*最后更新：2026-05-22 · 标签：`学习/大三下学期期末考试复习/Java`*
+*最后更新：2026-05-22（笔考题型：问答 / 读程 / 编程）· 标签：`学习/大三下学期期末考试复习/Java`*
