@@ -1,0 +1,1664 @@
+﻿=== 1_JAVA程序设计.ppt ===
+-- Slide 1 --
+CS205501Java程序设计
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+教材与参考书
+教材	Java语言程序设计（第4版），郎波	清华大学出版社，2021参考书Java编程思想，Bruce EckelCore Java (Volume 1)，Horstmann, CornellIntroduction to Java Programming, D. Lianghttp://www.oracle.com/technetwork/java/index.html
+-- Slide 3 --
+上机实验
+学时：34（课堂）+28（上机）	 -> 26（课堂）+8（网络）+28（上机）	 -> 本年度：32（课堂）+32（上机）	上机时间     后续课程在XD智课/QQ群通知要求运行并理解课件中的所有例子程序完成上机作业
+-- Slide 4 --
+成绩评定(往年)->今年增加上机考试30%
+期末考试：30%、机考30%实验成绩：30%1次课程大作业：6%：提交源代码及项目设计报告上机作业（6次->每节课后，独立完成）：24%部分作业提交源代码及上机报告平时成绩：10%对上机作业讲解作业要求XD智课平台源代码为*.java文件，报告文档为word或pdf格式不要因为报告中包含了源代码就不提交源代码文件请按照规定的deadline提交
+-- Slide 5 --
+课程基础
+C语言数据结构
+-- Slide 6 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 7 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 8 --
+Java的发展历史
+1991，Sun公司成立Green小组，研发面向家电的软件C/C++ … 开发了Oak语言1992.8，Star 7Oak与Green OS、用户接口模块、硬件模块集成为Star 7Green小组 First Person子公司1994，First Person解体Sun决定将Oak与www相结合
+James Gosling
+P. Naughton
+Bill Joy
+John Gage
+-- Slide 9 --
+Java的发展历史
+1995，Gosling和Naughton完成了Oak新版——后更名为 Java第一个基于Oak的浏览器原型Web Runner——后更名为HotJavaHotJava是第一个支持Java的第二代浏览器1995.5，Java的第一个发布版本Java 1.0a2和HotJava浏览器
+James Gosling
+P. Naughton
+Bill Joy
+John Gage
+-- Slide 10 --
+HotJava
+-- Slide 11 --
+Java的发展历史
+1996.1，Sun公司发布了第一个Java开发工具包JDK 1.01997.2，Sun公司发布了JDK 1.11998.12，Sun公司发布了Java 2平台及JDK 1.2Java 2平台是Java技术发展的新的里程碑，标志着Java技术发展的新阶段
+-- Slide 12 --
+Java的发展历史
+1999.6，Sun公司重新定义了Java技术的构架 ，针对不同市场目标，将Java 2平台分为3个版本：Java 2 Standard Edition — J2SEJava 2 Enterprise Edition — J2EEJava 2 Micro Edition — J2ME——J2SE代替JDK用以表示Java的标准平台2004.9，Sun公司发布J2SE 1.5更改了版本号：J2SE 1.5 -> J2SE 5.0
+-- Slide 13 --
+Java的发展历史
+2006.12 — Java SE 6J2SE — Java SE、J2EE — Java EE、J2ME — Java ME2009.4 — Sun公司被Oracle公司收购2011.7 — Java SE 72014.3 — Java SE 8 LTS（Long-Term Support)2017.9 — Java SE 9 （每6个月更新一个版本）Java9：Java模块系统、H5文档、新的垃圾收集器Java10: 局部变量类型推断2018.9 — Java SE 11 LTS ：垃圾收集器、switch表达式https://www.oracle.com/technetwork/java/java-se-support-roadmap.html
+-- Slide 14 --
+Java SE支持路线图
+-- Slide 15 --
+Java LTS版本生态
+-- Slide 16 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 17 --
+什么是Java
+Java是一种编程语言Java是一种平台
+-- Slide 18 --
+什么是Java
+Java是一种编程语言一次编程，到处运行
+-- Slide 19 --
+什么是Java
+Java是一种编程语言Java是一种平台
+-- Slide 20 --
+Java 2 平台
+-- Slide 21 --
+Java SE
+针对：运行于PC上的一般桌面应用程序Java SE平台 = JRE + Tools & Tool APIsJRE = JVM + Java API + 其他组件
+-- Slide 22 --
+Java ME
+针对：嵌入式设备和移动设备微控制器和传感器手机电视置顶盒汽车导航系统打印机……对Java SE进行语言精简，对运行环境进行优化配置（Configuration）：从内存、处理器、网络等方面对运行时环境的规约（常见：CLDC和CDC）轮廓（Profile）：扩充configuration，形成可用的API集合，应用程序针对特定profile编写
+-- Slide 23 --
+Java EE
+针对：企业级和高端服务器的Internet应用开发基于Java SE实现，包括Enterprice JavaBeans（EJB）Java Servlets APIJava Server Pages（JSP）Java Message Services (JMS)现升级为Jakarta EE，并与 Spring Boot 一起构成现代 Java 企业开发的双核心http://www.oracle.com/technetwork/topics/newtojava/java-technology-concept-map-150250.pdf 本课程此后提及的“Java”指Java SE
+-- Slide 24 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 25 --
+TIOBE编程语言社区排行榜基于互联网上有经验的程序员、课程和第三方厂商的数量，使用搜索引擎（Google、Bing、Yahoo!、Wikipedia、Amazon、YouTube、Baidu等）计算评分用于衡量编程语言流行趋势和热门程度开发新系统时的语言选择依据不能说明一种语言所编写的代码数量编程语言好与不好（Bjarne Stroustrup：“只有两种编程语言：一种是天天挨骂的，另一种是没人用的。”）
+TIOBE Index http://www.tiobe.com/tiobe-index
+-- Slide 26 --
+TIOBE Index for March 2026 http://www.tiobe.com/tiobe-index
+-- Slide 27 --
+TIOBE Index for March 2026http://www.tiobe.com/tiobe-index
+-- Slide 28 --
+2021 IEEE 编程语言排行榜
+-- Slide 29 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 30 --
+Java的特征
+Sun公司Java白皮书中指出：Java语言是一种“简单、面向对象、分布式、解释型、健壮、安全、体系结构中立、可移植、高性能、多线程和动态”的编程语言Oracle：平台无关、高性能、易学、基于标准、适宜企业应用、丰富的工具生态系统
+-- Slide 31 --
+Java的特征(1)–简单性
+语法和语义都比较单纯，基本语法沿承C和C++，容易学习和使用忽略了C++的复杂特性指针多重继承运算符重载goto内存管理（Java实现了自动内存回收机制）提供功能丰富的可重用类库，简化了编程工作量
+-- Slide 32 --
+Java的特征(2)–面向对象
+Java是纯面向对象语言，更全面地支持面向对象方法通过封装、继承和多态来提供灵活性、模块化和可重用性封装性：Java对象有模块化性质和信息隐藏能力继承性：单继承，通过接口实现多重继承的效果多态性：在继承的基础上，通过重写、向上转型（上塑造型）、动态绑定实现多态
+-- Slide 33 --
+Java的特征(3)–分布式
+数据分布通过Java的URL类可以访问网上的各类信息资源，访问方式完全类似于对本地文件的访问操作分布Java程序（字节码）可以被传输并在互联网上的客户机上运行（例如网页中的Applet）将计算从服务器分布至客户机，避免网络拥挤，提高系统效率
+-- Slide 34 --
+Java的特征(4)–解释型
+优点兼具编译执行的效率优势和解释执行的灵活性
+-- Slide 35 --
+Java的特征(5)–可移植性
+可移植性源于两方面：半编译、半解释体系结构中立：采用标准的独立于硬件平台的中间语言
+-- Slide 36 --
+Java的特征(6)–健壮性
+自动垃圾收集内存管理对程序员透明异常处理机制在编译时发现部分意外强类型语言编译时须经严格的类型检查
+-- Slide 37 --
+Java的特征(7)–安全性
+内存分配模型内存布局由运行系统控制，对于程序员透明（C/C++：由编译器决定）取消了指针，编译器通过符号指针来引用内存，运行系统在运行时将符号指针解释为实际内存地址安全控制模型类装载器字节码验证器：确保代码遵循下列规则不存在伪造的引用未违反访问权限严格遵循对象访问规范来访问对象用合适的参数调用方法没有栈溢出
+-- Slide 38 --
+Java的特征(8)–高性能
+字节码与机器码十分接近，使得两者间转换快捷即时编译技术将要执行的字节码一次编译为机器码，以提高应用程序运行速度（通常针对部分关键代码）保留可移植性的同时，提高了性能Java与C++谁更快？http://keithlea.com/javabench/indexhttp://bruscy.republika.pl/pages/przemek/java_not_really_faster_than_cpp.htmlhttp://www.shudo.net/jit/perf/http://zi.fi/shootout/
+-- Slide 39 --
+Java的特征(9)–多线程
+Java多线程在语言级实现的对并发的支持机制Java线程执行被映射到实际操作系统线程，映射过程对程序员透明Java线程调度基于java.lang.Thread类的内建机制Java线程同步采用C.A.R. Hoare的临界区保护规则
+-- Slide 40 --
+Java的特征(10)–动态特性
+Java只在运行时动态装载必需的类使Java可以动态维护应用程序与其支持类之间的一致性C++：支持类库变化  应用程序重新编译
+-- Slide 41 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 42 --
+Java的语法机制概述
+与C++一致的语法机制数据类型表达式程序流控制结构化异常处理…
+与C++不同的语法机制类接口 (Interface)程序包 (Package)取消指针
+-- Slide 43 --
+Java与C++不同的语法机制
+类的定义与C++的主要区别Java不支持多重继承，通过接口实现多重继承的效果Java引入了abstract 和final关键字abstract：定义抽象类（不能直接产生实例对象）final：定义类不能作为父类被继承接口一种抽象类，其中只能出现静态常量或抽象方法定义主要目的：实现多重继承功能（类通过实现多个接口来实现多重继承）
+-- Slide 44 --
+Java与C++不同的语法机制
+程序包一系列相关类或接口的集合Java的可重用类库的组织方式，如java.lang，java.util等用户可自定义程序包通过 import 语句将程序包引入应用程序取消指针通过new操作符进行所有动态内存请求通过new操作符得到的引用，不能通过直接修改它的值来指向另一内存地址
+-- Slide 45 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 46 --
+Java虚拟机
+定义：一种在真实计算机上通过软件仿真实现的虚构机器Java SE平台 = JRE + Tools & Tool APIsJRE = JVM + Java API + 其他组件两个侧面规范实现
+-- Slide 47 --
+Java虚拟机规范
+JVM规范定义了一组抽象的逻辑组件，包括：指令集寄存器组：程序计数器、栈顶指针等.class文件的格式栈结构：提供各种参数等存储区：存放字节码的方法代码、符号表垃圾收集器下载http://docs.oracle.com/javase/specs/
+-- Slide 48 --
+Java运行系统
+各平台厂商对JVM的具体实现JVM需针对不同的软硬件平台做专门实现实现要求：必须符合JVM规范（使得所有运行系统能够执行统一格式的字节码）运行系统的类型Java Application — Java解释器Java Applet — Java兼容的Web浏览器运行系统的组成类装载器字节码验证器解释器即时编译器运行支持库
+-- Slide 49 --
+Java运行系统
+Java字节码运行过程代码的装入代码的验证代码的执行：解释方式、即时编译JIT方式
+-- Slide 50 --
+Java的发展历史什么是JavaJava的现状Java的特征Java的语法机制Java虚拟机与Java运行系统Java程序示例
+-- Slide 51 --
+JDK 版本问题
+jetbrains idea IDE对Java版本使用情况统计（2020）：
+-- Slide 52 --
+JDK的安装
+下载JDKhttp://www.oracle.com/technetwork/java/javase/downloads/index.html运行JDK的安装程序改变环境变量JAVA_HOME = C:\Program Files\Java\jdk-17.0.5 （安装路径，根据安装版本调整）path = %PATH%; %JAVA_HOME%\binclasspath = .; %JAVA_HOME%\lib    (JDK5.0之后无需配置classpath)
+-- Slide 53 --
+Java应用程序举例
+HelloWorld.javapublic class HelloWorld{	public static void main(String args[]){		System.out.println("Hello World!");	}}
+-- Slide 54 --
+Java程序的编写
+主类：与源文件名称相同的类，通常定义为public class每个源文件中至多有一个public class主类中的main()方法声明public static void main(String args[]){…}是Java程序入口点源文件扩展名必须是.java
+-- Slide 55 --
+Java程序的编译和执行
+编译javac HelloWord.java生成HelloWorld.class执行java HelloWorld
+-- Slide 56 --
+找出并修改下面代码的错误public class HelloWorld{	public static void Main(String args[]){		System.out.println(“Hello World!”);	}}
+-- Slide 57 --
+常用集成开发环境
+Eclipse：http://www.eclipse.org/downloads/开源的、基于Java的可扩展开发平台还可以支持C++等语言IntelliJ IDEA：JetBrainsNetBeans：OracleJBuilder：BorlandJCreator：Xinox Software
+-- Slide 58 --
+近似计算π：编写程序，显示以下运算的结果4×(1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 - …)
+-- Slide 59 --
+Java长期学习路线
+-- Slide 60 --
+课后作业
+请在自己的PC上安装JDK和Eclipse编写并运行HelloWorld程序
+=== 2_面向对象程序设计概念.ppt ===
+-- Slide 1 --
+面向对象程序设计概念
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+“我们之所以将自然界分解、组织成各种概念，并按其含义分类，主要是因为我们是整个口语交流社会共同遵守的协定的参与者，这个协定以语言的形式固定下来……除非赞成这个协定中规定的有关语言信息的组织和分类，否者我们根本无法交谈”——Benjamin Lee Whorf (1897-1941)
+-- Slide 4 --
+为什么程序难写？
+问题
+机器模型
+问题空间
+解空间
+编程语言
+0000  8B  C3      MOV AX,BX0002  8A  CE      MOV CL,DH0004  43              INC BX
+if(a[i]>a[i+1])    swap(&a[i], &a[i+1]);
+People people=new People();people.drink(water);
+Assembly
+C
+Java
+目标问题的结构
+计算机的结构
+机器语言
+0001110101……
+语言的发展朝着人类更容易理解的方向前进
+-- Slide 5 --
+面向对象程序设计(OOP)
+OOP is a programming paradigm using "objects" – data structures consisting of data fields and methods together with their interactions – to design applications and computer programs.- http://en.wikipedia.org面向对象程序设计是使用“对象”设计程序的编程范式对象是由数据字段、方法及它们之间的交互组成的数据结构允许根据问题来描述问题，而不是根据运行解决方案的计算机来描述问题
+-- Slide 6 --
+面向对象程序设计的发展
+60年代后期，Simula-67语言引入类和实例的概念，采用class关键字定义新的类型70年代，Alan Kay研制了Smalltalk，并于1980年首度对外发布，标志着OOP思想的确立80年代初，Bjarne Stroustrup研制了C++，80年代末到90年代初开始流行1995：James Gosling研制了Java
+-- Slide 7 --
+面向对象问题求解
+问题
+机器模型
+问题空间
+解空间
+编程语言
+问题
+机器模型
+问题空间
+解空间
+编程语言
+概念模型
+概念空间
+建模语言
+实体
+问题空间
+解空间
+转换
+抽象数据类型
+概念空间
+抽象
+类
+对象
+实例化
+抽象
+映射
+引入概念空间：
+-- Slide 8 --
+面向对象问题求解
+实体
+问题空间
+解空间
+转换
+抽象数据类型
+概念空间
+抽象
+类
+对象
+实例化
+抽象
+映射
+- 长
+- 宽
+- 高
+- 瓶盖
++ 装水
++ 倒水
++ 密封
+静态属性
+动态方法
+-- Slide 9 --
+面向对象程序设计的特征
+Alan Kay的OOP五大原则：一切皆对象程序是一系列对象的组合，对象间通过消息传递进行联系每个对象都有自身内存空间，可容纳其他对象每个对象都有一种类型同一类型的所有对象都能够接收相同的消息面向对象方法的核心概念：抽象、对象、类、封装、继承和多态
+-- Slide 10 --
+抽象对象类封装继承多态
+-- Slide 11 --
+什么是抽象？
+抽象是一种设计技术用以说明一个实体的本质方面，而忽略或掩盖其非本质方面抽象是一种工具用以将复杂现象简化到可以分析、实验或者可以理解的程度
+-- Slide 12 --
+抽象的作用
+简化：识别重要细节，忽略无关细节过滤问题空间中模型的无关侧面
+-- Slide 13 --
+抽象的作用
+抽象是OOP的基础单个实体可能有多种抽象OOP过程需要确定将哪些属性和行为包括在给定的抽象中抽象是对象与类联系的关键通过在抽象基础上对抽象结果的组织来联系
+-- Slide 14 --
+抽象对象类封装继承多态
+-- Slide 15 --
+对象
+对象是问题空间中可以明确标识的实体问题空间的实体或概念在解空间中的抽象表示对象的组成对象 = 状态（特征、数据、属性）	       + 行为（动作、操作、服务）	       （+ 标识，Booch）状态：具有当前值的数据域（Java：成员变量）行为：用于设置或改变对象的状态，或对外提供一种服务（Java：方法）
+-- Slide 16 --
+对象
+状态与行为之间的关系对内：只有方法能操作成员变量对外：方法是对象与外部环境（其他对象）交互、通信的接口
+-- Slide 17 --
+对象
+对象之间通过发送消息进行交互与通信消息通过对方法的调用来实现消息的组成：接收消息的对象方法名称方法参数消息由发送者对象编写，由接收者对象解释消息可以引起接收者状态变化返回结果
+Bicycle b
+Person p
+b.changeGears(lowerGear);
+-- Slide 18 --
+对象
+如何产生有用的对象确定可能向对象发出的请求完成交易在屏幕上画图打开开关……由对象的接口（interface）定义这些请求
+接口：确定了对特定对象所能发出的请求，或者对象接收消息的方式
+-- Slide 19 --
+对象
+接口确定了对特定对象所能发出的请求，或对象接收消息的方式对象如何与类联系：通过在抽象基础上对抽象结果的组织来联系接口是“组织”的依据之一
+-- Slide 20 --
+抽象对象类封装继承多态
+-- Slide 21 --
+类
+In OOP, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions, methods).- http://en.wikipedia.org在面向对象程序设计中，类是一个可扩展的程序代码模板，用于创建一类对象并为对象提供成员变量初始值和方法实现
+-- Slide 22 --
+类
+类的结构
+抽象
+实例化
+-- Slide 23 --
+类
+类示例（自行车）
+-- Slide 24 --
+类的实例化
+类与对象
+-- Slide 25 --
+类与对象
+类与对象的关系类是同种对象的集合与抽象类描述对象的共同的数据特征和行为特征类的实例化就是对象
+-- Slide 26 --
+抽象对象类封装继承多态
+-- Slide 27 --
+封装
+类开发者
+客户端程序员
+提供
+使用
+修改
+使用
+可以修改什么？
+-- Slide 28 --
+封装
+定义：把数据和方法包装进类中，并对具体实现进行隐藏类是基本的封装单元，一个类的所有对象实例有相同的封装特性“具体实现”包括：对象的数据域、方法实现以及非接口方法的定义等对数据的完全隐藏是对象的理想结构，现实中使用public、protected、private关键字实现4种隐藏能力（访问权限）
+-- Slide 29 --
+封装
+意义模块化：不同对象代码间相对独立，对象可以在系统中方便移动保证数据对象的一致性：通过隐藏对象变量和方法实现，防止绕过接口更改变量易于维护：对私有变量和私有方法的更改，不会影响到调用对象接口的其他程序，提高了程序的可移植性
+-- Slide 30 --
+抽象对象类封装继承多态
+-- Slide 31 --
+继承
+现实世界中的对象间关系包含（has a）：对象A是对象B的组成部分关联：对象A中保存对象B的一个引用而非对象B本身继承（is a）：对象A是对象B的特例，抽象  具体
+-- Slide 32 --
+继承
+含义：描述子类与父类之间的关系子类：从某个特定类派生出来的类父类：派生出某个特定类的类关系：子类继承父类的变量和方法子类可以增加新的变量和方法子类可以重写（Override）继承来的方法继承关系可以有多层，子类要继承它所有父类的方法与状态
+-- Slide 33 --
+继承
+一个类可以用extends关键字显式地继承另一个类如果没有显式地继承其他类，则隐含继承java.lang.Object类Java.lang包中的Object类是最顶层的类，所有其他的类都是它直接或间接的子类Object类型的变量可以指向任意类型的对象（upcasting）Object类提供了所有Java对象都需要的行为（方法）
+-- Slide 34 --
+继承
+继承的优点重用父类中的代码将一般行为与特殊行为分离一般行为包含在父类中从父类继承得到的特定子类，实现特殊行为的具体细节（新变量、新方法、重写父类方法）
+-- Slide 35 --
+抽象对象类封装继承多态
+-- Slide 36 --
+多态
+泛指能够创建多于一种形式的变量、方法和对象的能力形式：编译时多态：通过方法重载（overloading）实现运行时多态：通过方法重写、向上转型和动态绑定，达到“对外一个接口，内部多种实现”
+-- Slide 37 --
+多态
+编译时多态：一个类中定义多个名称相同但参数不同的方法运行时多态：以继承为基础改变从父类继承的行为（方法重写，overriding）将子类对象当作父类对象看待（向上转型，upcasting）在运行时确定接收消息的对象的类型及其行为（动态绑定，dynamic binding）
+-- Slide 38 --
+面向对象编程的主要特点
+封装性：实现模块化和信息隐藏，有利于程序的可移植性继承性：定义对象之间的层次关系，下层对象继承了上层对象的特性，可以实现程序代码重用，并且有效地组织整个程序多态性：使得在程序运行时，对象的一种接口可以提供多种不同的操作，提高程序的灵活性
+=== 3_JAVA语言基础.ppt ===
+-- Slide 1 --
+Java语言基础
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+标识符、关键字与数据类型表达式与语句程序流控制数组
+-- Slide 4 --
+标识符
+标识符用来对变量、类和方法进行命名命名规则一个由字母、“_”、“$”和数字组成的不限长度的序列以字母，”_”（下划线）或”$”起始不能以数字起始不能是Java关键字不能是true、false或null大小写敏感见名知意E.g.: username，user_name，_sys_varl，$change
+-- Slide 5 --
+习题3.1. 下列标识符哪些是合法的$88#67numappletApplet7#Tb++--bclasspublic
+-- Slide 6 --
+标识符
+风格约定不使用“_”、“$”作为标识符的第一个字符类名、接口名：所有单词首字母大写，其余字母小写变量名、方法名：首单词小写，其余单词的首字母大写，如anyVariableWorld常量名完全大写，由“_”分隔方法名使用动词，类名和接口名使用名词，变量名尽量有含义
+-- Slide 7 --
+注释
+// 注释一行/* 注释一行或多行 *//** 可用javadoc命令转化为HTML文件 */注意：注释不支持嵌套，即在开始于//的注释中，/*和*/没有特殊的意义，而在开始于/*或/**的注释中，//没有特殊的意义
+-- Slide 8 --
+关键字
+指程序语言中预先定义的有特殊意义的标识符const和goto是C++的关键字，Java虽然将其保留为关键字，但Java尚未使用它们；true, false和null虽然不是关键字，但也被Java保留，不能用作标志符
+-- Slide 9 --
+数据类型
+类型的意义限定变量和表达式的取值范围限定在特定值上能够执行的操作确定运算符的意义
+-- Slide 10 --
+数据类型
+基本数据类型逻辑型：boolean文本型：char整型：byte, short, int, long浮点型：double, float复合数据类型（引用类型）类接口数组枚举类型（J2SE 5.0）
+-- Slide 11 --
+基本数据类型-逻辑型
+逻辑型：boolean取值：truefalse（默认值）例：boolean truth = true;Java中布尔值与整型值之间不能相互转换
+-- Slide 12 --
+基本数据类型-文本型
+文本型：char16位的Unicode字符 ASCII码例：char  mychar=‘Q’;
+-- Slide 13 --
+基本数据类型-文本型
+Unicode：国际标准字符集是一套字符编码系统，可支持各类文字的字符每个字符两个字节：字符编码范围为0x0000至0xFFFFUnicode的实现方式：Unicode转换格式（Unicode Transformation Format，简称为UTF）一个字符的Unicode编码是确定的，但对Unicode编码的实现方式有所不同目前通用的实现方式：UTF-16小端序（LE）、UTF-16大端序（BE）和UTF-8
+-- Slide 14 --
+基本数据类型-文本型
+Java中的转义字符序列表示
+-- Slide 15 --
+public class CharConst{	public static void main(String args[]){		char c1='Q';		char c2='\u0051';		char c3=0x0051;		System.out.println(c1+";"+c2+";"+c3+";"+'\121');	}}
+-- Slide 16 --
+基本数据类型-文本型
+String不是基本数据类型，是类例：String greeting="Good Morning! ";String对象表示的字符串不能修改，如需修改字符串，应使用StringBuilder类。StringBuffer类与StringBuilder类相似，也是可修改类，他的执行效率低于StringBuilder类，但他是线程安全的。
+-- Slide 17 --
+基本数据类型-整数类型
+整数类型：byte, short, int 和 longJava中所有整数类型均为有符号的整数类型
+-- Slide 18 --
+基本数据类型-整数类型
+整型常量整型常量具有三种进制表示十进制十六进制八进制整型常量默认为int类型byte或short类型的常量与int类型常量的形式相同long类型的常量后应加L或l
+-- Slide 19 --
+基本数据类型-浮点型
+浮点型：float 和double
+-- Slide 20 --
+基本数据类型-浮点型
+浮点型常量浮点型常量默认为double类型float类型的常量后必须加F或fdouble类型的常量后可以加D或d浮点型常量的表达方法：E或e：	科学记数法    	6.02e23F或f：	表示float类型		6.02e23FD或d：	表示double 型	2.718D
+-- Slide 21 --
+public class  Assign {	public static void main(String args[]) {		int x, y; 			// 声明整型变量		float z = 3.414f; 		// 声明并赋值float型变量		double w = 3.1415; 	// 声明并赋值double型变量		boolean truth = true; 	// 声明并赋值boolean型变量		char c; 			// 声明字符变量		String str; 		// 声明String类型变量		String str1 = "bye";	// 声明并赋值String类型变量		x = 6;		y = 1000; 		// 给int型变量赋值		c = 'A'; 			// 给字符变量赋值		str = "Hi out there"; 	// 给String变量赋值	}}例：SomeConstTest.java
+-- Slide 22 --
+下列哪些是正确的浮点数常量12.312.3e+223.4e-2-334.42039F40D
+-- Slide 23 --
+特殊的浮点型值
+NaN是无序的除了NaN之外的浮点数集合中的所有元素都是有序的浮点数0.0和-0.0也需特别注意
+-- Slide 24 --
+写出以下表达式的运算结果0.0 == -0.00.0 > -0.01.0 < Double.NaN1.0 > Double.NaN1.0 == Double.NaN1.0 != Double.NaNDouble. NaN == Double. NaN0.0 / 0.01.0 / 0.01.0 / -0.0
+-- Slide 25 --
+复合数据类型
+类的初步概念“日期”类型的两种不同表达：方式一：  int day, month, year;	//定义年、月、日	 		    int d1,m1,y1;		// 定义一个日期			    int d2,m2,y2;		//定义另一个日期方式二：class Date{	int day;	int month;	int year;	void setDate( int a, int b, int c){... }} // Java用class创建新的类型（复合数据类型）
+-- Slide 26 --
+标识符、关键字与数据类型表达式与语句程序流控制数组
+-- Slide 27 --
+变量
+变量的分类从语言机制上划分：数据类型分基本类型和引用类型，相应地，变量类型也分基本类型和引用类型根据作用域划分：成员变量局部变量方法参数catch语句块入口参数（异常处理参数）
+-- Slide 28 --
+变量
+引用类型变量的声明与引用基本类型变量在声明时，直接分配数据空间，如int a;a = 12;引用类型变量在声明时，不直接分配数据空间，而仅仅分配引用空间，必须经过实例化，才能开辟数据空间
+名字
+值
+-- Slide 29 --
+变量
+程序执行过程（图源：尚学堂Java）
+-- Slide 30 --
+变量
+引用类型变量的声明与引用例：		Date  today;		today = new Date( ); //实例化
+-- Slide 31 --
+变量
+引用类型变量的声明与引用例：		Date  today;
+today
+null
+-- Slide 32 --
+变量
+引用类型变量的声明与引用例：		Date  today;		 today = new Date( ); //实例化
+today
+null
+-- Slide 33 --
+变量
+引用类型变量的声明与引用例：		Date  today;		 today = new Date( ); //实例化
+today
+0xabcd
+-- Slide 34 --
+变量
+引用类型变量之间的赋值例：		Date a, b;		a = new Date( );		b = a;
+-- Slide 35 --
+变量
+引用类型变量之间的赋值例：		Date a, b;
+a
+null
+b
+null
+-- Slide 36 --
+变量
+引用类型变量之间的赋值例：		Date a, b;		a = new Date( );
+a
+0xabcd
+b
+null
+-- Slide 37 --
+变量
+引用类型变量之间的赋值例：		Date a, b;		a = new Date( );		b = a;
+a
+0xabcd
+b
+0xabcd
+-- Slide 38 --
+变量
+变量的作用域局部变量：从声明变量的位置开始，到包含该变量的代码块结束为止类成员变量：至少包括整个类方法参数：所在方法的内部catch语句块入口参数：catch语句块
+-- Slide 39 --
+变量
+对象的成员变量的默认初始值（系统自动初始化）局部变量必须在使用前手工赋初始值，若局部变量未初始化就使用，编译器报错
+-- Slide 40 --
+public class TestInit {	int x;	public static void main(String args[]) {		TestInit init = new TestInit();		int x = (int) (Math.random() * 100);		int z;		int y; 			// int y=0;		if (x > 50) {			y = 9;		}		z = x + y + init.x;		System.out.println("x=" + x + " y=" + y + 					" z=" + z + " init.x=" + init.x);	}}
+-- Slide 41 --
+运算符与表达式
+将运算符与操作数按照特定规则连接起来，就构成了通常意义的表达式Java运算符与C语言的不同之处：Java的类型限制比C严格，运算符的操作对象的类型会受到更多限制Java不提供指针运算符Java增加了类型测试运算符instanceof字符串运算符+零填充的右移>>>
+-- Slide 42 --
+运算符与表达式
+Java运算符类别
+-- Slide 43 --
+算术运算符
+一元算术运算符：+, -, ++, --能够将byte/short/char类型的操作数自动提升为int型位运算符～也具有类似的类型转换效果
+-- Slide 44 --
+public class UnaryConversion{	public static void main(String[] args){		byte b=2;		char c='\u1234';		int x=8,y=3;		//byte b2 = -b; //int值不能直接赋给byte类型变量b2		//char c2 = +c; //int值不能直接赋给char类型变量c2		System.out.println((-b) + ";" + (+c));		int i=~b;	//byte转换为int		System.out.println(Integer.toHexString(i));		System.out.println(x/y);		System.out.println(x/(float)y);	}}
+-- Slide 45 --
+算术运算符
+二元算术运算中的自动类型转换检查两个操作数的类型(type1,type2)：if (double,*)或(*,double)，then *doubleelse if (float,*)或(*,float)，then *floatelse if (long,*)或(*,long)，then *longelse (*,*)  (int,int)byte/short/char -> int -> long -> float -> double
+-- Slide 46 --
+算术运算符
+注意：即使两个操作数全是byte型或short型，运算结果也是int型整型之间的/运算和%运算中除数为0时会产生异常%的操作数可以为浮点数：9.5%3=0.5只有当被除数为负数时，余数才是负数	-7%3=-1	20%-13=7+运算可以连接字符串String  salutation = “Dr. ”;String name = “Pete ” + “Seymour” ;String title = salutation + name ;则title 值：Dr. Pete Seymour
+-- Slide 47 --
+假设int a=1和double d=1.0，且每个表达式均独立，以下表达式的结果分别是什么a = 46 / 9;a = 46 % 9 + 4 * 4 - 2;a = 45 + 43 % 5 * (23 * 3 % 2);d = 4 + d * d + 4;d += 1.5 * 3 + (++a);d -= 1.5 * 3 + a++;
+-- Slide 48 --
+关系运算符
+计算操作数之间的关系并得到boolean结果数值型的关系运算符遵循与二元算术运算符相同的自动类型转换规则测试对象的等价性“==”和”!=”比较的是对象的引用而非对象的内容比较对象的内容是否相等——重写equals()方法所有对象都拥有从Object类继承的equals()方法equals()方法默认也是比较对象的引用需要对equals()方法进行重写，以比较对象内容多数Java类库都通过重写equals()实现了对于对象内容的比较
+-- Slide 49 --
+class Value {	int i;	public boolean equals(Value v) {		return (this.i == v.i) ? true : false;	}}public class Equivalence {	public static void main(String[] args) {		Integer n1=new Integer(47); Integer n2=new Integer(47);		System.out.println("n1==n2: "+ (n1==n2)); //对引用的比较		System.out.println("n1!=n2: "+ (n1!=n2));		System.out.println("n1.equals(n2): "+ n1.equals(n2));			//Integer已重写equals() 		Value v1 = new Value(); Value v2 = new Value();		v1.i = v2.i = 10;		System.out.println("v1.equals(v2): " + v1.equals(v2));	}}
+-- Slide 50 --
+逻辑运算符
+&, |			称为不短路与、或&&,||		称为短路与、或短路：在逻辑表达式计算过程中，一旦部分运算结果能够确定整个表达式的值，则不再计算表达式的余下部分
+-- Slide 51 --
+public class ShortCircuit {	static boolean bLessThan1(int n) {		System.out.println("(n<1)? " + (n < 1));		return (n < 1);	}	static boolean bLessThan2(int n) {		System.out.println("(n<2)? " + (n < 2));		return (n < 2);	}	public static void main(String[] args) {		System.out.println("Short Circuit:");		System.out.println( bLessThan1(1) && bLessThan2(1) );		System.out.println("Not Short Circuit:");		System.out.println( bLessThan1(1) & bLessThan2(1) );	}}
+-- Slide 52 --
+位运算符
+右移运算符>>和>>>>>：带符号右移1010 … >> 2      111010 …>>>：无符号右移，以0 填充1010 … >>> 2    001010 …当逻辑运算符与位运算符相同时，根据操作数判定是何种运算（&、|、^）
+-- Slide 53 --
+赋值运算符及赋值中的类型转换
+虚箭头表示有可能损失精度int n = 123456789;float f = n; // f is 1.23456792E8
+-- Slide 54 --
+强制类型转换
+将较大范围类型的操作数值转换为较小范围类型的操作数值时，需要强制类型转换一般形式：(type) expression例：(float)x/2对强制类型转换的限制：整型与浮点型可以相互转换基本类型和数组、对象等引用类型之间不能互相转换逻辑型与整型之间不能互相转换逻辑型与浮点型之间不能互相转换
+-- Slide 55 --
+强制类型转换
+截尾和舍入由float/double类型向int/long类型强制转换时，执行截尾操作要得到舍入结果，需使用java.lang.Math的round()方法
+-- Slide 56 --
+public class CastingRoundingNumber {    public static void main(String[] args) {        double above = 0.7;        double below = 0.4;        float fabove = 0.7f;        float fbelow = 0.4f;        System.out.println("(int)above: " + (int) above);        System.out.println("(int)below: " + (int) below);        System.out.println("(int)fabove: " + (int) fabove);        System.out.println("(int)fbelow: " + (int) fbelow);        System.out.println("Math.round(above): " + Math.round(above));        System.out.println("Math.round(below): " + Math.round(below));        System.out.println("Math.round(fabove): " + Math.round(fabove));        System.out.println("Math.round(fbelow): " + Math.round(fbelow));    }}
+-- Slide 57 --
+写出下面语句段的输出float f=12.5F;int i=(int)f;System.out.println(f);System.out.println(i);以下类型转换是否合法？boolean b=true; int i=(int)b;int i=1; boolean b=(boolean) i;
+-- Slide 58 --
+运算符的优先级与结合方向（非、算、关、与或、赋）
+-- Slide 59 --
+x和y都是int类型，以下哪些表达式合法？x > y > 0x = y && yx /= yx or yx and y(x != 0) || (x = 0)假设a, b, c初始值均为1，下面语句执行后a, b, c的值分别是多少？a = b += c = 5;
+-- Slide 60 --
+标识符、关键字与数据类型表达式与语句程序流控制数组
+-- Slide 62 --
+循环语句
+Java SE 5.0后的for循环新形式：将一个集合作为一个整体放入for循环中，在for循环中可将集合中的元素进行逐个处理，例：	String[] names = {"Wang", "Zhang", "Li", "Wu"};	for(String option: names) {	System.out.println(option);	}
+-- Slide 63 --
+循环语句
+在循环条件中不要使用浮点值来比较值是否相等，否则可能导致不精确的循环次数和结果double item=1, sum=0;while(item!=0){sum+=item;item-=0.2;}
+-- Slide 64 --
+分支语句
+if-else逻辑型与整型之间不能相互转换，循环与分支条件必须得到一个逻辑型的值，不能像C那样接受整型：C：		int x=3; if(x){…}Java：	int x=3; if(x!=0){…}条件运算符?:是if-else的一种紧缩格式表达
+-- Slide 65 --
+分支语句
+switchswitch整型表达式的值必须是int兼容的类型，即byte, short, char或int不论执行哪个分支，程序都会继续执行直至遇到break语句或到达整个switch语句末尾才结束switch语句
+-- Slide 66 --
+public class SwitchDemo2 {	public static void main(String[] args) {		int month = 2;		int year = 2000;		int numDays = 0;		switch (month) {		case 1: case 3: case 5: case 7: case 8: case 10: case 12:			numDays = 31;	break;		case 4: case 6: case 9: case 11:			numDays = 30; break;		case 2:			if (((year % 4 == 0) && !(year % 100 == 0)) || 				(year % 400 == 0))				numDays = 29;			else				numDays = 28;			break;		}		System.out.println("The number of Days = “ + numDays);	}}
+-- Slide 67 --
+跳转语句
+break [label]从switch语句、循环语句中跳出continue[label]跳过标号循环体的其余部分，不带label 跳过最内层循环的剩余语句label: statement
+-- Slide 68 --
+跳转语句
+1  loop:  while (true){2  		for( … ){3			switch( ){4				case -1:5				case ‘\n’:6					break loop ; //跳出while到11行7				…8			}9		}10	}11 test:	for( … ){12		…13		while(… ){14			if( …){15				…16				continue test ;  //跳到11行17	  		}18		}19	}
+-- Slide 69 --
+public class BreakAndContinueWithLabel{    public static void main(String[] args){        String searchMe = "Look for a substring in me";        String substring = "sub";        boolean found = false;        int max = searchMe.length() - substring.length();test: for (int i = 0; i <= max; i++) { 	// i:子串查找开始位置            int n = substring.length();            int j = i; 				// j:当前在主串中的查找位置            int k = 0; 				// k:当前在子串中的查找位置            while (n-- != 0) {                if (searchMe.charAt(j++) != substring.charAt(k++)) {                    continue test;                }            }            found = true;            break test;        }        System.out.println(found ? "Found！" : "Didn't find！");    }}	//其他例子： BreakDemo.java，BreakWithLabelDemo.java
+-- Slide 70 --
+编写程序，读取一个整数n，输出该整数的各位数字相加之和
+-- Slide 71 --
+标识符、关键字与数据类型表达式与语句程序流控制数组
+-- Slide 72 --
+数组
+数组声明数组的创建、初始化和访问数组复制多维数组
+-- Slide 73 --
+数组声明
+数组用于存储元素个数固定、元素类型相同的有序集长度在创建时确定，在创建后不变元素都是同一种类型定义数组的要素：数组长度元素类型数组变量的名称数组维度（支持多维数组的语言需要提供）
+声明时
+数组创建时
+-- Slide 74 --
+数组声明
+声明包含三部分元素类型：基本类型或引用类型数组变量名称数组维度一维数组声明的格式：元素类型[]  数组变量名称;元素类型  数组变量名称[];例：char s[];	 char[] s; 	//基本类型数组Point p[];	 Point[] p; 	//引用类型数组char[] s,m,n;	//三个变量都是字符数组变量
+-- Slide 75 --
+数组创建
+在Java中，数组类型是一种引用类型，因此数组声明不分配数组的数据空间，而是创建一个对该类型数组的引用数组的数据空间可以看作一个对象实例建立数组变量与数组对象之间的引用关系（数组实例化）也通过new关键字实现：数组变量名称=new 元素类型[数组长度];例：s = new char[20]; 	    //创建有20个字符的数组p = new Point[100];   //创建有100个Point引用的数组数组变量与数组对象不同，数组变量存储了对数组对象的引用
+-- Slide 76 --
+数组的初始化
+在创建数组对象时，使用元素类型的默认值对每个元素进行初始化进一步初始化直接对数组的各个元素赋值：Point[ ] p = new Point[100];p[0] = new Point();p[1] = new Point();…用初始值创建数组String names[] = {"Jack", "Wang", "Lee"};int  a[] = {1, 2, 3};Date d[] = {new Date(), new Date(), new Date()};
+-- Slide 77 --
+习题3.13.下列数组定义哪些是合法的？int i=new int(30);double d[]=new double[30];Integer[] r=new Integer(1..30);int i[]=(3,4,3,2);float f[]={2.3, 4.5, 5.6};char[] c=new char();Integer[][] r=new Integer[2];
+-- Slide 78 --
+数组的访问
+数组对象中的元素可以看作数组对象的成员变量这些成员没有名称必须通过“数组变量名称[索引值]”的方式访问例：p[1]表示访问由数组变量p指向的数组对象中索引为1的元素索引值必须为int类型，short、byte、char类型的索引值，编译器会自动将其转换为int类型所有数组都包含表示元素个数的成员变量length
+-- Slide 79 --
+数组复制
+数组变量之间赋值是引用赋值int [ ] a= new int [6];int [ ] b;b = a ;无法通过变量赋值复制数组复制方法一：使用循环语句逐个复制int[] target = new int[source.length];for(int i = 0; i < source.length; i++)	target[i] = source[i];
+-- Slide 80 --
+数组复制
+复制方法二：java.lang.System的静态arraycopy()方法System.arraycopy(Object source, int srcIndex, Object dest, int destIndex, int length);注意：dest数组空间必须预先分配好
+-- Slide 81 --
+public class ArrayCopyDemo { 	public static void main(String[] args) {		char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n',					'a', 't', 'e', 'd' };		char[] copyTo = new char[7];		System.arraycopy(copyFrom, 2, copyTo, 0, 7);		System.out.println(new String(copyTo));	}}
+-- Slide 82 --
+多维数组
+声明：使用连续的[]说明数组维度例：int a[][]; 或 int[][] a;创建与初始化：需指明至少一个嵌套层的长度必须从最高维指定数组长度例：a = new int[4][4];  	//为每一维分配内存a = new int[4][]; //为第一维分配内存, 生成不规则数组a[0] = new int[10];a[1] = new int[5];  …a = new int[][4];	//不合法
+-- Slide 83 --
+多维数组
+多维数组的长度每一维的长度均可通过length变量获取例：public class ArrayLength{	public static void main(String[] args){	int[][] a={{1,2,3,4,5},{1,2,3}};	System.out.println(a.length+";"		+a[0].length+";"+a[1].length);}}
+-- Slide 84 --
+练习以下程序执行结束后，i和j的值分别是多少int i = 5;int j = (i++) + (i++);实现程序，在字符串“Java is my favorate programming language”中查找字符a的出现次数
+-- Slide 85 --
+Eclipse调试
+-- Slide 86 --
+Eclipse调试
+-- Slide 87 --
+Eclipse调试
+-- Slide 88 --
+Eclipse调试
+-- Slide 89 --
+Eclipse调试
+-- Slide 90 --
+Eclipse调试
+=== 4_Java面向对象特性.ppt ===
+-- Slide 1 --
+Java面向对象特性
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+面向对象程序语言三个关键特点
+封装 (Encapsulation)将对象的数据与操作数据的方法相结合，通过方法来保护对象的数据与实现细节继承 (Inheritance)子类是父类的特例，继承父类的状态和行为Java只支持单继承，多继承须通过接口实现多态(Polymorphism)编译时多态：overloading运行时多态：“对外一个接口，内部多种实现”重写（overriding）向上转型（upcasting）动态绑定（dynamic binding）
+-- Slide 4 --
+对象与类访问权限控制对象生命周期类的继承与多态
+-- Slide 5 --
+类和对象
+在OOP中，类是一个可扩展的程序代码模板，用于创建一类对象并为对象提供成员变量初始值和方法实现类是将同一类对象都具有的数据和行为进行封装所形成的复合数据类型类是同种对象的集合与抽象定义和描述了一类对象的共同的数据特征和行为特征类是创建对象的一种模板，对象是类的具体实例
+-- Slide 6 --
+类定义
+类定义 = 类声明 + 类体类体由以下4部分组成成员变量声明构造方法声明成员方法声明初始化程序块
+-- Slide 7 --
+类声明
+[public][abstract|final] class 类名 [extends 父类名] [implements 接口名列表] {…}public：用来声明任意类均可访问该类缺省（非public）：只有与该类在同一包中的类可访问该类一个Java源文件中至多只能有一个public类，该类的类名应与该源文件的文件名相同abstract：声明该类为抽象类final：声明该类不能被继承
+-- Slide 8 --
+类声明
+[public][abstract|final] class 类名 [extends 父类名] [implements 接口名列表] {…}extends：表示该类从父类继承得到父类名可以是用户自定义的类，也可以是Java预定义的类implements：该类实现了接口名列表中的所有接口
+-- Slide 9 --
+根据以下继承关系图，在MyClassDecl.java文件中声明所有的类，并保证：Shape类不能生成任何对象实例Triangle类不能被其他类继承
+-- Slide 10 --
+成员变量声明
+[public|protected|private][static][final][transient][volatile] 类型  变量名;
+-- Slide 11 --
+成员变量声明
+[public|protected|private][static][final][transient][volatile] 类型  变量名;public|protected|private：成员变量的访问权限static：限制该成员变量为类变量（无static：该成员变量为实例变量）final：用于声明一个常量，该常量的值在程序中不能修改transient：声明一个暂时性变量volatile：禁止编译器通过保存多线程共享变量的多个拷贝来提高效率
+-- Slide 12 --
+成员变量声明
+显式初始化：成员变量声明中可以包含简单的赋值表达式，这种在声明成员变量时对变量的显式赋值称为显式初始化例：class Rectangle{private int width = 0;private int height = 0;…}
+-- Slide 13 --
+成员方法声明
+[public|protected|private][static][final|abstract][native][synchronized] 返回类型 方法名([参数列表]) [throws 异常类型列表] { [语句块] }public, protected, private, static：与成员变量类似abstract：声明该方法是抽象方法，无方法体final：声明方法不能被重写native：本地方法synchronized：多线程访问共享数据throws：抛出异常的列表（第六章）
+-- Slide 14 --
+成员方法声明
+方法调用中的参数传递基本要求一：实参与形参在次序和数量上匹配，并在类型上兼容；基本要求二：实参传递给形参的过程，是值传递（pass-by-value）的过程基本类型的参数——传值对象或数组等引用类型的参数——传递实参变量的值（一个指向对象或数组的引用，传递过后形参和实参均指向同一个对象或数组）在方法中，将形参指向另一对象，则实参变量所指向的对象不再受方法影响在方法中，修改形参所指向的对象的内容，则修改在方法结束后保留下来
+-- Slide 15 --
+public class PassTest {	public void changeInt(int value) {// 基本类型的参数		value = 55;	}	public static void main(String args[]) {		int val;		PassTest pt = new PassTest();		val = 11;		pt.changeInt(val); // 基本类型参数的值传递		System.out.println("Int value is: " + val);	}}
+-- Slide 16 --
+public class PassTest {	public void changeStr(String value) {  // 引用类型参数		value = new String(“different”);  //方法中改变形参所指对象	}	public static void main(String args[]) {		String str;		PassTest pt = new PassTest();		str = new String("Hello");		pt.changeStr(str); // 引用类型参数的传递		System.out.println("Str value is: " + str);	}}
+-- Slide 17 --
+public class PassTest {	float ptValue;	public void changeObjValue(PassTest ref) {// 引用类型参数		ref.ptValue = 99.0f;  //改变参数所指对象的成员变量值	}	public static void main(String args[]) {		PassTest pt = new PassTest();		pt.ptValue = 101.0f;		pt.changeObjValue(pt); // 引用类型参数的传递		System.out.println("Pt value is: " + pt.ptValue);	}}
+-- Slide 18 --
+成员方法声明
+在方法声明时，还有以下问题需要注意：可变长参数列表形如：类型…参数名Java将可变长参数作为数组对待可变长参数只能作为方法参数列表中最后一个参数
+-- Slide 19 --
+public class VariousArgs{	public double ratingAverage(double r, int ... points){		int sum=0;		for(int p: points)			sum+=p;		return ((sum*r)/points.length);	}	public static void main(String[] args){		VariousArgs va=new VariousArgs();		System.out.println( 			va.ratingAverage(0.5, new int[]{95,90,85}) );		System.out.println( 			va.ratingAverage(0.5, 94,92,90,88,86));	}}		//又例：Calculation.java
+-- Slide 20 --
+成员方法声明
+在方法声明时，还有以下问题需要注意：若局部变量名与类的成员变量名相同，则类的成员变量被隐藏，需使用this将该成员变量显露出来
+-- Slide 21 --
+public class UnmaskField{	private int x = 1;	private int y = 1;	public void changeFields(int a, int b) {		x = a;		//x指成员变量		int y = b;	//局部变量y使同名的类成员变量被隐藏		this.y=8;	//this.y指成员变量		System.out.println("x=" + x + "; y=" + y); //局部变量y的值	}	public void PrintFields() { System.out.println("x=" + x + "; y=" + y); }	public static void main(String args[]) {		UnmaskField uf = new UnmaskField();		uf.PrintFields();		uf.changeFields(10,9);		uf.PrintFields();	}}
+-- Slide 22 --
+this关键字的用法
+在成员方法内部，this表示对“调用方法的那个对象”的引用方法形参或局部变量与成员变量同名时，成员变量被隐藏，通过“this.成员变量名”使用成员变量this可作为返回值，返回对当前对象的引用在构造方法内部，通过this调用当前类的另一个构造方法（见“构造方法重载”）
+-- Slide 23 --
+构造方法声明
+[public|protected|private] 类名 ( [参数列表] ) { [语句块] }
+-- Slide 24 --
+构造方法声明
+构造方法的特点构造方法的名称必须与类名相同构造方法没有返回值，这与返回值为void不同构造方法在创建一个对象时调用，调用时必须使用关键字new例：class Circle{private double radius;public Circle(double r){ radius=r; }}
+-- Slide 25 --
+构造方法声明
+缺省构造方法：对于没有定义构造方法的类，Java编译器会自动加入一个特殊的构造方法，该构造方法没有参数且方法体为空，称为缺省构造方法用缺省构造方法初始化对象时，对象的成员变量初始化为默认值若类中已定义了构造方法，则编译器不再向类中加入缺省构造方法
+-- Slide 26 --
+class Bird {	int i;	// public Bird(int j){ i=j; }}public class DefaultConstructor {	public static void main(String[] args) {		Bird nc = new Bird(); // 缺省构造方法	}}
+-- Slide 27 --
+定义EmpInfo类，要求：在MyClassAndObj.java文件中进行定义包含三个成员变量：name, designation, department，均为String类型包含非缺省的构造方法包含成员方法print()：用于输出成员变量内容定义EmpInfo类型的对象，要求：对象变量名为emp1，emp2设置两个对象的成员变量值分别为：emp1: "Robert Java", "Manager ", "Coffee shop"emp2: "Tom Java", "Worker", "Coffee shop"调用print()查看输出
+-- Slide 28 --
+对象与类访问权限控制对象生命周期类的继承与多态
+-- Slide 29 --
+访问权限控制
+类开发者
+客户端程序员
+提供
+使用
+修改
+使用
+可以修改什么？
+-- Slide 30 --
+访问权限控制
+基本问题“如何把变动的事物与保持不变的事物区分开”对于类库，要求类库开发者有权限进行修改和改进客户代码不会因为类库的改动而受到影响解决方法权限修饰符：类库开发者向客户程序员指定哪些可用，哪些不可用权限修饰符public | protected | private | (default/package)
+-- Slide 31 --
+访问权限控制
+前提——包（package）包：相关类与接口的一个集合，提供了类的命名空间的管理和访问保护包机制的好处：容易根据所需的功能找到相应的类和接口每个包都提供独立的命名空间，不同包中的同名类之间不会冲突同一个包中的类之间有比较宽松的访问权限控制
+-- Slide 32 --
+访问权限控制
+包的定义package pkg1[.pkg2[.pkg3…]];包存储路径：”包的根路径\pkg1\...\pkgn”包的根路径由CLASSPATH环境变量指出包分隔符”.”相当于目录分隔符从源文件编译出的.class文件应放在包存储路径中包定义语句在每个源程序中只能有一条，即一个类只能属于一个包包定义语句必须在程序代码的第一行（除注释之外）
+-- Slide 33 --
+访问权限控制
+包成员：包中的类和接口包成员的访问方法：第1步: import pkg1[.pkg2[.pkg3 …]].(类名|*);pkg1[.pkg2[.pkg3 …]]表示包层次，对应于文件目录“类名”指明所要引入的类通配符*表示引入该包中的所有类import语句须在源程序所有类声明之前，package语句之后：[package …]		//默认是package .;[import …]		//默认是import java.lang.*;[类声明]
+-- Slide 34 --
+访问权限控制
+包成员：包中的类和接口包成员的访问方法：第2步: 使用包成员使用短名（类名）引用包成员使用长名（“包名.类名”）引用包成员（过于繁琐，一般仅当两个包中含有同名类时，为区分同名类才使用）例：TestPackage.java
+-- Slide 35 --
+访问权限控制
+权限修饰符：public|protected|private|(default)
+-- Slide 36 --
+访问权限控制
+权限修饰符：public|protected|private|(default)该成员可以被任何类访问
+-- Slide 37 --
+访问权限控制
+权限修饰符：public|protected|private|(default)可以被该成员所在的包中的所有类访问
+-- Slide 38 --
+/*  pkg1/A.java  */package pkg1;public class A{	public A(){ System.out.println("A's constructor"); }	void func(){ System.out.println(“A‘s method”); } //func()为包权限}class B{//B为包权限	public B(){ System.out.println("B's constructor"); }}/*  pkg2/PublicVsPackage.java  */package pkg2; //pkg2与pkg1不是同一个包import pkg1.*;public class PublicVsPackage{	public static void main(String[] args){		A obj=new A();		//B obj2=new B(); 	//在pkg1之外不能创建B的对象		//obj.func(); 		//在pkg1之外不能访问func()方法	}}	//又如：Greek/Alpha.java和Greek/Beta.java
+-- Slide 39 --
+访问权限控制
+权限修饰符：public|protected|private|(default)用于成员变量，成员方法：除包含该成员的类之外，其他类都无法访问该成员用于构造方法：其他类不能生成该类的实例对象同一个类的不同对象之间可互相访问私有成员
+-- Slide 40 --
+/*  pkg2/PrivateVsPackage.java  */package pkg2;public class PrivateVsPackage{	public static void main(String[] args){		C obj=new C();	//默认构造方法的权限与类的访问权限相同		obj.func2();		//obj.func1();	//与C在同一包中的其他类无法访问func1()	}}class C{	private void func1(){		System.out.println("C's method 1");	}	void func2(){		System.out.println("C's method 2");		this.func1(); //同一个类内可以调用func1()	}}	//又如：TestPrivate.java
+-- Slide 41 --
+访问权限控制
+权限修饰符：public|protected|private|(default)可以被该成员所在的包中的所有类访问可以被该成员所属类的子类访问（不论子类是否在同一包中）
+-- Slide 42 --
+/*  pkg1/C.java */public class C{	protected void func(){ System.out.println("Protected method of C"); }}/*  pkg2/ProtectedVsPackageAndPublic.java  */import pkg1.C;public class ProtectedVsPackageAndPublic{	public static void main(String[] args){		C obj=new C();		//! obj.func();	//不是C的子类，且与C非同一个包	}}class CSub extends C{		//C的子类，可以访问C的func()方法	void mtd(C parent, CSub sub){		func();		//! parent.func();  //应通过子类引用而非父类引用访问func()		sub.func();	}}
+-- Slide 43 --
+写程序证明：protected权限包含package权限同一包中的其他类是否能访问protected权限的成员？写程序证明：protected权限大于package权限package权限的成员在包外子类中是否能够访问？
+-- Slide 44 --
+访问权限控制
+包相关的其他问题：引入其他类的静态成员程序在使用其他类的static final的常量或static的方法时，每次引用这些常量或方法都用它们所属的类名例：java.lang.Math类定义了常数PI以及静态方法cos()，需用double r=Math.cos (Math.PI * theta);简化方法：import static [静态常量名|静态方法名|*];例：	import static java.lang.Math.PI;	或			import static java.lang.Math.*;	然后直接使用：double r = cos (PI*theta );
+-- Slide 45 --
+访问权限控制
+源文件(.java)与类文件(.class)的管理源文件可以按照包名指明的路径放置。如每个类（而非每个.java文件）对应一个.class文件
+-- Slide 46 --
+访问权限控制
+源文件(.java)与类文件(.class)的管理可将源文件与类文件分别存放，采用如下方式
+-- Slide 47 --
+对象与类访问权限控制对象生命周期类的继承与多态
+-- Slide 48 --
+对象生命周期
+对象的创建对象的使用对象的清除
+-- Slide 49 --
+对象的创建
+步骤声明对象变量：类名  变量名;对象的实例化：new 类名( [参数列表] );对象实例化的过程为对象分配存储空间，并用默认值对成员变量初始化执行显式初始化，即执行成员变量声明时的赋值执行构造方法的主体，完成对象初始化返回该对象的引用
+-- Slide 50 --
+public class Point {	public int x = 2;	public int y;	public Point(int y) {		this.y = y;	}	public static void main(String[] args) {		Point p = new Point(22);	}}
+-- Slide 51 --
+class Window {	Window(int m) { System.out.println("window " + m); }}class House {	Window w1 = new Window(1);	House() { 		System.out.println("House");		w3 = new Window(33);	}	Window w2 = new Window(2);	void f() { System.out.println("f()"); }	Window w3 = new Window(3);}public class OrderOfInit {	public static void main(String[] args) {		House h = new House();		h.f();	}}
+-- Slide 52 --
+对象的使用
+通过圆点运算符(.)注意成员变量和方法的访问权限
+-- Slide 53 --
+对象的清除
+垃圾收集机制（garbage collection）：当Java运行环境确定某个对象不再被使用时，将其删除一个对象在没有引用指向它时，可作为垃圾收集Java运行环境中的垃圾收集器周期性地释放不用的对象占用的空间垃圾收集器在对象被收集前调用对象的finalize()方法某些情况下可通过调用System.gc()建议JVM执行垃圾收集
+-- Slide 54 --
+定义Rectangle类，该类包含：double类型的成员变量width和height默认构造方法（能够将width和height均置为0.0）带两个参数的构造方法（分别对width和height用参数进行初始化）成员方法getArea()，返回矩形面积成员方法getPerimeter()，返回矩形周长定义Point类，该类包含：double类型的成员变量x和y默认构造方法（将x和y分别置为0.0）带两个参数的构造方法（用于初始化x和y）成员方法distance(Point p)，返回当前点与p点的距离
+-- Slide 55 --
+修改Rectangle类：加入一个Point类型的成员，代表矩形左上角顶点坐标修改Rectangle的两个构造方法，将构造出的矩形的左上角顶点坐标设为(0.0, 0.0)向Rectangle中加入新构造方法，传入4个参数，分别用以初始化width，height，以及左上角顶点的x坐标和y坐标向Rectangle中加入新的成员方法boolean bPointIn(Point p)，计算p点是否在当前矩形内部，如果在内部则返回true，否则返回false向Rectangle中加入新的成员方法boolean bRectangleIn(Rectangle r)，计算矩形r是否在当前矩形内部，如果在内部则返回true，否则返回false
+-- Slide 56 --
+对象与类访问权限控制对象生命周期类的继承与多态
+-- Slide 57 --
+类的继承
+继承：类之间的“is a”关系反映出一个类（子类）是另一个类（父类）的特例继承是从已有的类创建新类的一种方法
+public class Employee {	String  name ;	Date hireDate ;	Date dateofBirth ;	String jobTitle ;	int grade ;	…}
+public class Manager {	String  name ;	Date hireDate ;	Date dateofBirth ;	String jobTitle ;	int grade ;	String department ;	Employee [ ] subordinates;	…}
+-- Slide 58 --
+类的继承
+Java中用extends关键字定义子类class 子类名 extends 父类名 { … }
+public class Manager extends Employee{	String department ;	Employee [ ] subordinates; }
+public class Employee {	String  name ;	Date hireDate ;	Date dateofBirth ;	String jobTitle ;	int grade ;	…}
+-- Slide 59 --
+类的继承
+如何从父类得到子类子类继承父类的所有成员变量和方法，子类中只需声明特有的东西注意：子类并不能继承父类的所有变量和方法：父类的private的成员变量和方法不能被继承；构造方法不能被继承。考虑：父类的package权限的成员呢？创建一个类总会继承其他的类，显式的继承使用extends关键字；如果没有显式地指明父类，则从Java的标准根类Object进行继承
+-- Slide 60 --
+类的继承
+对父类成员的访问——super关键字用法：表示“当前对象的父类对象的引用”，用来引用父类中的成员变量或方法
+-- Slide 61 --
+public class TestInheritance{	public static void main(String[] args){		Rectangle rect=new Rectangle();		rect.newDraw();	}}class Shape{	public void draw(){ System.out.println("Draw shape"); }}class Rectangle extends Shape{	public void draw(){ System.out.println("Draw Rectangle"); }	public void newDraw(){		draw();		super.draw();	}}
+-- Slide 62 --
+考虑：Rectangle中的draw()方法与Shape中的draw()方法是什么关系？如果Rectangle中没有实现自己的draw()方法，那么以上程序的输出是什么？
+-- Slide 63 --
+类的继承
+对父类成员的访问——super关键字用法：表示“当前对象的父类对象的引用”，用来引用父类中的成员变量或方法在子类构造方法中，通过“super([参数列表]);”调用父类的构造方法。该语句必须出现在子类构造方法的第一行。
+-- Slide 64 --
+类的继承
+子类对象的创建与初始化的一般步骤子类构造方法调用父类构造方法通过显式的super()方法调用或编译器隐含插入的super()方法调用这一过程递归地进行，直到根类Object的构造方法。在这一过程中，子类对象所需的所有内存空间被分配，所有成员变量均使用默认值初始化从根类Object的构造方法开始，自顶向下地对每个类依次执行如下两步：显式初始化执行构造方法的主体（不包括使用super调用父类构造方法）
+-- Slide 65 --
+public class ConstructSubObj{	public static void main(String[] args){		Undergraduate ug=new Undergraduate(12345678);	}}class Person{	Person() { System.out.println("Person"); }}class Student extends Person{	Student(int id) { System.out.println("Student "+id); }}class Undergraduate extends Student{	Undergraduate(int id) {		super(id); //必须使用，因为student没有默认构造方法		System.out.println("Undergraduate"); 	}}	//又例：Manager2.java
+-- Slide 66 --
+class Meal { Meal() { System.out.println("Meal()"); } }class Bread { Bread() { System.out.println("Bread()"); } }class Cheese { Cheese() { System.out.println("Cheese()"); } }class Lettuce { Lettuce() { System.out.println("Lettuce()"); } }class Lunch extends Meal {	Lunch() { System.out.println("Lunch()"); }}class PortableLunch extends Lunch {	PortableLunch() { System.out.println("PortableLunch()"); }}public class Sandwich extends PortableLunch {	private Bread b = new Bread();	private Cheese c = new Cheese();	private Lettuce l = new Lettuce();	public Sandwich() { System.out.println("Sandwich()"); }	public static void main(String[] args) {		new Sandwich();	}}
+-- Slide 67 --
+回顾对象的实例化过程步骤，能否将其归纳到子类的实例化过程？
+-- Slide 68 --
+多态
+编译时多态重载（overloading）运行时多态重写（overriding）向上转型（upcasting）动态绑定（dynamic binding）
+-- Slide 69 --
+重载
+在同一个类中一个方法名被用来定义多个方法class Screen {public void print( int i){ … }public void print( float f){ … }public void print( String str ){ … }}重载必须遵循的原则方法的参数表（包括参数的类型或个数）必须不同方法的返回类型、修饰符可以相同也可以不同
+-- Slide 70 --
+public class TestOverloading{	public static void main(String[] args){		System.out.println(false);	//println(boolean b)		System.out.println('C');		//println(char c)		System.out.println(123);		//println(int i)		System.out.println(123L);	//println(long l)		System.out.println(12.3f);	//println(float f)		System.out.println(12.3);		//println(double d)		System.out.println();		//println(): 输出换行符		char[] cc={'a','b','c'};		System.out.println(cc);		//println(char[] lc)		System.out.println("abc");	//println(String s)		System.out.println(new java.util.Date());	//println(Object o)	}}
+-- Slide 71 --
+构造方法重载
+在一个构造方法中可以利用另一个构造方法使用this调用当前类的构造方法目的：使对象具有不同的初始值注意：当一个构造方法需要使用this调用另一个构造方法时，对this的调用必须位于这个构造方法的起始处
+-- Slide 72 --
+public class ConstructorOverloading{	public static void main(String[] args){		Student stu=new Student();		System.out.println(stu.getName()+", "+stu.getID());	}}class Student{	private String name;	private String id;	public Student(String nm, String id){		this.name=nm;		this.id=id;	}	public Student(String nm){		this(nm,"00000000");	}	public Student(){		this("Unknown");	}	public String getName(){ return name; }	public String getID(){ return id; }}
+-- Slide 73 --
+多态
+编译时多态重载（overloading）运行时多态重写（overriding）向上转型（upcasting）动态绑定（dynamic binding）
+-- Slide 74 --
+成员方法重写
+在子类中修改父类方法的实现方法重写的前提：存在继承关系方法重写的要求不改变方法的名称、参数列表和返回值，改变方法的内部实现子类中重写方法的访问权限不能缩小子类中重写方法不能抛出新的异常
+-- Slide 75 --
+成员方法重写
+注意：父类中成员变量也可以被子类中同名同类型的成员变量覆盖变量调用的是子类重写后的方法还是父类的原方法，由变量所指向的对象实例的类型决定，而不是由变量本身的类型决定——重写是实现运行时多态的基础无论是成员变量的覆盖，还是成员方法的重写，前提都是成员能够在子类中被访问到。因此，父类中private的成员，在子类中不能被覆盖（重写）父类中的final方法不能被子类重写。
+-- Slide 76 --
+public class NotOverriding extends Base{	private int i=2;	public static void main(String[] args){		NotOverriding no=new NotOverriding();		no.increase();		System.out.println(no.i);		System.out.println(no.getI());	}}class Base{	private int i=100;	public void increase(){		this.i++;	}	public int getI(){		return this.i;	}}
+-- Slide 77 --
+写出以下程序的输出结果public class PrivOverride {	private void f() { System.out.println("private f()"); }	public static void main(String[] args) {		PrivOverride po = new Derived();		po.f();	}}class Derived extends PrivOverride {	public int a;	public void f() { System.out.println("public f()"); }}
+-- Slide 78 --
+多态
+编译时多态重载（overloading）运行时多态重写（overriding）向上转型（upcasting）动态绑定（dynamic binding）
+-- Slide 79 --
+向上转型
+子类对象既可以作为该子类的类型对待，也可以作为其父类的类型对待将子类对象的引用转换成父类对象的引用，称为向上转型（Upcasting）如：Employee e=new Manager();通过该变量（如e）只能访问父类（Emplyee）的方法，子类（Manager）特有的部分被隐藏
+-- Slide 80 --
+向上转型
+向上转型使得数组可以包含不同类型的对象Employee [ ]  staff = new Employee[3];staff[0] = new Manager();staff[1] = new Secretary();staff[2] = new Employee();
+-- Slide 81 --
+运行时多态
+通过父类变量发出的方法调用，可能执行该方法在父类中的实现，也可能执行该方法在某子类中的实现，这只能在运行时根据该变量指向的具体对象类型决定	Employee e;	…	//内部多种实现：继承、重写、向上转型	e.getDetails();	//对外一个接口	…
+-- Slide 82 --
+多态
+编译时多态重载（overloading）运行时多态重写（overriding）向上转型（upcasting）动态绑定（dynamic binding）
+-- Slide 83 --
+动态绑定
+运行时多态的实现机理绑定（binding）: 将方法调用和方法体联系在一起动态绑定：绑定操作在程序运行时根据对象的具体类型找到正确的方法体Java中除了static方法和final方法（private方法属于final方法），其余方法都采用动态绑定例：shapes/Shapes.java
+-- Slide 84 --
+构造方法内部的多态方法的行为
+父类构造方法中，被调用的一般方法执行重写后的行为，但其依赖的子类成员变量此时可能尚未被初始化，导致错误行为
+-- Slide 85 --
+class Glyph {	void draw() { System.out.println("Glyph.draw()"); }	Glyph() {		System.out.println("Glyph() before draw()");		draw();		System.out.println("Glyph() after draw()");	}}class RoundGlyph extends Glyph {	private int radius = 1;	RoundGlyph(int r) {		radius = r;		System.out.println("RG.RoundGlyph(), radius = " + radius);	}	void draw() { System.out.println("RG.draw(), radius = " + radius); }}public class PolyConstruct {	public static void main(String[] args) {		new RoundGlyph(5);	}}
+方法重写在父类对象构造之前还是之后？
+-- Slide 86 --
+构造方法内部的多态方法的行为
+实现构造方法的原则尽量避免调用其他一般方法能够被父类构造方法安全地调用的方法父类中的final方法父类中的private方法（隐含是final的）原因：以上两类方法不会被重写
+-- Slide 87 --
+向下转型与运行时类型识别
+父类弱、子类强，父类变量不能直接按子类引用，必须强制转换才能作为子类的引用使用向下转型（downcasting） ：将父类类型的引用变量强制（显式）地转换为子类类型如何保证向下转型的正确性？先测试以确定子类类型，再执行转换：if (supVar instanceof  SomeSubClass)	(someSubClass) supVar;对强制转换结果进行运行时类型识别，若结果类型与子类类型不符，则抛出ClassCastException
+-- Slide 88 --
+class Useful {	public void f() { }	public void g() { }}class MoreUseful extends Useful {	public void f() { }	public void g() { }	public void u() { }	public void v() { }	public void w() { }}public class RTTI {	public static void main(String[] args) {		Useful[] x = { new Useful(), new MoreUseful() };		x[0].f();		x[1].g();		// Compile time: method not found in Useful:		// ！ x[1].u();		((MoreUseful) x[1]).u(); // Downcast/RTTI		((MoreUseful) x[0]).u(); // 抛出异常	}}
+=== 5_Java高级语言特征.ppt ===
+-- Slide 1 --
+Java高级特征
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 4 --
+静态变量(类变量)
+静态变量：在类的成员变量声明中带有static关键字的变量
+class Employee{    private int id;    public static int serialNum = 1;    Employee(){ id=serialNum ++; }    public static void main(String[] args){        Employee e1=new Employee();        Employee e2=new Employee();        Employee e3=new Employee();    }}
+-- Slide 5 --
+静态变量(类变量)
+该类的所有的对象实例之间共享的静态变量
+class Employee{    private int id;    public static int serialNum = 1;    Employee(){ id=serialNum ++; }    public static void main(String[] args){        Employee e1=new Employee();        Employee e2=new Employee();        Employee e3=new Employee();    }}
+id: 1
+sN
+sN: 1
+id: 2
+sN
+id: 3
+sN
+e1
+e2
+e3
+sN: 2
+sN: 3
+sN: 4
+-- Slide 6 --
+静态变量的创建
+静态变量的创建与实例对象无关只在系统加载其所在类时分配空间并初始化，且在创建该类的实例对象时不再分配空间什么时候加载其所在类？运行到不得不加载该类的时候什么是“不得不加载该类的时候”？即将创建该类的第一个对象时首次使用该类的静态方法或静态变量时加载一个类的子类之前要先加载其父类
+-- Slide 7 --
+class Bowl {    Bowl(int i) { print("Bowl(" + i + ")"); }    void f1(int i) { print("f1(" + i + ")"); }}class Table {    static Bowl bowl1 = new Bowl(1);    Table() {        print("Table()");        bowl2.f1(1);    }    void f2(int i) { print("f2(" + i + ")"); }    static Bowl bowl2 = new Bowl(2);}class Cupboard {    Bowl bowl3 = new Bowl(3);    static Bowl bowl4 = new Bowl(4);    Cupboard() {        print("Cupboard()");        bowl4.f1(2);    }    void f3(int i) { print("f3(" + i + ")"); }    static Bowl bowl5 = new Bowl(5);}
+public class StaticInitialization {    public static void main(String[] args) {        print("new Cupboard() in main");        new Cupboard();        print("new Cupboard() in main");        new Cupboard();        table.f2(1);        cupboard.f3(1);    }    static Table table = new Table();    static Cupboard cupboard = new Cupboard();}
+-- Slide 8 --
+静态变量的访问
+非private的静态变量，可在类外用类名访问class Employee{private int id;public static int serialNum = 1;Employee(){ id=serialNum ++; }}class OtherClass{public static void main(String[] args){      System.out.println(Employee.serialNum);}}
+-- Slide 9 --
+静态变量的访问
+非private的静态变量，可在类外用类名访问class Employee{private int id;public static int serialNum = 1;Employee(){ id=serialNum ++; }}class OtherClass{public static void main(String[] args){      Employee e=new Employee();      System.out.println(e.serialNum);}}
+-- Slide 10 --
+静态方法(类方法)
+静态方法：在类的成员方法声明中带有static关键字的方法main方法是静态方法、程序入口点，JVM不创建实例对象就可以运行该方法任何类的构造方法实际上都是静态方法，当首次创建一个类的对象实例时，如果类还没有被装载，就会首先装载该类，然后再进行对象的实例化静态方法一般通过类名访问，但特殊情况下也可通过实例对象访问
+-- Slide 11 --
+class GeneralFunction {	public static int add(int x, int y) {		return x + y;	}}public class UseGeneral {	public static void main(String[] args) {		int c = GeneralFunction.add(9, 10);		System.out.println("9 + 10 = " + c);	}}
+-- Slide 12 --
+静态方法(类方法)
+静态方法中没有this引用，因此，静态方法不能直接调用实例方法，也不能直接访问所属类的实例成员变量
+-- Slide 13 --
+public class TestStaticMethod{	public static void main(String[] args){		StaticMethod obj=new StaticMethod();		StaticMethod.sPrintXAndY(obj);		}}class StaticMethod{	int x=0;		static int y=1;	public void iPrintAndIncreaseY(){		sPrintY(); 		y++;	}	public static void sPrintY(){		//System.out.println(this.x);	//不能访问实例成员变量		//iPrintAndIncreaseY();		//不能访问实例方法		System.out.println(StaticMethod.y);	//可以访问静态变量	}	public static void sPrintXAndY(StaticMethod o){		System.out.println(o.x);	//可以通过o引用访问实例成员变量		o.iPrintAndIncreaseY();	//可以通过o引用调用实例方法		sPrintY();		//可以直接调用静态方法	}}
+-- Slide 14 --
+静态方法的重写
+回顾方法重写的规则：不改变方法的名称、参数列表和返回值，改变方法的内部实现子类中重写方法的访问权限不能缩小子类中重写方法不能抛出新的异常父类中private的成员，在子类中不能被覆盖（重写）
+-- Slide 15 --
+静态方法的重写
+本节加入以下重写规则：子类不能把父类的静态方法重写为非静态子类不能把父类的非静态方法重写为静态子类可以声明与父类静态方法相同的方法静态方法的重写不会导致多态性构造方法本质上是static方法，不具有多态性
+-- Slide 16 --
+静态方法的重写
+class ClassA{public void mtdOne(int i) {}public void mtdTwo(int i){}public static void mtdThree(int i){}public static void mtdFour(int i){}}
+class ClassB extends ClassA{public static void mtdOne(int i){} //错误! 将ClassA中的mtdOne()变成静态的public void mtdTwo(int i) {}public void mtdThree(int i){}//错误! 将ClassA中的mtdThree()变为非静态public static void mtdFour(int i){}//正确! 两个静态方法mtdFour()独立}
+-- Slide 17 --
+静态方法的重写
+本节加入以下重写规则：子类不能把父类的静态方法重写为非静态子类不能把父类的非静态方法重写为静态子类可以声明与父类静态方法相同的方法静态方法的重写不会导致多态性构造方法本质上是static方法，不具有多态性
+-- Slide 18 --
+/*  static方法的行为不具有多态性  */class StaticSuper {	public static String staticGet() { return "Base staticGet()"; }	public String dynamicGet() { return "Base dynamicGet()"; }}class StaticSub extends StaticSuper {	public static String staticGet() { return "Derived staticGet()"; }	public String dynamicGet() { return "Derived dynamicGet()"; }}public class StaticPoly {	public static void main(String[] args) {		StaticSuper sup = new StaticSub(); //向上转型		System.out.println(sup.staticGet());		System.out.println(sup.dynamicGet());	}}
+-- Slide 19 --
+静态初始化程序块
+类定义中不属于任何方法体且以static关键字修饰的语句块	static {…}在加载该类时执行且只执行一次如果类中定义了多个静态语句块，则这些语句块按照在类中出现的次序运行
+-- Slide 20 --
+class StaticInitDemo {	static int i;	static {		i = 5;		System.out.println("Static code: i=" + i++);	}}public class TestStaticInit {	public static void main(String args[]) {		System.out.println("Main code: i=" + StaticInitDemo.i);	}}
+-- Slide 21 --
+写出以下程序的输出class T1 {	static int s1 = 1;	static { System.out.println("static block of T1: " + T2.s2); }	T1() { System.out.println("T1(): " + s1); }}class T2 extends T1 {	static int s2 = 2;	static { System.out.println("static block of T2: " + T2.s2); }	T2() { System.out.println("T2(): " + s2); }}public class InheritStaticInit {	public static void main(String[] args) {		new T2();	}}
+-- Slide 22 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 23 --
+final关键字
+final的使用位置在类声明中使用：表示类不能被继承在成员方法声明及方法参数中使用：成员方法不能被重写，参数变量值不能更改在成员变量和局部变量声明中使用：表示变量的值不能更改
+-- Slide 24 --
+在类声明中使用final关键字
+被定义成final的类不能再派生子类例：	final class Employee {…}		class Manager extends Employee { …}
+-- Slide 25 --
+在成员方法声明中使用final关键字
+被定义成final的方法不能被重写将方法定义为final可使运行时的效率优化对于final方法，编译器直接产生调用方法的代码，而阻止运行时刻对方法调用的动态绑定private的方法都隐含指定为是final的，对子类不可见就无所谓被重写
+-- Slide 26 --
+在方法参数中使用final关键字
+将方法参数指明为final，则无法在方法中更改参数的值
+-- Slide 27 --
+class Gizmo {	public void spin() { }}public class FinalArg {	void with(final Gizmo g) {		// g=new Gizmo();	//错误,g是final的	}	void without(Gizmo g) {		g = new Gizmo();		g.spin();	}	int g(final int i) { return i + 1; }	public static void main(String[] args) {		FinalArg bf = new FinalArg();		bf.without(null);		bf.with(null);	}}
+-- Slide 28 --
+在成员变量中使用final关键字
+被定义成final的成员变量不能改变对于基本类型的成员变量：数值不变用来定义常量：声明final变量并同时赋初值对于引用类型的成员变量：引用不变，但被引用对象可被修改这一约定同样适用于数组
+-- Slide 29 --
+class Value { int i;	public Value(int i) { this.i = i; }}public class FinalData {	private static Random rand = new Random(47);	private final int valueOne = 9;		// 基本类型编译时常量	private final int i4 = rand.nextInt(20);// 运行时不可变,但非编译时常量	private Value v1 = new Value(11);	private final Value v2 = new Value(22);	//引用类型常量	private final int[] a = { 1, 2, 3, 4, 5, 6 };	//数组类型常量	public static void main(String[] args) {		FinalData fd1 = new FinalData();		//fd1.valueOne++; fd1.i4++; 	//valueOne, i4不能更改		fd1.v1 = new Value(9);	// v1不是final的, 可引用到新的对象		// fd1.v2=new Value(0); 	//v2是final的,不能引用到新的对象		fd1.v2.i++;		// v2引用不能更改,但对象本身可更改		// fd1.a=new int[3];	//数组a为final,不能引用到新的数组		for (int i = 0; i < fd1.a.length; i++) {			fd1.a[i]++; // 数组a是final的,但数组元素不是final的		}	}}
+-- Slide 30 --
+在成员变量中使用final关键字
+空白final：若final成员变量声明时未赋初值，则在所属类的每个构造方法中都必须对该变量赋值
+-- Slide 31 --
+class Poppet {	private int i;	Poppet(int ii) { i = ii; }}public class BlankFinal {	private final int i = 0; 	// 被初始化的final	private final int j; 	// 空白final	private final Poppet p; 	// 空白final引用	public BlankFinal() {		j = 1; 			// 初始化空白final		p = new Poppet(1); 	// 初始化空白final引用	}	public BlankFinal(int x) {		j = x; 			// 初始化空白final		p = new Poppet(x); 	// 初始化空白final引用	}	public static void main(String[] args) {		new BlankFinal();		new BlankFinal(47);	}}		// 又例：Customer.java
+-- Slide 32 --
+在局部变量中使用final关键字
+被定义成final的局部变量可以在所属方法的任何位置被赋值，但只能赋一次
+-- Slide 33 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 34 --
+抽象方法
+抽象方法：Java允许在类中只声明方法而不提供方法的实现，这种只有声明而没有方法体的方法称为抽象方法抽象方法的声明中需加关键字abstract
+-- Slide 35 --
+抽象类
+由关键字abstract声明的类称为抽象类包含抽象方法的类必须是抽象类抽象类可以不包含抽象方法，但一般会包括抽象类可以有构造方法、普通成员变量和方法抽象类的构造方法通常声明为protected（只给子类用）不能创建抽象类的实例，若抽象类的子类实现了所有抽象方法，则可以创建子类的实例对象，否则该子类也是抽象类
+-- Slide 36 --
+抽象类
+抽象类的作用：为一类对象建立抽象的模型abstract class Employee{	abstract void raiseSalary(int i) ;}class Manager extends Employee{	void raiseSalary(int i ){ …}} …Employee e=new Manager();//创建Employee子类Manager的对象Employee e=new Employee(); //错误！Employee为抽象类
+-- Slide 37 --
+接口
+接口（ Interface ）：确定了对特定对象所能发出的请求，或者对象接收消息的方式将“做什么”与“怎么做”分离接口中只声明方法（“做什么”，抽象方法）但不定义方法体（“怎么做”）接口只规定了类的基本形式，不涉及任何实现细节，实现一个接口的类具有接口规定的行为接口可看作使用类的“客户”代码与提供服务的类之间的契约或协议抽象类是介于普通类与接口之间的中间状态
+-- Slide 38 --
+接口的定义
+接口定义=接口声明+接口体
+interface Runner{public static final int id = 1;public void start();public void run();public void stop();}
+-- Slide 39 --
+接口声明
+[public] interface 接口名 [extends 父接口列表] { 接口体 }public / default：任意类均可使用 / 与该接口在同一个包中的类可使用一个接口可以有多个父接口，子接口继承父接口的所有常量和方法
+-- Slide 40 --
+接口体
+接口体=常量定义+方法定义常量默认具有public, final, static属性类型 常量名=常量值;方法默认具有public, abstract属性返回类型 方法名 ([参数列表]);
+-- Slide 41 --
+接口体
+接口体=常量定义+方法定义例：
+-- Slide 42 --
+接口体
+常量不能为空白final的父接口中的常量可被子接口中的同名常量隐藏，父接口中的方法可被子接口中的方法重写接口中成员不能使用的修饰符：transient, volatile, synchronized, private, protected
+-- Slide 43 --
+接口的使用——用类实现接口
+类声明中的implements关键字类可以使用接口定义的常量类必须实现接口定义的所有方法一个类可以实现多个接口，例：	interface  I1{ … }	interface  I2{ … }	class  Sup { … }	class C extends Sup implements I1,I2 { … }
+-- Slide 44 --
+接口的使用——作为数据类型，支持多态
+实现该接口的类可看作该接口的“子类”，接口类型的变量可指向该“子类”的实例Interface Human{ void showNameInNativeLanguage(); }class Chinese implements Human{ … }class Japanese implements Human{ … }...Human e = new Chinese( ); Human e = new Japanese( );e.showNameInNativeLanguage();…
+-- Slide 45 --
+接口与多重继承
+Java的类继承只支持单继承（子类从单个父类继承），不支持多重继承（子类从多个父类继承）extends后的类名只能有一个类的继承关系形成树型层次结构接口的继承支持多重继承
+-- Slide 46 --
+接口与多重继承
+类可以通过实现多个接口达到多重继承的效果在进行单个父类与多个接口合并时，只有单个父类具有实现细节，从而避免代码冲突
+-- Slide 47 --
+Interface示例
+47
+interfaceFlyer
+Vehicle
+interfaceSailer
+dock ( )cruise ( )
+Airplane
+takeoff ( )land ( )fly ( )
+RiverBarge
+dock ( )cruise ( )
+takeoff ( )land ( )fly ( )
+SeaPlane
+dock ( )cruise ( )
+Helicopter
+-- Slide 48 --
+Interface示例
+48
+interfaceFlyer
+Vehicle
+interfaceSailer
+dock ( )cruise ( )
+Airplane
+takeoff ( )land ( )fly ( )
+RiverBarge
+dock ( )cruise ( )
+takeoff ( )land ( )fly ( )
+SeaPlane
+dock ( )cruise ( )
+Helicopter
+-- Slide 49 --
+Interface示例
+49
+interfaceFlyer
+Vehicle
+interfaceSailer
+dock ( )cruise ( )
+Airplane
+takeoff ( )land ( )fly ( )
+RiverBarge
+dock ( )cruise ( )
+takeoff ( )land ( )fly ( )
+SeaPlane
+dock ( )cruise ( )
+Helicopter
+-- Slide 50 --
+Interface示例
+50
+interfaceFlyer
+Vehicle
+interfaceSailer
+dock ( )cruise ( )
+Airplane
+takeoff ( )land ( )fly ( )
+RiverBarge
+dock ( )cruise ( )
+takeoff ( )land ( )fly ( )
+SeaPlane
+dock ( )cruise ( )
+Helicopter
+-- Slide 51 --
+接口与抽象类的区别
+接口中的所有方法都是抽象的，而抽象类可以定义非抽象方法一个类可以实现多个接口，但只能继承一个抽象父类接口与实现它的类不构成类的继承体系，即接口不是类体系的一部分，不相关的类也可以实现相同的接口；抽象类属于类的继承体系，且一般位于类体系的较高层
+-- Slide 52 --
+通过继承扩展接口
+直接向接口中扩展方法可能带来问题：所有实现原来接口的类将因为接口的改变而不能正常工作不能向interface定义中随意增加方法，需要通过继承扩展接口public interface StockWatcher {	final String sunTicker = "SUNW";	final String oracleTicker = "ORCL";	void valueChanged(String tickerSymbol, double newValue); 	void currentValue(String tickerSymbol, double newValue); }public interface StockTracker extends StockWatcher {    void currentValue(String tickerSymbol, double newValue);}
+-- Slide 53 --
+习题5.5. 下列接口的定义中，哪些是正确的？(1)	interface Printable{	    void print() {};	}(2)	abstract interface Printable{	    void print();	}(3)	abstract interface Printable extends Interface1, Interface2{	    void print() {};	}(4)	interface Printable{	    void print();	}
+-- Slide 54 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 55 --
+泛型的基本概念
+泛型：又称为参数化类型，通过定义含有一个或多个类型参数的类或接口，对具有类似特征与行为的类进行抽象类型参数：可以指代任何具体类型例：JDK中java.util.ArrayList<E>的定义，ArrayList<E>定义了一个泛型，E为类型参数，它代表了能够放入ArrayList中的对象的类型如何使用一个预定义的泛型？对泛型中的类型参数进行具体化，即可得到具体的类例：如果希望创建一个能够存放String对象的ArrayList，应使用ArrayList<String>进行声明。ArrayList<String>总是可以被看作一个具体的类，该类的实例作为容器可以存放String类型的对象。
+-- Slide 56 --
+集合类
+一个集合类的实例（集合对象）表示了一组对象，相当于一个容器，集合对象存放指向其他对象的引用集合接口树的简要结构：
+LinkedList<E>
+ArrayList<E>
+-- Slide 57 --
+集合类
+Collection：集合接口树的根，定义通用的集合操作APISet：集合。无序，不能包含重复元素List：列表。有序，可包含重复元素，可通过索引序号访问元素Queue：队列。必须按照排队规则来确定元素顺序Map：实现键到值的映射，允许通过键查找值不能包含重复的键每个键至多只映射到一个值SortedSet, SortedMap：具有排序功能的Set和Map
+-- Slide 58 --
+Collection接口中所定义的方法：int size();boolean isEmpty();void clear();boolean contain(Object element);boolean add(Object element);boolean remove(Object element);Iterator iterator();boolean containAll(Collection c);boolean addAll(Collection c);boolean removeAll(Collection c);boolean retainAll(Collection c);Object[] toArray();
+-- Slide 59 --
+完整的容器分类
+-- Slide 60 --
+集合类
+Abstract*方便创建自己的容器类多数情况下，已有容器类库足够用，可忽略Abstract*legacy：Java 1.0/1.1容器：不应使用，但须了解（读JDK文档）
+-- Slide 61 --
+简化的容器分类
+去除Abstract*，legacy类，中间接口等，得到简化的容器分类
+-- Slide 62 --
+Set接口
+三种接口实现：HashSet, TreeSet, LinkedHashSet
+-- Slide 63 --
+Set接口
+三种接口实现：HashSet, TreeSet, LinkedHashSetHashSet：采用Hash表实现了Set接口，元素无固定顺序，对元素的访问效率高TreeSet：实现了SortedSet接口，采用有序树结构存储集合元素，元素按照比较结果的升序排列LinkedHashSet：实现了Set接口，采用Hash表和链表结合的结构存储集合元素，元素按照被添加的先后顺序保存
+-- Slide 64 --
+Set与Collection的主要接口方法
+-- Slide 65 --
+public class FindDups {	public static void main(String args[]) {		// 创建一个HashSet对象，缺省的初始容量是16		Set<String> s = new HashSet<String>();		// 将命令行中的每个字符串加入到集合s中，		//其中重复的字符串将不能加入，并被打印输出		for (int i = 0; i < args.length; i++) {		        if (!s.add(args[i]))			System.out.println("Duplicate detected: " + args[i]);		}		// 输出集合s的元素个数以及集合中的所有元素：		System.out.println(s.size() + " distinct words detected: " + s);	}}
+-- Slide 66 --
+Set接口
+注意如果要将T类型的实例放入HashSet或TreeSet中，需要为T定义equals()方法如果要将T的实例放入HashSet或LinkedHashSet中，需要为T定义hashCode()方法
+-- Slide 67 --
+List接口
+两种接口实现：ArrayList, LinkedList
+-- Slide 68 --
+List接口
+两种接口实现：ArrayList, LinkedListArrayList：采用可变大小的数组实现List接口无需声明上限，随着元素的增加，长度自动增加对元素的随机访问速度快，插入/移除元素较慢该类是非同步的，相对于Vector（legacy）效率高LinkedList：采用链表结构实现List接口实际上实现了List接口、Queue接口和双端队列Deque接口，因此可用来实现堆栈、队列或双端队列插入/移除元素快，对元素的随机访问较慢该类是非同步的
+-- Slide 69 --
+List接口方法
+-- Slide 70 --
+ArrayList的用法
+构造方法public ArrayList()：创建一个空ArrayList，初始长度为10public ArrayList(int initialCapacity)：创建一个空ArrayList，初始长度为initialCapacitypublic ArrayList(Collection<E> c)：由指定集合的元素创建ArrayList，顺序由集合的迭代器决定
+-- Slide 71 --
+public class UseArrayList {	public static void main(String[] args) {		List<String> scores = new ArrayList<String>();		scores.add("86");	// 添加元素		scores.add("98");	// 添加元素		scores.add(1, "99");	// 插入元素		for (int i = 0; i < scores.size(); i++) {			System.out.print(scores.get(i) + " ");// 输出结果		}		scores.set(1, "77");	// 修改第二个元素		scores.remove(0);	// 删除第一个元素		System.out.println("\n修改并删除之后");		for (int i = 0; i < scores.size(); i++) {			System.out.print(scores.get(i) + " ");		}		System.out.println(“ \n按字符串输出\n" + scores.toString());	}}		//又例：Deal.java
+-- Slide 72 --
+Queue接口
+两种接口实现：LinkedList, PriorityQueue
+-- Slide 73 --
+Queue接口方法
+-- Slide 74 --
+Queue接口方法
+Queue提供两种形式的插入、删除和元素检查：
+-- Slide 75 --
+public class QueueDemo {	public static void printQ(Queue queue) {		while (queue.peek() != null)			System.out.print(queue.remove() + " ");		System.out.println();	}	public static void main(String[] args) {		Queue<Integer> queue = new LinkedList<Integer>();		Random rand = new Random(47);		for (int i = 0; i < 10; i++)			queue.offer(rand.nextInt(i + 10));		printQ(queue);		Queue<Character> qc = new LinkedList<Character>();		for (char c : "Brontosaurus".toCharArray())			qc.offer(c);		printQ(qc);	}}		//又例：Counter.java
+-- Slide 76 --
+优先队列（PriorityQueue）
+队列规则：给定一组队列中的元素的情况下，确定下一个弹出队列的元素的规则一般队列：FIFO优先队列：选择优先级最高的元素当调用offer()插入对象时，对象在队列中排序Integer、String、Character等类型的默认排序采用“自然顺序”可通过提供自己的Comparator修改排序顺序
+-- Slide 77 --
+Map接口
+接口实现：HashMap, TreeMap, LinkedHashMap
+-- Slide 78 --
+Map接口
+接口实现：HashMap, TreeMap, LinkedHashMap把键映射到某个值一个键最多只能映射一个值一个值可对应多个键最常用：HashMap（无序）和TreeMap（有序）HashMap：使用Hash表实现Map接口无序，非同步且允许空的键与值相比Hashtable（legacy）效率高TreeMap：与TreeSet类似，实现了SortedMap接口
+-- Slide 79 --
+Map接口方法
+-- Slide 80 --
+public class Freq {	public static void main(String args[]) {		String[] words = { "if", "it", "is", "to", "be", "it", 				"is", "up", "to", "me", "to", "delegate" };		Integer freq;		Map<String, Integer> m = new TreeMap<String, Integer>();				for (String a : words) {//以(单词,词频)为键值对, 构造频率表			freq = m.get(a); // 获取指定单词的词频。			if (freq == null) { // 词频递增				freq = new Integer(1);			} else {				freq = new Integer(freq + 1);// .intValue()			}			m.put(a, freq); // 在Map中更改词频		}		System.out.println(m.size() + " distinct words detected:");		System.out.println(m);	}}
+-- Slide 81 --
+HashMap的用法
+构造方法public HashMap()：构造空HashMap，默认初始容量为16，默认load因子为0.75public HashMap(int initialCapacity)：构造空HashMap，指定初始容量为initialCapacity，默认load因子为0.75public HashMap(int initialCapacity, float loadFactor)：构造空HashMap，指定初始容量为initialCapacity，指定load因子为loadFactor
+-- Slide 82 --
+public class UseHashMap {        public static void main(String args[]) {	HashMap<String, String> hScore = new HashMap<String, String>();	hScore.put("张一", "86");	hScore.put("李二", "98");	hScore.put("海飞", "99");	System.out.println(“按字符串输出：" + hScore.toString());	hScore.put("李二", "77");	hScore.remove("张一");	System.out.println("修改并删除之后");	System.out.println(“按字符串输出：" + hScore.toString());        }}	//又例：Statistics.java
+-- Slide 83 --
+迭代器(Iterator)
+Iterator是一个轻量级对象，用于遍历并选择序列中的对象用法：使用容器的iterator()方法返回容器的迭代器，该迭代器准备返回容器的第一个元素Java的迭代器只能单向移动next()：获得序列的下一个元素hasNext()：检查序列中是否还有元素remove()：将迭代器新近返回的元素（即由next()产生的最后一个元素）删除，因此在调用remove()之前必须先调用next()
+-- Slide 84 --
+public class TestIterator{        public static void main(String[] args){	String sentence="I believe I can fly, I believe I can touch the sky.";	String[] strs=sentence.split(" ");	List<String> list=new ArrayList<String>( Arrays.asList(strs) );	Iterator<String> it=list.iterator();	while(it.hasNext())		System.out.print(it.next()+"_");	System.out.println();			it=list.iterator();	while(it.hasNext()){		if(it.next().equals("I"))			it.remove();	}	it=list.iterator();	while(it.hasNext())		System.out.print(it.next()+" ");	System.out.println();        }}
+-- Slide 85 --
+ListIterator
+Iterator的子类，只能用于各种List类的访问可以双向移动用法List容器的listIterator()方法产生一个指向List开始处的ListIterator对象例: ListIteratorDemo.java
+-- Slide 86 --
+定义一个类Student，属性为学号、姓名和成绩；方法为增加记录SetRecord和得到记录GetRecord。SetRecord给出学号、姓名和成绩的赋值，GetRecord通过学号得到考生的成绩假设一个学生所选课程为语文、数学、英语、政治、物理、化学，给出此学生所选课程的ArrayList列表，并访问物理存放在ArrayList中的位置对于右图中的Shebei表，将设备编码和设备名称作为HashMap中的键和值进行存储，然后访问此HashMap，找到键0008和0016并输出设备编码为0008、0016的设备名称
+-- Slide 87 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 88 --
+枚举类型
+通过关键字enum将一组具名值的有限集合创建为一种类型这些具名值又称为枚举常量一个枚举类型实际定义了一个类，该类可以包含方法和其他属性，以支持对枚举值的操作，还可以实现任意的接口枚举类型变量属于引用变量，变量取值范围为所有可能的枚举常量
+-- Slide 89 --
+枚举类型
+枚举类型的定义：[public] enum 枚举类型名 [implements 接口名表] {	枚举常量定义	[枚举体定义]}
+-- Slide 90 --
+枚举类型
+枚举类型的定义：[public] enum 枚举类型名 [implements 接口名表] {	枚举常量定义	[枚举体定义]}枚举声明：public/default：可被包外类访问 / 只能在同一包中访问所有枚举类型都隐含继承java.lang.Enum类，故不能再继承其他任何类
+-- Slide 91 --
+枚举类型
+枚举类型的定义：[public] enum 枚举类型名 [implements 接口名表] {	枚举常量定义	[枚举体定义]}枚举常量定义：常量1[,常量2[, … 常量n]] [;]如果没有枚举体部分，则“;”可省略枚举常量实际上是枚举类型的static和final的实例，加载枚举类型时，调用枚举类型的构造方法创建这些实例如果在枚举体中定义了构造方法，则在定义枚举常量时可采用“常量(参数1,参数2, …)”的形式
+-- Slide 92 --
+枚举类型
+枚举类型的定义：[public] enum 枚举类型名 [implements 接口名表] {	枚举常量定义	[枚举体定义]}枚举体定义：可以包含变量、构造方法和成员方法构造方法只能为private，保证用户不会创建新的枚举常量
+-- Slide 93 --
+枚举类型
+枚举类型的方法每个枚举类型都具有java.lang.Object类和java.lang.Comparable接口中可以被继承的方法编译器在创建枚举类型时也自动加入一些方法，如：ElementType[] values()：返回一个数组，数组包含该枚举类型的所有枚举常量，且数组中的元素严格保持其在枚举类型中的声明顺序String name()：返回当前枚举常量的名字int ordinal()：返回该枚举常量在声明中的次序值
+-- Slide 94 --
+enum Week {	SUNDAY, MONDAY, TUESDAY, WEDNESDAY, 	THURSDAY, FRIDAY, SATURDAY}public class EnumValuesTest {	public static void main(String args[]) {		for (Week w : Week.values()) {			System.out.print(w.name() + ". ");		}		System.out.println();	}}
+-- Slide 95 --
+enum Coin { PENNY(1), NICKEL(5), DIME(10), QUARTER(25);        private final int value;        Coin(int value) { this.value = value; }        public int value() { return value; }}enum CoinColor { COPPER, NICKEL, SILVER }public class CoinTest {        public static void main(String[] args) {	for (Coin c : Coin.values()) {	        System.out.print(c + ": " + c.value() + ", ");	        switch (c) {		case PENNY:		System.out.println(CoinColor.COPPER); break;		case NICKEL:		System.out.println(CoinColor.NICKEL); break;		case DIME:		case QUARTER:		System.out.println(CoinColor.SILVER); break;	        }	}        }}
+-- Slide 96 --
+静态变量、方法与初始化程序块final关键字抽象类与接口集合类枚举类型Wrapper类
+-- Slide 97 --
+Wrapper类
+Wrapper将基本类型表示成类，每个基本数据类型在java.lang包中都有一个对应的Wrapper类每个Wrapper类对象都封装了基本类型的一个值
+-- Slide 98 --
+Wrapper类
+Wrapper类实例的构造：将基本数据类型值传递给Wrapper类的构造函数Wrapper类中包含很多有用的方法和常量：数值型Wrapper类中的MIN_VALUE, MAX_VALUEbyteValue()：将当前Wrapper类型的值作为byte返回shortValue()：将当前Wrapper类型的值作为short返回valueOf()：将字符串转换为Wrapper类型的实例toString()：将基本类型值转换为字符串parseInt()：将字符串转换为int类型值……
+-- Slide 99 --
+Wrapper类
+autoboxing / autounboxingautoboxing：在应该使用对象的地方使用基本类型的数据时，编译器自动将该数据包装为对应的Wrapper类对象autounboxing：在应该使用基本类型数据的地方使用Wrapper类的对象时，编译器自动从Wrapper类对象中取出所包含的基本类型数据
+-- Slide 100 --
+public class AutoBoxingTest {	public static void main(String args[]) {		Integer x, y;		int c;		x = 22;// autoboxing		y = 15;// autoboxing		if ((c = x.compareTo(y)) == 0)			System.out.println("x is equal to y");		else if (c < 0)			System.out.println("x is less than y");		else			System.out.println("x is greater than y");		System.out.println("x + y = " + (x + y));// autounboxing	}}
+=== 6_异常处理.ppt ===
+-- Slide 1 --
+异常处理
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+异常的概念异常处理方法自定义异常类断言
+-- Slide 4 --
+异常的概念
+在程序运行时，打断正常程序流程的不正常情况分两类错误(Error)：应用程序无法捕获的严重问题异常(Exception)：应用程序可捕获的一般问题例：试图打开的文件不存在网络连接中断数组越界要加载的类找不到……
+-- Slide 5 --
+//声明一个字符串数组，通过while循环输出数组中的各字符串1	public class HelloWorld{2		public static void main(String args[ ]){3			int i=0;4			String greetings[ ]={ “Hello World!”, “Hello!”,5				“HELLO WORLD!”};6			while ( i<4){7				System.out.println(greetings[i]);8				i++;                               }                              System.out.println("end!");          11		}12	}
+Hello World!Hello!HELLO WORLD!Exception in thread “main” Java.lang.ArrayIndexOutOfBoundsException	at HelloWorld.main(HelloWorld.java:7)
+程序运行中出现了异常，导致了程序的非正常终止！！！
+产生异常的语句是第7行异常的名称是：数组越界
+-- Slide 6 --
+异常的概念
+错误虚拟机相关的问题，如虚拟机崩溃、动态链接失败、低层资源错误等总是不受编译器检查的（Unchecked）可以被抛出，但无法恢复，不可能被捕获异常Runtime异常（免检异常）：由Runtime异常类及其子类表示的异常，如数组越界、算术运算异常、空指针异常等不需要显式地处理（捕获或抛出）该异常，就能编译通过（Unchecked）必检异常：除Runtime异常类及其子类之外的所有异常，如文件不存在、无效URL等编译器检查并强制对其进行异常处理（Checked）
+-- Slide 7 --
+Java的异常类层次
+-- Slide 8 --
+Java的异常类层次
+Java.lang.Throwable是所有异常类的父类检索异常的相关信息输出显示异常发生位置的堆栈追踪轨迹
+-- Slide 9 --
+Java的异常类层次
+整数的除0操作导致的异常，如：int i=10/0;
+-- Slide 10 --
+Java的异常类层次
+对象未实例化时，即试图通过该对象的引用访问其成员变量或方法，如Date d=null;  System.out.println(d.toString());
+-- Slide 11 --
+Java的异常类层次
+输入/输出时可能产生的各种异常
+-- Slide 12 --
+Java的异常类层次
+异常一般是由程序员的疏忽或者环境的变化所导致的若不对异常进行处理，则会导致程序的不正常终止，为保证程序正常运行，Java提供了异常处理机制
+-- Slide 13 --
+异常的概念异常处理方法自定义异常类断言
+-- Slide 14 --
+异常处理的具体方式
+捕获并处理异常将方法中产生的异常抛出
+-- Slide 15 --
+捕获并处理异常
+通过try-catch-finally语句来实现，基本格式：try{ /** 监控区域 */	//一条或多条可能抛出异常的Java语句}catch(ExceptionType1 e1){  /** 异常处理程序 */	//捕获到ExceptionType1类型的异常时执行的代码}catch (ExceptionType2 e2){  /** 异常处理程序 */	//捕获到ExceptionType2类型的异常时执行的代码} …finally{ 	//执行最终清理的语句}
+-- Slide 16 --
+捕获并处理异常
+try把可能出现异常的语句都放在try语句块中try语句块之后必须紧跟至少一个catch语句块catch (ThrowableType  objRef) {…}ThrowableType：当前catch语句块能够处理的异常类型，必须是Throwable类的子类objRef：异常处理程序中使用的指向被捕获异常对象的引用
+-- Slide 17 --
+捕获并处理异常
+finally用于将除内存之外的资源恢复到初始状态需清理的资源包括：已打开的文件或网络连接，在屏幕上画的图形等finally 语句块可以省略若finally语句块存在，则无论是否发生异常均执行
+-- Slide 18 --
+捕获并处理异常
+-- Slide 19 --
+//ListOfNumbers.java//创建一个保存10个Integer对象的向量，//并通过writeList方法将该向量保存到OutFile.txt中import java.io.*;import java.util.*;public class ListOfNumbers {    private ArrayList<Integer> list;    private static final int size = 10;    public ListOfNumbers() {        list = new ArrayList<Integer>(size);        for (int i = 0; i < size; i++)            list.add(new Integer(i));	}    public void writeList(){         PrintWriter out=new PrintWriter(new FileWriter("OutFile.txt"));         for (int i=0;i<size;i++)            out.println("Value at: "+i+" = "+list.get(i));         out.close();    }    public static void main(String args[]) {        ListOfNumbers list = new ListOfNumbers();        list.writeList();    }}
+调用了java.io.FileWriter的构造方法创建文件输出流，该方法声明如下：public FileWriter(String fileName) throws IOException;而writeList()方法中没有对FileWriter()方法抛出的必检异常IOException进行处理，故程序在编译时产生错误
+-- Slide 20 --
+//更改writeList()方法public void writeList() {    PrintWriter out = null;    try {        System.out.println("Entering try statement");        out = new PrintWriter(new FileWriter("OutFile.txt"));        for (int i = 0; i < size; i++)            out.println("Value at: " + i + " = " + list.get(i));    } catch (IndexOutOfBoundsException e) {        System.err.println("Caught IndexOutOfBoundsException: "                + e.getMessage());    } catch (IOException e) {        System.err.println("Caught IOException: " + e.getMessage());    } finally {/*执行程序的最后清理操作，关闭程序打开的文件流*/        if (out != null) {            System.out.println("Closing PrintWriter");            out.close();        } else { System.out.println("PrintWriter not open"); }    }}
+-- Slide 21 --
+以下程序的输出是什么？	public static void main(String args[]){		int i = 0 ;		String greetings[]={“Hello World!”,”Hello!”,”HELLO!”};		while (i<4){			try {				System.out.println(greetings[i]);			}catch(ArrayIndexOutOfBoundsException e){				System.out.println(“Re-setting Index Value”);				i=-1;			}finally{				System.out.println(“This is always printed”);			}			i++;		}	}
+-- Slide 22 --
+多种异常同时处理
+可编写针对Exception的任何子类的catch块子类的异常对象可与父类的异常处理程序匹配若catch块针对叶节点，则是专用的异常处理，捕获一种特定的异常若catch块针对中间节点，则是通用的异常处理，捕获该节点及其所有子类表示的异常
+-- Slide 23 --
+//处理多种异常：public void writeList() {     PrintWriter out = null;     try {        System.out.println("Entering try statement");         out=new PrintWriter(new FileWriter("OutFile.txt"));         for (int i=0;i<size;i++)            out.println("Value at: "+i+" = "+list.get(i));     } catch (IOException e) {         System.err.println("Caught IOException: " + e.getMessage());     } catch (Exception e){         System.err.println("Caught Exception: "+e.getMessage());     } finally {         if (out!=null) {             System.out.println("Closing PrintWriter");            out.close();         } else { System.out.println("PrintWriter not open"); }     } }
+-- Slide 24 --
+异常处理的具体方式
+捕获并处理异常将方法中产生的异常抛出
+-- Slide 25 --
+抛出异常
+可能产生异常的方法不处理该异常，而是将该异常抛出到调用该方法的程序例：public void troublesome() throws IOException { … }声明异常(throws子句)retType mtdName ( [paralist] ) throws [exceptionList];抛出异常(throw语句)throw someThrowableObj;执行throw语句后，转向调用者程序，在调用者程序中查找是否有catch子句匹配someThrowableObj若找到则由该catch子句处理，若未找到，则转向上一层调用者程序若一个异常在转向到main()后还未被处理，则程序将非正常终止
+-- Slide 26 --
+抛出异常
+-- Slide 27 --
+class ListOfNumbersDeclared {    private ArrayList<Integer> list;    private static final int size = 10;    public ListOfNumbersDeclared() {//构造方法        list = new ArrayList<Integer>(size);        for (int i = 0; i < size; i++)            list.add(new Integer(i));    }    public void writeList()         throws IOException, IndexOutOfBoundsException {//声明抛出异常        PrintWriter out = new PrintWriter(new FileWriter("OutFile1.txt"));        for (int i = 0; i < size; i++)            out.println("Value at: " + i + " = " + list.get(i));        out.close();    }}public class TestListOfNumbersDeclared {    public static void main(String args[]) {        try { ListOfNumbersDeclared list = new ListOfNumbersDeclared();            list.writeList();        } catch (Exception e) { }       System.out.println("A list of numbers created and stored in OutFile1.txt");    }}
+-- Slide 28 --
+程序中增加异常处理的优点是什么?设s2语句会引起异常，对于左右两个程序，分别说明s3是否会执行？如果异常被捕获，哪些语句会被执行？如果异常未被捕获，哪些语句会被执行？
+try{  s1; s2; s3;} catch(ExceptionType1 e){}catch(ExceptionType2 e){}s5;
+try{  s1; s2; s3;} catch(ExceptionType1 e){}  catch(ExceptionType2 e){}finally{s4}s5;
+-- Slide 29 --
+异常的概念异常处理方法自定义异常类断言
+-- Slide 30 --
+自定义异常类
+在开发Java程序时，以下情况可能导致需要自定义异常类所需的异常类型在Java标准异常体系中不存在需要将某些实际的异常与Java标准异常相区分使用其它package中定义的异常类会影响当前package的独立性与自包含性
+-- Slide 31 --
+自定义异常类
+定义方法自定义异常类是Exception类的子类，可包含普通类的内容尽量不将自定义异常类作为RuntimeException类的子类，因为RuntimeException免检而我们希望自定义异常必检
+-- Slide 32 --
+自定义异常类的定义
+//描述通信中客户端和服务器连接超时的异常public class ServerTimeOutException extends Exception{    private String reason;    private int port ;    public ServerTimeOutException(String reason, int port){        this.reason = reason;        this.port = port;    }    public String getReason(){        return reason;    }    public int getPort(){        return port;    }}
+-- Slide 33 --
+自定义异常类的使用
+// 抛出自定义异常public void connectMe(String serverName) 		throws ServerTimeOutException{    int success;    int portToConnect = 80;    success = open(serverName, portToConnect);    if(success== -1){        throw new ServerTimeOutException(“Could		not connect”,80);    }}
+-- Slide 34 --
+自定义异常类的使用
+// 捕获自定义异常并处理public void findServer(){…    try{        connectMe(defaultServer);    } catch (ServerTimeOutException e){        System.out.println(“Server timed out, try another”);        try{ //try-catch语句块是可以嵌套的            connectMe(alternateServer);        } catch (ServerTimeOutException e1) {            System.out.println(“No server avaliable”);        }    }}// 例：TestMyException.java
+-- Slide 35 --
+方法重写抛出异常
+注意：重写方法需要抛出与原方法所抛出异常类型一致的异常或者不抛出异常。
+-- Slide 36 --
+异常的概念异常处理方法自定义异常类断言
+-- Slide 37 --
+断言(Assertion)
+断言是软件开发中常用的调试方式，很多语言（如C，C++等）都支持此机制，但支持方式不尽相同Java中专门提供了assert语句，为Java程序提供一种错误检查机制每个断言都包含一个布尔表达式若程序没有错，则运行assert语句时该表达式的值应该为true如果表达式的值为false，则系统将抛出一个错误
+-- Slide 38 --
+断言的定义
+第一种形式assert expr;expr为布尔表达式运行该断言语句时，求出expr的值若值为false，则说明程序处于不正确状态，系统抛出一个没有任何详细信息的AssertionError类型的错误对象，并退出若值为true，则继续执行
+-- Slide 39 --
+断言的定义
+第二种形式assert expr1 : expr2;expr1为布尔表达式，expr2为一般表达式运行该断言语句时，求出expr1的值若值为false，则系统计算出expr2的值，并以这个值为参数调用AssertionError类的构造方法，创建一个包含详细信息的AssertionError对象，抛出并退出若值为true，则expr2不被计算，程序继续执行
+-- Slide 40 --
+断言的使用（一）
+保证控制流的正确性在if-else语句和switch语句中，可在不应被执行的控制流下，使用assert false语句，若控制流异常，则会抛出AssersionError
+-- Slide 41 --
+public class AssertionDemo {    public static void main(String[] args) {        int month = 13;        switch (month) {            case 1:  System.out.println("January"); break;            case 2:  System.out.println("February"); break;            case 3:  System.out.println("March"); break;            case 4:  System.out.println("April"); break;            case 5:  System.out.println("May"); break;            case 6:  System.out.println("June"); break;            case 7:  System.out.println("July"); break;            case 8:  System.out.println("August"); break;            case 9:  System.out.println("September"); break;            case 10: System.out.println("October"); break;            case 11: System.out.println("November"); break;            case 12: System.out.println("December"); break;            default: assert false:"Hey, that's not a valid month!"; break;        }    }}
+-- Slide 42 --
+断言的使用（二）
+检查私有方法输入参数的有效性若私有方法对参数有特定的要求，可在方法开始处使用断言进行检查如：若要求输入的参数param1不能为null，则在方法开始处加入断言语句：	assert param1 != null: “param is null in test()”;
+-- Slide 43 --
+断言的使用（三）
+检查方法的返回结果是否有效对一些计算型方法，可通过断言语句，在方法返回前检查返回值是否满足必要的性质如：对于计算绝对值的方法，可在方法中加入下列断言：	assert value>=0:“value should be bigger than 0:”+value;
+-- Slide 44 --
+断言的使用（四）
+检查程序不变量程序不变量是程序某个特定点或某些特定点都保持为真的一种特性不变量反映程序的特性，通过分析程序关键点上的不变量，可以监测到程序运行中的异常例如： while (x>0) do { assert x>0; …  }
+-- Slide 45 --
+断言的执行
+默认情况下断言是不执行的开启java –enableassertions Myprogram  或java –ea Myprogram关闭java –disableassertions Myprogram  或java –da Myprogram若-ea/-da后无参数，则对所有类开启/关闭-ea/-da也可对指定的类、包开启/关闭如：-ea: <className>, -ea:<packageName>等
+-- Slide 46 --
+断言的执行
+=== 7_输入输出.ppt ===
+-- Slide 1 --
+输入/输出
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+File类流式输入/输出随机存取文件对象的串行化
+-- Slide 4 --
+File类
+File类是外存文件和目录的抽象表示File类用来操作文件和获得文件的信息，但不提供对文件数据读取的方法（由文件流提供）通过File类的方法，可以生成新的目录、临时文件改变文件名删除文件得到文件或目录的描述信息（文件名、路径、可读写性、长度等）列出一个目录中的所有文件或满足某种模式的文件
+-- Slide 5 --
+File类
+创建File对象public File(String pathname)File myFile=new File(“myfile.txt”);public File(String parent, String child)File myFile=new File(“d:\works”, “source\myfile.txt”);public File(File parent, String child)File myFileParent=new File(“d:\works”);File myFile=new File(myFileParent, “source\myfile.txt”);注意：为保证程序的可移植性，应尽量使用相对路径parent：父路径字符串或对象，绝对或相对路径child：相对于parent的目录或文件名字符串
+-- Slide 6 --
+File类
+文件名的操作String getName( )String getParent( )String getPath( )String getAbsolutePath( )boolean renameTo(File newName)获取文件一般信息与常用操作long length()long lastModified()boolean delete()
+文件信息测试boolean exists( )boolean canWrite( )boolean canRead( )boolean canExecute( )boolean  isFile( )boolean  isDirectory( )boolean  isAbsolute( )目录操作String[] list()File[] listFiles()boolean mkdir()boolean mkdirs()
+-- Slide 7 --
+public class RenameFile {        private static void fileData(File f) {                System.out.println("Absolute path: " + f.getAbsolutePath()                      + "\n Can read: " + f.canRead() + "\n Can write: " + f.canWrite()                      + "\n getName: " + f.getName() + "\n getParent: " + f.getParent()                       + "\n getPath: “ + f.getPath() + "\n length: " + f.length()                      + "\n lastModified: " + new Date(f.lastModified()));                if (f.isFile())  System.out.println("It's a file");                else    System.out.println("It's a directory");        }        public static void main(String[] args) {                File old = new File(args[0]);                File rname = new File(args[1]);                System.out.println("The original file's information: ");                fileData(old);                old.renameTo(rname);                System.out.println("\n The file information after rename: ");                fileData(rname);                if (!old.exists())                       System.out.println("\n The original file never exists");        }}
+-- Slide 8 --
+File类流式输入/输出随机存取文件对象的串行化
+-- Slide 9 --
+流式输入/输出
+流(stream)：从源到目的地的字节的有序序列流中的字节依据先进先出，具有严格的顺序两种流输入流：从某种数据源（如文件、内存等）到程序的流
+-- Slide 10 --
+流式输入/输出
+流(stream)：从源到目的地的字节的有序序列流中的字节依据先进先出，具有严格的顺序两种流输入流：从某种数据源（如文件、内存等）到程序的流输出流：从程序到外界某种目的地（存储介质等）的用于将程序数据顺序写出到外界的流
+-- Slide 11 --
+流式输入/输出
+流(stream)：从源到目的地的字节的有序序列流中的字节依据先进先出，具有严格的顺序两种流输入流：从某种数据源（如文件、内存等）到程序的流输出流：从程序到外界某种目的地（存储介质等）的用于将程序数据顺序写出到外界的流由于流是有向的，输入流只能被读，输出流只能被写读过程（输入流）：打开流→若流中还有数据，执行读操作→关闭流写过程（输出流）：打开流→当有数据需要输出时执行写操作→关闭流
+-- Slide 12 --
+流的分类
+依据流相对于程序的另一个端点的不同：节点流：以特定源（如磁盘文件、内存某区域或线程之间的管道）为端点构造的输入/输出流过滤流：以其他已存在的流为端点构造的输入/输出流依据流中的数据单位不同：字节流：流中的数据以8位字节为单位进行读写，以InputStream和OutputStream为共同父类字符流：流中的数据以16位字符为单位进行读写，以Reader和Writer为共同父类
+-- Slide 13 --
+输入字节流的类层次
+所有输入字节流都是InputStream的子类灰色为节点流，其他为过滤流
+-- Slide 14 --
+输入字节流的用法
+-- Slide 15 --
+InputStream接口方法
+-- Slide 16 --
+输出字节流的类层次
+所有输出字节流都是OutputStream的子类灰色为节点流，其他为过滤流
+-- Slide 17 --
+输出字节流的用法
+-- Slide 18 --
+OutputStream接口方法
+-- Slide 19 --
+输入字符流的类层次
+所有输入字符流都是Reader类的子类灰色为节点流，其他为过滤流
+-- Slide 20 --
+Reader接口方法
+-- Slide 21 --
+输出字符流的类层次
+所有输出字符流都是Writer类的子类灰色为节点流，其他为过滤流
+-- Slide 22 --
+Writer接口方法
+-- Slide 23 --
+Reader和Writer
+Reader和Writer提供对Unicode的完整兼容适配器类InputStreamReader将InputStream转换为Reader，OutputStreamWriter将OutputStream转换为Writer所有的流在创建时自动打开；程序可调用close方法关闭流，否则Java运行环境的垃圾收集器将隐含将流关闭
+-- Slide 24 --
+输入/输出流的演进
+-- Slide 25 --
+输入/输出流的演进
+-- Slide 26 --
+输入/输出流的演进
+注意：一旦需使用readLine()方法，就应使用BufferedReader，否则应优先使用DataInputStream以下Java 1.0类在Java 1.1中没有相应类DataOutputStreamFileRandomAccessFileSequenceInputStream演进的目的不是替代，而是国际化和提升效率优先选择新类，新类解决不了则使用旧类
+-- Slide 27 --
+输入/输出流的嵌套
+单独使用节点流的情况在程序中较少出现一般常通过过滤流将多个流套接在一起，利用各种流的特性共同处理数据，套接的多个流构成了一个流链优点：方便数据的处理并提高处理的效率
+-- Slide 28 --
+常用的输入/输出流
+文件流缓存流数据流标准I/O
+-- Slide 29 --
+文件流
+文件流包括：FileReader/FileWriter类FileInputStream/FileOutputStream类创建文件流：以文件名或File类型的对象作为参数，e.g.public FileInputStream(String name)public FileInputStream(File file)
+-- Slide 30 --
+public class FileCopy{        public static void main(String[] args) throws IOException{                FileInputStream in=new FileInputStream("FileCopy.java");                FileOutputStream out=new FileOutputStream("FileCopy.txt");                int c;                while( (c=in.read())!=-1)                        out.write(c);                in.close();                out.close();        }}	//又例：CopyBytes.java
+-- Slide 31 --
+缓存流
+缓冲流要套接到相应的节点流之上，对读写的数据提供缓冲的功能，提高了读写的效率缓存流包括：BufferedInputStream/BufferedOutputStream类BufferedReader/BufferedWriter类把数据从原始流成块读入或把数据积累到一个大数据块后再成批写出，通过减少系统资源的读写次数来加快程序的执行BufferedOutputStream和BufferedWriter仅在缓冲区满或调用flush()时才写数据
+-- Slide 32 --
+缓存流
+缓存流是过滤流，以InputStream/OutputStream为前端流，并可指定缓冲区大小，如：public BufferedInputStream(InputStream in)public BufferedInputStream(InputStream in, int size)BufferedReader增加readLine()BufferedWriter增加newLine()
+-- Slide 33 --
+public class BufferedIO{	public static void main(String[] args) throws IOException{		BufferedReader in=new BufferedReader(				new FileReader("BufferedIO.java"));		PrintWriter out=new PrintWriter( new BufferedWriter(				new FileWriter("BufferedIO.txt")));		String s;		int linecnt=1;		StringBuilder sb=new StringBuilder();		while((s=in.readLine())!=null){			sb.append(linecnt+":"+s+"\n");			out.println(linecnt+":"+s);			linecnt++;		}		in.close();		out.close();		System.out.print(sb.toString());	}}
+-- Slide 34 --
+数据流
+数据流包括：DataInputStream/DataOutputStream类读写基本数据类型的接口方法：
+-- Slide 35 --
+数据流
+readUTF()与writeUTF()writeBytes(String)和writeChars(String)方法在DataInputStream中没有对应的方法恢复出String用DataOutputStream写字符串并使得DataInputStream能恢复出字符串的方法是使用writeUTF()和readUTF()UTF-8ASCII字符→单字节形式；非ASCII字符→多字节形式字符串长度→UTF-8字符串的前两字节中Java中使用的是UTF-8的变体，UTF-8只是读写过程中的字符串形式，程序中Unicode
+-- Slide 36 --
+public class DataIO{    public static void main(String[] args) throws IOException{        DataOutputStream out=new DataOutputStream(	new BufferedOutputStream(new FileOutputStream("data.txt")));        out.writeBoolean(false); out.writeChar('c');        out.writeByte(1); out.writeShort(2);        out.writeInt(3); out.writeLong(4L);        out.writeFloat(5.0f); out.writeDouble(6.0);        out.writeUTF("hello world!"); out.close();        DataInputStream in=new DataInputStream(             new BufferedInputStream( new FileInputStream("data.txt")));        System.out.println(in.readBoolean()+";"+in.readChar()+";");        System.out.println(in.readByte()+";"+in.readShort()+";");        System.out.println(+in.readInt()+";"+in.readLong());        System.out.println(in.readFloat()+";"+in.readDouble()+";");        System.out.println(in.readUTF()); in.close();    }}
+-- Slide 37 --
+标准I/O
+标准输入：键盘标准输出：加载Java程序的命令窗口Java在System类中定义了三个标准I/O流：System.in：标准输入流System.out：标准输出流System.err：标准错误输出流是System类的三个静态变量
+-- Slide 38 --
+标准I/O
+System.in完整定义：public static final InputStream in在程序运行时一直打开并准备好提供输入数据System.out完整定义：public static final PrintStream out在程序运行时一直打开并准备好接收输出的数据System.err完整定义：public static final PrintStream err在程序运行时一直打开并准备好接收输出的数据显示错误消息或其他能够马上引起用户注意的信息
+-- Slide 39 --
+标准I/O
+程序从键盘读入数据：使用System.in的read()方法，如：int ch=System.in.read();System.in.read()从键盘缓冲区读入一个字节的数据，返回的是整型值（低位字节为输入数据，高位字节全为零）System.in.read()的执行使得整个程序被挂起，直到用户从键盘输入数据才继续运行从键盘逐行读入：嵌套BufferedReader和InputStreamReaderPrintStream定义了在命令窗口显示不同类型数据的方法print()和println()
+-- Slide 40 --
+public class StandardIO {	public static void main(String[] args) {		String s;		BufferedReader in = new BufferedReader(				       new InputStreamReader(System.in));		System.out.println("Please input: ");		try {			s = in.readLine();			while (!s.equals("exit")) {				System.out.println(" read: " + s);				s = in.readLine();			}			System.out.println("End of Inputting");			in.close();		} catch (IOException e) {			e.printStackTrace();		}	}}
+-- Slide 41 --
+java.util.Scanner类：从控制台读取输入
+Scanner sc=new Scanner(System.in);Scanner将控制台输入按照分隔符模式进行分割，分隔符模式默认为匹配空格扫描结果通过各种next*()方法转化为不同类型的值next()		获取一个字符串nextByte()     	获取一个byte类型的整数nextShort()    	获取一个short类型的整数nextInt()      	获取一个int类型的整数nextLong()     	获取一个long类型的整数nextFloat()    	获取一个float类型的数nextDouble()   获取一个double类型的数nextLine()  	获取一行文本（即以回车键为结束标志）
+-- Slide 42 --
+java.util.Scanner类：从控制台读取输入
+读取和计算个数不定的多个整数之和，以0结束：Scanner sc=new Scanner(System.in);int sum=0, data;while((data=sc.nextInt())!=0) sum+=data;System.out.println(sum);
+-- Slide 43 --
+输入输出的重定向
+输入/输出重定向可分别使用以下命令java [ClassName] < input.txtjava [ClassName] < input.txt > output.txt也可使用以下静态方法System.setIn(InputStream)System.setOut(PrintStream)System.setErr(PrintStream)
+-- Slide 44 --
+File类流式输入/输出随机存取文件对象的串行化
+-- Slide 45 --
+随机存取文件
+到目前为止所学习的Java流式输入/输出都是顺序访问流，即流中的数据必须按顺序进行读写当需要随机读写磁盘文件中的内容时，用RandomAccessFile类（既可对文件读，又可对文件写）
+-- Slide 46 --
+随机存取文件
+RandomAccessFile类在java.io包中，与其他I/O类的关系如图（不是从InputStream/OutputStream派生）在JDK1.4后，大多数功能被NIO的内存映射文件所取代
+-- Slide 47 --
+RandomAccessFile类(对象创建)
+构造方法：public RandomAccessFile(String name, String mode) throws FileNotFoundExceptionpublic RandomAccessFile(File file, String mode) throws FileNotFoundExceptionmode规定了对象可以用何种方式打开和访问指定的文件：r：只读rw：读写rwd：读写，且内容更新同步写入底层存储设备rws：与rwd基本相同，还可以更新文件的元数据
+-- Slide 48 --
+RandomAccessFile类(对象操作)
+文件指针操作long getFilePointer()	//返回当前文件指针void seek(long pos)	//文件指针定位到指定位置long length()		//返回文件长度int skipBytes(int n)	//从当前位置开始跳过n字节读操作(实现了DataInput接口)readBoolean(), readChar(), readInt(), readLong(), readFloat(), readDouble(), readLine(), readUTF()等写操作(实现了DataOutput接口)writeBoolean(), writeChar(), writeUTF(), writeInt(), writeLong(), writeFloat(), writeDouble()等
+-- Slide 49 --
+public class RandomAccessTest {	public static void main(String[] args) throws IOException {		long filePoint = 0;		String s;		RandomAccessFile file = new RandomAccessFile(					"RandomAccessTest.java", "r");		long fileLength = file.length(); // 获取文件长度		while (filePoint < fileLength) {			s = file.readLine(); // 读一行字符，并移动文件指针			System.out.println(s); // 输出显示读入的一行字符			file.skipBytes(5);			filePoint = file.getFilePointer(); // 获取当前文件指针		}		file.close();	}}
+-- Slide 50 --
+File类流式输入/输出随机存取文件对象的串行化
+-- Slide 51 --
+对象的串行化
+把对象保存到外存，称为对象的永久化对象永久化的关键是将对象的状态以一种串行格式表示出来，以便以后读取时能够将该对象重构出来对java对象的这一读写过程称为对象的串行化对象串行化常在下列情况下使用Java远程方法调用(Remote Method Invocation)Java Bean / EJB对象永久化
+-- Slide 52 --
+串行化方法
+用ObjectOutputStream/ObjectInputStream实现对象的串行化通过ObjectOutputStream的writeObject方法将一个对象写入到流中public final void writeObject(Object obj) throws IOException通过ObjectInputStream的readObject方法将一个对象从对象流中读出public final Object readObject() throws IOException, ClassNotFoundExceptionObjectOutputStream实现了java.io.DataOutput接口ObjectInputStream实现了java.io.DataInput接口
+-- Slide 53 --
+/*输出对象*/public class SerializeDate {	SerializeDate( ){		Date d = new Date( );		try {			ObjectOutputStream s= new ObjectOutputStream(					new FileOutputStream(“date.ser”));			s.writeObject(d);			s.close( );		}catch( IOException e){			e.printStackTrace( );		}	}	public static void main(String args[]){		SerializeDate b = new SerializeDate();	}}
+-- Slide 54 --
+/*输入对象*/public class UnSerializeDate {	Date d = null;	UnSerializeDate() {		try {			ObjectInputStream s = new ObjectInputStream(					new FileInputStream("date.ser"));			Object o=s.readObject();			if(o instanceof Date)				d = (Date) o; 			s.close();		} catch (Exception e) {			e.printStackTrace();		}	}	public static void main(String[] args) {		UnSerializeDate us = new UnSerializeDate();		System.out.println(us.d.toString());	}}
+-- Slide 55 --
+可串行化类的构造
+一个类只有实现了Serializable接口，其对象才是可串行化的在指定对象不可串行化时，writeObject将抛出NotSerializableException类型的异常如何构造可串行化对象的类Serializable接口的定义：	package java.io;	public interface Serializable{};只需在类声明中implements Serializable，如：	public class MySerializableClass implements Serializable { … }
+-- Slide 56 --
+串行化的要求
+对象串行化时，只有对象的数据被保存，而对象所属类的方法和构造方法不保存静态变量和使用transient关键字的变量不被串行化若被保存对象引用了不可串行化的对象，则该对象引用所对应的成员变量应使用transient关键字，以保证串行化正常进行保存某些瞬时的状态没有意义，如Thread对象或FileInputStream对象，对于这些对象，必须用transient标明，否则编译器报错
+=== 9_线程.ppt ===
+-- Slide 1 --
+线程
+西安电子科技大学计算机学院张涛咨询问题：toddzt@msn.com
+课程代码：
+-- Slide 2 --
+课程内容
+Java概述面向对象程序设计概念Java语言基础Java面向对象特性Java高级特征常用预定义类的使用异常处理I/O线程GUI程序设计Java网络程序设计
+-- Slide 3 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 4 --
+线程的概念
+并发的目的提高系统效率简化程序设计多线程是实现并发的一种有效手段多进程并发（多任务操作系统中）多线程并发：一个进程可以通过运行多个线程来并发地执行多项任务Java语言的重要特征是在语言级支持多线程的程序设计
+-- Slide 5 --
+线程与进程（OS角度）
+进程：内核级的实体包含代码、数据、堆，PCB（进程管理、内存管理、文件管理信息）等进程结构存在于内核空间，用户程序须通过系统调用进行访问或改变线程：用户级的实体线程结构驻留在用户空间，能够被普通的用户级函数组成的线程库直接访问线程独有：寄存器（栈指针，程序计数器）、栈等一个进程中的所有线程共享该进程的状态
+-- Slide 6 --
+什么是线程（程序设计角度）
+线程：进程中的单个顺序执行流多线程：进程中包含多个顺序执行流
+-- Slide 7 --
+Java线程模型
+线程模型：CPU、程序代码和数据的封装体线程的CPU状态CPU执行的代码CPU执行代码过程中操作的数据共享数据（例如堆）独有数据（PC、栈）代码+数据=线程体（决定线程的行为）注意：代码与数据相互独立代码和部分数据可多线程共享
+-- Slide 8 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 9 --
+Thread类
+线程模型由java.lang.Thread类进行定义和描述程序中的线程都是Thread类或其子类的实例
+-- Slide 10 --
+Thread类的构造方法
+public Thread(ThreadGroup group, Runnable target, String name);public Thread();public Thread(Runnable target);public Thread(ThreadGroup group, Runnable target);public Thread(String name);public Thread(ThreadGroup group, String name);public Thread(Runnable target, String name);group：指明该线程所处的线程组（不建议使用）name：线程名称target：提供线程体的对象（由Runnable接口变量引用的实现了Runnable接口的类的对象）
+-- Slide 11 --
+线程的创建方法（一）
+实现Runnable接口定义一个类实现Runnable接口，提供run()方法的实现将该类的一个实例作为参数传递给Thread构造方法，该实例对象提供线程体（代码：run()方法的实现；数据：对象状态）
+-- Slide 12 --
+public class CountDown implements Runnable{	private static int idcnt=1;	private final int threadid=idcnt++;	int counter=3;	public void run(){		while(counter>=0){			try{ 				Thread.sleep(1000); 			} catch (Exception e){ e.printStackTrace(); }			System.out.println("#"+threadid+				(counter>0?"->"+counter:"->run!"));			counter--;		}	}	public static void main(String[] args){		Thread t1=new Thread(new CountDown());		Thread t2=new Thread(new CountDown());		t1.start();		t2.start();		System.out.println("waiting for run...");	}}	//又例：ThreadTest.java
+线程从Runnable实例的run()方法开始执行
+线程是Thread类的一个实例
+-- Slide 13 --
+线程的创建方法（二）
+Thread类本身也实现了Runnable接口，因而可通过重写Thread类的子类中的run()方法定义线程行为，并通过创建Thread子类的实例创建线程继承Thread类从Thread类派生子类，并重写其中的run()方法，以定义线程行为创建该子类的对象即创建线程
+-- Slide 14 --
+public class CountDown2 extends Thread{	private static int idcnt=1;	private final int threadid=idcnt++;	int counter=3;	public void run(){		while(counter>=0){			try{ 				Thread.sleep(1000);			} catch (Exception e){ e.printStackTrace(); }			System.out.println("#"+threadid+				(counter>0?"->"+counter:"->run!"));			counter--;		}	}	public static void main(String[] args){		CountDown2 t1=new CountDown2();		Thread t2=new CountDown2();		t1.start();		t2.start();		System.out.println("waiting for run...");	}}	//又例：ThreadTest2.java
+-- Slide 15 --
+两种线程创建方法比较
+实现Runnable接口的优点便于用extends继承其它类继承Thread类的优点程序代码更简单
+-- Slide 16 --
+public class CountDown3{ static int idcnt=1;    public static void main(String[] args){        new SubThread().start();        new Thread(new Run()).start();    }}class SubThread extends Thread{    private final int threadid=CountDown3.idcnt++;    public void run(){        try{ Thread.sleep(1000); System.out.println("#"+threadid);        } catch (Exception e){ e.printStackTrace(); }	    }}class Parent{ public void doSth(){ System.out.println("do something ..."); }}class Run extends Parent implements Runnable{    private final int threadid=CountDown3.idcnt++;    public void run(){        try{ Thread.sleep(1000); System.out.print("#"+threadid+": "); doSth();        } catch (Exception e){ e.printStackTrace(); }    }}
+-- Slide 17 --
+线程的运行
+新创建的线程不会自动运行，必须调用线程的start()方法，如：t.start();该方法的调用把线程的虚拟CPU置为可运行（Runnable）状态Runnable状态意味着该线程可以参加调度，被JVM调度运行，但并不意味着线程会立即运行
+-- Slide 18 --
+实现了Runnable接口的类是否可以直接使用而不构造Thread对象？
+-- Slide 19 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 20 --
+线程优先级
+Thread类有三个有关线程优先级的静态常量MIN_PRIORITY：最低优先级（1）MAX_PRIORITY：最高优先级（10）NORM_PRIORITY：普通优先级（5）MIN_PRIORITY<=线程优先级<=MAX_PRIORITY，数值越大优先级越高线程有缺省优先级，主线程缺省为NORM_PRIORITY子线程继承其父线程（创建子线程的语句执行时所在的线程）的优先级
+-- Slide 21 --
+线程优先级
+获得/设定线程优先级getPriority() / setPriority()方法注意：用户尽可能不要改变线程的优先级如需改变优先级，则一般在run()方法开始处进行设置Java线程优先级与OS线程优先级难以映射，因此可移植的方式是仅使用MIN_PRIORITY、MAX_PRIORITY和NORM_PRIORITY进行优先级设置
+-- Slide 22 --
+线程调度策略
+线程调度：在单个CPU上以某种顺序运行多个线程Java中线程调度策略：基于优先级的抢先式调度允许多个线程可运行，但只有一个线程在运行根据线程优先级，选择高优先级的可运行线程当前线程持续运行，直到以下两种情况之一该线程自行中止（如执行Thread.sleep()调用，或等待访问共享的资源）出现更高优先级线程成为可运行（这时CPU被高优先级线程抢占运行）同一优先级的多个可运行线程可分时轮流运行，也可逐个运行，由JVM而定实际：平台相关，JVM相关
+-- Slide 23 --
+线程的基本控制
+currentThread()：获取当前线程引用isAlive()：测试线程是否活着sleep()：睡眠join()：加入一个线程yield()：让步以下控制方法已废止，会导致死锁stop()suspend()resume()
+-- Slide 24 --
+线程的基本控制
+currentThread()Thread 类的静态方法，返回当前线程的引用isAlive()线程状态未知时，用以确定线程是否活着返回true：线程已启动，且尚未运行结束sleep()用来使当前线程阻塞（睡眠）一段固定的时间。在线程睡眠时间内，将运行其他线程sleep()结束后，线程从阻塞状态进入Runnable状态
+-- Slide 25 --
+线程的基本控制
+-- Slide 26 --
+线程的基本控制：join()
+/*在当前线程中执行t.join()方法使当前线程等待，直到线程 t 结束为止，线程恢复到runnable状态*/public void doTask(){    TimerThread  t = new TimerThread(100) ;    t.start();    …    // Do stuff in parallel with the other thread for a while     …    // Wait here for the TimerThread (t) to finish    try{        t.join();    } catch( InterruptedException e) { //tt came back early }   …   // continue in this thread   …}
+-- Slide 27 --
+线程的基本控制：join()
+-- Slide 28 --
+class ToJoin extends Thread{        public ToJoin(String nm){ super(nm); }        public void run(){                try{ Thread.sleep(2000); } catch (InterruptedException e){ }                System.out.println(Thread.currentThread().getName()+" awake!");        }}class Joiner implements Runnable{        private ToJoin tojoin;        public Joiner(ToJoin t){ this.tojoin=t; }        public void run(){                try{ this.tojoin.join(); } catch (InterruptedException e){ }                System.out.println(this.tojoin.getName()+" join finished");        }}public class TestJoin{        public static void main(String[] args){                ToJoin t1=new ToJoin("t1");                t1.start();                new Thread(new Joiner(t1)).start();        }}	//又例：ThreadJoinTest.java
+-- Slide 29 --
+线程的基本控制：yield()
+yield()调用该方法将CPU让给具有相同优先级的线程若无同优先级的线程是Runnable状态，则什么也不做
+-- Slide 30 --
+线程的基本控制：yield()
+-- Slide 31 --
+线程的基本控制：结束线程
+线程完成运行并结束后，将不能再运行线程除正常运行结束（run()方法执行完成）外，还可用其他方法控制使其停止stop()：强行终止线程，易造成线程不一致使用标志flag：通过设置flag 指明run()方法应该结束
+-- Slide 32 --
+public class TestStop {	public static void main(String[] args){		Tick t=new Tick();		new Thread(t).start();		try{ Thread.sleep(3000);		} catch (Exception e){}		System.out.println("quiting Task ...");		t.stopRunning();	}}class Tick implements Runnable {	private boolean timeToQuit = false;	public void stopRunning() { timeToQuit = true; }	public void run( ){		while(!timeToQuit){		        try { Thread.sleep(1000); System.out.println("tick ...");		        } catch (Exception e) {}		}		System.out.println("Tick finished.");	}}	//又例：ThreadTerminate.java
+-- Slide 33 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 34 --
+线程并发中的问题
+多个线程相对执行的顺序不确定，导致执行结果不确定多个线程操作共享数据时，执行结果不确定导致共享数据的一致性被破坏对共享数据操作的并发控制机制称为线程同步
+-- Slide 35 --
+线程并发中的问题
+//一个堆栈类public class MyStack{	private int idx = 0 ;	private char[ ] data = new char[6] ;	public void push( char c ){		data[idx] = c ;		idx ++ ;   // 栈顶指针指向下一个空单元	}	public char pop( ){		idx-- ; 		return data[idx] ;	}}
+-- Slide 36 --
+线程并发中的问题
+线程 a(压栈)
+线程b(出栈)
+堆栈 s 状态
+时刻t1
+时刻t2
+时刻t3
+//调用s.push(‘r’);data[idx]=‘r’ ;
+//恢复运行idx++ ;
+/*线程a 被抢占idx++; 未执行*/
+...
+线程a 压入的数据”r”丢失。t4时刻pop()会怎样？
+-- Slide 37 --
+对象锁与锁语句
+对象锁：Java中每个标记为synchronized的对象都含有的一个排他锁synchronized：共享数据的标记方法synchronized标记在特定的代码片段（方法）上，这样的代码片段又称临界区共享数据包含在对象中，对象锁与对象一一对应，对象的所有synchronized方法（代码片段）共享对象锁排他线程获得对象锁后才能执行临界区代码片段（即拥有对该对象的操作权）这时，其他任何线程无法获得对象锁，也无法执行临界区代码
+-- Slide 38 --
+示例：MyStack类的改进
+//栈的push,pop操作都采用这种线程同步机制public class MyStack{	… 	public void push( char c ){		synchronized(this){			data[idx] = c ;			idx ++ ; 		}	}	public char   pop( ){		synchronized(this){			idx-- ; 			return data[idx] ; 		}	}}
+-- Slide 39 --
+线程 a(压栈)
+线程b(出栈)
+堆栈 s 状态
+时刻t1
+时刻t2
+时刻t3
+/* 调 用s.push(‘r’), 获得s的对象锁后运行 */data[idx]=‘r’ ;
+/* 调用s.pop(),未获得s的对象锁,b到s的lock pool中等待s的对象锁 */
+// 恢复运行idx++ ;/* 完成，并交回s的对象锁 */
+//线程a 被抢占
+...
+时刻t4
+/* 运行pop()得结果r */
+...
+多线程对共享数据进行操作
+-- Slide 40 --
+几点说明
+如果一个方法的整体都在synchronized块中，则可将synchronized关键字放于方法声明中，也就是说：public synchronized void mtd() {/*方法体*/ }等价于public void mtd(){ synchronized(this){ /*方法体*/ }}考虑，以上两种方式哪种效率更高？
+-- Slide 41 --
+几点说明
+对象锁具有可重入性：允许已拥有某对象锁的线程再次请求并获得该对象锁
+public class Reentrant {     public synchronized void a() {         b();         System.out.println("here I am, in a()");     }     public synchronized void b() {         System.out.println("here I am, in b()");     } }
+-- Slide 42 --
+几点说明
+对共享资源加锁，是通过限制代码对共享资源的访问方式来实现的——不要留给用户绕过临界区代码访问共享资源的机会将作为类成员变量的共享数据设为private的对共享数据的所有访问都必须使用synchronized何时返还对象锁synchronized()语句块执行完毕后在synchronized()语句块中出现exception时持有锁的线程调用该对象的wait()方法。将该线程放入对象的wait pool中，等待某事件的发生
+-- Slide 43 --
+几点说明
+-- Slide 44 --
+避免死锁
+死锁是指两个线程同时等待对方持有的锁死锁的避免完全由程序控制可以采用的方法——资源排序在访问多个共享数据对象时，从全局考虑定义一个获得锁的顺序，并在整个程序中都遵守此顺序；释放锁时，要按加锁的反序释放
+-- Slide 45 --
+线程间的交互
+多个线程间不仅需要同步使用共享数据，还需要进行某种协作，一种典型的协作方式是使用共享资源的wait()和notify()方法wait()和notify()线程在synchronized块中调用R.wait()释放共享对象R的对象锁，将自身阻塞并进入R的wait pool，线程调用R.notify()，将共享对象R的wait pool中的一个线程唤醒（移入lock pool），等待R的对象锁notifyAll()将共享对象wait pool中的所有线程都移入lock pool
+-- Slide 46 --
+线程间的交互
+-- Slide 47 --
+示例--Producer/Consumer
+/* Producer线程：每隔300ms产生一个字母压入theStack栈中 ，共200个 */public void run( ){	char c ;	for(int I=0; I<200; I++){		c=(char)(math.random()*26+’A’);		theStack.push( c);		try{			Thread.sleep(300) ;		}catch(InterruptedException e){ }	}}
+-- Slide 48 --
+示例--Producer/Consumer
+/*Consumer线程：每隔300ms从theStack栈中取出一个字符，共200个*/public void run( ){	char c ;	for(int I=0; I<200; I++){		c = theStack.pop( );		try{			Thread.sleep(300) ;		}catch(InterruptedException e){ }	}}
+-- Slide 49 --
+示例--Producer/Consumer
+/*堆栈类SyncStack：为保证共享数据一致性，push()与pop()定义为synchronized*/public class SyncStack{	private Vector buffer = new Vector(400,200) ;	public synchronized  char  pop( ){ …};	public synchronized  void  push(char c){ …}}
+-- Slide 50 --
+示例--Producer/Consumer
+/* 堆栈类SyncStack：为实现Producer与Consumer之间的同步，加入wait()与notify()*///pop( )中加入wait()：public synchronized  char  pop( ){    char c ;    while(buffer.size( ) ==0){    	try{  this.wait( );	}catch(InterruptedException e){  }     }    c=( (Character)buffer.remove(buffer.size( )-1)).charValue();    return c ;}
+-- Slide 51 --
+示例--Producer/Consumer
+/* 堆栈类SyncStack：为实现Producer与Consumer之间的同步，加入wait()与notify()*///push( )中加入notify:public synchronized  void  push(char c){	this.notify();	Character charObj = new Character( c );	buffer.addElement( char Obj);}例：Producer.java/Consumer.java/SyncStack.java/SyncTest.java
+-- Slide 52 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 53 --
+线程状态与生命周期
+-- Slide 54 --
+线程状态
+new：线程被创建，尚未start()Runnable：线程可以被调度器选中执行Running：线程正在占用CPU执行Dead：run()执行结束，不会再被调度Blocked：线程此后还能运行，但某种条件阻止其运行当前线程调用sleep()进入睡眠状态当前线程调用t.join()等待线程t执行结束当前线程试图执行临界区代码片段但未获得对象锁当前线程调用共享对象的wait()方法
+-- Slide 55 --
+线程的概念线程的创建线程调度控制线程同步线程状态与生命周期线程间的管道流I/O
+-- Slide 56 --
+常用的输入/输出流：管道流
+用以实现线程间数据的直接传输管道输入流： PipedReader/PipedInputStream管道输出流： PipedWriter/PipedOutputStream管道流模型
+-- Slide 57 --
+管道流的创建
+将一个线程的输出流与另一线程的输入流连接PipedInputStream pin= new PipedInputStream( );	PipedOutputStream pout = new PipedOutputStream(pin);PipedInputStream pin= new PipedInputStream( );	PipedOutputStream pout = new PipedOutputStream( );	pin.connect(pout); //或pout.connect(pin);
+-- Slide 58 --
+管道流示例
+输入一组单词，先将每个单词逆序，再将所有单词排序，最后将这些单词逆序输出Rhymingwords.java程序处理流程：
