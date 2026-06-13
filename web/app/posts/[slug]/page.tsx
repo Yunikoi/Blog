@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import "katex/dist/katex.min.css";
 import PostTocPortal from "@/components/PostTocPortal";
 import HashScroll from "@/components/HashScroll";
 import { buildTocTree, extractToc } from "@/lib/markdown-toc";
@@ -54,7 +57,10 @@ export default async function PostPage({ params }: Props) {
               ) : null}
             </p>
           </header>
-          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypeSlug, rehypeKatex]}
+          >
             {post.content}
           </ReactMarkdown>
       </article>
