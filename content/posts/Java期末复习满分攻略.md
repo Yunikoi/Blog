@@ -11,14 +11,15 @@ toc: true
 > **考试形式**：闭卷纸笔，**仅 3 种题型**  
 > **资料**：任课教师期末说明 + 课件 `D:\Study\大三\大三下学期\JAVA\课件\`（8 个 `.ppt`）+ 上机实验源码  
 > **PPT 路径**：`JAVA\课件\` — 第一章概念（**历史不看**）；**第三章起全部重要**；GUI 无独立课件，结合大作业 `FarmGUI` 自学  
-> **说明**：需用库时会 **提供方法声明**；PPT **历史沿革不考**
+> **说明**：需用库时会 **提供方法声明**；PPT **历史沿革不考**  
+> **本文档**：在原有提纲基础上扩充为 **详讲版**——每章有概念解释 + 代码示例 + 考场陷阱；简答附 **22 题完整详答**；读程附 **30 题逐题手算解析**。
 
 ![期末考试题型说明](/java-exam/exam-structure.png)
 
 | 题型 | 题量 | 核心要求 |
 |------|------|----------|
 | **简答题** | **4～5 道** | **只考概念**，不写完整程序；**必考多线程 + GUI** 各至少 1 道 |
-| **读程题** | **5～7 道** | 写运行结果 / 判断能否编译 |
+| **读程题** | **5～7 道** | **只写运行结果**（代码保证能运行） |
 | **编程题** | **2 道** | 纸笔写类、接口、方法（常考 OOP 建模） |
 
 **复习顺序**：简答背概念 → 读程手算 → 编程默写骨架。
@@ -28,9 +29,9 @@ toc: true
 ## 目录
 
 - [PPT 章节 ↔ 题型对照](#ppt-章节--题型对照摘自-javacourse)
-- [按课件逐章要点](#按课件逐章要点抄自-ppt按题型归类)
-- [一、简答题（4～5 道）](#一简答题45-道)
-- [二、读程题（5～7 道）](#二读程题57-道)
+- [按课件逐章要点（详讲）](#按课件逐章要点详讲)
+- [简答题题库（详答版 22 题）](#简答题题库详答版--共-22-题)
+- [读程题库（25 题 · 只写输出）](#二读程题57-道--题库-25-题)
 - [三、编程题（2 道）](#三编程题2-道)
 - [冲刺 Checklist](#冲刺-checklist)
 - [附录：实验代码 ↔ 考点](#附录实验代码--考点)
@@ -57,7 +58,9 @@ toc: true
 
 ---
 
-## 按课件逐章要点（抄自 PPT，按题型归类）
+## 按课件逐章要点（详讲）
+
+> 下表是 **速查提纲**；每节后附 **详讲**：把 PPT 里容易只背标题、不懂原理的部分写透。
 
 ### 第一章 `1_JAVA程序设计.ppt`（历史不看）
 
@@ -71,6 +74,64 @@ toc: true
 | 主类与 main | `public class` 与源文件同名；`public static void main(String[] args)` |
 | **不考** | Gosling、JDK 版本年表、TIOBE 排名等历史 |
 
+#### 第一章详讲
+
+**1. Java 既是语言又是平台**
+
+- **语言**：你写的 `.java` 源码，语法、关键字、类库 API。
+- **平台**：JVM + Java API。不同操作系统装不同 JVM，但跑的是同一份 **字节码**（`.class`），所以叫「Write Once, Run Anywhere」。
+
+**2. Java SE / EE / ME 怎么记**
+
+| 版本 | 面向 | 本课 |
+|------|------|------|
+| **SE** | PC 桌面、标准库 | ✅ 期末只考这个 |
+| **EE** | 企业 Web、Servlet、EJB | 了解即可 |
+| **ME** | 手机、嵌入式 | 了解即可 |
+
+**3. Java 十大特征（简答可逐条展开）**
+
+PPT Slide 30 原文框架，每条要能 **用一句话解释**：
+
+1. **简单性**：去掉 C++ 的指针、多重继承、goto；有 GC。
+2. **面向对象**：封装、继承、多态（第二章展开）。
+3. **分布式**：URL 访问网络资源；Applet 曾用于浏览器（了解）。
+4. **解释型**：字节码半编译半解释，跨平台。
+5. **可移植性**：体系结构中立，靠 JVM。
+6. **健壮性**：强类型、异常机制、GC。
+7. **安全性**：无指针、字节码验证器、类装载器。
+8. **高性能**：JIT 即时编译热点代码。
+9. **多线程**：语言级支持，第九章重点。
+10. **动态性**：运行时动态装载类，不必像 C++ 改库就全量重编译。
+
+**4. JVM 运行过程（读程/简答都可能问）**
+
+```
+.java  --javac-->  .class（字节码）
+                      ↓
+              类装载器 → 字节码验证器 → 解释器 / JIT → 本地机器码执行
+```
+
+**5. 主类与 main 的硬性规则（读程常考编译错误）**
+
+| 规则 | 错例 | 后果 |
+|------|------|------|
+| 文件名 = public 类名 | `Hello.java` 里 `public class Hi` | 编译失败 |
+| 入口必须是 `main` 小写 | `public static void Main(...)` | 运行找不到入口 |
+| `main` 必须 `static` | 非 static main | 无法直接启动 |
+| 参数类型 | `String args` 可以；`String[] args` 标准写法 | — |
+
+```java
+// PPT Slide 56 改错题：Main 大写、中文引号
+public class HelloWorld {
+    public static void main(String[] args) {  // Main → main；英文引号
+        System.out.println("Hello World!");
+    }
+}
+```
+
+---
+
 ### 第二章 `2_面向对象程序设计概念.ppt`
 
 | 概念 | 简答一句话 + 要点 |
@@ -81,6 +142,49 @@ toc: true
 | **封装** | 数据+方法包装进类；`public/protected/private/默认` 隐藏实现 |
 | **继承** | is-a；子类继承父类变量方法；可增新成员、**重写**；Java **单继承** |
 | **多态** | 编译时：**重载**；运行时：**重写 + 向上转型 + 动态绑定** |
+
+#### 第二章详讲：六个概念怎么答才满分
+
+**抽象（Abstraction）**  
+从具体事物中抽出 **共性**，忽略与当前问题无关的细节。例如「学生」类只关心学号、姓名，不关心身高、爱好是否与本题有关。
+
+**对象（Object）**  
+程序运行时的 **实体**，有：
+
+- **状态**：成员变量的当前值；
+- **行为**：方法；
+- **标识**：内存中唯一，引用变量存的是地址。
+
+向对象 **发消息** = 调用它的方法：`stu.study()`。
+
+**类（Class）**  
+对象的 **模板/图纸**。`Student s = new Student();` 中，`Student` 是类，`s` 是对象（实例）。
+
+**封装（Encapsulation）**  
+把数据和方法绑在类里，用 **访问控制** 隐藏内部：
+
+| 修饰符 | 同类 | 同包 | 子类 | 任意 |
+|--------|:----:|:----:|:----:|:----:|
+| private | ✅ | ❌ | ❌ | ❌ |
+| 默认 | ✅ | ✅ | ❌ | ❌ |
+| protected | ✅ | ✅ | ✅ | ❌ |
+| public | ✅ | ✅ | ✅ | ✅ |
+
+对外只暴露必要接口（如 getter/setter），内部实现可改而不影响调用方。
+
+**继承（Inheritance）**  
+表达 **is-a**：`Dog extends Animal`。子类 **拥有** 父类非 private 成员，可 **扩展** 新字段/方法，可 **重写** 父类方法。Java **只允许单继承**一个类，多继承效果靠 **接口**。
+
+**多态（Polymorphism）**  
+同一操作作用于不同对象，表现不同行为。
+
+- **编译时多态**：**重载**——同名方法，参数列表不同；编译期确定调哪个。
+- **运行时多态**：**重写**——子类改父类方法；父类引用指向子类对象时，**运行时** 调子类版本（动态绑定）。  
+  `Animal a = new Dog(); a.speak();` → 执行 `Dog.speak()`。
+
+**static / final 方法不参与动态绑定**（第五章会再考）。
+
+---
 
 ### 第三章 `3_JAVA语言基础.ppt`（读程高频）
 
@@ -95,18 +199,131 @@ toc: true
 | 流控制 | `switch` 须 `break`；增强 for `for(String s: arr)` |
 | 数组 | 引用类型；`length`；赋值是**引用复制**；`System.arraycopy`；多维 `int[][]` |
 
+#### 第三章详讲
+
+**基本类型 8 种**
+
+| 类型 | 字节 | 默认值（成员变量） | 备注 |
+|------|:----:|-------------------|------|
+| byte, short, int, long | 1/2/4/8 | 0 | long 字面量加 `L` |
+| float, double | 4/8 | 0.0 | float 字面量加 `f` |
+| char | 2 | `\u0000` | Unicode |
+| boolean | — | false | **不能与 int 互转** |
+
+**引用类型**：类、接口、数组、`String`、`enum`。声明 `String s;` 只产生引用，默认 `null`；使用前通常要 `new` 或赋值。
+
+**String 不可变——读程必考**
+
+```java
+String s = "Hi";
+s.concat("!");       // 返回新串 "Hi!"，s 仍是 "Hi"
+s = s + "!";         // s 指向新对象
+```
+
+循环拼接用 `StringBuilder`（单线程）或 `StringBuffer`（多线程同步）。
+
+**== 与 equals（PPT `Equivalence` 例题）**
+
+```java
+Integer n1 = new Integer(47), n2 = new Integer(47);
+System.out.println(n1 == n2);        // false，两个不同对象
+System.out.println(n1.equals(n2));   // true，Integer 重写了 equals
+
+// 陷阱：自定义 equals 签名错误
+class Value {
+    int i;
+    public boolean equals(Value v) {  // × 不是重写 Object.equals(Object o)
+        return this.i == v.i;
+    }
+}
+// 调用 v1.equals(v2) 能编译，但 Object.equals 仍是比较引用
+```
+
+**NaN / Infinity**
+
+```java
+double a = 0.0 / 0.0;   // NaN
+double b = 1.0 / 0.0;   // Infinity
+System.out.println(a == a);              // false
+System.out.println(Double.isNaN(a));     // true
+```
+
+**数组是引用类型**
+
+```java
+int[] a = {1, 2}, b = a;
+b[0] = 99;
+System.out.println(a[0]);  // 99，a 与 b 指向同一数组
+```
+
+**switch 与 break**：没有 `break` 会 **贯穿** 到下一个 case（读程要数执行了几条 `println`）。
+
+---
+
 ### 第四章 `4_Java面向对象特性.ppt`（编程 + 读程）
 
 | 模块 | 要点 |
 |------|------|
 | 类体四部分 | 成员变量、构造方法、成员方法、**初始化块** |
-| `this` | 区分成员与局部；`this.y`；构造中 `this(...)` 重载 | 
+| `this` | 区分成员与局部；`this.y`；构造中 `this(...)` 重载 |
 | 参数传递 | **值传递**；引用传的是引用的副本，改对象内容会影响实参 |
 | 包与 import | `package` 第一行；`import`；访问权限 **public > protected > 默认 > private** |
 | 对象生命周期 | `new` → 分配空间、默认初始化、显式初始化、构造 → 引用；**GC** 无引用可回收 |
 | 继承 | `extends`；不继承 `private` 构造；隐含继承 **Object**；`super()` 第一行 |
 | 多态 | 重载 vs 重写；向上转型 `Animal a=new Dog()`；**动态绑定**（非 static/final） |
 | **读程必考** | 局部变量**遮蔽**成员 + `this.y`（PPT `UnmaskField` = 官方 `Test2`） |
+
+#### 第四章详讲
+
+**类体执行顺序（读程偶尔考）**
+
+1. 静态初始化块 / 静态变量（类加载时，只一次）  
+2. 实例初始化块 / 实例变量  
+3. 构造方法  
+
+**参数传递：Java 只有值传递**
+
+```java
+void f(int x) { x = 10; }           // 改的是副本
+void g(int[] arr) { arr[0] = 10; }  // 副本指向同一数组，内容会变
+```
+
+**PPT 原版 `UnmaskField`（= 官方 Test2 同类）**
+
+```java
+public class UnmaskField {
+    private int x = 1, y = 1;
+
+    public void changeFields(int a, int b) {
+        x = a;           // 成员 x → 10
+        int y = b;       // 局部 y 遮蔽成员 y
+        this.y = 8;      // 成员 y → 8
+        System.out.println("x=" + x + "; y=" + y);  // 局部 y=9
+    }
+
+    public void printFields() {
+        System.out.println("x=" + x + "; y=" + y);
+    }
+
+    public static void main(String[] args) {
+        UnmaskField uf = new UnmaskField();
+        uf.printFields();           // x=1; y=1
+        uf.changeFields(10, 9);     // x=10; y=9（println 里 y 是局部）
+        uf.printFields();           // x=10; y=8
+    }
+}
+```
+
+**继承构造**：子类构造 **第一行** 必须是 `super(...)` 或 `this(...)`，否则编译器自动插入 `super()`。父类无无参构造时，子类必须显式调 `super(参数)`。
+
+**重写规则速记**
+
+- 方法名、参数列表 **相同**（重载是参数不同）。
+- 返回类型兼容；访问权限 **不能更严**。
+- 不能抛出 **更多/更新** 的受检异常。
+- `@Override` 建议写上，编译器帮你查。
+
+---
 
 ### 第五章 `5_Java高级语言特征.ppt`
 
@@ -125,6 +342,62 @@ toc: true
 | **enum** | `enum Season{...}`；`values()`、`name()`、`ordinal()`；构造 **private** |
 | Wrapper | 基本类型包装；**autoboxing / autounboxing** |
 
+#### 第五章详讲
+
+**static**
+
+- 属于 **类**，不属于某个对象；所有实例共享一份静态变量。
+- 静态方法里 **不能** 直接用实例成员（没有 `this`），只能调其他静态成员或通过对象访问实例成员。
+- **静态方法不参与重写**：`Father.f()` 与 `Son.f()` 是隐藏（hide），不是多态。
+
+**final**
+
+```java
+final int x = 1;      // x 不能重新赋值
+final int[] arr = {1, 2};
+arr[0] = 99;          // ✅ 数组内容可变
+arr = new int[3];     // ❌ 不能让 arr 指向新数组
+```
+
+**抽象类 vs 接口（简答高频）**
+
+| 对比项 | 抽象类 | 接口 |
+|--------|--------|------|
+| 关键字 | `abstract class` | `interface` |
+| 继承/实现 | `extends` 单继承 | `implements` 可多接口 |
+| 构造方法 | 可以有 | 不能有 |
+| 成员变量 | 任意 | 默认 `public static final` 常量 |
+| 方法 | 可有抽象+具体 | 传统全抽象；Java 8+ 可有 default/static |
+| 实例化 | 不能直接 `new` | 不能直接 `new` |
+
+**HashSet 与 hashCode**
+
+- `equals` 相等 → `hashCode` **必须** 相等。
+- 放入 `HashSet` 的对象应 **同时重写** `equals` 和 `hashCode`。
+- 只重写 `equals` 不重写 `hashCode` → Set 可能认为两个「相等」对象是两个元素。
+
+**Iterator 删除（PPT `TestIterator`）**
+
+```java
+Iterator<String> it = list.iterator();
+while (it.hasNext()) {
+    if (it.next().equals("I"))
+        it.remove();   // 必须用迭代器的 remove，不能 list.remove(i) 在 for-each 里
+}
+```
+
+**enum**
+
+```java
+public enum Season { SPRING, SUMMER, AUTUMN, WINTER; }
+Season.SPRING.ordinal();  // 0
+Season.SPRING.name();     // "SPRING"
+Season.values();          // 所有常量数组
+// 枚举比较用 == 即可（单例）
+```
+
+---
+
 ### 第六章 `6_异常处理.ppt`
 
 | 要点 | 说明 |
@@ -134,6 +407,32 @@ toc: true
 | try-catch-finally | 未捕获则终止；**finally 常执行**（关流） |
 | throws / throw | 方法声明 `throws`；`throw` 抛给调用者 |
 | 读程 | 未捕获异常 → **后续语句不执行** |
+
+#### 第六章详讲
+
+**异常层次（简答可画简图）**
+
+```
+Throwable
+├── Error（OutOfMemoryError…）— 一般不 catch
+└── Exception
+    ├── RuntimeException 及其子类 — 非受检（NullPointerException, ArrayIndexOutOfBounds…）
+    └── 其他（IOException…）— 受检，必须 try-catch 或 throws
+```
+
+**try-catch-finally 执行顺序**
+
+1. try 正常结束 → catch 跳过 → **finally 执行**  
+2. try 抛异常且 catch 匹配 → catch 执行 → **finally 执行**  
+3. try 抛异常且无 catch → **finally 仍执行** → 异常继续向上抛  
+4. `System.exit(0)` 时 finally **不** 执行（了解）
+
+**throws vs throw**
+
+- `throws`：写在 **方法签名**，声明可能抛出的受检异常，交给调用者处理。
+- `throw`：在方法 **体内** 主动 `throw new IOException("msg");`
+
+---
 
 ### 第七章 `7_输入输出.ppt`
 
@@ -146,6 +445,32 @@ toc: true
 | 文本写出 | `BufferedWriter` + **`newLine()`**；或 `PrintWriter.println` |
 | Scanner | `nextInt()`、`nextLine()` 等（练习一 `CalendarApp`） |
 | 对象串行化 | `implements Serializable`；`ObjectOutputStream.writeObject` |
+
+#### 第七章详讲
+
+**怎么选流**
+
+| 场景 | 推荐 |
+|------|------|
+| 读 `.txt` 文本 | `BufferedReader` + `FileReader` |
+| 读图片/二进制 | `BufferedInputStream` + `FileInputStream` |
+| 写文本按行 | `BufferedWriter.newLine()` |
+| 控制台输入 | `Scanner` 或 `BufferedReader(System.in)` |
+
+**标准读法模板（编程题默写）**
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        // 处理 line
+    }
+}  // try-with-resources 自动 close
+```
+
+**Scanner 陷阱**：`nextInt()` 后接 `nextLine()` 会读到换行符——读程/上机常考，中间加一次 `nextLine()` 吃掉换行。
+
+---
 
 ### 第九章 `9_线程.ppt`（简答必考）
 
@@ -161,9 +486,86 @@ toc: true
 | wait/notify | 在 synchronized 中；`wait()` 释放锁进 wait pool；`notify()` 唤醒 |
 | 线程状态 | **new → Runnable → Running → Blocked → Dead**；sleep/join/等锁/wait 会阻塞 |
 
+#### 第九章详讲
+
+**创建线程两种方式**
+
+```java
+// 方式 1：推荐，任务与 Thread 解耦
+Runnable task = () -> System.out.println("run");
+new Thread(task).start();
+
+// 方式 2：继承 Thread
+class MyThread extends Thread {
+    public void run() { System.out.println("run"); }
+}
+new MyThread().start();
+```
+
+**PPT `CountDown2` 读程要点**
+
+- `t1.start(); t2.start();` 后 main 可能先打印 `waiting for run...`，再与子线程输出 **交错**。
+- 每个线程 `sleep(1000)` 一秒打印一次，输出顺序 **不保证**（除非 `join`）。
+
+**synchronized 两种写法等价**
+
+```java
+public synchronized void mtd() { /* 方法体 */ }
+// 等价于
+public void mtd() { synchronized(this) { /* 方法体 */ } }
+```
+
+**可重入锁（PPT `Reentrant`）**：同一线程对已持有锁的对象再次进入 `synchronized`，允许（否则 `a()` 调 `b()` 会死锁）。
+
+**wait / notify 必须在 synchronized 块内**，且调用对象是 **锁对象**。`wait()` 释放锁并等待；`notify()` 唤醒 wait pool 中一个线程。
+
+**死锁预防**：对多个锁 **按固定全局顺序** 加锁；避免嵌套持锁。
+
+---
+
 ### GUI（课程大纲有，课件文件夹无独立 `.ppt`）
 
 结合大作业 `FarmGUI.java` + 自学：**AWT 重量级 vs Swing 轻量级**、组件层次、`ActionListener` / `WindowAdapter`、**匿名内部类**、**EDT**（耗时操作放后台线程）。
+
+#### GUI 详讲
+
+**AWT vs Swing**
+
+| | AWT | Swing |
+|---|-----|-------|
+| 实现 | 依赖操作系统原生控件（**重量级**） | 纯 Java 绘制（**轻量级**） |
+| 包 | `java.awt.*` | `javax.swing.*`，前缀 `J` |
+| 组件 | `Frame`, `Button` | `JFrame`, `JButton` |
+
+**事件处理三步**
+
+1. **事件源**：按钮 `JButton`  
+2. **事件对象**：`ActionEvent`  
+3. **监听器**：实现 `ActionListener`，在 `actionPerformed` 里写逻辑  
+
+```java
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // 处理点击
+    }
+});
+// Java 8+ 可写 lambda：button.addActionListener(e -> { ... });
+```
+
+**Adapter 模式**：`MouseListener` 有 5 个方法，全写太烦 → 用 `MouseAdapter` 只重写需要的。`WindowAdapter` 同理，常重写 `windowClosing`。
+
+**EDT（Event Dispatch Thread）**：Swing **单线程** 更新 UI。耗时任务（读大文件、网络）放 **后台线程**，完成后用 `SwingUtilities.invokeLater(() -> updateUI())` 回 EDT 改界面，否则界面 **卡死**。
+
+**层次结构（简答可画图）**
+
+```
+Component
+└── Container
+    ├── Window → Frame / JFrame
+    └── Panel / JPanel
+        └── JButton、JTextField、JTextArea …
+```
 
 ---
 
@@ -196,168 +598,744 @@ toc: true
 
 ---
 
-## ★ 必考专题 A：多线程（至少 1 道）
+## 简答题题库（详答版 · 共 22 题）
 
-| 考点 | 参考答案要点 |
-|------|----------------|
-| **进程 vs 线程** | 进程：资源分配单位，独立地址空间；线程：CPU 调度单位，**共享进程资源** |
-| **多线程概念** | 一进程内 **多条执行流** 并发/交替执行 |
-| **多线程好处** | 提高 CPU 利用率；I/O 等待时可切换；GUI 后台任务不阻塞界面 |
-| **多线程问题** | 数据竞争、线程安全；调试难；上下文切换开销 |
-| **线程如何同步** | `synchronized` 同步方法/块；`Lock`；互斥访问共享资源 |
-| **同步不好怎么办** | 缩小同步范围；避免嵌套锁；固定加锁顺序；`volatile` 保可见性（不代替互斥） |
-| **死锁产生** | 多线程 **互相等待** 对方已持有的锁；加锁顺序不一致 |
-| **死锁解除** | **预防**：统一加锁顺序、减少嵌套；**避免**：`tryLock` 超时；检测后中断（代价大） |
-| **`start()` vs `run()`** | `start()` 启动 **新线程**；直接 `run()` 只是普通方法调用 |
-| **线程状态**（PPT 第九章） | **new** → **Runnable** → **Running** → **Blocked** → **Dead**；`sleep`/`join`/等锁/`wait` 进入 Blocked |
-| **对象锁** | 每个 `synchronized` 对象有**排他锁**；未获锁线程进 **lock pool** 等待 |
-| **wait/notify** | `wait()` 释放锁、进 **wait pool**；`notify()` 唤醒一个到 lock pool |
-| **GUI 为何要新线程** | Swing 在 **EDT** 绘界面；耗时操作放 EDT 会 **卡死**，应后台线程 + `invokeLater` 更新 UI |
+> **用法**：每题按 **定义 → 原理/分点 → 对比或例子 → 考场一句话总结** 默写。  
+> 下面不是提纲，是 **可直接照着练的完整答案**；背熟要点后用自己的话写满即可。
 
 ---
 
-## ★ 必考专题 B：GUI — Swing 与 AWT（至少 1 道）
+### 题 1　`==` 和 `equals` 有什么区别？（官方样例）
 
-| 考点 | 参考答案要点 |
-|------|----------------|
-| **AWT vs Swing** | AWT：**重量级**，依赖本地控件；Swing：**轻量级**，纯 Java 绘制，组件更丰富 |
-| **层次结构（共性）** | `Component` → `Container` → `Window`/`Panel` → 具体组件；**布局管理器** 排位置 |
-| **Swing 常用** | `JFrame`、`JPanel`、`JButton`、`JTextArea`；`BorderLayout`、`FlowLayout`、`GridLayout` |
-| **事件处理模型** | **事件源** → **事件对象** → **监听器** 处理 |
-| **Listener** | 接口，如 `ActionListener`（`actionPerformed`）、`MouseListener` |
-| **Adapter** | 适配器类（`WindowAdapter`、`MouseAdapter`）**空实现**，只重写需要的方法 |
-| **内部类** | 类中定义类；可访问外部类成员；GUI 中作监听器 |
-| **匿名类 / 匿名内部类** | `new XxxListener() { ... }`；无类名；可访问 effectively final 局部变量 |
-| **事件处理方法** | 注册：`addActionListener(...)`；处理：在回调方法中写逻辑 |
-| **EDT** | Event Dispatch Thread；Swing **单线程** 更新界面 |
+**答：**
 
-**层次结构（简答可画图/写）**
+`==` 是 Java 的 **相等运算符**，`equals` 是定义在 `Object` 类中的 **实例方法**。二者比较的对象不同，不能混用。
 
-```
-Component
-└── Container
-    ├── Window → Frame / JFrame
-    └── Panel / JPanel
-        └── JButton、JTextField、JTextArea …
+**（1）`==` 的含义**
+
+- 对于 **基本类型**（`int`、`double`、`boolean` 等），`==` 比较的是 **数值是否相等**。
+- 对于 **引用类型**（类、数组、接口等），`==` 比较的是 **两个引用是否指向内存中的同一个对象**，即比较 **地址**，而不是对象内部字段的值。
+
+**（2）`equals` 的含义**
+
+- `Object` 类中 `equals` 的 **默认实现** 与 `==` 相同，也是比较引用（地址）。
+- **关键区别**：`==` **永远** 只比地址（引用类型）或数值（基本类型），**不能改**；`equals` **可以被重写**，重写后就按 **对象内容** 来比。
+- 许多 Java 类库类 **重写** 了 `equals`，改为比较 **对象内容** 是否相等。例如 `String`、`Integer` 的 `equals` 比较字符序列或数值。
+- 自定义类若要用 `equals` 比较字段，必须 **正确重写** `equals(Object o)`（参数类型是 `Object`，不是本类）。
+
+> **常见误区**：「默认一样，所以没区别？」—— **错**。默认确实一样，但考试和写代码考的是 **String 等已重写 equals 的类**。那时 `==` 仍比地址，`equals` 比内容，**结果可以不同**。
+
+**（2.1）一眼看懂：什么时候相同、什么时候不同**
+
+```java
+String a = new String("hi");
+String b = new String("hi");
+
+a == b;       // false —— 两个不同对象，地址不同
+a.equals(b);  // true  —— String 重写了 equals，比字符 "hi" 是否相同
 ```
 
----
+| 情况 | `==` | `equals` |
+|------|------|----------|
+| 两个引用指向 **同一个对象** | true | true（默认或重写后一般都 true） |
+| 两个 **不同对象**，内容相同（如两个 `new String("hi")`） | **false** | **true**（若类重写了 equals） |
+| 自定义类 **没重写** equals | 比地址 | 比地址（与 == 结果相同） |
+| 自定义类 **重写了** equals | 仍比地址 | 比字段内容 |
 
-## 专题 C：String / Math / Object（官方样例延伸）
+**（3）String 的特殊情况**
 
-| 考点 | 要点 |
-|------|------|
-| `==` vs `equals` | 见 [官方样例](#官方样例题) |
-| String 不可变 | `concat`、`+` 产生新对象，原串不变 |
-| String vs StringBuilder | String 不可变；StringBuilder **可变**，循环拼接首选 |
-| Object 三方法 | `toString` 可读信息；`equals` 先 `instanceof` 再比字段；`hashCode` 与 equals 一致 |
-| `hashCode` 约定 | **equals 相等 → hashCode 必须相等** |
+- 字符串 **字面量** 可能进入字符串常量池，两个相同字面量用 `==` 可能为 `true`。
+- 用 `new String("abc")` 创建的对象在堆上，`==` 与字面量比较通常为 **false**，但 `equals` 为 **true**。
 
-### Infinity 与 NaN（自学必考）
+**（4）规范**
 
-| 表达式 | 结果 |
-|--------|------|
-| `1.0 / 0.0` | `Infinity` |
-| `0.0 / 0.0` | `NaN` |
-| `NaN == NaN` | **false** |
-| 正确判断 | `Double.isNaN(x)`、`Double.isInfinite(x)` |
+比较字符串、包装类内容时，应使用 **`equals`**；只有明确要判断「是否为同一对象」时才用 `==`。
+
+**一句话总结**：`==` 比地址（或基本类型比値）；`equals` 默认也比地址，重写后比内容。
 
 ---
 
-## 专题 D：容器 Collection Framework
+### 题 2　进程和线程有什么区别？多线程有什么好处和问题？
 
-| 考点 | 要点 |
-|------|------|
-| List / Set / Map | List **有序可重复**；Set **不重复**；Map **键值对** |
-| ArrayList vs LinkedList | ArrayList **随机访问快**；LinkedList **头尾插删快** |
-| HashSet vs TreeSet | HashSet 无序 O(1)；TreeSet **有序**（Comparable/Comparator） |
-| HashMap | `put` 重复 key **覆盖** value；`getOrDefault` |
-| 迭代删除 | 用 `Iterator.remove()`，勿在 for-each 里直接 `list.remove(i)` |
+**答：**
 
-**体系简图（简答可画）**
+**（1）进程（Process）**
 
+进程是操作系统进行 **资源分配和调度** 的基本单位。每个进程拥有 **独立的地址空间**、文件描述符、堆栈等，进程之间 **不能直接访问** 对方的内存，需要通过 IPC 等机制通信。创建一个进程的开销较大。
+
+**（2）线程（Thread）**
+
+线程是 **CPU 调度** 的基本单位，是进程内的 **一条执行路径**。同一进程内的多个线程 **共享** 该进程的内存空间和资源（如打开的文件），因此线程间通信比进程间容易，但共享也带来了 **同步** 问题。
+
+**（3）区别对照**
+
+| 对比项 | 进程 | 线程 |
+|--------|------|------|
+| 资源 | 独立地址空间 | 共享进程资源 |
+| 开销 | 创建/切换大 | 相对小 |
+| 通信 | 较复杂 | 共享变量即可（需同步） |
+| 崩溃影响 | 一般不影响其他进程 | 可能影响同进程其他线程 |
+
+**（4）多线程的好处**
+
+- **提高 CPU 利用率**：一个线程等待 I/O 时，CPU 可切换执行其他线程。
+- **改善响应**：GUI 程序中，耗时操作放后台线程，界面线程（EDT）仍可响应用户。
+- **简化建模**：某些问题天然有多条并发活动（如服务器同时处理多个请求）。
+
+**（5）多线程的问题**
+
+- **线程安全**：多线程同时读写共享数据可能产生 **竞态条件**，结果依赖调度顺序。
+- **调试困难**：错误难以稳定复现。
+- **开销**：线程切换、同步机制有成本。
+- **死锁**：多个线程互相等待对方持有的锁。
+
+**一句话总结**：进程管资源、线程管执行；多线程提高效率但需同步。
+
+---
+
+### 题 3　线程如何同步？`synchronized` 的作用是什么？
+
+**答：**
+
+**（1）为什么需要同步**
+
+当多个线程访问 **同一共享可变数据** 时，若至少有一个线程在 **写**，就必须保证操作 **互斥**，否则会出现「丢失更新」「读到脏数据」等问题。同步就是为了 **同一时刻只有一个线程** 进入临界区访问共享资源。
+
+**（2）`synchronized` 的用法**
+
+- **同步实例方法**：锁对象是 **当前实例** `this`。
+- **同步静态方法**：锁对象是 **类的 Class 对象**。
+- **同步块**：`synchronized(对象) { ... }`，显式指定锁对象。
+
+**（3）工作原理（PPT 第九章）**
+
+Java 中每个对象都可以作为 **锁（monitor）**。线程进入 `synchronized` 标记的代码前，必须 **获得该对象的排他锁**；若锁已被其他线程持有，当前线程进入 **lock pool** 阻塞等待，直到锁被释放。
+
+**（4）其他手段（了解）**
+
+- `java.util.concurrent.locks.Lock`：显式加锁解锁，功能更灵活。
+- `volatile`：保证 **可见性**，**不能** 代替互斥；适合一个线程写、多线程读且语义简单的场景。
+
+**（5）注意**
+
+- 同步范围 **越小越好**，减少阻塞时间。
+- 所有访问共享数据的代码路径都必须受 **同一把锁** 保护，不能遗漏。
+
+**一句话总结**：`synchronized` 用对象锁保证临界区互斥，未获锁的线程等待。
+
+---
+
+### 题 4　什么是死锁？如何产生？如何预防或解除？
+
+**答：**
+
+**（1）定义**
+
+**死锁** 是指两个或多个线程各自持有部分资源，又 **互相等待** 对方释放资源，导致所有相关线程 **永久阻塞**，程序无法继续执行。
+
+**（2）典型产生条件（需同时满足）**
+
+- 互斥：资源一次只能被一个线程占用。
+- 持有并等待：线程持有至少一个资源，又等待其他资源。
+- 不可剥夺：已获得的锁不能强行夺走。
+- 循环等待：存在线程等待链形成环，如 A 等 B 的锁，B 等 A 的锁。
+
+**（3）例子**
+
+线程 1：`synchronized(lockA) { synchronized(lockB) { ... } }`  
+线程 2：`synchronized(lockB) { synchronized(lockA) { ... } }`  
+若交替获得第一把锁，可能永远等第二把锁。
+
+**（4）预防（PPT 强调「资源排序」）**
+
+- **统一加锁顺序**：所有线程按 **相同全局顺序** 获取多把锁（如始终先 A 后 B）。
+- **减少嵌套锁**：尽量只持有一把锁。
+- **缩短持锁时间**：临界区只放必要代码。
+- **不要使用** 已废止的 `stop()`、`suspend()`、`resume()`。
+
+**（5）解除**
+
+死锁一旦发生，通常需重启或中断线程；代价大，因此 **重点在预防**。
+
+**一句话总结**：死锁是互相等锁；预防靠固定加锁顺序、少嵌套。
+
+---
+
+### 题 5　`start()` 和 `run()` 有什么区别？
+
+**答：**
+
+**（1）`run()` 方法**
+
+- 定义在 `Thread` 类或 `Runnable` 接口中，包含线程要执行的 **任务逻辑**。
+- 若直接调用 `t.run()`，只是在 **当前线程**（通常是 main 线程）中 **普通地执行** 这段方法，**不会创建新线程**，程序仍是单线程执行。
+
+**（2）`start()` 方法**
+
+- `Thread` 类的方法，**不能重写**。
+- 调用 `t.start()` 后，JVM 会 **创建新的执行线程**，在新线程中 **自动调用** `run()`。
+- 线程进入 **Runnable** 状态，由调度器分配 CPU 时间片后进入 **Running**。
+
+**（3）读程/考场陷阱**
+
+- 题目写 `t.run()` 却问「启动几个线程」→ 答案是 **0 个新线程**。
+- 只有 `start()` 才表示 **多线程**。
+
+**（4）注意**
+
+- 对同一线程对象 **不能重复** `start()`，第二次会抛 `IllegalThreadStateException`。
+
+**一句话总结**：`run()` 是普通方法调用；`start()` 才真正启动新线程。
+
+---
+
+### 题 6　简述 Java 线程有哪些状态？哪些操作会导致阻塞？
+
+**答：**
+
+**（1）主要状态（PPT 第九章）**
+
+- **New（新建）**：创建了 `Thread` 对象，尚未 `start()`。
+- **Runnable（可运行）**：调用了 `start()`，等待或正在获得 CPU。
+- **Running（运行）**：正在执行（教材中常与 Runnable 合并讨论）。
+- **Blocked（阻塞）**：暂时无法继续执行，等待某种条件。
+- **Dead（终止）**：`run()` 执行完毕或异常退出。
+
+**（2）进入 Blocked 的常见原因**
+
+- 调用 `Thread.sleep(ms)`：主动睡眠，不释放对象锁（sleep 不在 synchronized 内时）。
+- 调用 `t.join()`：等待另一线程结束。
+- 试图进入 `synchronized` 块但锁被占用：在 **lock pool** 等待。
+- 在 `synchronized` 内调用 `wait()`：释放锁，进入 **wait pool**，等待 `notify()`。
+
+**（3）`sleep` vs `wait`**
+
+- `sleep` 是 `Thread` 的静态方法，**不释放** 已持有的锁。
+- `wait` 是 `Object` 的方法，必须在 synchronized 内，**释放** 锁并等待唤醒。
+
+**一句话总结**：new→Runnable→Running↔Blocked→Dead；sleep/join/等锁/wait 会阻塞。
+
+---
+
+### 题 7　`wait()` 和 `notify()` 有什么作用？使用时要注意什么？
+
+**答：**
+
+**（1）作用**
+
+用于多线程 **协作**（典型：生产者-消费者）。当线程发现条件不满足（如缓冲区空），可在 **持有对象锁** 的情况下调用 `wait()`， **释放锁** 并进入该对象的 **wait pool** 等待；其他线程在条件满足时调用 `notify()` 或 `notifyAll()`，唤醒 wait pool 中的线程，被唤醒的线程重新竞争锁。
+
+**（2）使用前提**
+
+- 必须在 **synchronized(同一对象)** 块或方法内调用，否则抛 `IllegalMonitorStateException`。
+- `wait()`/`notify()` 的接收者是 **锁对象**，不是 Thread 对象。
+
+**（3）与 `sleep` 的区别**
+
+- `wait` 释放锁；`sleep` 不释放锁。
+- `wait` 需要 notify 唤醒；`sleep` 时间到自动醒。
+
+**（4）PPT 例子**
+
+`SyncStack` 的 `pop()` 在 buffer 空时 `wait()`；`push()` 在放入数据后 `notify()`。
+
+**一句话总结**：wait/notify 在 synchronized 内协作；wait 释放锁，notify 唤醒等待线程。
+
+---
+
+### 题 8　AWT 和 Swing 有什么区别？
+
+**答：**
+
+**（1）AWT（Abstract Window Toolkit）**
+
+- Java 早期 GUI 工具包，组件依赖 **底层操作系统** 的原生窗口控件绘制。
+- 称为 **重量级（Heavyweight）** 组件，外观随操作系统变化。
+- 主要类：`Frame`、`Button`、`Panel` 等，在 `java.awt` 包。
+
+**（2）Swing**
+
+- 在 AWT 之上构建，`javax.swing` 包，组件名多带 **J** 前缀：`JFrame`、`JButton`。
+- 大多 **轻量级（Lightweight）**，由 Java 自己绘制，跨平台外观更一致，组件更丰富（如 `JTable`、`JTree`）。
+
+**（3）关系**
+
+- Swing 基于 AWT（顶层窗口仍可能用到 AWT 容器），但日常开发 **优先用 Swing**。
+- 二者都使用 **事件驱动** 模型处理用户交互。
+
+**（4）简答可补充**
+
+- 布局管理器：`FlowLayout`、`BorderLayout`、`GridLayout` 等自动排布组件，不用手写坐标。
+
+**一句话总结**：AWT 重量级依赖本地控件；Swing 轻量级纯 Java 绘制，功能更强。
+
+---
+
+### 题 9　什么是 Listener？什么是 Adapter？GUI 中为什么要用 Adapter？
+
+**答：**
+
+**（1）事件处理模型**
+
+GUI 采用 **事件驱动**：用户操作（点击、关闭窗口等）产生 **事件对象**，发送给已注册的 **监听器（Listener）** 处理。
+
+**（2）Listener（监听器）**
+
+- 通常是 **接口**，定义一个或多个回调方法。
+- 例如 `ActionListener` 有 `actionPerformed(ActionEvent e)`，处理按钮点击。
+- 使用步骤：① 实现接口 ② 创建监听器对象 ③ `组件.addXxxListener(监听器)` 注册。
+
+**（3）Adapter（适配器）**
+
+- 某些 Listener 接口方法很多（如 `MouseListener` 有 5 个方法、`WindowListener` 有 7 个）。
+- **适配器类**（如 `MouseAdapter`、`WindowAdapter`） **空实现** 所有方法，程序员 **继承适配器** 后 **只重写需要的方法**，避免写一堆空方法。
+
+**（4）匿名内部类**
+
+- GUI 中常写：`button.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) { ... } });`
+- 无类名，代码紧凑，可访问外部 **effectively final** 变量。
+
+**一句话总结**：Listener 处理事件；Adapter 空实现接口，只写需要的方法。
+
+---
+
+### 题 10　什么是 EDT？为什么 GUI 中耗时操作要放在新线程？
+
+**答：**
+
+**（1）EDT（Event Dispatch Thread）**
+
+Swing 规定 **所有 UI 的创建、更新、绘制** 都应在 **事件派发线程（EDT）** 上执行。这是 Swing 的 **单线程规则**：避免多线程同时改界面导致不一致或崩溃。
+
+**（2）问题**
+
+若在 EDT 上执行 **耗时操作**（读大文件、复杂计算、网络请求），EDT 被阻塞，界面 **无法重绘、无法响应点击**，用户感觉程序 **卡死**。
+
+**（3）正确做法**
+
+- 耗时任务在 **后台工作线程** 执行。
+- 需要更新界面时，用 `SwingUtilities.invokeLater(() -> { /* 更新 UI */ })` 把代码 **提交回 EDT** 执行。
+
+**（4）与大作业联系**
+
+`FarmGUI` + `AutoSaveThread`：自动保存在后台线程定时运行，保存完成后若需提示用户，应回到 EDT 更新。
+
+**一句话总结**：Swing 单线程更新 UI；耗时放后台，改界面用 invokeLater。
+
+---
+
+### 题 11　什么是封装、继承、多态？各举一例说明。
+
+**答：**
+
+**（1）封装（Encapsulation）**
+
+将 **数据（成员变量）** 和 **操作数据的方法** 包装在类中，并通过 **访问控制**（`private`、`public` 等） **隐藏内部实现细节**，只对外提供必要接口。  
+**例**：`private int age` + `public int getAge()` / `setAge()`，外部不能直接改 age 的非法值。
+
+**（2）继承（Inheritance）**
+
+子类通过 `extends` **获得** 父类的非 private 成员，表示 **is-a** 关系，并可 **扩展** 新成员或 **重写** 父类方法。Java **单继承** 一个类。  
+**例**：`class Dog extends Animal`，Dog 拥有 Animal 的 `speak()` 并可重写为「汪汪」。
+
+**（3）多态（Polymorphism）**
+
+同一 **父类引用** 可以指向 **不同子类对象**，调用 **被重写的方法** 时，在 **运行时** 根据 **实际对象类型** 绑定具体方法（ **动态绑定**）。  
+**例**：`Animal a = new Dog(); a.speak();` 输出狗叫声而非动物默认声。
+
+**（4）补充**
+
+- **重载**（编译时多态）：同名方法，参数列表不同。
+- **static 方法不参与** 重写意义上的多态。
+
+**一句话总结**：封装隐藏细节；继承复用 is-a；多态父类引用调子类重写方法。
+
+---
+
+### 题 12　抽象类和接口有什么区别？分别适用于什么场景？
+
+**答：**
+
+**（1）抽象类 `abstract class`**
+
+- 用 `abstract` 修饰，**不能** 用 `new` 直接实例化。
+- 可以包含 **抽象方法**（无方法体）和 **普通方法**、成员变量、构造方法。
+- 子类用 `extends` **单继承**，必须实现全部抽象方法（除非子类也是抽象类）才能实例化。
+- 适合：**is-a 关系** 且多个子类 **共享大量相同代码** 时使用。
+
+**（2）接口 `interface`**
+
+- 用 `interface` 定义，传统上方法 public abstract，常量是 public static final。
+- 类用 `implements` 实现，Java 支持 **多接口实现**，弥补单继承不足。
+- 适合：定义 **能力契约**（能做什么），如 `Life` 接口的 `living()`。
+
+**（3）对比表**
+
+| 项目 | 抽象类 | 接口 |
+|------|--------|------|
+| 继承/实现 | extends，单继承 | implements，可多实现 |
+| 构造方法 | 可以有 | 不能有 |
+| 成员变量 | 任意 | 默认 public static final |
+| 实例化 | 不能直接 new | 不能直接 new |
+
+**（4）编程题例子**
+
+官方样例：`Person` 抽象类存 name/age；`Life` 接口定义 `living()`；`Student extends Person implements Life`。
+
+**一句话总结**：抽象类共享代码+单继承；接口定义能力+多实现。
+
+---
+
+### 题 13　`static` 和 `final` 关键字分别有什么作用？
+
+**答：**
+
+**（1）`static`（静态）**
+
+- 修饰成员变量：属于 **类**，所有实例 **共享一份**，通过 `类名.变量` 访问。
+- 修饰方法：属于 **类**，**没有 `this`**，不能直接用实例成员；常作工具方法。
+- 静态方法 **不参与** 重写意义上的运行时多态（子类 static 方法 **隐藏** 父类 static 方法，看引用类型）。
+- 静态块：类加载时执行一次，用于静态资源初始化。
+
+**（2）`final`（最终）**
+
+- 修饰类：类 **不能被继承**（如 `String`）。
+- 修饰方法：方法 **不能被重写**。
+- 修饰变量：变量 **只能赋一次值**；对引用类型，引用不能改指向，但 **对象内容可变**（如 final 数组仍可改元素）。
+
+**（3）组合**
+
+- `static final` 常表示 **类常量**，如 `Math.PI`。
+
+**一句话总结**：static 属类共享；final 禁止改继承/重写/重新赋值。
+
+---
+
+### 题 14　String 为什么说是不可变的？和 StringBuilder 有什么区别？
+
+**答：**
+
+**（1）String 不可变**
+
+- `String` 内部字符数组（早期实现）在创建后 **不能修改**；`concat`、`+`、`replace` 等都 **返回新 String 对象**，原对象不变。
+- 好处：**线程安全**（只读）、可安全共享、适合常量池。
+- 读程陷阱：`s = s + "!"` 产生新对象；`s.concat("x")` 若不赋值，`s` 不变。
+
+**（2）StringBuilder**
+
+- **可变** 字符序列，`append`、`insert` 在 **同一对象** 上修改，适合 **循环拼接** 字符串，效率高于反复 `+` 产生大量临时 String。
+
+**（3）StringBuffer**
+
+- 与 StringBuilder 类似，但方法 **synchronized**，**线程安全**，单线程下 StringBuilder 更快。
+
+**（4）比较**
+
+| | String | StringBuilder |
+|---|--------|---------------|
+| 可变性 | 不可变 | 可变 |
+| 线程安全 | 安全 | 不安全 |
+| 适用 | 少量固定文本 | 大量拼接 |
+
+**一句话总结**：String 改操作产生新对象；StringBuilder 原地拼接。
+
+---
+
+### 题 15　List、Set、Map 有什么区别？ArrayList 和 LinkedList 呢？
+
+**答：（完整版见前文范文 4，此处扩展）**
+
+**（1）Collection 体系**
+
+- **List**：元素 **有序**、**可重复**，有索引。如 `ArrayList`、`LinkedList`。
+- **Set**：元素 **不重复**，无索引概念。如 `HashSet`（无序）、`TreeSet`（有序）。
+- **Map**：**键值对**，**key 不重复**，一个 key 对应一个 value。如 `HashMap`。Map **不是** Collection 子接口。
+
+**（2）ArrayList**
+
+- 底层 **动态数组**，`get(i)` 随机访问 **O(1)**，中间插入删除需移动元素 **O(n)**。
+
+**（3）LinkedList**
+
+- 底层 **双向链表**，头尾插删 **O(1)**，按索引访问需遍历 **O(n)**。
+
+**（4）选用**
+
+- 频繁按下标查改 → ArrayList；频繁在头尾增删 → LinkedList。
+- 去重 → HashSet；键值查找 → HashMap。
+
+**（5）HashMap 注意**
+
+- `put(k, v)` 若 key 已存在，**覆盖** 旧 value。
+
+**一句话总结**：List 有序可重复；Set 不重复；Map 键值对；ArrayList 查快，LinkedList 插删快。
+
+---
+
+### 题 16　放入 HashSet 的对象为什么要同时重写 `equals` 和 `hashCode`？
+
+**答：**
+
+**（1）HashSet 原理**
+
+`HashSet` 基于 `HashMap`，通过对象的 **hashCode** 定位桶，再通过 **equals** 判断是否与桶内元素相同。
+
+**（2）Java 约定**
+
+- 若两个对象 `equals` 为 true，则 **hashCode 必须相等**。
+- 若 hashCode 相等，equals 可以为 false（哈希冲突，需 equals 再判）。
+
+**（3）只重写 equals 不重写 hashCode 的后果**
+
+两个「逻辑相等」的对象 hashCode 可能不同，会被放进 **不同桶**，Set 中会出现 **重复元素**，违反 Set 语义。
+
+**（4）重写要点**
+
+- `equals`：先 `==`，再 `instanceof`，再比字段。
+- `hashCode`：用相同字段计算，保证 equals 相等则 hashCode 相等。
+
+**一句话总结**：HashSet 先比 hashCode 再 equals；equals 相等必须 hashCode 相等。
+
+---
+
+### 题 17　字节流和字符流有什么区别？读文本文件按行读怎么写？
+
+**答：（完整版见范文 5）**
+
+**（1）字节流** `InputStream`/`OutputStream`：按 **字节** 读写，适合图片、音频、任意二进制。
+
+**（2）字符流** `Reader`/`Writer`：按 **字符** 读写，内部处理 **字符编码**，适合 `.txt` 等文本。
+
+**（3）节点流与过滤流**
+
+- `FileReader`：节点流，直接连文件。
+- `BufferedReader`：过滤流，包装 Reader，提供 **缓冲** 和 **`readLine()`**。
+
+**（4）按行读模板**
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        // 处理 line
+    }
+}
 ```
-Collection → List(ArrayList/LinkedList)、Set(HashSet/TreeSet)
-Map → HashMap、TreeMap（不属于 Collection）
-```
+
+**（5）写出**
+
+`BufferedWriter` + `write(line)` + **`newLine()`**。
+
+**（6）try-with-resources**
+
+JDK 7+ 自动关闭实现了 `AutoCloseable` 的资源，防止忘关流。
+
+**一句话总结**：文本用字符流+BufferedReader.readLine()；二进制用字节流。
 
 ---
 
-## 专题 E：流 I/O
+### 题 18　受检异常和非受检异常有什么区别？`throws` 和 `throw` 呢？
 
-| 考点 | 要点 |
-|------|------|
-| 字节流 vs 字符流 | `InputStream/OutputStream` vs `Reader/Writer` |
-| 文本按行读 | **`BufferedReader.readLine()`** + `FileReader` |
-| 文本按行写 | **`BufferedWriter.newLine()`** + `FileWriter` |
-| try-with-resources | `try (BufferedReader br = ...) { }` 自动关闭 |
-| 选用 | `.txt` 用 **字符流**；二进制用字节流 |
+**答：**
+
+**（1）Exception 分类**
+
+- **受检异常（Checked）**：除 `RuntimeException` 及其子类外的 Exception，编译器 **强制** 处理——要么 `try-catch`，要么方法声明 **`throws`**。如 `IOException`。
+- **非受检异常（Unchecked）**：`RuntimeException` 子类（如 `NullPointerException`、`ArrayIndexOutOfBoundsException`）和 `Error`，编译器 **不强制** catch。
+
+**（2）Error vs Exception**
+
+- **Error**：严重错误（如 `OutOfMemoryError`），一般 **不捕获**。
+- **Exception**：程序可处理的异常。
+
+**（3）`throw` vs `throws`**
+
+- **`throw`**：在方法 **体内** 主动抛出异常对象，如 `throw new IOException("msg");`
+- **`throws`**：在方法 **签名** 上声明可能抛出的受检异常，交给 **调用者** 处理。
+
+**（4）finally**
+
+无论是否发生异常，`finally` 块 **通常** 都会执行，常用于 **关闭资源**。
+
+**（5）读程**
+
+未捕获的运行时异常 → try 内 **后续语句不执行**，程序终止（除非被 catch）。
+
+**一句话总结**：受检异常必须 catch 或 throws；throw 抛出，throws 声明。
 
 ---
 
-## 专题 F：枚举 enum（自学必考）
+### 题 19　什么是 NaN 和 Infinity？如何正确判断 NaN？
+
+**答：**
+
+**（1）Infinity（无穷大）**
+
+浮点运算中，如 `1.0 / 0.0` 得到 **正无穷** `Double.POSITIVE_INFINITY`；`-1.0 / 0.0` 为负无穷。
+
+**（2）NaN（Not a Number）**
+
+如 `0.0 / 0.0`、无效的浮点运算结果，表示 **非数值**。
+
+**（3）陷阱**
+
+- **`NaN == NaN` 结果为 false**（NaN 与任何值包括自己比较相等都为 false）。
+- 不能用 `x == NaN` 判断，应使用 **`Double.isNaN(x)`** 或 **`Float.isNaN(x)`**。
+- 无穷大可用 `Double.isInfinite(x)`。
+
+**（4）读程常考**
+
+`System.out.println(0.0/0.0 == 0.0/0.0);` → **false**。
+
+**一句话总结**：NaN 不等于自身；用 Double.isNaN() 判断。
+
+---
+
+### 题 20　Java 枚举类型 enum 如何定义和使用？有什么优点？
+
+**答：**
+
+**（1）定义**
 
 ```java
 public enum Season { SPRING, SUMMER, AUTUMN, WINTER; }
 ```
 
-| 要点 | 说明 |
-|------|------|
-| 定义 | `enum` 关键字，逗号分隔常量 |
-| 使用 | `Season.SPRING`、`values()`、`ordinal()`、`switch` |
-| 特点 | **类型安全** 常量；可有字段、构造、方法 |
-| 比较 | 枚举常量用 `==` 即可（同一实例） |
+每个枚举常量本质是 **public static final** 的枚举实例。
+
+**（2）常用方法**
+
+- `Season.SPRING`：引用常量。
+- `values()`：返回所有常量的数组。
+- `ordinal()`：返回声明顺序，从 0 开始。
+- `name()`：返回常量名字符串。
+- 可用于 **`switch`**。
+
+**（3）特点**
+
+- **类型安全**：编译期检查，比 int 常量不易写错。
+- 可有 **构造方法**（默认 **private**）、字段、普通方法。
+- 枚举比较可用 **`==`**（单例）。
+
+**（4）读程**
+
+`Season.SPRING.ordinal()` → **0**。
+
+**一句话总结**：enum 类型安全常量；values/ordinal/name；比较用==。
 
 ---
 
-## 专题 G：OOP 与第二章概念
+### 题 21　Java 是值传递还是引用传递？请举例说明。
 
-| 考点 | 要点 |
-|------|------|
-| 封装 | private 字段 + public getter/setter，隐藏实现 |
-| 继承 | `extends`；子类拥有父类非 private 成员；`super()` 调父构造 |
-| 多态 | 父类引用指向子类对象；**重写** 方法运行时绑定 |
-| 抽象类 | `abstract class`；可有抽象方法；**不能 new** |
-| 接口 | `interface`；实现类 `implements`；多实现 |
-| 包与访问控制 | `public` > `protected` > 默认 > `private` |
+**答：**
 
----
+**Java 只有值传递（pass by value）**。
 
-## 专题 H：异常（PPT 第六章 `6_异常处理.ppt`）
+**（1）基本类型**
 
-| 考点 | 要点 |
-|------|------|
-| Error vs Exception | Error 虚拟机级、不可恢复；Exception 应用程序可捕获 |
-| 受检 vs 非受检 | **必检**：除 `RuntimeException` 及其子类外；**免检**：`RuntimeException`、Error |
-| `try-catch-finally` | 至少一个 catch；**finally 无论是否异常都执行**（关文件流） |
-| `throws` / `throw` | 方法签名 `throws IOException`；`throw new XxxException()` 交给调用者 |
-| 重写与异常 | 子类重写方法不能抛出**比父类更多/更新**的受检异常 |
-| 读程陷阱 | 未捕获异常 → **try 内后续语句不执行**，程序终止 |
+方法参数收到的是 **值的副本**，方法内改参数 **不影响** 实参。
 
----
+**（2）引用类型**
 
-## 简答题自测（闭卷）
+传递的是 **引用的副本**（地址值的复制），不是对象本身。因此：
 
-1. 线程和进程的区别？多线程的好处和问题？
-2. 线程如何同步？死锁如何产生和解除？
-3. Swing 和 AWT 的区别？Listener 和 Adapter 各是什么？
-4. `==` 和 `equals` 的区别？（官方样例）
-5. List、Set、Map 的区别？ArrayList 和 LinkedList 呢？
-6. 字节流和字符流的区别？读 txt 按行用什么？
-7. `Infinity`、`NaN` 是什么？如何判断 NaN？
-8. Java 枚举如何定义和使用？
-9. 抽象类和接口的区别？
-10. 为何 GUI 耗时操作要放新线程？
+- 通过副本 **修改对象内部状态**（如 `arr[0]=10`），**会影响** 实参所指向的对象。
+- 若让参数 **指向新对象**（`param = new Xxx()`），**不会** 改变实参的引用。
+
+**（3）例子**
+
+```java
+void f(int x) { x = 10; }           // 实参 int 不变
+void g(int[] a) { a[0] = 10; }     // 实参数组内容变
+void h(int[] a) { a = new int[3]; } // 实参引用不变
+```
+
+**一句话总结**：Java 永远传值的拷贝；引用拷贝可改对象内容，不能改引用本身。
 
 ---
 
-# 二、读程题（5～7 道）
+### 题 22　什么是方法重载和方法重写？有什么区别？
 
-> 给一段代码 → 写 **运行结果** 或判断 **能否编译**。
+**答：**
 
-## 官方样例题
+**（1）重载（Overload）**
+
+- **同一类** 中，方法名相同，**参数列表不同**（类型、个数、顺序）。
+- 与返回值无关；编译期根据实参 **静态绑定** 决定调哪个方法。
+
+**（2）重写（Override）**
+
+- **子类** 对 **父类** 实例方法重新实现，方法名、参数列表 **相同**。
+- 运行时根据 **实际对象类型** **动态绑定**（多态）。
+- 访问权限不能更严；受检异常不能更多；`@Override` 注解辅助检查。
+- **static、final、private** 方法不能重写（static 是隐藏，不是重写）。
+
+**（3）对比**
+
+| | 重载 | 重写 |
+|---|------|------|
+| 位置 | 同类 | 子类对父类 |
+| 参数 | 必须不同 | 必须相同 |
+| 绑定 | 编译时 | 运行时 |
+| 多态 | 编译时多态 | 运行时多态 |
+
+**一句话总结**：重载同名不同参；重写子类改父类同名同参方法。
+
+---
+
+## 简答题自测清单（闭卷 22 题）
+
+1. `==` 和 `equals` 的区别？（官方样例）
+2. 进程和线程的区别？多线程的好处和问题？
+3. 线程如何同步？`synchronized` 作用？
+4. 什么是死锁？如何产生和预防？
+5. `start()` 和 `run()` 的区别？
+6. 线程有哪些状态？哪些操作会阻塞？
+7. `wait()` 和 `notify()` 的作用？
+8. AWT 和 Swing 的区别？
+9. Listener 和 Adapter 是什么？
+10. 什么是 EDT？GUI 为何要用新线程？
+11. 封装、继承、多态各是什么？
+12. 抽象类和接口的区别？
+13. `static` 和 `final` 的作用？
+14. String 为何不可变？与 StringBuilder 区别？
+15. List、Set、Map 区别？ArrayList vs LinkedList？
+16. HashSet 为何要重写 equals 和 hashCode？
+17. 字节流和字符流区别？如何按行读 txt？
+18. 受检/非受检异常？`throw` vs `throws`？
+19. NaN 和 Infinity？如何判断 NaN？
+20. enum 如何定义使用？
+21. Java 值传递？举例。
+22. 重载和重写的区别？
+
+---
+
+# 二、读程题（5～7 道 · 题库 25 题）
+
+> **考场真实形式**：给一段 **能编译、能运行** 的 Java 代码，只要求 **写出运行结果**（控制台输出）。  
+> **不考**「能否编译」——那种题出现在练习里，期末读程 **只填输出**。  
+> 下面 **25 道** 偏 **综合、多步手算**；每题：**📖 知识点 → 代码 → 输出结果 → 逐步分析**。
+
+## 解题四步法（只算输出）
+
+1. **圈调用链**：main 里调了谁？构造顺序？父类/子类谁先执行？  
+2. **圈作用域**：成员 / 局部 / 参数；`this.`；static 看 **声明类型** 还是 **实际对象**  
+3. **盯修改**：String 是否新对象、集合 `remove` 下标还是值、异常后哪句跳过  
+4. **按顺序写输出**：`print` 不换行、`println` 换行；try-catch-finally 每轮各输出什么  
+
+---
+
+## 官方样例题（必做 · 只写输出）
 
 ![读程题样例：Test2](/java-exam/sample-read-code.png)
+
+**📖 相关知识点**
+
+- 考场代码 **一定能运行**；样例 PDF 里若写了 `Test3` 是印刷笔误，按 **`Test2`** 理解。
+- **变量遮蔽**：方法里 `int y = b` 是 **局部 y**，与成员 y 同名；裸写 `y` 指局部，`this.y` 指成员。
+- **toString()**：`println(对象)` 会自动调 `toString()`。
+
+**问：写出运行结果（每行一条输出）**
 
 ```java
 public class Test2 {
@@ -366,9 +1344,9 @@ public class Test2 {
 
     public void changeState(int a, int b) {
         x = a;
-        int y = b;        // 局部 y 遮蔽成员 y
-        this.y = 8;       // 修改成员 y
-        System.out.println("x=" + x + "; y=" + y);  // 局部 y=9
+        int y = b;
+        this.y = 8;
+        System.out.println("x=" + x + "; y=" + y);
     }
 
     public String toString() {
@@ -376,131 +1354,1095 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-        Test3 t3 = new Test3();   // × 编译错误：没有 Test3
-        System.out.println(t3);
-        t3.changeState(10, 9);
-        System.out.println(t3);
+        Test2 t2 = new Test2();
+        System.out.println(t2);
+        t2.changeState(10, 9);
+        System.out.println(t2);
     }
 }
 ```
 
-**分析**
-
-| 步骤 | 结论 |
-|------|------|
-| 能否编译 | **不能** — `Test3` 类不存在 |
-| 若改为 `Test2 t2 = new Test2();` | 可编译，输出如下 |
-
-**正确输出（三行）**
-
+**输出结果**：
 ```
 x = 1; y = 1
 x=10; y=9
 x = 10; y = 8
 ```
 
-**考点**：① 局部变量 **遮蔽** 成员（PPT 第四章 `UnmaskField`）② `this.y` 访问成员 ③ `println` 打印 **局部 y=9** ④ `toString` 打印 **成员 y=8** ⑤ 类名错误 → 编译失败
+**逐步分析**：
+1. `println(t2)` → toString → `x = 1; y = 1`  
+2. `changeState(10,9)`：成员 x→10；局部 y=9 打印 `x=10; y=9`；**this.y**→8  
+3. 再 println(t2) → 成员 x=10, y=8  
 
 ---
 
-## 解题五步法
+## A 组 · 作用域与成员（4 题 · 综合）
 
-1. **先判编译**：类名、接口是否实现、抽象方法、访问权限  
-2. **圈作用域**：成员 / 局部 / 参数；是否 **`this.`**  
-3. **盯修改**：`add/remove`、`start()` 是否调用、String 是否重新赋值  
-4. **手算输出**：`substring` 左闭右开；`==` vs `equals`  
-5. **多线程**：`start` 顺序、`sleep`、`synchronized` 谁先拿锁
+### 读程 A1
+
+**📖 相关知识点**
+
+- 参数也是 **局部变量**，与成员同名时 **遮蔽成员**。
+- 无 `this.` 时改的是 **局部/参数**；`this.n` 改 **成员**。
+- 多个方法连续改同一成员，要 **按调用顺序累加**。
+
+**问：写出运行结果**
+
+```java
+public class Mask1 {
+    int n = 0;
+    void bump() { n++; }
+    void f(int n) {
+        n = 10;
+        bump();
+        System.out.println(n);
+        System.out.println(this.n);
+    }
+    public static void main(String[] args) {
+        Mask1 o = new Mask1();
+        o.f(5);
+        o.bump();
+        System.out.println(o.n);
+    }
+}
+```
+
+**输出结果**：
+```
+10
+1
+2
+```
+
+**分析**：`f(5)` 里局部 n=10 打印；`bump()` 使成员 n=1；`this.n` 打印 1；main 里再 bump → n=2。
 
 ---
 
-## 分类训练
+### 读程 A2
 
-### ① 编译与作用域（官方样例同类）
+**📖 相关知识点**
 
-| 陷阱 | 示例 |
-|------|------|
-| 类名错误 | `new Test3()` 但类是 `Test2` |
-| 未实现接口 | 漏写 `implements` 的方法 |
-| 变量遮蔽 | `int y = b` 遮住成员，`this.y` 才是成员 |
-| 抽象类实例化 | `new AbstractClass()` 非法 |
+- 课件 **UnmaskField** 加长版：两次改字段 + 中间 print。
+- 每次进方法都要 **分开看** 局部变量与 `this.`。
 
-### ② String / Math / Object
+**问：写出运行结果**
 
 ```java
-String a = "Hello", b = "Hello", c = new String("Hello");
-System.out.println(a == b);        // true（常量池）
-System.out.println(a == c);        // false
-System.out.println(a.equals(c));   // true
-System.out.println("Java".substring(1, 3));  // av
-System.out.println("1,2,3".split(",").length);  // 3
+public class Mask2 {
+    private int x = 1, y = 1;
+    public void change(int a, int b) {
+        x = a;
+        int y = b;
+        this.y = 8;
+        System.out.println("x=" + x + "; y=" + y);
+    }
+    public void show() {
+        System.out.println("x=" + x + "; y=" + y);
+    }
+    public static void main(String[] args) {
+        Mask2 m = new Mask2();
+        m.show();
+        m.change(10, 9);
+        m.show();
+        m.change(3, 4);
+        m.show();
+    }
+}
 ```
 
-| 陷阱 | 说明 |
-|------|------|
-| 不可变 | `s.concat("x")` 不改变 `s` |
-| `==` vs `equals` | 见简答官方样例 |
-| `substring` | **[begin, end)** 左闭右开 |
-
-### ③ Infinity / NaN / enum
-
-```java
-System.out.println(0.0/0.0 == 0.0/0.0);  // false（NaN）
-System.out.println(1.0/0.0 > 0);        // true（Infinity）
-System.out.println(Season.SPRING.ordinal());  // 0
+**输出结果**：
+```
+x=1; y=1
+x=10; y=9
+x=10; y=8
+x=3; y=4
+x=3; y=8
 ```
 
-### ④ 集合
-
-```java
-List<String> list = new ArrayList<>();
-list.add("a"); list.add("b");
-list.remove(0);
-// size=1, 内容为 "b"
-```
-
-| 陷阱 | 说明 |
-|------|------|
-| `remove(int)` vs `remove(Object)` | `list.remove(1)` 删下标；`list.remove("1")` 删对象 |
-| 引用 | 两个引用指向同一 `ArrayList`，`add` 都生效 |
-
-### ⑤ 继承与多态
-
-```java
-class Animal { void speak() { System.out.print("A"); } }
-class Dog extends Animal { void speak() { System.out.print("D"); } }
-Animal a = new Dog();
-a.speak();  // D（运行时绑定）
-```
-
-### ⑥ 多线程
-
-```java
-Thread t = new Thread(() -> System.out.print("T"));
-t.run();    // 只输出 T，不启动新线程
-t.start();  // 新线程执行
-```
-
-| 陷阱 | 说明 |
-|------|------|
-| `run()` vs `start()` | 直接 `run()` **不** 新起线程 |
-| 输出顺序 | 多线程 **不确定**（除非 `join`） |
-
-### ⑦ 异常
-
-未捕获的运行时异常 → 程序终止，**后续语句不执行**。
+**分析**：每次 `change` 第三行 print 的是 **局部 y**；`show()` 打印 **成员**；第二次 change 后成员 x=3, y=8。
 
 ---
 
-## 读程题自测
+### 读程 A3
 
-1. 官方 **Test2**：先判能否编译，再手算三行输出。  
-2. `new String("a") == new String("a")` → ?  
-3. `0.0/0.0 == 0.0/0.0` → ?  
-4. `"Java".substring(1, 3)` → ?  
-5. `t.run()` 与 `t.start()` 输出有何不同？  
-6. `ArrayList` 连续 `add` 两次后 `remove(0)`，`get(0)` 是什么？
+**📖 相关知识点**
 
-> **参考答案**：2 false · 3 false · 4 `av` · 5 `run` 不启新线程 · 6 第二个元素
+- **static 变量** 全类共享；**实例变量** 每个对象一份。
+- 通过对象访问 static 字段合法，但改的是 **同一份** static。
+
+**问：写出运行结果**
+
+```java
+public class StaticInst {
+    static int sx = 1;
+    int ix = 10;
+    public static void main(String[] args) {
+        StaticInst a = new StaticInst();
+        StaticInst b = new StaticInst();
+        a.sx = 2;
+        b.ix = 20;
+        a.ix = 15;
+        System.out.println(a.sx + " " + b.sx);
+        System.out.println(a.ix + " " + b.ix);
+        System.out.println(StaticInst.sx);
+    }
+}
+```
+
+**输出结果**：
+```
+2 2
+15 20
+2
+```
+
+---
+
+### 读程 A4
+
+**📖 相关知识点**
+
+- 方法 **重载**：根据 **实参类型** 选方法。
+- 重载与成员变量无关，别被同名变量干扰。
+
+**问：写出运行结果**
+
+```java
+public class OverPrint {
+    int v = 1;
+    void p(int x) { System.out.print("A" + x); }
+    void p(long x) { System.out.print("B" + x); }
+    void p(Integer x) { System.out.print("C" + x); }
+    public static void main(String[] args) {
+        OverPrint o = new OverPrint();
+        o.p(1);
+        o.p(1L);
+        o.p(Integer.valueOf(1));
+        System.out.println();
+        System.out.println(o.v);
+    }
+}
+```
+
+**输出结果**：
+```
+A1B1C1
+1
+```
+
+**分析**：`1`→int→A；`1L`→long→B；`Integer.valueOf(1)`→C。
+
+---
+
+## B 组 · String / 包装类（4 题 · 综合）
+
+### 读程 B1
+
+**📖 相关知识点**
+
+- String **不可变**；`+` 在循环里每次产生 **新对象**。
+- `equals` 比内容；`==` 比是否为 **同一对象**。
+
+**问：写出运行结果**
+
+```java
+public class StrLoop {
+    public static void main(String[] args) {
+        String s = "";
+        for (int i = 0; i < 3; i++) {
+            s = s + i;
+        }
+        String t = "012";
+        System.out.println(s.equals(t));
+        System.out.println(s == t);
+        System.out.println(s);
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+012
+```
+
+---
+
+### 读程 B2
+
+**📖 相关知识点**
+
+- 字面量、`+` 常量折叠、**new String** 与常量池。
+- 先 `==` 再 `equals`，顺序别漏。
+
+**问：写出运行结果**
+
+```java
+public class StrPool {
+    public static void main(String[] args) {
+        String a = "java";
+        String b = "ja" + "va";
+        String c = new String("java");
+        String d = c.intern();
+        System.out.println(a == b);
+        System.out.println(a == c);
+        System.out.println(a == d);
+        System.out.println(c == d);
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+true
+false
+```
+
+**分析**：`intern()` 把 c 的内容放入/指向常量池，d 与 a 同一对象；c 仍是堆上原对象。
+
+---
+
+### 读程 B3
+
+**📖 相关知识点**
+
+- `substring(begin,end)` **左闭右开**；`indexOf` 返回首次下标。
+- **`+` 结合性**：从左到右，遇 String 变连接。
+
+**问：写出运行结果**
+
+```java
+public class StrMix {
+    public static void main(String[] args) {
+        String s = "abcdef";
+        System.out.println(s.substring(1, 4));
+        System.out.println(s.indexOf("cd"));
+        System.out.println("" + 1 + 2 + 3);
+        System.out.println(1 + 2 + 3 + "");
+        System.out.println("Java".replace('a', 'o'));
+    }
+}
+```
+
+**输出结果**：
+```
+bcd
+2
+123
+6
+Jovo
+```
+
+---
+
+### 读程 B4
+
+**📖 相关知识点**
+
+- **Integer 缓存** -128～127；超出则新对象。
+- **自动拆箱** 参与 `+` 时按 int 算。
+
+**问：写出运行结果**
+
+```java
+public class Wrap {
+    public static void main(String[] args) {
+        Integer a = 127, b = 127;
+        Integer c = 128, d = 128;
+        System.out.println(a == b);
+        System.out.println(c == d);
+        System.out.println(c.equals(d));
+        System.out.println(a + b);
+        System.out.println(Double.isNaN(0.0 / 0.0));
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+true
+254
+true
+```
+
+---
+
+## C 组 · 继承与多态（5 题 · 高频难点）
+
+### 读程 C1
+
+**📖 相关知识点**
+
+- **实例方法**：运行时 **动态绑定**，看 **实际对象类型**。
+- **static 方法**：看 **引用声明类型**，没有多态。
+
+**问：写出运行结果**
+
+```java
+class Base {
+    static void sf() { System.out.print("Sb"); }
+    void im() { System.out.print("Ib"); }
+}
+class Derived extends Base {
+    static void sf() { System.out.print("Sd"); }
+    void im() { System.out.print("Id"); }
+}
+public class Poly1 {
+    public static void main(String[] args) {
+        Base r = new Derived();
+        r.sf();
+        r.im();
+        System.out.println();
+        r = new Base();
+        r.sf();
+        r.im();
+    }
+}
+```
+
+**输出结果**：
+```
+SbId
+SbIb
+```
+
+---
+
+### 读程 C2
+
+**📖 相关知识点**
+
+- 课件 **PrivOverride**：子类 **不能** 用 public 方法「覆盖」父类 **private** 方法；父类 private 方法不参与多态。
+- 引用类型为父类时，调 private 方法 **编译通过**，执行 **父类版本**。
+
+**问：写出运行结果**
+
+```java
+public class PrivOverride {
+    private void f() { System.out.println("parent"); }
+    public static void main(String[] args) {
+        PrivOverride p = new PrivChild();
+        p.f();
+        new PrivChild().f();
+    }
+}
+class PrivChild extends PrivOverride {
+    public void f() { System.out.println("child"); }
+}
+```
+
+**输出结果**：
+```
+parent
+child
+```
+
+**分析**：`main` 在 **声明 private f 的类内部**，`p.f()` 调的是 **父类 private 方法**（子类 public f **不算重写**）；`new PrivChild().f()` 在子类上下文中调 **子类自己的 f**。
+
+---
+
+### 读程 C3
+
+**📖 相关知识点**
+
+- **构造顺序**：创建子类 → 父类构造 → 子类构造。
+- 父类构造里若调 **可被重写** 的实例方法，可能跑到 **子类尚未初始化完** 的版本（读程常考 print 顺序）。
+
+**问：写出运行结果**
+
+```java
+class Animal {
+    Animal() {
+        System.out.print("A");
+        show();
+    }
+    void show() { System.out.print("a"); }
+}
+class Dog extends Animal {
+    int age = 10;
+    Dog() { System.out.print("D"); }
+    void show() { System.out.print("d" + age); }
+}
+public class InitOrder {
+    public static void main(String[] args) {
+        new Dog();
+        System.out.println();
+    }
+}
+```
+
+**输出结果**：
+```
+Ad0D
+```
+
+**分析**：父构造调 `show()` 时已动态绑定到 Dog，但 **age 尚未初始化**（默认 0）→ `d0`；再 D。
+
+---
+
+### 读程 C4
+
+**📖 相关知识点**
+
+- 课件 **static 初始化块 + 继承**：先父 static → 子 static → 父构造 → 子构造。
+- **static 块** 在类 **首次加载** 时执行一次。
+
+**问：写出运行结果**
+
+```java
+class T1 {
+    static int s1 = 1;
+    static { System.out.print("T1s"); }
+    T1() { System.out.print("T1c"); }
+}
+class T2 extends T1 {
+    static int s2 = 2;
+    static { System.out.print("T2s"); }
+    T2() { System.out.print("T2c"); }
+}
+public class StaticInit {
+    public static void main(String[] args) {
+        new T2();
+        new T2();
+    }
+}
+```
+
+**输出结果**：
+```
+T1sT2sT1cT2cT1cT2c
+```
+
+**分析**：static 块 **只执行一次**；第二次 new 只有构造 `T1cT2c`。
+
+---
+
+### 读程 C5
+
+**📖 相关知识点**
+
+- 数组、引用 **赋值共享**；通过任一引用改元素，另一引用可见。
+- **值传递**：传引用副本，改元素有效，换引用无效。
+
+**问：写出运行结果**
+
+```java
+public class ArrRef {
+    static void change(int[] a, int x) {
+        a[0] = 99;
+        a = new int[] { 1 };
+        x = 100;
+    }
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3 };
+        int k = 5;
+        change(arr, k);
+        System.out.println(arr[0] + " " + arr.length);
+        System.out.println(k);
+    }
+}
+```
+
+**输出结果**：
+```
+99 3
+5
+```
+
+---
+
+## D 组 · static / final / 重载（3 题）
+
+### 读程 D1
+
+**📖 相关知识点**
+
+- **static 计数**：构造每执行一次 count++。
+- static 属于类，不随对象销毁。
+
+**问：写出运行结果**
+
+```java
+public class Count {
+    static int n = 0;
+    Count() { n++; }
+    static void reset() { n = 0; }
+    public static void main(String[] args) {
+        new Count();
+        new Count();
+        System.out.println(n);
+        reset();
+        new Count();
+        System.out.println(n);
+    }
+}
+```
+
+**输出结果**：
+```
+2
+1
+```
+
+---
+
+### 读程 D2
+
+**📖 相关知识点**
+
+- **final 引用**：不能改 **指向**；但引用指向的 **对象内容** 仍可改（如数组元素、StringBuilder）。
+
+**问：写出运行结果**
+
+```java
+public class FinalRef {
+    public static void main(String[] args) {
+        final int[] a = { 1, 2 };
+        a[0] = 9;
+        final StringBuilder sb = new StringBuilder("Hi");
+        sb.append("!");
+        System.out.println(a[0] + " " + a[1]);
+        System.out.println(sb);
+    }
+}
+```
+
+**输出结果**：
+```
+9 2
+Hi!
+```
+
+---
+
+### 读程 D3
+
+**📖 相关知识点**
+
+- **重写** 要求签名相同；子类返回类型可以是 **协变** 类型（本题不涉及）。
+- 多态调用 **实际对象** 的重写方法。
+
+**问：写出运行结果**
+
+```java
+class Shape {
+    void draw() { System.out.print("S"); }
+}
+class Circle extends Shape {
+    void draw() { System.out.print("C"); }
+    void radius() { System.out.print("r"); }
+}
+public class ShapeTest {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+        Circle c = (Circle) s;
+        c.draw();
+        c.radius();
+    }
+}
+```
+
+**输出结果**：
+```
+CCr
+```
+
+---
+
+## E 组 · 集合（4 题 · 课件风格）
+
+### 读程 E1
+
+**📖 相关知识点**
+
+- 课件 **UseArrayList**：add、**insert**、set、remove 混合。
+- `remove(int)` 是 **下标**；删后 size 变，下标要重新想。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class ListOps {
+    public static void main(String[] args) {
+        List<String> L = new ArrayList<>();
+        L.add("86");
+        L.add("98");
+        L.add(1, "99");
+        for (int i = 0; i < L.size(); i++) {
+            System.out.print(L.get(i) + " ");
+        }
+        L.set(1, "77");
+        L.remove(0);
+        System.out.println();
+        System.out.println(L);
+    }
+}
+```
+
+**输出结果**：
+```
+86 99 98 
+[77, 98]
+```
+
+**分析**：插入后 [86,99,98]；set(1,"77")→[86,77,98]；remove(0) 删 86→[77,98]。
+
+---
+
+### 读程 E2
+
+**📖 相关知识点**
+
+- `remove(1)` → 下标 1；`remove(Integer.valueOf(1))` → 删 **值为 1** 的元素。
+- 两种 remove **结果完全不同**，读程必考。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class RemoveTrap {
+    public static void main(String[] args) {
+        List<Integer> L = new ArrayList<>(Arrays.asList(1, 2, 3, 2));
+        L.remove(1);
+        System.out.println(L);
+        L.remove(Integer.valueOf(2));
+        System.out.println(L);
+    }
+}
+```
+
+**输出结果**：
+```
+[1, 3, 2]
+[1, 3]
+```
+
+---
+
+### 读程 E3
+
+**📖 相关知识点**
+
+- **HashMap**：同 key 的 put **覆盖** value；size 不变。
+- `get` 不存在返回 **null**（本题都有 key）。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class MapOps {
+    public static void main(String[] args) {
+        Map<String, Integer> m = new HashMap<>();
+        m.put("a", 1);
+        m.put("b", 2);
+        m.put("a", 3);
+        System.out.println(m.get("a"));
+        System.out.println(m.get("c"));
+        System.out.println(m.size());
+        m.remove("b");
+        System.out.println(m.containsKey("b"));
+        System.out.println(m);
+    }
+}
+```
+
+**输出结果**：
+```
+3
+null
+2
+false
+{a=3}
+```
+
+---
+
+### 读程 E4
+
+**📖 相关知识点**
+
+- **HashSet** 不重复；`add` 返回 boolean 表示是否 **新加进**。
+- 课件 **FindDups** 思路：重复 add 失败。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class SetOps {
+    public static void main(String[] args) {
+        Set<String> s = new HashSet<>();
+        System.out.print(s.add("A") + " ");
+        System.out.print(s.add("A") + " ");
+        System.out.print(s.add("B") + " ");
+        System.out.println(s.size());
+        System.out.println(s);
+    }
+}
+```
+
+**输出结果**：
+```
+true false true 2
+[A, B]
+```
+
+（Set 的 toString 顺序 **不保证**，考场一般只考 size 或 true/false 行。）
+
+---
+
+## F 组 · 异常（3 题 · 课件风格）
+
+### 读程 F1
+
+**📖 相关知识点**
+
+- try 里 **异常点之后** 的语句 **不执行**；进 catch；**finally 几乎总执行**。
+- 课件常见：`1/0` 跳过中间 print。
+
+**问：写出运行结果**
+
+```java
+public class Ex1 {
+    public static void main(String[] args) {
+        System.out.print("1");
+        try {
+            System.out.print("2");
+            int x = 10 / 0;
+            System.out.print("3");
+        } catch (ArithmeticException e) {
+            System.out.print("4");
+        } finally {
+            System.out.print("5");
+        }
+        System.out.print("6");
+    }
+}
+```
+
+**输出结果**：
+```
+12456
+```
+
+---
+
+### 读程 F2
+
+**📖 相关知识点**
+
+- 课件 **greetings 循环** 简化版：catch 住 **数组越界** 后 break，避免死循环。
+- 每轮 **finally 都执行**。
+
+**问：写出运行结果**
+
+```java
+public class ExLoop {
+    public static void main(String[] args) {
+        String[] g = { "A", "B", "C" };
+        int i = 0;
+        while (i < 4) {
+            try {
+                System.out.print(g[i]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.print("X");
+                break;
+            } finally {
+                System.out.print("F");
+            }
+            i++;
+        }
+        System.out.print("E");
+    }
+}
+```
+
+**输出结果**：
+```
+AFBFCFXFE
+```
+
+**逐步分析**：
+- i=0：`A` + finally `F` → `AF`  
+- i=1：`B` + `F` → `BF`  
+- i=2：`C` + `F` → `CF`  
+- i=3：越界 → `X` + finally `F` → `XF`；break  
+- 最后 `E`  
+
+---
+
+### 读程 F3
+
+**📖 相关知识点**
+
+- **return 之前** 仍执行 finally。
+- finally 里若有 return 会覆盖 try 的 return（本题 finally 只 print）。
+
+**问：写出运行结果**
+
+```java
+public class ExFinally {
+    static int f() {
+        try {
+            return 1;
+        } finally {
+            System.out.print("F");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.print(f());
+        System.out.print(f());
+    }
+}
+```
+
+**输出结果**：
+```
+F1F1
+```
+
+---
+
+## G 组 · 多线程（3 题）
+
+### 读程 G1
+
+**📖 相关知识点**
+
+- **`run()`** 普通调用，**不启新线程**；**`start()`** 才新线程。
+- 本题全在 main 线程，顺序确定。
+
+**问：写出运行结果**
+
+```java
+public class ThreadRun {
+    public static void main(String[] args) {
+        Thread t = new Thread(() -> System.out.print("T"));
+        t.run();
+        t.run();
+        System.out.print("M");
+    }
+}
+```
+
+**输出结果**：
+```
+TTM
+```
+
+---
+
+### 读程 G2
+
+**📖 相关知识点**
+
+- **`start()` + `join()`**：main 等子线程 **跑完** 再往下。
+- 无 join 时，打印顺序可能 **不确定**（考场若给了 join 就 **确定**）。
+
+**问：写出运行结果**
+
+```java
+public class ThreadJoin {
+    static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args) throws Exception {
+        Thread t = new Thread(() -> sb.append("B"));
+        t.start();
+        t.join();
+        sb.append("A");
+        System.out.println(sb);
+    }
+}
+```
+
+**输出结果**：
+```
+BA
+```
+
+---
+
+### 读程 G3
+
+**📖 相关知识点**
+
+- **synchronized**：同一把锁 **互斥**；本题顺序固定因 main 等 t1、t2 都 join。
+
+**问：写出运行结果**
+
+```java
+public class SyncDemo {
+    static int n = 0;
+    static final Object lock = new Object();
+    static void add() {
+        synchronized (lock) {
+            n++;
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        Thread t1 = new Thread(() -> { add(); add(); });
+        Thread t2 = new Thread(() -> { add(); });
+        t1.start(); t2.start();
+        t1.join(); t2.join();
+        System.out.println(n);
+    }
+}
+```
+
+**输出结果**：
+```
+3
+```
+
+---
+
+## H 组 · switch / 数组 / 循环（4 题）
+
+### 读程 H1
+
+**📖 相关知识点**
+
+- **switch 贯穿**：case 无 **break** 则 **继续执行** 下一 case。
+- 考场常考 **故意不写 break**。
+
+**问：写出运行结果**
+
+```java
+public class Sw {
+    public static void main(String[] args) {
+        int n = 2;
+        switch (n) {
+            case 1: System.out.print("1");
+            case 2: System.out.print("2");
+            case 3: System.out.print("3"); break;
+            default: System.out.print("d");
+        }
+        System.out.print("!");
+    }
+}
+```
+
+**输出结果**：
+```
+23!
+```
+
+---
+
+### 读程 H2
+
+**📖 相关知识点**
+
+- **二维数组**：`length` 是 **行数**；每行是 **一维数组**，长度可不同。
+- `a[i][j]` 先选行再选列。
+
+**问：写出运行结果**
+
+```java
+public class Arr2D {
+    public static void main(String[] args) {
+        int[][] a = { { 1, 2 }, { 3 }, { 4, 5, 6 } };
+        System.out.print(a.length + " ");
+        System.out.print(a[1].length + " ");
+        System.out.print(a[2][1] + " ");
+        int sum = 0;
+        for (int[] row : a) {
+            sum += row[0];
+        }
+        System.out.print(sum);
+    }
+}
+```
+
+**输出结果**：
+```
+3 1 5 8
+```
+
+**分析**：三行；第二行长 1；a[2][1]=5；各行第 0 列 1+3+4=8。
+
+---
+
+### 读程 H3
+
+**📖 相关知识点**
+
+- **`if (b = true)`** 是 **赋值**，不是 `==`；条件为 true。
+- **短路运算** `&&` / `||`：左侧能定结果则 **不评估** 右侧。
+
+**问：写出运行结果**
+
+```java
+public class Logic {
+    public static void main(String[] args) {
+        int x = 0;
+        if (x++ == 0) System.out.print("A");
+        System.out.print(x + " ");
+        boolean ok = false;
+        if (ok = true) System.out.print("B");
+        if (false && (++x > 0)) System.out.print("C");
+        System.out.print(x);
+    }
+}
+```
+
+**输出结果**：
+```
+A1 B1
+```
+
+---
+
+### 读程 H4
+
+**📖 相关知识点**
+
+- **for 循环 + continue/break**；嵌套 loop 要 **分层手算**。
+- `print` 无换行，一行粘在一起。
+
+**问：写出运行结果**
+
+```java
+public class LoopNest {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                if (i == j) continue;
+                System.out.print(i + "" + j + " ");
+            }
+        }
+    }
+}
+```
+
+**输出结果**：
+```
+12 13 21 23 31 32 
+```
+
+（末尾空格可有可无，看阅卷是否抠格式。）
+
+---
+
+## 读程题自测索引（25 题 · 只写输出）
+
+| 编号 | 难度 | 核心考点 |
+|------|------|----------|
+| 官方 Test2 | ★★ | 遮蔽、this、toString |
+| A1-A4 | ★★ | 参数遮蔽、UnmaskField、static 共享、重载 |
+| B1-B4 | ★★★ | String 循环、常量池、混合运算、包装类 |
+| C1-C5 | ★★★★ | static/实例绑定、PrivOverride、构造+多态、static 块、引用 |
+| D1-D3 | ★★ | static 计数、final 引用、重写 |
+| E1-E4 | ★★★ | ArrayList 课件、remove 陷阱、HashMap、HashSet |
+| F1-F3 | ★★★ | 异常链、循环+finally、return+finally |
+| G1-G3 | ★★★ | run/start、join、synchronized |
+| H1-H4 | ★★★ | switch 贯穿、二维数组、短路、嵌套循环 |
+
+> **冲刺建议**：考场 **5～7 道** 读程，难度接近 C/E/F 组；每天 **手算 8 道** 不看书，错题回到 [按课件详讲](#按课件逐章要点详讲)。
 
 ---
 
@@ -583,6 +2525,25 @@ class Student extends Person implements Life {
 - [ ] **组合** `Job job` + `setJob`  
 - [ ] `living()` 输出 **一字不错**  
 - [ ] `toString` 用 `super.toString()` 带父类字段  
+
+**逐行得分说明（编程题阅卷视角）**
+
+| 代码块 | 分值关注点 | 常见扣分 |
+|--------|------------|----------|
+| `abstract class Person` | 字段 protected、构造赋值 | 写成 public 字段、漏构造 |
+| `class Job` | 独立类、toString | 误写成 static 内部类 |
+| `interface Life` | 只有方法声明，无方法体 | 写了 `{}` 实现 |
+| `Student extends Person implements Life` | 顺序：先 extends 后 implements | 反写、漏 implements |
+| `super(name, age)` | 必须是构造第一行有效语句 | 用 this.name 重复赋值代替 super |
+| `private Job job` + `setJob` | **组合** 关系，非继承 | 漏 setJob 导致 job 永远 null |
+| `living()` | 字符串与题目 **完全一致** | 标点、空格错误 |
+| `toString()` | `super.toString()` + 本类字段 + job | 漏 job 或 id |
+
+**变式题可能改什么**
+
+- 把 `Job` 改成接口 `Workable`，`Student implements Life, Workable`
+- 增加 `equals`/`hashCode` 只比 `id`
+- 增加 `abstract void study()` 由 Student 实现
 
 ---
 
@@ -706,7 +2667,7 @@ class Worker extends Thread {
 
 **读程（5～7）**
 
-- [ ] 官方 **Test2** 编译判断 + 三行输出
+- [ ] 官方 **Test2** 三行输出（遮蔽 + this.y）
 - [ ] String / 集合 / 线程 各练 2 道
 - [ ] NaN、enum.ordinal()
 
@@ -734,4 +2695,4 @@ class Worker extends Thread {
 
 ---
 
-*最后更新：2026-05-22 · 笔考专版 · 课件摘自 `JAVA\课件\` 共 8 个 PPT（无 GUI 课件）· 已移除机考*
+*最后更新：2026-06-12 · **详讲版** · 笔考专版 · 课件摘自 `JAVA\课件\` 共 8 个 PPT（无 GUI 课件）· 已移除机考*
