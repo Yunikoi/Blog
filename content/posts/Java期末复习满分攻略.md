@@ -35,6 +35,7 @@ toc: true
 - [★ 期末抢分秘籍](#-期末抢分秘籍)
 - [三、编程题（2 道）](#三编程题2-道)
   - [按题目要求写 · 知识点保基本分](#编程题--按题目要求写知识点--保基本分)
+  - [编程全能考点手册（按课件）](#第三步编程题全能考点手册按课件--按题目用语)
 - [冲刺 Checklist](#冲刺-checklist)
 - [附录：实验代码 ↔ 考点](#附录实验代码--考点)
 
@@ -2924,6 +2925,2345 @@ public String toString() {
 
 ---
 
+### 第三步：编程题全能考点手册（按课件 · 按题目用语）
+
+> **老师出题规律**：编程 **2 道**，要求 **逐条列出**（第 1 点、第 2 点…）。  
+> **你要做的**：在题目里 **圈关键词** → 在下表 / 对应小节找到写法 → **一条要求 = 一段代码**。  
+> 下面按 **PPT 章节 + 实验作业** 汇总 **所有可能考到** 的编程要求（不只官方 Person 样例）。
+
+#### 总索引：题目里出现这些词 → 怎么写
+
+| 题目用语 | 写什么 | 见小节 |
+|----------|--------|--------|
+| 定义类 X / 编写类 X | `class X { 字段; 构造; 方法 }` | [A1](#a1-普通类--字段--构造--输出) |
+| **抽象类** X | `abstract class X` | [A2](#a2-官方综合题--抽象类--接口--继承--组合) |
+| **接口** X | `interface X { void m(); }` 无方法体 | [A2](#a2-官方综合题--抽象类--接口--继承--组合) |
+| **继承** X、**extends** | `class Y extends X` | [A3](#a3-继承--重写--super) |
+| **实现** 接口 X、**implements** | `implements X` 或 `implements X, Y` | [A2](#a2)、[A10](#a10-实现多个接口) |
+| 成员变量 / 字段 | `private/protected 类型 名;` | [A1](#a1-普通类--字段--构造--输出) |
+| **构造方法** / 非缺省构造 | `public 类名(参数) { ... }` | [A1](#a1) |
+| **默认构造** / 无参构造 | `public 类名() { 字段=默认值; }` | [A4](#a4-几何类--rectangle--point-型) |
+| **构造重载** | 多个构造，用 `this(...)` 串联 | [A5](#a5-构造重载--this-链) |
+| 子类构造 + 父类有参构造 | 第一行 **`super(...)`** | [A2](#a2)、[A6](#a6-多层继承--super-链) |
+| **重写** / override 方法 | 同名同参 + `@Override` + 方法体 | [A3](#a3) |
+| **重载** 方法 | 同名 **不同参数列表** | [A7](#a7-方法重载) |
+| `toString()` | `public String toString() { return ... }` | [A1](#a1)、[A8](#a8-重写-equals--hashcode--tostring) |
+| `equals()` | 参数 `Object o`，`instanceof` + 强转 | [A8](#a8) |
+| `hashCode()` | 与 equals 一致，常 `return Objects.hash(...)` 或 `Long.hashCode(id)` | [A8](#a8) |
+| **输出** / `print()` 方法 | `System.out.println(...)` 或题目指定格式 | [A1](#a1) |
+| **引用** 某类对象 / 组合 | `private SomeClass ref;` + setter | [A2](#a2) |
+| **getter/setter** | `getX()` / `setX(类型 x)` | [A9](#a9-getter--setter) |
+| **static** 变量/方法 | `static int count;` / `static void f()` | [B1](#b1-static) |
+| **final** 类 | `final class X` 不可继承 | [B2](#b2-final) |
+| **final** 方法/字段 | 方法不可重写 / 字段只能赋一次 | [B2](#b2) |
+| **abstract** 方法 | 父类声明，子类 **public** 实现 | [B3](#b3-抽象方法) |
+| **enum** 枚举 | `enum Season { SPRING, SUMMER; }` | [B4](#b4-enum) |
+| **ArrayList** | `List<T> list = new ArrayList<>();` add/get/remove/set | [B5](#b5-arraylist) |
+| **HashMap** | put/get/remove/containsKey | [B6](#b6-hashmap) |
+| **HashSet** | add，不重复 | [B7](#b7-hashset) |
+| 统计频次 / 计数 | `map.getOrDefault(k,0)+1` | [B6](#b6) |
+| **try-catch-finally** | 异常处理块 | [C1](#c1-try-catch-finally) |
+| **throws** IOException | 方法头声明 | [C2](#c2-throws-与自定义异常) |
+| 自定义异常类 | `class MyEx extends Exception` | [C2](#c2) |
+| 读文件 / 按行读 | `BufferedReader` + `readLine()` | [D1](#d1-字符流按行读写) |
+| 写文件 | `BufferedWriter` + `write` + `newLine()` | [D1](#d1) |
+| 去空行 / 复制文件 | readLine + `trim().isEmpty()` + write | [D2](#d2-去空行复制--farmstorage-型) |
+| **split** 分割 | `line.split(",")` | [D3](#d3-split-解析) |
+| **extends Thread** | `class T extends Thread { public void run() }` | [E1](#e1-线程类) |
+| **implements Runnable** | `class T implements Runnable { public void run() }` | [E2](#e2-runnable) |
+| **synchronized** | 方法或块 | [E3](#e3-synchronized) |
+| **ActionListener** | 匿名内部类 | [F1](#f1-actionlistener) |
+| **WindowAdapter** | 重写 `windowClosing` | [F2](#f2-windowadapter) |
+| **main** 方法 | 仅题目明确要求时写 | [G1](#g1-main-与变长参数) |
+
+---
+
+#### A 组 · 第四章「面向对象特性」（编程 ★★★ · 最高频）
+
+##### A1 普通类 · 字段 · 构造 · 输出
+
+**对应**：PPT `EmpInfo` 习题、实验农场类、任何「定义 XX 类，包含…」
+
+**题目示例**：定义 `EmpInfo`，字段 `name, designation, department`（String），非缺省构造，`print()` 输出成员。
+
+**知识点**：类体顺序 = **字段 → 构造 → 方法**；构造方法名 **= 类名**；`this.字段 = 参数`。
+
+```java
+class EmpInfo {
+    private String name;
+    private String designation;
+    private String department;
+
+    public EmpInfo(String name, String designation, String department) {
+        this.name = name;
+        this.designation = designation;
+        this.department = department;
+    }
+
+    public void print() {
+        System.out.println(name + ", " + designation + ", " + department);
+    }
+}
+```
+
+**基本分**：3 字段 + 构造里 3 赋值 + print 里 3 字段都出现。
+
+---
+
+##### A2 官方综合题 · 抽象类 + 接口 + 继承 + 组合
+
+**对应**：期末 **官方 20 分样例** Person / Job / Life / Student。
+
+**逐条翻译**（完整讲解见上文 [要求 1～4](#第二步逐条知识点官方样例怎么写)）：
+
+| 条 | 写法要点 |
+|----|----------|
+| 抽象类 Person | `abstract class` + protected 字段 + 构造 + toString |
+| 类 Job | 普通 `class`，独立 |
+| 接口 Life | `void living();` 无 `{}` |
+| Student | `extends Person implements Life` + super + living + setJob + toString(super) |
+
+**基本分**：四个类型都写对 + Student 里 **super + setJob + living 原句**。
+
+---
+
+##### A3 继承 · 重写 · super
+
+**对应**：PPT `Shape` / `Rectangle`、农场 `Animal`/`Cow` 继承链。
+
+**题目示例**：`Rectangle extends Shape`，重写 `draw()`，新方法里先调自己的 `draw()` 再 `super.draw()`。
+
+**知识点**：
+- **继承**：子类拥有父类非 private 成员。
+- **重写**：方法名、参数、返回类型 **相同**；子类用 `@Override`。
+- **super.方法()**：调用 **父类版本**。
+
+```java
+class Shape {
+    public void draw() { System.out.println("Draw shape"); }
+}
+class Rectangle extends Shape {
+    @Override
+    public void draw() { System.out.println("Draw Rectangle"); }
+    public void newDraw() {
+        draw();        // 子类 draw
+        super.draw();  // 父类 draw
+    }
+}
+```
+
+**基本分**：`extends` + `@Override` + 方法体 + 题目若要求 `super` 则写上。
+
+---
+
+##### A4 几何类 · Rectangle / Point 型
+
+**对应**：PPT 习题「定义 Rectangle、Point」。
+
+**题目示例**：Rectangle 有 width、height；无参构造置 0；两参构造；`getArea()`、`getPerimeter()`。
+
+```java
+class Rectangle {
+    private double width, height;
+
+    public Rectangle() {
+        width = height = 0.0;
+    }
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double getArea() { return width * height; }
+
+    public double getPerimeter() { return 2 * (width + height); }
+}
+```
+
+**变式**：加入 `Point` 左上角、`boolean contains(Point p)` → 用 **组合** `private Point corner;`，比较坐标。
+
+**基本分**：题目要几个构造写几个 + 要几个方法写几个（公式别写错：面积 w×h，周长 2(w+h)）。
+
+---
+
+##### A5 构造重载 · this() 链
+
+**对应**：PPT `ConstructorOverloading` / `Student` 三构造。
+
+**知识点**：`this(实参)` 调用 **本类另一个构造**，必须放在构造 **第一行**。
+
+```java
+class Student {
+    private String name, id;
+
+    public Student(String nm, String id) {
+        this.name = nm;
+        this.id = id;
+    }
+    public Student(String nm) {
+        this(nm, "00000000");
+    }
+    public Student() {
+        this("Unknown");
+    }
+}
+```
+
+**基本分**：多个构造 + 至少一处 `this(...)` 调别的构造。
+
+---
+
+##### A6 多层继承 · super 链
+
+**对应**：PPT `Person → Student → Undergraduate`。
+
+**知识点**：每层子类构造 **先** `super(父类需要的参数)`，否则父类字段未初始化。
+
+```java
+class Person {
+    Person() { System.out.println("Person"); }
+}
+class Student extends Person {
+    Student(int id) { System.out.println("Student " + id); }
+}
+class Undergraduate extends Student {
+    Undergraduate(int id) {
+        super(id);
+        System.out.println("Undergraduate");
+    }
+}
+```
+
+**基本分**：最子类构造里 **super 参数与父类构造匹配**。
+
+---
+
+##### A7 方法重载
+
+**对应**：PPT `Screen.print(int/float/String)`。
+
+**知识点**：同名，**参数类型或个数不同**；与返回值无关。
+
+```java
+void print(int i)    { System.out.println(i); }
+void print(String s) { System.out.println(s); }
+void print(double d) { System.out.println(d); }
+```
+
+**基本分**：至少 2 个同名方法，参数列表不同。
+
+---
+
+##### A8 重写 equals / hashCode / toString
+
+**对应**：PPT 集合章要求、HashSet 存自定义对象。
+
+**题目示例**：`equals` 仅比较 `id`；`toString` 返回所有字段。
+
+```java
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof Student)) return false;
+    Student s = (Student) o;
+    return this.id == s.id;
+}
+
+@Override
+public int hashCode() {
+    return Long.hashCode(id);
+}
+
+@Override
+public String toString() {
+    return "Student{id=" + id + ", name=" + name + "}";
+}
+```
+
+**基本分**：equals 参数是 **Object**；hashCode 若题目提到 HashSet **必写**。
+
+---
+
+##### A9 getter / setter
+
+**题目示例**：提供 `getName()`、`setName(String name)`。
+
+```java
+public String getName() { return name; }
+public void setName(String name) { this.name = name; }
+```
+
+**基本分**：get **return 字段**；set **`this.字段 = 参数`**。
+
+---
+
+##### A10 实现多个接口
+
+**题目示例**：`class Duck extends Animal implements Flyable, Swimmable`
+
+```java
+interface Flyable { void fly(); }
+interface Swimmable { void swim(); }
+
+class Duck extends Animal implements Flyable, Swimmable {
+    public void fly()  { System.out.println("flying"); }
+    public void swim() { System.out.println("swimming"); }
+}
+```
+
+**基本分**：`extends` 一个类 + `implements` 多个接口用逗号分隔；**每个接口方法都要实现**。
+
+---
+
+#### B 组 · 第五章「高级语言特征」（编程 ★★★）
+
+##### B1 static
+
+**题目示例**：统计创建了多少个对象；或 `static void main` 调 `static` 方法。
+
+```java
+class Counter {
+    static int n = 0;
+    Counter() { n++; }
+    static int getCount() { return n; }
+}
+```
+
+**知识点**：static 属于 **类**，所有对象共享；static 方法 **不能** 直接访问实例字段（无 this）。
+
+**基本分**：`static` 关键字 + 题目要求的变量/方法。
+
+---
+
+##### B2 final
+
+| 题目说 | 写法 |
+|--------|------|
+| final 类 | `final class X { }` 不能再 extends |
+| final 方法 | `public final void f() { }` 不能重写 |
+| final 字段 | 构造或声明时赋一次；引用可改对象内容 |
+
+```java
+final class Config { }  // 不可继承
+
+class Box {
+    final int id;
+    final int[] data = {1, 2};
+    Box(int id) { this.id = id; }
+    void change() { data[0] = 9; }  // OK
+}
+```
+
+---
+
+##### B3 抽象方法
+
+**题目示例**：抽象类 `Animal` 有 `abstract void sound();`，`Dog` 实现。
+
+```java
+abstract class Animal {
+    abstract void sound();
+}
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("wang");
+    }
+}
+```
+
+**基本分**：抽象类里 **只有声明**；具体类 **public void** 实现。
+
+---
+
+##### B4 enum
+
+**题目示例**：定义季节枚举，含 `SPRING, SUMMER` 及构造传中文名。
+
+```java
+enum Season {
+    SPRING("春"), SUMMER("夏");
+    private final String label;
+    Season(String label) { this.label = label; }
+    public String getLabel() { return label; }
+}
+```
+
+**基本分**：`enum` 关键字 + 常量列表；若题目要方法则写。
+
+---
+
+##### B5 ArrayList
+
+**对应**：PPT `UseArrayList`、实验 **练习三** 农场 ArrayList。
+
+**题目示例**：创建 List，add、在指定下标 insert、set 修改、remove 删除、遍历输出。
+
+```java
+List<String> list = new ArrayList<>();
+list.add("86");
+list.add("98");
+list.add(1, "99");           // 在下标 1 插入
+for (int i = 0; i < list.size(); i++) {
+    System.out.print(list.get(i) + " ");
+}
+list.set(1, "77");
+list.remove(0);              // 下标 0
+```
+
+**基本分**：`new ArrayList<>()` + 题目点的操作各写一句。
+
+---
+
+##### B6 HashMap
+
+**对应**：PPT `UseHashMap`、练习三设备表、单词统计。
+
+**题目示例**：键值存姓名-分数；同 key 覆盖；按 key 查询。
+
+```java
+Map<String, String> map = new HashMap<>();
+map.put("张一", "86");
+map.put("李二", "98");
+map.put("李二", "77");       // 覆盖
+System.out.println(map.get("李二"));
+map.remove("张一");
+```
+
+**统计词频模板**：
+
+```java
+Map<String, Integer> freq = new HashMap<>();
+for (String w : words) {
+    freq.put(w, freq.getOrDefault(w, 0) + 1);
+}
+```
+
+**基本分**：put + get；统计题加 getOrDefault 循环。
+
+---
+
+##### B7 HashSet
+
+**对应**：PPT `FindDups` 去重。
+
+```java
+Set<String> set = new HashSet<>();
+for (String s : args) {
+    if (!set.add(s)) {
+        System.out.println("Duplicate: " + s);
+    }
+}
+```
+
+**基本分**：`new HashSet<>()` + add；题目若说「不重复」用 Set。
+
+---
+
+#### C 组 · 第六章「异常处理」（编程 ★★）
+
+##### C1 try-catch-finally
+
+**题目示例**：读文件时捕获 IOException；除零捕获 ArithmeticException。
+
+```java
+public void readFile(String path) {
+    try {
+        // 可能出错的代码
+    } catch (IOException e) {
+        System.out.println("读文件失败");
+    } finally {
+        // 可选：关闭资源（更推荐 try-with-resources）
+    }
+}
+```
+
+**try-with-resources（推荐写法）**：
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    // 读
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+**基本分**：try + 至少一个 catch；题目说 finally 则写。
+
+---
+
+##### C2 throws 与自定义异常
+
+```java
+class ScoreException extends Exception {
+    ScoreException(String msg) { super(msg); }
+}
+
+void check(int score) throws ScoreException {
+    if (score < 0) throw new ScoreException("分数非法");
+}
+```
+
+**基本分**：自定义类 **extends Exception**；throw + throws 与题目一致。
+
+---
+
+#### D 组 · 第七章「输入输出」（编程 ★★★ · 练习四）
+
+##### D1 字符流按行读写
+
+**对应**：实验 `FarmStorage`、PPT 流式 I/O。
+
+**题目会给**：`FileReader`、`BufferedReader`、`FileWriter` 等声明。
+
+```java
+static void copyLines(String inPath, String outPath) throws IOException {
+    try (BufferedReader br = new BufferedReader(new FileReader(inPath));
+         BufferedWriter bw = new BufferedWriter(new FileWriter(outPath))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            bw.write(line);
+            bw.newLine();
+        }
+    }
+}
+```
+
+**基本分**：try-with-resources + while readLine + write/newLine。
+
+---
+
+##### D2 去空行复制 · FarmStorage 型
+
+**题目示例**：复制 txt，**跳过空行**（或只复制非空行）。
+
+```java
+while ((line = br.readLine()) != null) {
+    if (line.trim().isEmpty()) continue;
+    bw.write(line);
+    bw.newLine();
+}
+```
+
+**基本分**：`trim().isEmpty()` + continue。
+
+---
+
+##### D3 split 解析
+
+**对应**：FarmStorage 按逗号存动物/设备。
+
+```java
+String[] parts = line.split(",");
+String name = parts[0].trim();
+int age = Integer.parseInt(parts[1].trim());
+```
+
+**基本分**：split + 下标取字段 + parseInt/parseDouble。
+
+---
+
+#### E 组 · 第九章「线程」（编程 ★★）
+
+##### E1 线程类
+
+**对应**：PPT `CountDown2`、`AutoSaveThread`。
+
+```java
+class AutoSave extends Thread {
+    private volatile boolean running = true;
+
+    public void shutdown() {
+        running = false;
+        interrupt();
+    }
+
+    @Override
+    public void run() {
+        while (running) {
+            try {
+                Thread.sleep(1000);
+                // 题目要求的保存/打印
+            } catch (InterruptedException e) {
+                if (!running) break;
+            }
+        }
+    }
+}
+```
+
+**使用**：`AutoSave t = new AutoSave(); t.start();`（题目若要求 main 才写）
+
+**基本分**：extends Thread + public run() + 题目要的 sleep/循环。
+
+---
+
+##### E2 Runnable
+
+```java
+class Task implements Runnable {
+    public void run() {
+        System.out.println("task");
+    }
+}
+// 使用
+new Thread(new Task()).start();
+```
+
+**基本分**：implements Runnable + run()；启动用 **start()** 不是 run()。
+
+---
+
+##### E3 synchronized
+
+**题目示例**：多线程累加共享变量 count。
+
+```java
+synchronized void add() {
+    count++;
+}
+// 或
+synchronized (lock) {
+    count++;
+}
+```
+
+**基本分**：synchronized 关键字 + 共享变量修改在块/方法内。
+
+---
+
+#### F 组 · GUI（编程 ★★ · 大作业 FarmGUI）
+
+##### F1 ActionListener
+
+**题目示例**：按钮点击把输入框文字追加到文本区。
+
+```java
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        textArea.append(inputField.getText() + "\n");
+    }
+});
+```
+
+**基本分**：`addActionListener` + 匿名类 + `@Override` + `actionPerformed` + 题目那一行操作。
+
+---
+
+##### F2 WindowAdapter
+
+**题目示例**：关闭窗口时退出或保存。
+
+```java
+frame.addWindowListener(new WindowAdapter() {
+    @Override
+    public void windowClosing(WindowEvent e) {
+        // 保存 / System.exit(0)
+    }
+});
+```
+
+**基本分**：WindowAdapter + 只重写 windowClosing。
+
+---
+
+##### F3 常用组件（题目若要求创建界面）
+
+```java
+JFrame frame = new JFrame("标题");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+JPanel panel = new JPanel();
+JButton btn = new JButton("确定");
+JTextArea area = new JTextArea(10, 30);
+panel.add(btn);
+panel.add(new JScrollPane(area));
+frame.add(panel);
+frame.pack();
+frame.setVisible(true);
+```
+
+**基本分**：题目要哪个组件写哪个；纸笔常只考 **监听器补全**，不必整窗。
+
+---
+
+#### G 组 · 其他可能要求
+
+##### G1 main 与变长参数
+
+**仅题目明确要求时写 main**：
+
+```java
+public static void main(String[] args) {
+    EmpInfo e = new EmpInfo("a", "b", "c");
+    e.print();
+}
+```
+
+**变长参数**（PPT `VariousArgs`）：
+
+```java
+double avg(int r, int... points) {
+    int sum = 0;
+    for (int p : points) sum += p;
+    return (double) sum / points.length * r;
+}
+```
+
+---
+
+### 第四步：两道编程题常见搭配
+
+| 搭配 | 说明 |
+|------|------|
+| **① OOP 综合 + ② 文件/集合方法** | 最常见：第 1 道 Person/Student；第 2 道 HashMap 或 BufferedReader |
+| **① OOP + ② GUI 监听器** | 补 ActionListener / WindowAdapter |
+| **① 继承体系 + ② 线程类** | Animal 子类 + extends Thread |
+| **① 多类建模 + ② enum/equals** | 加 HashSet 存对象 |
+
+**第二道原则**：看清是 **写整个类** 还是 **只写某一个方法**；方法题 **题目给 API 声明**，你只写方法体 + throws。
+
+---
+
+### 第五步：按课件自查清单（编程题全能）
+
+考前过一遍，**不会的回到对应小节**：
+
+| 课件/实验 | 必会编程技能 | ☐ |
+|-----------|--------------|---|
+| 第四章 EmpInfo | 普通类 + 构造 + print/toString | ☐ |
+| 第四章 Shape/Rectangle | extends + @Override + super | ☐ |
+| 第四章 构造重载 | this(...) 链 | ☐ |
+| **官方样例** | abstract + interface + extends + implements + 组合 | ☐ |
+| 第五章 抽象/接口 | abstract 方法实现；多接口 | ☐ |
+| 第五章 集合 | ArrayList / HashMap / HashSet 基本操作 | ☐ |
+| 第五章 equals/hashCode | Object 参数 + instanceof | ☐ |
+| 第六章 | try-catch；throws；try-with-resources | ☐ |
+| 第七章 / 练习四 | readLine；去空行；split | ☐ |
+| 第九章 | Thread.run；Runnable；synchronized | ☐ |
+| GUI / FarmGUI | ActionListener；WindowAdapter | ☐ |
+
+---
+
+### 第六步：官方样例 · 对照表（写完打勾）
+
+| 题号 | 题目要求 | 你写了吗？ |
+|------|----------|------------|
+| 1 | `abstract class Person` + name, age | ☐ |
+| 1 | Person 构造 + toString | ☐ |
+| 2 | `class Job` + accountabilities + 构造 + toString | ☐ |
+| 3 | `interface Life` + `void living();` | ☐ |
+| 4 | `Student extends Person implements Life` | ☐ |
+| 4 | 字段 school, id, job | ☐ |
+| 4 | 构造 + **super(name, age)** | ☐ |
+| 4 | living() 固定输出 | ☐ |
+| 4 | setJob(Job job) | ☐ |
+| 4 | toString 含 **全部** 成员 | ☐ |
+
+**10 项对 8 项 ≈ 基本分**；全对 ≈ 满分。
+
+---
+
+---
+
+## 官方样例题（必做 · 只写输出）
+
+![读程题样例：Test2](/java-exam/sample-read-code.png)
+
+**📖 相关知识点**
+
+- 考场代码 **一定能运行**；样例 PDF 里若写了 `Test3` 是印刷笔误，按 **`Test2`** 理解。
+- **变量遮蔽**：方法里 `int y = b` 是 **局部 y**，与成员 y 同名；裸写 `y` 指局部，`this.y` 指成员。
+- **toString()**：`println(对象)` 会自动调 `toString()`。
+
+**问：写出运行结果（每行一条输出）**
+
+```java
+public class Test2 {
+    private int x = 1;
+    private int y = 1;
+
+    public void changeState(int a, int b) {
+        x = a;
+        int y = b;
+        this.y = 8;
+        System.out.println("x=" + x + "; y=" + y);
+    }
+
+    public String toString() {
+        return "x = " + x + "; y = " + y;
+    }
+
+    public static void main(String[] args) {
+        Test2 t2 = new Test2();
+        System.out.println(t2);
+        t2.changeState(10, 9);
+        System.out.println(t2);
+    }
+}
+```
+
+**输出结果**：
+```
+x = 1; y = 1
+x=10; y=9
+x = 10; y = 8
+```
+
+**逐步分析**：
+1. `println(t2)` → toString → `x = 1; y = 1`  
+2. `changeState(10,9)`：成员 x→10；局部 y=9 打印 `x=10; y=9`；**this.y**→8  
+3. 再 println(t2) → 成员 x=10, y=8  
+
+---
+
+## A 组 · 作用域与成员（4 题 · 综合）
+
+### 读程 A1
+
+**📖 相关知识点**
+
+- 参数也是 **局部变量**，与成员同名时 **遮蔽成员**。
+- 无 `this.` 时改的是 **局部/参数**；`this.n` 改 **成员**。
+- 多个方法连续改同一成员，要 **按调用顺序累加**。
+
+**问：写出运行结果**
+
+```java
+public class Mask1 {
+    int n = 0;
+    void bump() { n++; }
+    void f(int n) {
+        n = 10;
+        bump();
+        System.out.println(n);
+        System.out.println(this.n);
+    }
+    public static void main(String[] args) {
+        Mask1 o = new Mask1();
+        o.f(5);
+        o.bump();
+        System.out.println(o.n);
+    }
+}
+```
+
+**输出结果**：
+```
+10
+1
+2
+```
+
+**分析**：`f(5)` 里局部 n=10 打印；`bump()` 使成员 n=1；`this.n` 打印 1；main 里再 bump → n=2。
+
+---
+
+### 读程 A2
+
+**📖 相关知识点**
+
+- 课件 **UnmaskField** 加长版：两次改字段 + 中间 print。
+- 每次进方法都要 **分开看** 局部变量与 `this.`。
+
+**问：写出运行结果**
+
+```java
+public class Mask2 {
+    private int x = 1, y = 1;
+    public void change(int a, int b) {
+        x = a;
+        int y = b;
+        this.y = 8;
+        System.out.println("x=" + x + "; y=" + y);
+    }
+    public void show() {
+        System.out.println("x=" + x + "; y=" + y);
+    }
+    public static void main(String[] args) {
+        Mask2 m = new Mask2();
+        m.show();
+        m.change(10, 9);
+        m.show();
+        m.change(3, 4);
+        m.show();
+    }
+}
+```
+
+**输出结果**：
+```
+x=1; y=1
+x=10; y=9
+x=10; y=8
+x=3; y=4
+x=3; y=8
+```
+
+**分析**：每次 `change` 第三行 print 的是 **局部 y**；`show()` 打印 **成员**；第二次 change 后成员 x=3, y=8。
+
+---
+
+### 读程 A3
+
+**📖 相关知识点**
+
+- **static 变量** 全类共享；**实例变量** 每个对象一份。
+- 通过对象访问 static 字段合法，但改的是 **同一份** static。
+
+**问：写出运行结果**
+
+```java
+public class StaticInst {
+    static int sx = 1;
+    int ix = 10;
+    public static void main(String[] args) {
+        StaticInst a = new StaticInst();
+        StaticInst b = new StaticInst();
+        a.sx = 2;
+        b.ix = 20;
+        a.ix = 15;
+        System.out.println(a.sx + " " + b.sx);
+        System.out.println(a.ix + " " + b.ix);
+        System.out.println(StaticInst.sx);
+    }
+}
+```
+
+**输出结果**：
+```
+2 2
+15 20
+2
+```
+
+---
+
+### 读程 A4
+
+**📖 相关知识点**
+
+- 方法 **重载**：根据 **实参类型** 选方法。
+- 重载与成员变量无关，别被同名变量干扰。
+
+**问：写出运行结果**
+
+```java
+public class OverPrint {
+    int v = 1;
+    void p(int x) { System.out.print("A" + x); }
+    void p(long x) { System.out.print("B" + x); }
+    void p(Integer x) { System.out.print("C" + x); }
+    public static void main(String[] args) {
+        OverPrint o = new OverPrint();
+        o.p(1);
+        o.p(1L);
+        o.p(Integer.valueOf(1));
+        System.out.println();
+        System.out.println(o.v);
+    }
+}
+```
+
+**输出结果**：
+```
+A1B1C1
+1
+```
+
+**分析**：`1`→int→A；`1L`→long→B；`Integer.valueOf(1)`→C。
+
+---
+
+## B 组 · String / 包装类（4 题 · 综合）
+
+### 读程 B1
+
+**📖 相关知识点**
+
+- String **不可变**；`+` 在循环里每次产生 **新对象**。
+- `equals` 比内容；`==` 比是否为 **同一对象**。
+
+**问：写出运行结果**
+
+```java
+public class StrLoop {
+    public static void main(String[] args) {
+        String s = "";
+        for (int i = 0; i < 3; i++) {
+            s = s + i;
+        }
+        String t = "012";
+        System.out.println(s.equals(t));
+        System.out.println(s == t);
+        System.out.println(s);
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+012
+```
+
+---
+
+### 读程 B2
+
+**📖 相关知识点**
+
+- 字面量、`+` 常量折叠、**new String** 与常量池。
+- 先 `==` 再 `equals`，顺序别漏。
+
+**问：写出运行结果**
+
+```java
+public class StrPool {
+    public static void main(String[] args) {
+        String a = "java";
+        String b = "ja" + "va";
+        String c = new String("java");
+        String d = c.intern();
+        System.out.println(a == b);
+        System.out.println(a == c);
+        System.out.println(a == d);
+        System.out.println(c == d);
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+true
+false
+```
+
+**分析**：`intern()` 把 c 的内容放入/指向常量池，d 与 a 同一对象；c 仍是堆上原对象。
+
+---
+
+### 读程 B3
+
+**📖 相关知识点**
+
+- `substring(begin,end)` **左闭右开**；`indexOf` 返回首次下标。
+- **`+` 结合性**：从左到右，遇 String 变连接。
+
+**问：写出运行结果**
+
+```java
+public class StrMix {
+    public static void main(String[] args) {
+        String s = "abcdef";
+        System.out.println(s.substring(1, 4));
+        System.out.println(s.indexOf("cd"));
+        System.out.println("" + 1 + 2 + 3);
+        System.out.println(1 + 2 + 3 + "");
+        System.out.println("Java".replace('a', 'o'));
+    }
+}
+```
+
+**输出结果**：
+```
+bcd
+2
+123
+6
+Jovo
+```
+
+---
+
+### 读程 B4
+
+**📖 相关知识点**
+
+- **Integer 缓存** -128～127；超出则新对象。
+- **自动拆箱** 参与 `+` 时按 int 算。
+
+**问：写出运行结果**
+
+```java
+public class Wrap {
+    public static void main(String[] args) {
+        Integer a = 127, b = 127;
+        Integer c = 128, d = 128;
+        System.out.println(a == b);
+        System.out.println(c == d);
+        System.out.println(c.equals(d));
+        System.out.println(a + b);
+        System.out.println(Double.isNaN(0.0 / 0.0));
+    }
+}
+```
+
+**输出结果**：
+```
+true
+false
+true
+254
+true
+```
+
+---
+
+## C 组 · 继承与多态（5 题 · 高频难点）
+
+### 读程 C1
+
+**📖 相关知识点**
+
+- **实例方法**：运行时 **动态绑定**，看 **实际对象类型**。
+- **static 方法**：看 **引用声明类型**，没有多态。
+
+**问：写出运行结果**
+
+```java
+class Base {
+    static void sf() { System.out.print("Sb"); }
+    void im() { System.out.print("Ib"); }
+}
+class Derived extends Base {
+    static void sf() { System.out.print("Sd"); }
+    void im() { System.out.print("Id"); }
+}
+public class Poly1 {
+    public static void main(String[] args) {
+        Base r = new Derived();
+        r.sf();
+        r.im();
+        System.out.println();
+        r = new Base();
+        r.sf();
+        r.im();
+    }
+}
+```
+
+**输出结果**：
+```
+SbId
+SbIb
+```
+
+---
+
+### 读程 C2
+
+**📖 相关知识点**
+
+- 课件 **PrivOverride**：子类 **不能** 用 public 方法「覆盖」父类 **private** 方法；父类 private 方法不参与多态。
+- 引用类型为父类时，调 private 方法 **编译通过**，执行 **父类版本**。
+
+**问：写出运行结果**
+
+```java
+public class PrivOverride {
+    private void f() { System.out.println("parent"); }
+    public static void main(String[] args) {
+        PrivOverride p = new PrivChild();
+        p.f();
+        new PrivChild().f();
+    }
+}
+class PrivChild extends PrivOverride {
+    public void f() { System.out.println("child"); }
+}
+```
+
+**输出结果**：
+```
+parent
+child
+```
+
+**分析**：`main` 在 **声明 private f 的类内部**，`p.f()` 调的是 **父类 private 方法**（子类 public f **不算重写**）；`new PrivChild().f()` 在子类上下文中调 **子类自己的 f**。
+
+---
+
+### 读程 C3
+
+**📖 相关知识点**
+
+- **构造顺序**：创建子类 → 父类构造 → 子类构造。
+- 父类构造里若调 **可被重写** 的实例方法，可能跑到 **子类尚未初始化完** 的版本（读程常考 print 顺序）。
+
+**问：写出运行结果**
+
+```java
+class Animal {
+    Animal() {
+        System.out.print("A");
+        show();
+    }
+    void show() { System.out.print("a"); }
+}
+class Dog extends Animal {
+    int age = 10;
+    Dog() { System.out.print("D"); }
+    void show() { System.out.print("d" + age); }
+}
+public class InitOrder {
+    public static void main(String[] args) {
+        new Dog();
+        System.out.println();
+    }
+}
+```
+
+**输出结果**：
+```
+Ad0D
+```
+
+**分析**：父构造调 `show()` 时已动态绑定到 Dog，但 **age 尚未初始化**（默认 0）→ `d0`；再 D。
+
+---
+
+### 读程 C4
+
+**📖 相关知识点**
+
+- 课件 **static 初始化块 + 继承**：先父 static → 子 static → 父构造 → 子构造。
+- **static 块** 在类 **首次加载** 时执行一次。
+
+**问：写出运行结果**
+
+```java
+class T1 {
+    static int s1 = 1;
+    static { System.out.print("T1s"); }
+    T1() { System.out.print("T1c"); }
+}
+class T2 extends T1 {
+    static int s2 = 2;
+    static { System.out.print("T2s"); }
+    T2() { System.out.print("T2c"); }
+}
+public class StaticInit {
+    public static void main(String[] args) {
+        new T2();
+        new T2();
+    }
+}
+```
+
+**输出结果**：
+```
+T1sT2sT1cT2cT1cT2c
+```
+
+**分析**：static 块 **只执行一次**；第二次 new 只有构造 `T1cT2c`。
+
+---
+
+### 读程 C5
+
+**📖 相关知识点**
+
+- 数组、引用 **赋值共享**；通过任一引用改元素，另一引用可见。
+- **值传递**：传引用副本，改元素有效，换引用无效。
+
+**问：写出运行结果**
+
+```java
+public class ArrRef {
+    static void change(int[] a, int x) {
+        a[0] = 99;
+        a = new int[] { 1 };
+        x = 100;
+    }
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3 };
+        int k = 5;
+        change(arr, k);
+        System.out.println(arr[0] + " " + arr.length);
+        System.out.println(k);
+    }
+}
+```
+
+**输出结果**：
+```
+99 3
+5
+```
+
+---
+
+## D 组 · static / final / 重载（3 题）
+
+### 读程 D1
+
+**📖 相关知识点**
+
+- **static 计数**：构造每执行一次 count++。
+- static 属于类，不随对象销毁。
+
+**问：写出运行结果**
+
+```java
+public class Count {
+    static int n = 0;
+    Count() { n++; }
+    static void reset() { n = 0; }
+    public static void main(String[] args) {
+        new Count();
+        new Count();
+        System.out.println(n);
+        reset();
+        new Count();
+        System.out.println(n);
+    }
+}
+```
+
+**输出结果**：
+```
+2
+1
+```
+
+---
+
+### 读程 D2
+
+**📖 相关知识点**
+
+- **final 引用**：不能改 **指向**；但引用指向的 **对象内容** 仍可改（如数组元素、StringBuilder）。
+
+**问：写出运行结果**
+
+```java
+public class FinalRef {
+    public static void main(String[] args) {
+        final int[] a = { 1, 2 };
+        a[0] = 9;
+        final StringBuilder sb = new StringBuilder("Hi");
+        sb.append("!");
+        System.out.println(a[0] + " " + a[1]);
+        System.out.println(sb);
+    }
+}
+```
+
+**输出结果**：
+```
+9 2
+Hi!
+```
+
+---
+
+### 读程 D3
+
+**📖 相关知识点**
+
+- **重写** 要求签名相同；子类返回类型可以是 **协变** 类型（本题不涉及）。
+- 多态调用 **实际对象** 的重写方法。
+
+**问：写出运行结果**
+
+```java
+class Shape {
+    void draw() { System.out.print("S"); }
+}
+class Circle extends Shape {
+    void draw() { System.out.print("C"); }
+    void radius() { System.out.print("r"); }
+}
+public class ShapeTest {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+        Circle c = (Circle) s;
+        c.draw();
+        c.radius();
+    }
+}
+```
+
+**输出结果**：
+```
+CCr
+```
+
+---
+
+## E 组 · 集合（4 题 · 课件风格）
+
+### 读程 E1
+
+**📖 相关知识点**
+
+- 课件 **UseArrayList**：add、**insert**、set、remove 混合。
+- `remove(int)` 是 **下标**；删后 size 变，下标要重新想。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class ListOps {
+    public static void main(String[] args) {
+        List<String> L = new ArrayList<>();
+        L.add("86");
+        L.add("98");
+        L.add(1, "99");
+        for (int i = 0; i < L.size(); i++) {
+            System.out.print(L.get(i) + " ");
+        }
+        L.set(1, "77");
+        L.remove(0);
+        System.out.println();
+        System.out.println(L);
+    }
+}
+```
+
+**输出结果**：
+```
+86 99 98 
+[77, 98]
+```
+
+**分析**：插入后 [86,99,98]；set(1,"77")→[86,77,98]；remove(0) 删 86→[77,98]。
+
+---
+
+### 读程 E2
+
+**📖 相关知识点**
+
+- `remove(1)` → 下标 1；`remove(Integer.valueOf(1))` → 删 **值为 1** 的元素。
+- 两种 remove **结果完全不同**，读程必考。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class RemoveTrap {
+    public static void main(String[] args) {
+        List<Integer> L = new ArrayList<>(Arrays.asList(1, 2, 3, 2));
+        L.remove(1);
+        System.out.println(L);
+        L.remove(Integer.valueOf(2));
+        System.out.println(L);
+    }
+}
+```
+
+**输出结果**：
+```
+[1, 3, 2]
+[1, 3]
+```
+
+---
+
+### 读程 E3
+
+**📖 相关知识点**
+
+- **HashMap**：同 key 的 put **覆盖** value；size 不变。
+- `get` 不存在返回 **null**（本题都有 key）。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class MapOps {
+    public static void main(String[] args) {
+        Map<String, Integer> m = new HashMap<>();
+        m.put("a", 1);
+        m.put("b", 2);
+        m.put("a", 3);
+        System.out.println(m.get("a"));
+        System.out.println(m.get("c"));
+        System.out.println(m.size());
+        m.remove("b");
+        System.out.println(m.containsKey("b"));
+        System.out.println(m);
+    }
+}
+```
+
+**输出结果**：
+```
+3
+null
+2
+false
+{a=3}
+```
+
+---
+
+### 读程 E4
+
+**📖 相关知识点**
+
+- **HashSet** 不重复；`add` 返回 boolean 表示是否 **新加进**。
+- 课件 **FindDups** 思路：重复 add 失败。
+
+**问：写出运行结果**
+
+```java
+import java.util.*;
+public class SetOps {
+    public static void main(String[] args) {
+        Set<String> s = new HashSet<>();
+        System.out.print(s.add("A") + " ");
+        System.out.print(s.add("A") + " ");
+        System.out.print(s.add("B") + " ");
+        System.out.println(s.size());
+        System.out.println(s);
+    }
+}
+```
+
+**输出结果**：
+```
+true false true 2
+[A, B]
+```
+
+（Set 的 toString 顺序 **不保证**，考场一般只考 size 或 true/false 行。）
+
+---
+
+## F 组 · 异常（3 题 · 课件风格）
+
+### 读程 F1
+
+**📖 相关知识点**
+
+- try 里 **异常点之后** 的语句 **不执行**；进 catch；**finally 几乎总执行**。
+- 课件常见：`1/0` 跳过中间 print。
+
+**问：写出运行结果**
+
+```java
+public class Ex1 {
+    public static void main(String[] args) {
+        System.out.print("1");
+        try {
+            System.out.print("2");
+            int x = 10 / 0;
+            System.out.print("3");
+        } catch (ArithmeticException e) {
+            System.out.print("4");
+        } finally {
+            System.out.print("5");
+        }
+        System.out.print("6");
+    }
+}
+```
+
+**输出结果**：
+```
+12456
+```
+
+---
+
+### 读程 F2
+
+**📖 相关知识点**
+
+- 课件 **greetings 循环** 简化版：catch 住 **数组越界** 后 break，避免死循环。
+- 每轮 **finally 都执行**。
+
+**问：写出运行结果**
+
+```java
+public class ExLoop {
+    public static void main(String[] args) {
+        String[] g = { "A", "B", "C" };
+        int i = 0;
+        while (i < 4) {
+            try {
+                System.out.print(g[i]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.print("X");
+                break;
+            } finally {
+                System.out.print("F");
+            }
+            i++;
+        }
+        System.out.print("E");
+    }
+}
+```
+
+**输出结果**：
+```
+AFBFCFXFE
+```
+
+**逐步分析**：
+- i=0：`A` + finally `F` → `AF`  
+- i=1：`B` + `F` → `BF`  
+- i=2：`C` + `F` → `CF`  
+- i=3：越界 → `X` + finally `F` → `XF`；break  
+- 最后 `E`  
+
+---
+
+### 读程 F3
+
+**📖 相关知识点**
+
+- **return 之前** 仍执行 finally。
+- finally 里若有 return 会覆盖 try 的 return（本题 finally 只 print）。
+
+**问：写出运行结果**
+
+```java
+public class ExFinally {
+    static int f() {
+        try {
+            return 1;
+        } finally {
+            System.out.print("F");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.print(f());
+        System.out.print(f());
+    }
+}
+```
+
+**输出结果**：
+```
+F1F1
+```
+
+---
+
+## G 组 · 多线程（3 题）
+
+### 读程 G1
+
+**📖 相关知识点**
+
+- **`run()`** 普通调用，**不启新线程**；**`start()`** 才新线程。
+- 本题全在 main 线程，顺序确定。
+
+**问：写出运行结果**
+
+```java
+public class ThreadRun {
+    public static void main(String[] args) {
+        Thread t = new Thread(() -> System.out.print("T"));
+        t.run();
+        t.run();
+        System.out.print("M");
+    }
+}
+```
+
+**输出结果**：
+```
+TTM
+```
+
+---
+
+### 读程 G2
+
+**📖 相关知识点**
+
+- **`start()` + `join()`**：main 等子线程 **跑完** 再往下。
+- 无 join 时，打印顺序可能 **不确定**（考场若给了 join 就 **确定**）。
+
+**问：写出运行结果**
+
+```java
+public class ThreadJoin {
+    static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args) throws Exception {
+        Thread t = new Thread(() -> sb.append("B"));
+        t.start();
+        t.join();
+        sb.append("A");
+        System.out.println(sb);
+    }
+}
+```
+
+**输出结果**：
+```
+BA
+```
+
+---
+
+### 读程 G3
+
+**📖 相关知识点**
+
+- **synchronized**：同一把锁 **互斥**；本题顺序固定因 main 等 t1、t2 都 join。
+
+**问：写出运行结果**
+
+```java
+public class SyncDemo {
+    static int n = 0;
+    static final Object lock = new Object();
+    static void add() {
+        synchronized (lock) {
+            n++;
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        Thread t1 = new Thread(() -> { add(); add(); });
+        Thread t2 = new Thread(() -> { add(); });
+        t1.start(); t2.start();
+        t1.join(); t2.join();
+        System.out.println(n);
+    }
+}
+```
+
+**输出结果**：
+```
+3
+```
+
+---
+
+## H 组 · switch / 数组 / 循环（4 题）
+
+### 读程 H1
+
+**📖 相关知识点**
+
+- **switch 贯穿**：case 无 **break** 则 **继续执行** 下一 case。
+- 考场常考 **故意不写 break**。
+
+**问：写出运行结果**
+
+```java
+public class Sw {
+    public static void main(String[] args) {
+        int n = 2;
+        switch (n) {
+            case 1: System.out.print("1");
+            case 2: System.out.print("2");
+            case 3: System.out.print("3"); break;
+            default: System.out.print("d");
+        }
+        System.out.print("!");
+    }
+}
+```
+
+**输出结果**：
+```
+23!
+```
+
+---
+
+### 读程 H2
+
+**📖 相关知识点**
+
+- **二维数组**：`length` 是 **行数**；每行是 **一维数组**，长度可不同。
+- `a[i][j]` 先选行再选列。
+
+**问：写出运行结果**
+
+```java
+public class Arr2D {
+    public static void main(String[] args) {
+        int[][] a = { { 1, 2 }, { 3 }, { 4, 5, 6 } };
+        System.out.print(a.length + " ");
+        System.out.print(a[1].length + " ");
+        System.out.print(a[2][1] + " ");
+        int sum = 0;
+        for (int[] row : a) {
+            sum += row[0];
+        }
+        System.out.print(sum);
+    }
+}
+```
+
+**输出结果**：
+```
+3 1 5 8
+```
+
+**分析**：三行；第二行长 1；a[2][1]=5；各行第 0 列 1+3+4=8。
+
+---
+
+### 读程 H3
+
+**📖 相关知识点**
+
+- **`if (b = true)`** 是 **赋值**，不是 `==`；条件为 true。
+- **短路运算** `&&` / `||`：左侧能定结果则 **不评估** 右侧。
+
+**问：写出运行结果**
+
+```java
+public class Logic {
+    public static void main(String[] args) {
+        int x = 0;
+        if (x++ == 0) System.out.print("A");
+        System.out.print(x + " ");
+        boolean ok = false;
+        if (ok = true) System.out.print("B");
+        if (false && (++x > 0)) System.out.print("C");
+        System.out.print(x);
+    }
+}
+```
+
+**输出结果**：
+```
+A1 B1
+```
+
+---
+
+### 读程 H4
+
+**📖 相关知识点**
+
+- **for 循环 + continue/break**；嵌套 loop 要 **分层手算**。
+- `print` 无换行，一行粘在一起。
+
+**问：写出运行结果**
+
+```java
+public class LoopNest {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                if (i == j) continue;
+                System.out.print(i + "" + j + " ");
+            }
+        }
+    }
+}
+```
+
+**输出结果**：
+```
+12 13 21 23 31 32 
+```
+
+（末尾空格可有可无，看阅卷是否抠格式。）
+
+---
+
+## 读程题自测索引（25 题 · 只写输出）
+
+| 编号 | 难度 | 核心考点 |
+|------|------|----------|
+| 官方 Test2 | ★★ | 遮蔽、this、toString |
+| A1-A4 | ★★ | 参数遮蔽、UnmaskField、static 共享、重载 |
+| B1-B4 | ★★★ | String 循环、常量池、混合运算、包装类 |
+| C1-C5 | ★★★★ | static/实例绑定、PrivOverride、构造+多态、static 块、引用 |
+| D1-D3 | ★★ | static 计数、final 引用、重写 |
+| E1-E4 | ★★★ | ArrayList 课件、remove 陷阱、HashMap、HashSet |
+| F1-F3 | ★★★ | 异常链、循环+finally、return+finally |
+| G1-G3 | ★★★ | run/start、join、synchronized |
+| H1-H4 | ★★★ | switch 贯穿、二维数组、短路、嵌套循环 |
+
+> **冲刺建议**：考场 **5～7 道** 读程，难度接近 C/E/F 组；每天 **手算 8 道** 不看书，错题回到 [按课件详讲](#按课件逐章要点详讲)。
+
+---
+
+# ★ 期末抢分秘籍
+
+> 老师原话：**只有三种题型**——简答 4～5、读程 5～7、编程 2；**要用库会给方法声明**，不用背 API 签名。  
+> 编程题就是 **[官方样例截图](/java-exam/sample-programming.png)** 那种：**抽象类 + 普通类 + 接口 + 子类**，纸笔写完整类定义。
+
+## 考场时间怎么切（90 分钟卷参考）
+
+| 阶段 | 时间 | 做什么 |
+|------|------|--------|
+| ① 编程题 | **25～30 min** | 先拿大分；Person/Student 型 **默写骨架** |
+| ② 读程题 | **25 min** | 只写输出；每题 3～4 min，不确定也写一版 |
+| ③ 简答题 | **25 min** | 概念分点写满；**多线程 + GUI 各至少 1 道** |
+| ④ 检查 | **10 min** | 编程：`super`、接口、`living()` 标点；读程：漏行 |
+
+**原则**：编程 **先写**——会就是 15～20 分一道，不会后面慌；简答 **写满** 就有分，空着必 0。
+
+---
+
+## 简答题 · 3 条抢分口诀
+
+1. **分点 + 关键词**：阅卷按点给分。看到「线程同步」必写 **`synchronized`、对象锁、临界区**；看到 GUI 必写 **AWT/Swing、Listener/Adapter、EDT**。
+2. **对比题用表格思维**：`==` vs `equals`、List/Set/Map、受检/非受检异常——写 **3 行对比** 比一大段废话得分高。
+3. **最后一行总结句**：例如「Java 只有值传递，引用传的是地址的副本」。一句话 1 分，不亏。
+
+---
+
+## 读程题 · 3 条抢分口诀
+
+1. **只填输出**——代码一定能跑；别在卷子上写「不能编译」。
+2. **`print` vs `println`**：粘在一起还是换行，占一半错题；写完 **数行数** 是否和 `println` 次数一致。
+3. **拿不准也写**：多线程无 `join` 时顺序可能乱，但 **有 join / synchronized** 的题顺序 **确定**，必须算准；实在不会写「输出顺序不确定」比空白强（本题若确定则别写这句）。
+
+---
+
+## 编程题 · 抢分核心（Person / Job / Life / Student 型）
+
+![编程题样例：Person / Job / Life / Student](/java-exam/sample-programming.png)
+
+老师这种题 **20 分一道、考 2 道**，本质是 **OOP 建模默写**：照着题目 **逐条翻译** 成 Java，不需要算法、不需要 main。
+
+### 第一步：30 秒圈得分点（写在草稿角）
+
+拿到题先在边上打勾，**写一条算一条**：
+
+| 题目里的词 | 你要写的 Java | 几分级 |
+|------------|---------------|--------|
+| 抽象类 X | `abstract class X { ... }` | 必写 |
+| 成员变量 | `private/protected 类型 名;` | 每个字段 1 分 |
+| 构造方法 | `public X(参数) { this.x = x; }` | 2～3 分 |
+| `toString()` | `return "name=" + name + ...` | 2 分 |
+| 接口 Y | `interface Y { void method(); }` **无方法体** | 2 分 |
+| 继承 + 实现 | `class Z extends X implements Y` | **先 extends 后 implements** |
+| 调用父构造 | `super(...)` 在子类构造 **第一行** | 漏了整题构造 0 分 |
+| 组合（has-a） | `private Job job;` + `setJob(Job job)` | 常漏 setJob |
+| 接口方法实现 | `public void living() { System.out.println("…"); }` | 字符串 **一字不差** |
+| 重写 toString | `super.toString() + ", school=" + ...` | 要含 **全部** 字段含 job |
+
+### 第二步：默写顺序（固定 4 步，闭卷练到 12 分钟内）
+
+```
+1. abstract class Person     ← 最简单，先写稳
+2. class Job                 ← 独立类，复制 Person 改字段
+3. interface Life            ← 两行搞定
+4. class Student             ← 分值最高，留最多时间
+```
+
+**Student 内部顺序（别乱）**：
+
+```
+extends Person implements Life
+→ 字段 school, id, job
+→ 构造 + super(name, age)
+→ living() 固定句
+→ setJob()
+→ toString() 含 super.toString()
+```
+
+### 第三步：最小保分版（时间不够 / 某块忘了）
+
+即使写不完，按下面写也能 **拿到 60%～70%**：
+
+```java
+abstract class Person {
+    protected String name;
+    protected int age;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String toString() {
+        return "name=" + name + ", age=" + age;
+    }
+}
+
+class Job {
+    private String accountabilities;
+    public Job(String accountabilities) {
+        this.accountabilities = accountabilities;
+    }
+    public String toString() {
+        return accountabilities;   // 忘了字段名至少 return 参数
+    }
+}
+
+interface Life {
+    void living();
+}
+
+class Student extends Person implements Life {
+    private String school;
+    private long id;
+    private Job job;
+
+    public Student(String name, int age, String school, long id) {
+        super(name, age);
+        this.school = school;
+        this.id = id;
+    }
+
+    public void living() {
+        System.out.println("好好学习、天天向上！");
+    }
+
+    public void setJob(Job job) { this.job = job; }
+
+    public String toString() {
+        return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+    }
+}
+```
+
+### 第四步：致命扣分 · 考前红笔标
+
+| 错误 | 后果 |
+|------|------|
+| `implements extends` 顺序反了 | 语法错，Student 整段 0 分 |
+| 子类构造 **没有** `super(name, age)` | 父类字段未初始化，构造 0 分 |
+| 接口里写了 `{ System.out... }` | 接口不能带实现（除非 default，本课一般不考） |
+| `living()` 字符串和题目 **差一个标点** | 该方法 0 分（全角 `！` 看清楚） |
+| 有 `Job job` 但 **没写 setJob** | 组合关系不完整，扣 2～4 分 |
+| `toString` 只写字类字段，**没 super** | 父类 name/age 缺失，扣一半 |
+| 把 `Job` 写成 `extends Job` | 组合变继承，概念错 |
+
+### 第五步：`living()` 和 toString 格式 · 一字抄题
+
+**官方固定句（截图原文）**：
+
+```java
+System.out.println("好好学习、天天向上！");
+```
+
+- 用的是 **中文顿号 `、`** 和 **全角叹号 `！`**
+- 建议考前 **手抄三遍**，别用英文 `!`
+
+**toString 推荐格式**（字段全、阅卷好认）：
+
+```java
+return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+```
+
+`job` 会自动调 `Job.toString()`，不用手动拼 `accountabilities`。
+
+### 第六步：第二道编程题可能考什么
+
+第一道往往是 **Person/Student 型**；第二道常见变式（仍纸笔写类/方法）：
+
+| 变式 | 抢分写法 |
+|------|----------|
+| 抽象类加 `abstract void study();` | Student 里 **必须** `public void study() { ... }` |
+| `Job` 改成接口 `Workable` | `implements Life, Workable`（逗号分隔，**先 extends 后 implements**） |
+| 加 `equals` 只比 `id` | `if (!(o instanceof Student)) return false;` + `(Student)o` + `return id == s.id;` |
+| 文件方法「去空行复制」 | 直接默写 [类型 3 骨架](#类型-3文件读写方法ppt-第三章--练习四) |
+| 集合「统计单词频次」 | 默写 [类型 4 骨架](#类型-4集合方法ppt-第三章--练习三) |
+| GUI 补监听器 | 默写 [类型 5 骨架](#类型-5gui-监听器补全ppt-gui-章) |
+| 线程类 `extends Thread` | 默写 [类型 6 骨架](#类型-6线程类ppt-多线程章) |
+
+**第二道若是方法题**：题目会给 `FileReader` / `HashMap` 等声明 → **只写方法体 + throws**，别纠结 import。
+
+### 编程题 · 纸笔书写技巧
+
+- **类与类之间空一行**，阅卷一眼四个类齐不齐。
+- 字段先 **竖着写全**，再写构造，避免漏 `id` 或 `job`。
+- 接口方法、实现类 public 方法：行首 **`public`** 别漏（实现接口时 public 可省略但写上更稳）。
+- 写错一行 **划单线改**，别涂黑团；构造参数名和字段同名时用 **`this.`**。
+- **不需要写 `main`**，除非题目明确要求。
+
+### 编程题 · 15 分钟倒计时演练
+
+| 分钟 | 任务 |
+|------|------|
+| 0～1 | 圈 Person/Job/Life/Student 得分点 |
+| 1～4 | 写完 Person + Job + Life |
+| 4～12 | 写 Student（super、living、setJob、toString） |
+| 12～14 | 对照题目逐条打勾 |
+| 14～15 | 补漏的 `@Override` 或分号 |
+
+---
+
+## 一页纸速记卡（进考场前背）
+
+```
+简答：多线程 + GUI 必考；分点写；对比题三行表
+读程：只写输出；println 数行数；String/集合/多态手算
+编程：Person→Job→Life→Student
+      extends 在前 implements 在后
+      super 第一行
+      living 全角：好好学习、天天向上！
+      toString 要 super + job + setJob
+      组合不是 extends
+```
+
+---
+
+# 三、编程题（2 道）
+
+> 纸笔写 **类 / 接口 / 方法**；`import` 可省略；需用库时考场给 **方法声明**。  
+> **老师出题方式**：要求写得很细（第 1 点、第 2 点……），你要做的是 **把每一条要求翻译成 Java**，不用自己设计程序。
+
+---
+
+## 编程题 · 按题目要求写（知识点 + 保基本分）
+
+### 先建立正确心态
+
+编程题 **不是** 让你从零想逻辑，而是 **照着说明书拼代码**：
+
+```
+题目第 N 条要求  →  对应一种 Java 写法  →  写对一条得一条的分
+```
+
+基本分策略：**题目有几条，就写几个类 / 几个方法**；即使某个方法体写不完美，**类名、字段、构造、继承关系** 写对也能拿大部分分。
+
+---
+
+### 第一步：读题——把要求拆成四类
+
+拿到题先 **用铅笔在题目旁标号**，通常就这四类（官方样例全覆盖）：
+
+| 题目怎么说 | 你要写什么 | 例子 |
+|------------|------------|------|
+| **抽象类** X | `abstract class X { ... }` | `abstract class Person` |
+| **类** X（没写抽象） | `class X { ... }` | `class Job` |
+| **接口** X | `interface X { 方法声明; }` | `interface Life` |
+| **类** Y **继承** X **实现** 接口 Z | `class Y extends X implements Z` | `class Student extends Person implements Life` |
+
+另外常见 **附加要求**（出现在某一条里）：
+
+| 题目怎么说 | 含义 | 怎么写 |
+|------------|------|--------|
+| 成员变量 / 字段 | 类里存数据的变量 | `private 类型 名;` |
+| 构造方法 | `new` 时初始化字段 | `public 类名(参数) { this.字段 = 参数; }` |
+| `toString()` | 把对象转成字符串 | `public String toString() { return "..."; }` |
+| 方法 **输出** xxx | 打印固定内容 | `System.out.println("题目原文");` |
+| **重写** toString | 子类重新写 toString | 加 `@Override`，用 `super.toString()` 带上父类信息 |
+| **引用** 某类对象 | **组合**（has-a），不是继承 | `private Job job;` + `setJob(Job j)` |
+| `abstract` 方法 | 子类 **必须实现** | 子类里写 `public void 方法名() { ... }` |
+
+---
+
+### 第二步：逐条知识点——官方样例怎么写
+
+下面按 **截图题目顺序**，讲 **每条要求考什么、基本分怎么拿**。
+
+![编程题样例：Person / Job / Life / Student](/java-exam/sample-programming.png)
+
+---
+
+#### 要求 1：抽象类 `Person`
+
+> 成员变量 `String name`、`int age`；构造方法；`toString()` 返回姓名年龄信息。
+
+**① 为什么是「抽象类」？**
+
+- 题目写 **抽象类** → 关键字必须是 **`abstract class`**。
+- 抽象类 **不能** `new Person()`，但 **可以** 被继承；适合当「人的公共模板」，具体学生由 `Student` 实现。
+- **基本分**：写出 `abstract class Person` 就有结构分。
+
+**② 成员变量怎么写？**
+
+```java
+protected String name;
+protected int age;
+```
+
+- 题目给什么类型就写什么类型：`String name`、`int age`。
+- 用 **`protected`** 最常见：子类 `Student` 能直接访问，又比 `public` 规范（写 `private` + getter 也行，但纸笔考试 **题目没要求就别多写**）。
+- **基本分**：两个字段 **类型 + 名字** 和题目一致。
+
+**③ 构造方法怎么写？**
+
+```java
+public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+```
+
+- 构造方法 **名字必须和类名相同**：`Person`。
+- 参数列表 **和题目一致**：`(String name, int age)`。
+- 参数名和字段名相同时，左边用 **`this.name`** 表示 **成员变量**，右边 `name` 是 **参数**。
+- **基本分**：有构造 + 两个赋值语句。
+
+**④ `toString()` 怎么写？**
+
+```java
+public String toString() {
+    return "name=" + name + ", age=" + age;
+}
+```
+
+- 返回类型 **`String`**；方法名 **`toString`**（和 Object 类一致，属于 **重写**）。
+- 题目说「返回姓名年龄信息」→ 用字符串拼：`"name=" + name + ", age=" + age`。
+- **不要求** 和标准库格式一模一样，**能看出 name、age 就行**。
+- **基本分**：`return` 里 **同时出现 name 和 age**。
+
+---
+
+#### 要求 2：类 `Job`
+
+> 成员变量 `String accountabilities`（职责描述）；构造方法；`toString()` 输出职责描述。
+
+**① 普通类 vs 抽象类**
+
+- 题目只写 **类**，没写抽象 → 用 **`class Job`**，**不要** 加 `abstract`。
+- `Job` 和 `Person` **没有继承关系**，是 **两个独立的类**。
+
+**② 和 Person 写法一样，换字段名即可**
+
+```java
+class Job {
+    private String accountabilities;
+
+    public Job(String accountabilities) {
+        this.accountabilities = accountabilities;
+    }
+
+    public String toString() {
+        return "accountabilities=" + accountabilities;
+        // 或 return accountabilities;  也能拿 toString 基本分
+    }
+}
+```
+
+- **基本分**：字段 + 构造 + toString 三段都有。
+- 题目若写「输出职责描述」，toString 的 return 里 **带上 accountabilities** 即可。
+
+---
+
+#### 要求 3：接口 `Life`
+
+> 包含方法 `living()`。
+
+**① 接口是什么？**
+
+- 接口 = **只规定「能做什么」**，不管 **怎么做**。
+- 写法：**只有方法声明，没有方法体**（没有 `{ ... }` 实现）。
+
+```java
+interface Life {
+    void living();
+}
+```
+
+**② 常见错误**
+
+```java
+// ❌ 错：接口里不能写实现
+interface Life {
+    void living() {
+        System.out.println("...");
+    }
+}
+
+// ❌ 错：漏写 void
+interface Life {
+    living();
+}
+```
+
+- **基本分**：`interface Life` + `void living();` 两行。
+
+---
+
+#### 要求 4：类 `Student`（分值最高，分条拆）
+
+> 继承 `Person`、实现 `Life`；`living()` 输出「好好学习、天天向上！」；字段 `school`、`id`、`Job job`；构造；重写 `toString` 含 **全部** 成员；`setJob(Job job)`。
+
+**① 继承 + 实现——类头怎么写？**
+
+```java
+class Student extends Person implements Life {
+```
+
+| 关键字 | 含义 |
+|--------|------|
+| `extends Person` | **is-a**：学生 **是一种** 人，继承 name、age |
+| `implements Life` | **can-do**：学生 **具备** 生活能力，必须写 `living()` |
+
+- **顺序固定**：`extends` 在前，`implements` 在后。
+- Java **单继承**：只能 `extends` 一个类；接口可以 **多个**：`implements A, B`。
+
+**② 子类自己的字段**
+
+```java
+private String school;
+private long id;
+private Job job;
+```
+
+- 题目说 **long id** → 类型写 **`long`**，不要写成 `int`。
+- **`Job job`**：表示学生 **有一个** 工作对象 → 这叫 **组合（has-a）**。
+  - ✅ `private Job job;` —— 学生 **持有** Job
+  - ❌ `class Student extends Job` —— 错，学生不是 Job 的子类
+
+**③ 构造方法 + `super`（必考）**
+
+```java
+public Student(String name, int age, String school, long id) {
+    super(name, age);
+    this.school = school;
+    this.id = id;
+}
+```
+
+**为什么要有 `super(name, age)`？**
+
+- 父类 `Person` **没有无参构造**，只有 `Person(String name, int age)`。
+- 创建 `Student` 时，必须先 **帮父类初始化 name、age** → 子类构造 **第一行** 写 `super(name, age)`。
+- `school`、`id` 是子类自己的，用 `this.school = school` 赋值。
+- **基本分**：有 `super(name, age)` 且参数和父类构造 **一致**。
+
+**④ 实现接口方法 `living()`**
+
+```java
+@Override
+public void living() {
+    System.out.println("好好学习、天天向上！");
+}
+```
+
+- **实现接口** = 给出方法 **具体 body**。
+- 题目写 **输出** → 用 **`System.out.println`**。
+- 字符串 **从题目原样抄写**（全角 **`！`**、顿号 **`、`**）。
+- **基本分**：方法名 `living`、无参、`void`、println 里字符串对。
+
+**⑤ `setJob(Job job)`——题目明确要求就要写**
+
+```java
+public void setJob(Job job) {
+    this.job = job;
+}
+```
+
+- 题目说「为 job 赋值」→ 提供 **setter** 即可，**不要求** getter。
+- 参数类型 **`Job`** 和字段类型一致。
+- **基本分**：方法名 `setJob`、参数 `Job job`、给 `this.job` 赋值。
+
+**⑥ 重写 `toString()`——含「全部成员变量」**
+
+```java
+@Override
+public String toString() {
+    return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+}
+```
+
+**「全部成员」包括什么？**
+
+- **继承来的**：name、age → 用 **`super.toString()`** 带上（不要重复写 name、age 赋值逻辑）。
+- **自己的**：school、id、job → 字符串里都要有。
+- `job` 是对象，拼接时会自动调 **`Job.toString()`**。
+
+**基本分**：return 里 **school、id、job 三个都出现** + 用了 `super.toString()`。
+
+---
+
 ### 第三步：题目里其他常见要求（第二道编程题）
 
 第一道多是 **Person/Student 型**；第二道仍是 **按条写**，常见如下：
@@ -3159,7 +5499,7 @@ class Student extends Person implements Life {
 
 ### 类型 1：OOP 建模（官方样例 ★★★）
 
-抽象类 + 接口 + 继承 + 组合 → 见 [满分骨架](#满分骨架默写)
+抽象类 + 接口 + 继承 + 组合 → 见 [全能考点手册 A 组](#a-组--第四章面向对象特性编程--最高频) + [满分骨架](#满分骨架默写)
 
 ### 类型 2：重写 `equals` / `toString`
 
@@ -3243,13 +5583,18 @@ class Worker extends Thread {
 
 ---
 
-## 编程题自测
+## 编程题自测（按全能手册）
 
-1. 默写 **Person / Job / Life / Student** 完整四类（官方样例）。  
-2. 写方法：读 `input.txt` 去空行写入 `output.txt`。  
-3. 写方法：`HashMap` 统计单词频次。  
-4. 为 `JButton` 写 `ActionListener` **匿名内部类**。  
-5. 写 `extends Thread` 的 `run()` + `sleep` + `volatile` 退出。
+1. **A2 官方样例**：Person / Job / Life / Student 四类（12 分钟）。  
+2. **A1**：EmpInfo 或 Rectangle 普通类（字段+构造+方法）。  
+3. **A3**：Shape/Rectangle 继承 + override + super。  
+4. **A5**：构造重载 + this() 链。  
+5. **A8**：equals 只比 id + toString。  
+6. **B5～B7**：ArrayList 增删改查；HashMap 覆盖与统计；HashSet 去重。  
+7. **D2**：BufferedReader 读文件去空行写出。  
+8. **E1**：extends Thread + run + sleep。  
+9. **F1～F2**：ActionListener 与 WindowAdapter 各默写一遍。  
+10. 随机抽一道：**圈题目用语 → 查总索引表 → 写代码**。
 
 ---
 
