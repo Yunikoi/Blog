@@ -32,7 +32,9 @@ toc: true
 - [按课件逐章要点（详讲）](#按课件逐章要点详讲)
 - [简答题题库（详答版 22 题）](#简答题题库详答版--共-22-题)
 - [读程题库（25 题 · 只写输出）](#二读程题57-道--题库-25-题)
+- [★ 期末抢分秘籍](#-期末抢分秘籍)
 - [三、编程题（2 道）](#三编程题2-道)
+  - [按题目要求写 · 知识点保基本分](#编程题--按题目要求写知识点--保基本分)
 - [冲刺 Checklist](#冲刺-checklist)
 - [附录：实验代码 ↔ 考点](#附录实验代码--考点)
 
@@ -2446,9 +2448,604 @@ public class LoopNest {
 
 ---
 
+# ★ 期末抢分秘籍
+
+> 老师原话：**只有三种题型**——简答 4～5、读程 5～7、编程 2；**要用库会给方法声明**，不用背 API 签名。  
+> 编程题就是 **[官方样例截图](/java-exam/sample-programming.png)** 那种：**抽象类 + 普通类 + 接口 + 子类**，纸笔写完整类定义。
+
+## 考场时间怎么切（90 分钟卷参考）
+
+| 阶段 | 时间 | 做什么 |
+|------|------|--------|
+| ① 编程题 | **25～30 min** | 先拿大分；Person/Student 型 **默写骨架** |
+| ② 读程题 | **25 min** | 只写输出；每题 3～4 min，不确定也写一版 |
+| ③ 简答题 | **25 min** | 概念分点写满；**多线程 + GUI 各至少 1 道** |
+| ④ 检查 | **10 min** | 编程：`super`、接口、`living()` 标点；读程：漏行 |
+
+**原则**：编程 **先写**——会就是 15～20 分一道，不会后面慌；简答 **写满** 就有分，空着必 0。
+
+---
+
+## 简答题 · 3 条抢分口诀
+
+1. **分点 + 关键词**：阅卷按点给分。看到「线程同步」必写 **`synchronized`、对象锁、临界区**；看到 GUI 必写 **AWT/Swing、Listener/Adapter、EDT**。
+2. **对比题用表格思维**：`==` vs `equals`、List/Set/Map、受检/非受检异常——写 **3 行对比** 比一大段废话得分高。
+3. **最后一行总结句**：例如「Java 只有值传递，引用传的是地址的副本」。一句话 1 分，不亏。
+
+---
+
+## 读程题 · 3 条抢分口诀
+
+1. **只填输出**——代码一定能跑；别在卷子上写「不能编译」。
+2. **`print` vs `println`**：粘在一起还是换行，占一半错题；写完 **数行数** 是否和 `println` 次数一致。
+3. **拿不准也写**：多线程无 `join` 时顺序可能乱，但 **有 join / synchronized** 的题顺序 **确定**，必须算准；实在不会写「输出顺序不确定」比空白强（本题若确定则别写这句）。
+
+---
+
+## 编程题 · 抢分核心（Person / Job / Life / Student 型）
+
+![编程题样例：Person / Job / Life / Student](/java-exam/sample-programming.png)
+
+老师这种题 **20 分一道、考 2 道**，本质是 **OOP 建模默写**：照着题目 **逐条翻译** 成 Java，不需要算法、不需要 main。
+
+### 第一步：30 秒圈得分点（写在草稿角）
+
+拿到题先在边上打勾，**写一条算一条**：
+
+| 题目里的词 | 你要写的 Java | 几分级 |
+|------------|---------------|--------|
+| 抽象类 X | `abstract class X { ... }` | 必写 |
+| 成员变量 | `private/protected 类型 名;` | 每个字段 1 分 |
+| 构造方法 | `public X(参数) { this.x = x; }` | 2～3 分 |
+| `toString()` | `return "name=" + name + ...` | 2 分 |
+| 接口 Y | `interface Y { void method(); }` **无方法体** | 2 分 |
+| 继承 + 实现 | `class Z extends X implements Y` | **先 extends 后 implements** |
+| 调用父构造 | `super(...)` 在子类构造 **第一行** | 漏了整题构造 0 分 |
+| 组合（has-a） | `private Job job;` + `setJob(Job job)` | 常漏 setJob |
+| 接口方法实现 | `public void living() { System.out.println("…"); }` | 字符串 **一字不差** |
+| 重写 toString | `super.toString() + ", school=" + ...` | 要含 **全部** 字段含 job |
+
+### 第二步：默写顺序（固定 4 步，闭卷练到 12 分钟内）
+
+```
+1. abstract class Person     ← 最简单，先写稳
+2. class Job                 ← 独立类，复制 Person 改字段
+3. interface Life            ← 两行搞定
+4. class Student             ← 分值最高，留最多时间
+```
+
+**Student 内部顺序（别乱）**：
+
+```
+extends Person implements Life
+→ 字段 school, id, job
+→ 构造 + super(name, age)
+→ living() 固定句
+→ setJob()
+→ toString() 含 super.toString()
+```
+
+### 第三步：最小保分版（时间不够 / 某块忘了）
+
+即使写不完，按下面写也能 **拿到 60%～70%**：
+
+```java
+abstract class Person {
+    protected String name;
+    protected int age;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String toString() {
+        return "name=" + name + ", age=" + age;
+    }
+}
+
+class Job {
+    private String accountabilities;
+    public Job(String accountabilities) {
+        this.accountabilities = accountabilities;
+    }
+    public String toString() {
+        return accountabilities;   // 忘了字段名至少 return 参数
+    }
+}
+
+interface Life {
+    void living();
+}
+
+class Student extends Person implements Life {
+    private String school;
+    private long id;
+    private Job job;
+
+    public Student(String name, int age, String school, long id) {
+        super(name, age);
+        this.school = school;
+        this.id = id;
+    }
+
+    public void living() {
+        System.out.println("好好学习、天天向上！");
+    }
+
+    public void setJob(Job job) { this.job = job; }
+
+    public String toString() {
+        return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+    }
+}
+```
+
+### 第四步：致命扣分 · 考前红笔标
+
+| 错误 | 后果 |
+|------|------|
+| `implements extends` 顺序反了 | 语法错，Student 整段 0 分 |
+| 子类构造 **没有** `super(name, age)` | 父类字段未初始化，构造 0 分 |
+| 接口里写了 `{ System.out... }` | 接口不能带实现（除非 default，本课一般不考） |
+| `living()` 字符串和题目 **差一个标点** | 该方法 0 分（全角 `！` 看清楚） |
+| 有 `Job job` 但 **没写 setJob** | 组合关系不完整，扣 2～4 分 |
+| `toString` 只写字类字段，**没 super** | 父类 name/age 缺失，扣一半 |
+| 把 `Job` 写成 `extends Job` | 组合变继承，概念错 |
+
+### 第五步：`living()` 和 toString 格式 · 一字抄题
+
+**官方固定句（截图原文）**：
+
+```java
+System.out.println("好好学习、天天向上！");
+```
+
+- 用的是 **中文顿号 `、`** 和 **全角叹号 `！`**
+- 建议考前 **手抄三遍**，别用英文 `!`
+
+**toString 推荐格式**（字段全、阅卷好认）：
+
+```java
+return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+```
+
+`job` 会自动调 `Job.toString()`，不用手动拼 `accountabilities`。
+
+### 第六步：第二道编程题可能考什么
+
+第一道往往是 **Person/Student 型**；第二道常见变式（仍纸笔写类/方法）：
+
+| 变式 | 抢分写法 |
+|------|----------|
+| 抽象类加 `abstract void study();` | Student 里 **必须** `public void study() { ... }` |
+| `Job` 改成接口 `Workable` | `implements Life, Workable`（逗号分隔，**先 extends 后 implements**） |
+| 加 `equals` 只比 `id` | `if (!(o instanceof Student)) return false;` + `(Student)o` + `return id == s.id;` |
+| 文件方法「去空行复制」 | 直接默写 [类型 3 骨架](#类型-3文件读写方法ppt-第三章--练习四) |
+| 集合「统计单词频次」 | 默写 [类型 4 骨架](#类型-4集合方法ppt-第三章--练习三) |
+| GUI 补监听器 | 默写 [类型 5 骨架](#类型-5gui-监听器补全ppt-gui-章) |
+| 线程类 `extends Thread` | 默写 [类型 6 骨架](#类型-6线程类ppt-多线程章) |
+
+**第二道若是方法题**：题目会给 `FileReader` / `HashMap` 等声明 → **只写方法体 + throws**，别纠结 import。
+
+### 编程题 · 纸笔书写技巧
+
+- **类与类之间空一行**，阅卷一眼四个类齐不齐。
+- 字段先 **竖着写全**，再写构造，避免漏 `id` 或 `job`。
+- 接口方法、实现类 public 方法：行首 **`public`** 别漏（实现接口时 public 可省略但写上更稳）。
+- 写错一行 **划单线改**，别涂黑团；构造参数名和字段同名时用 **`this.`**。
+- **不需要写 `main`**，除非题目明确要求。
+
+### 编程题 · 15 分钟倒计时演练
+
+| 分钟 | 任务 |
+|------|------|
+| 0～1 | 圈 Person/Job/Life/Student 得分点 |
+| 1～4 | 写完 Person + Job + Life |
+| 4～12 | 写 Student（super、living、setJob、toString） |
+| 12～14 | 对照题目逐条打勾 |
+| 14～15 | 补漏的 `@Override` 或分号 |
+
+---
+
+## 一页纸速记卡（进考场前背）
+
+```
+简答：多线程 + GUI 必考；分点写；对比题三行表
+读程：只写输出；println 数行数；String/集合/多态手算
+编程：Person→Job→Life→Student
+      extends 在前 implements 在后
+      super 第一行
+      living 全角：好好学习、天天向上！
+      toString 要 super + job + setJob
+      组合不是 extends
+```
+
+---
+
 # 三、编程题（2 道）
 
-> 纸笔写 **类 / 接口 / 方法**；`import` 可省略；需用库时考场给 **方法声明**。
+> 纸笔写 **类 / 接口 / 方法**；`import` 可省略；需用库时考场给 **方法声明**。  
+> **老师出题方式**：要求写得很细（第 1 点、第 2 点……），你要做的是 **把每一条要求翻译成 Java**，不用自己设计程序。
+
+---
+
+## 编程题 · 按题目要求写（知识点 + 保基本分）
+
+### 先建立正确心态
+
+编程题 **不是** 让你从零想逻辑，而是 **照着说明书拼代码**：
+
+```
+题目第 N 条要求  →  对应一种 Java 写法  →  写对一条得一条的分
+```
+
+基本分策略：**题目有几条，就写几个类 / 几个方法**；即使某个方法体写不完美，**类名、字段、构造、继承关系** 写对也能拿大部分分。
+
+---
+
+### 第一步：读题——把要求拆成四类
+
+拿到题先 **用铅笔在题目旁标号**，通常就这四类（官方样例全覆盖）：
+
+| 题目怎么说 | 你要写什么 | 例子 |
+|------------|------------|------|
+| **抽象类** X | `abstract class X { ... }` | `abstract class Person` |
+| **类** X（没写抽象） | `class X { ... }` | `class Job` |
+| **接口** X | `interface X { 方法声明; }` | `interface Life` |
+| **类** Y **继承** X **实现** 接口 Z | `class Y extends X implements Z` | `class Student extends Person implements Life` |
+
+另外常见 **附加要求**（出现在某一条里）：
+
+| 题目怎么说 | 含义 | 怎么写 |
+|------------|------|--------|
+| 成员变量 / 字段 | 类里存数据的变量 | `private 类型 名;` |
+| 构造方法 | `new` 时初始化字段 | `public 类名(参数) { this.字段 = 参数; }` |
+| `toString()` | 把对象转成字符串 | `public String toString() { return "..."; }` |
+| 方法 **输出** xxx | 打印固定内容 | `System.out.println("题目原文");` |
+| **重写** toString | 子类重新写 toString | 加 `@Override`，用 `super.toString()` 带上父类信息 |
+| **引用** 某类对象 | **组合**（has-a），不是继承 | `private Job job;` + `setJob(Job j)` |
+| `abstract` 方法 | 子类 **必须实现** | 子类里写 `public void 方法名() { ... }` |
+
+---
+
+### 第二步：逐条知识点——官方样例怎么写
+
+下面按 **截图题目顺序**，讲 **每条要求考什么、基本分怎么拿**。
+
+![编程题样例：Person / Job / Life / Student](/java-exam/sample-programming.png)
+
+---
+
+#### 要求 1：抽象类 `Person`
+
+> 成员变量 `String name`、`int age`；构造方法；`toString()` 返回姓名年龄信息。
+
+**① 为什么是「抽象类」？**
+
+- 题目写 **抽象类** → 关键字必须是 **`abstract class`**。
+- 抽象类 **不能** `new Person()`，但 **可以** 被继承；适合当「人的公共模板」，具体学生由 `Student` 实现。
+- **基本分**：写出 `abstract class Person` 就有结构分。
+
+**② 成员变量怎么写？**
+
+```java
+protected String name;
+protected int age;
+```
+
+- 题目给什么类型就写什么类型：`String name`、`int age`。
+- 用 **`protected`** 最常见：子类 `Student` 能直接访问，又比 `public` 规范（写 `private` + getter 也行，但纸笔考试 **题目没要求就别多写**）。
+- **基本分**：两个字段 **类型 + 名字** 和题目一致。
+
+**③ 构造方法怎么写？**
+
+```java
+public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+```
+
+- 构造方法 **名字必须和类名相同**：`Person`。
+- 参数列表 **和题目一致**：`(String name, int age)`。
+- 参数名和字段名相同时，左边用 **`this.name`** 表示 **成员变量**，右边 `name` 是 **参数**。
+- **基本分**：有构造 + 两个赋值语句。
+
+**④ `toString()` 怎么写？**
+
+```java
+public String toString() {
+    return "name=" + name + ", age=" + age;
+}
+```
+
+- 返回类型 **`String`**；方法名 **`toString`**（和 Object 类一致，属于 **重写**）。
+- 题目说「返回姓名年龄信息」→ 用字符串拼：`"name=" + name + ", age=" + age`。
+- **不要求** 和标准库格式一模一样，**能看出 name、age 就行**。
+- **基本分**：`return` 里 **同时出现 name 和 age**。
+
+---
+
+#### 要求 2：类 `Job`
+
+> 成员变量 `String accountabilities`（职责描述）；构造方法；`toString()` 输出职责描述。
+
+**① 普通类 vs 抽象类**
+
+- 题目只写 **类**，没写抽象 → 用 **`class Job`**，**不要** 加 `abstract`。
+- `Job` 和 `Person` **没有继承关系**，是 **两个独立的类**。
+
+**② 和 Person 写法一样，换字段名即可**
+
+```java
+class Job {
+    private String accountabilities;
+
+    public Job(String accountabilities) {
+        this.accountabilities = accountabilities;
+    }
+
+    public String toString() {
+        return "accountabilities=" + accountabilities;
+        // 或 return accountabilities;  也能拿 toString 基本分
+    }
+}
+```
+
+- **基本分**：字段 + 构造 + toString 三段都有。
+- 题目若写「输出职责描述」，toString 的 return 里 **带上 accountabilities** 即可。
+
+---
+
+#### 要求 3：接口 `Life`
+
+> 包含方法 `living()`。
+
+**① 接口是什么？**
+
+- 接口 = **只规定「能做什么」**，不管 **怎么做**。
+- 写法：**只有方法声明，没有方法体**（没有 `{ ... }` 实现）。
+
+```java
+interface Life {
+    void living();
+}
+```
+
+**② 常见错误**
+
+```java
+// ❌ 错：接口里不能写实现
+interface Life {
+    void living() {
+        System.out.println("...");
+    }
+}
+
+// ❌ 错：漏写 void
+interface Life {
+    living();
+}
+```
+
+- **基本分**：`interface Life` + `void living();` 两行。
+
+---
+
+#### 要求 4：类 `Student`（分值最高，分条拆）
+
+> 继承 `Person`、实现 `Life`；`living()` 输出「好好学习、天天向上！」；字段 `school`、`id`、`Job job`；构造；重写 `toString` 含 **全部** 成员；`setJob(Job job)`。
+
+**① 继承 + 实现——类头怎么写？**
+
+```java
+class Student extends Person implements Life {
+```
+
+| 关键字 | 含义 |
+|--------|------|
+| `extends Person` | **is-a**：学生 **是一种** 人，继承 name、age |
+| `implements Life` | **can-do**：学生 **具备** 生活能力，必须写 `living()` |
+
+- **顺序固定**：`extends` 在前，`implements` 在后。
+- Java **单继承**：只能 `extends` 一个类；接口可以 **多个**：`implements A, B`。
+
+**② 子类自己的字段**
+
+```java
+private String school;
+private long id;
+private Job job;
+```
+
+- 题目说 **long id** → 类型写 **`long`**，不要写成 `int`。
+- **`Job job`**：表示学生 **有一个** 工作对象 → 这叫 **组合（has-a）**。
+  - ✅ `private Job job;` —— 学生 **持有** Job
+  - ❌ `class Student extends Job` —— 错，学生不是 Job 的子类
+
+**③ 构造方法 + `super`（必考）**
+
+```java
+public Student(String name, int age, String school, long id) {
+    super(name, age);
+    this.school = school;
+    this.id = id;
+}
+```
+
+**为什么要有 `super(name, age)`？**
+
+- 父类 `Person` **没有无参构造**，只有 `Person(String name, int age)`。
+- 创建 `Student` 时，必须先 **帮父类初始化 name、age** → 子类构造 **第一行** 写 `super(name, age)`。
+- `school`、`id` 是子类自己的，用 `this.school = school` 赋值。
+- **基本分**：有 `super(name, age)` 且参数和父类构造 **一致**。
+
+**④ 实现接口方法 `living()`**
+
+```java
+@Override
+public void living() {
+    System.out.println("好好学习、天天向上！");
+}
+```
+
+- **实现接口** = 给出方法 **具体 body**。
+- 题目写 **输出** → 用 **`System.out.println`**。
+- 字符串 **从题目原样抄写**（全角 **`！`**、顿号 **`、`**）。
+- **基本分**：方法名 `living`、无参、`void`、println 里字符串对。
+
+**⑤ `setJob(Job job)`——题目明确要求就要写**
+
+```java
+public void setJob(Job job) {
+    this.job = job;
+}
+```
+
+- 题目说「为 job 赋值」→ 提供 **setter** 即可，**不要求** getter。
+- 参数类型 **`Job`** 和字段类型一致。
+- **基本分**：方法名 `setJob`、参数 `Job job`、给 `this.job` 赋值。
+
+**⑥ 重写 `toString()`——含「全部成员变量」**
+
+```java
+@Override
+public String toString() {
+    return super.toString() + ", school=" + school + ", id=" + id + ", job=" + job;
+}
+```
+
+**「全部成员」包括什么？**
+
+- **继承来的**：name、age → 用 **`super.toString()`** 带上（不要重复写 name、age 赋值逻辑）。
+- **自己的**：school、id、job → 字符串里都要有。
+- `job` 是对象，拼接时会自动调 **`Job.toString()`**。
+
+**基本分**：return 里 **school、id、job 三个都出现** + 用了 `super.toString()`。
+
+---
+
+### 第三步：题目里其他常见要求（第二道编程题）
+
+第一道多是 **Person/Student 型**；第二道仍是 **按条写**，常见如下：
+
+#### 要求：「抽象方法 xxx，由子类实现」
+
+```java
+// 抽象类里
+abstract void study();
+
+// 子类里
+@Override
+public void study() {
+    System.out.println("正在学习");
+}
+```
+
+- 父类 **只声明**（无方法体）；子类 **必须写 public 实现**，否则子类也要标 abstract。
+
+#### 要求：「重写 equals，仅比较 id」
+
+```java
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof Student)) return false;
+    Student s = (Student) o;
+    return this.id == s.id;
+}
+```
+
+- 参数类型 **必须是 `Object`**；先 `instanceof` 再 **强转**。
+
+#### 要求：「读文件 / 写文件 / 去空行」
+
+题目会给 `FileReader`、`BufferedReader` 等声明 → 你写 **方法体**：
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(路径))) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        // 按题目处理 line
+    }
+}
+```
+
+- **基本分**：`try-with-resources` + `readLine` 循环 + 题目要求的 if/write。
+
+#### 要求：「用 HashMap / ArrayList 统计 / 存储」
+
+```java
+Map<String, Integer> map = new HashMap<>();
+for (String w : 数组) {
+    map.put(w, map.getOrDefault(w, 0) + 1);
+}
+```
+
+- **基本分**：声明集合 + 循环 + `put`/`get`。
+
+#### 要求：「为按钮添加 ActionListener」
+
+```java
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // 题目要求的动作
+    }
+});
+```
+
+- **基本分**：匿名内部类结构 + `@Override` + 题目里的那一行操作。
+
+#### 要求：「定义线程类，重写 run」
+
+```java
+class MyTask extends Thread {
+    @Override
+    public void run() {
+        // 题目要求循环 / sleep / 打印
+    }
+}
+```
+
+- **基本分**：`extends Thread` + `public void run()` 有方法体。
+
+---
+
+### 第四步：写代码的固定顺序（保基本分版）
+
+不管题目多细，**按这个顺序写就不会漏大项**：
+
+```
+1. 读完全题，数有几个类 / 接口
+2. 每个类：先字段 → 再构造 → 再其他方法
+3. 有父类：子类构造第一行 super(...)
+4. 有接口：实现类里每个接口方法都写 public 实现
+5. 题目说 toString / equals / setXxx：单独写一个方法，别漏
+6. 对照题目逐条打勾
+```
+
+**不需要写 `main`**，除非题目明确要求。
+
+---
+
+### 第五步：官方样例 · 对照表（写完打勾）
+
+| 题号 | 题目要求 | 你写了吗？ |
+|------|----------|------------|
+| 1 | `abstract class Person` + name, age | ☐ |
+| 1 | Person 构造 + toString | ☐ |
+| 2 | `class Job` + accountabilities + 构造 + toString | ☐ |
+| 3 | `interface Life` + `void living();` | ☐ |
+| 4 | `Student extends Person implements Life` | ☐ |
+| 4 | 字段 school, id, job | ☐ |
+| 4 | 构造 + **super(name, age)** | ☐ |
+| 4 | living() 固定输出 | ☐ |
+| 4 | setJob(Job job) | ☐ |
+| 4 | toString 含 **全部** 成员（super + school + id + job） | ☐ |
+
+**10 项里对 8 项 ≈ 基本分稳了**；全对 ≈ 满分。
+
+---
 
 ## 官方样例题
 
@@ -2504,7 +3101,7 @@ class Student extends Person implements Life {
     }
 
     public void living() {
-        System.out.println("好好学习、天天向上!");
+        System.out.println("好好学习、天天向上！");
     }
 
     public void setJob(Job job) {
@@ -2523,7 +3120,7 @@ class Student extends Person implements Life {
 - [ ] `extends` + `implements` 写法正确  
 - [ ] `super(name, age)` 调父构造  
 - [ ] **组合** `Job job` + `setJob`  
-- [ ] `living()` 输出 **一字不错**  
+- [ ] `living()` 输出 **一字不错**（全角 **`！`**，顿号 **`、`**）
 - [ ] `toString` 用 `super.toString()` 带父类字段  
 
 **逐行得分说明（编程题阅卷视角）**
@@ -2673,7 +3270,9 @@ class Worker extends Thread {
 
 **编程（2）**
 
-- [ ] 官方 **Person/Student** 四类骨架闭卷默写
+- [ ] [抢分秘籍](#-期末抢分秘籍) 过一遍：15 分钟默写顺序 + 致命扣分表
+- [ ] 官方 **Person/Job/Life/Student** 四类骨架 **12 分钟内**闭卷默写
+- [ ] `living()` 手抄三遍：`好好学习、天天向上！`
 - [ ] `BufferedReader` 按行读方法
 - [ ] `ActionListener` 或 `WindowAdapter` 匿名内部类
 
