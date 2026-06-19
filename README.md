@@ -5,7 +5,7 @@ This repository contains **two** ways to use the same Markdown-centric content:
 1. **Classic static site** at the repo root: **vanilla HTML, CSS, and JavaScript** with a hash router—matches the default **GitHub Pages** workflow (`.github/workflows/pages.yml` publishes the repo root).
 2. **Next.js 14 app** in **`web/`** (App Router): home, posts with optional TOC, tag tree, About page, optional footer music, and synced content from the root **`content/`** folder.
 
-**中文：** 仓库里有两套界面共用 **`content/`** 里的文章与配置：根目录 **纯静态** 博客（适合当前 Pages 工作流），以及 **`web/`** 下的 **Next.js** 阅读站（侧栏简介、标签树、目录与歌词区、路由模糊转场等）。编辑内容请以仓库根目录 **`content/`** 为准；Next 在 `npm run dev` / `npm run build` 时会把其复制到 `web/content/`（勿在 `web/content/` 长期手写）。
+**中文：** 仓库里有两套界面共用 **`content/`** 里的文章与配置：根目录 **纯静态** 博客（适合当前 Pages 工作流），以及 **`web/`** 下的 **Next.js** 阅读站（三栏布局、标签树、LaTeX 公式、背单词测验、可选底栏音乐等）。编辑内容请以仓库根目录 **`content/`** 为准；Next 在 `npm run dev` / `npm run build` 时会把其复制到 `web/content/`（勿在 `web/content/` 长期手写）。
 
 ---
 
@@ -14,22 +14,35 @@ This repository contains **two** ways to use the same Markdown-centric content:
 ### Features
 
 - **Content sync:** `web/scripts/sync-content.mjs` copies `../content` → `web/content` before dev/build (`predev` / `prebuild` in `web/package.json`).
-- **Config files (root `content/`):** `manifest.json` — `blogName`, `blogDescription` (About page + site metadata; multi-line OK), `posts[]`; `site.json` — profile (name, bio, avatar path as URL e.g. `/photo.jpg`), links, optional `music` playlist; Markdown bodies in `posts/`.
-- **Reading UX:** Sticky TOC on wide screens; current lyric line in the TOC panel when a post has a TOC; soft **blur / fade** transition on the main pane when changing routes (`prefers-reduced-motion` disables it); semi-transparent bottom player.
+- **Post discovery:** Next **scans** `content/posts/*.md` (YAML front matter: `title`, `date`, `updated`, `tags`, `column`, `toc`, `excerpt`, …). Optional `content/tags.json` merges extra tags per slug. `manifest.json` supplies **`blogName`** / **`blogDescription`** only (About + metadata); the static site’s `manifest.posts[]` list is **not** used by Next.
+- **Config files (root `content/`):** `manifest.json`, `site.json` (profile, links, optional `music` playlist), `tags.json` (optional), Markdown in `posts/`.
+- **Reading UX:** GFM Markdown, **KaTeX** math (`$…$`, `$$…$$`), sticky TOC on wide screens, lyric line in TOC panel when applicable, soft **blur / fade** route transitions (`prefers-reduced-motion` disables), semi-transparent bottom music player.
+- **Vocab quiz (`/quiz`):** `web/scripts/build-quiz-bank.mjs` (also in `predev` / `prebuild`) builds `public/quiz-bank.json` from lines like `#### 单词：释义` in any post—works on static deploy without a live API. Modes: term→definition or definition→term; progress stored in browser.
+- **Routes:** `/`, `/posts/[slug]`, `/tags`, `/tags/[tag]`, `/quiz`, `/about`, `/feed.xml`.
 
 ### Run locally
 
 ```bash
 cd web
 npm install
-npm run dev
+npm run dev          # http://localhost:3000
+npm run dev:lan      # bind 0.0.0.0 for phone on same Wi‑Fi
 ```
 
 Production: `npm run build` then `npm run start`.
 
+### Quiz card format (in any `content/posts/*.md`)
+
+```markdown
+#### 単語：意思
+#### apple：苹果
+```
+
+Only `####` headings with a Chinese colon `：` or ASCII `:` between term and definition are picked up.
+
 ### Deploy note
 
-GitHub Actions in this repo deploys the **static root** to Pages. Host **`web/`** on a Node-compatible platform (e.g. Vercel) if you want the Next app in production.
+GitHub Actions in this repo deploys the **static root** to Pages. Host **`web/`** on a Node-compatible platform (e.g. Vercel, root directory `web`) if you want the Next app—including `/quiz` and LaTeX—in production.
 
 ---
 
@@ -47,16 +60,19 @@ GitHub Actions in this repo deploys the **static root** to Pages. Host **`web/`*
 
 ```text
 Blog/
-├── content/                 # Shared: manifest, site profile, posts (source of truth for Next sync)
-│   ├── manifest.json      # blogName, blogDescription, posts[]
-│   ├── site.json          # Optional: profile + music (used by Next app)
-│   └── posts/*.md
-├── web/                     # Next.js 14 app
-│   ├── app/                 # Routes, layout, globals.css
-│   ├── components/
+├── content/                 # Shared source of truth (synced to web/content before Next dev/build)
+│   ├── manifest.json        # blogName, blogDescription; posts[] for static GitHub mode
+│   ├── site.json            # Profile, links, optional music (Next sidebar + player)
+│   ├── tags.json            # Optional per-slug tag overrides (Next)
+│   └── posts/*.md           # Articles + optional #### term：def lines for /quiz
+├── web/                     # Next.js 14 app (App Router)
+│   ├── app/                 # pages, /quiz, /feed.xml, music & quiz API routes
+│   ├── components/          # VocabQuiz, MusicPlayer, TagTree, …
 │   ├── lib/
-│   ├── public/              # Static assets (e.g. public/music/*.mp3, avatar image)
-│   ├── scripts/sync-content.mjs
+│   ├── public/              # Assets, generated quiz-bank.json, music/*.mp3
+│   ├── scripts/
+│   │   ├── sync-content.mjs
+│   │   └── build-quiz-bank.mjs
 │   └── package.json
 ├── index.html               # Classic static shell + settings
 ├── css/styles.css
@@ -139,7 +155,9 @@ No license file is bundled; add one in your fork if you need explicit terms.
 
 ## 中文说明
 
-Next.js 版功能、本地运行与部署说明见上文 **「Next.js app (`web/`)」** 一节；以下为根目录 **静态版** 说明。
+Next.js 版功能（含 **背单词 /quiz**、**KaTeX 公式**、标签树、音乐播放器）、本地运行与部署说明见上文 **「Next.js app (`web/`)」** 一节；以下为根目录 **静态版** 说明。
+
+**与 Next 的差异：** 静态站通过 **简易设置** 或 `manifest.json` 的 **`posts[]`** 维护文章列表；Next 直接读取 **`content/posts/`** 下全部 `.md`，`manifest` 只提供站名与简介。
 
 ### 功能概览（根目录静态站）
 
@@ -161,7 +179,17 @@ Next.js 版功能、本地运行与部署说明见上文 **「Next.js app (`web/
 npx --yes serve .
 ```
 
-Next.js 阅读站在 **`web/`** 目录：`cd web`，执行 `npm install` 与 `npm run dev`（详见文件开头的 **Next.js app** 一节）。
+Next.js 阅读站在 **`web/`** 目录：`cd web`，执行 `npm install` 与 `npm run dev`（局域网访问用 `npm run dev:lan`；详见文件开头的 **Next.js app** 一节）。
+
+### 背单词（`/quiz`）
+
+在任意 `content/posts/*.md` 里用四级标题写词条，构建时会生成 `public/quiz-bank.json`：
+
+```markdown
+#### 単語：意思
+```
+
+支持 **看词选义** / **看义选词**；部署到 Vercel 等后手机访问 `你的域名/quiz` 即可，无需本机 API。
 
 ### 使用 GitHub 管理文章
 
@@ -194,6 +222,16 @@ Next.js 阅读站在 **`web/`** 目录：`cd web`，执行 `npm install` 与 `np
 
 ## Git 代理提示 · Git proxy note
 
-**EN:** If Git reports `Failed to connect to github.com ... via 127.0.0.1`, Git is using a local proxy. Ensure your proxy app is running on the configured port, or run `git config --global --unset http.proxy` and `git config --global --unset https.proxy` to disable it.
+**EN:** If `git push` / `git fetch` fails with `TLS connect error: unexpected eof` or `Failed to connect to github.com ... via 127.0.0.1`, Git is using a local proxy (common with Clash on port **7897**).
 
-**中文：** 若 Git 提示经 `127.0.0.1` 连接 GitHub 失败，说明配置了本机代理。请确认代理软件已开启且端口正确，或使用 `git config --global --unset http.proxy` 与 `https.proxy` 取消代理后再试。
+1. Ensure the proxy app is running and the port matches your Git config.
+2. For Clash-style mixed ports, **HTTP proxy** often works better than SOCKS5:
+
+   ```powershell
+   git config --global http.proxy http://127.0.0.1:7897
+   git config --global https.proxy http://127.0.0.1:7897
+   ```
+
+3. To disable proxy entirely: `git config --global --unset http.proxy` and `git config --global --unset https.proxy`.
+
+**中文：** 若 `git push` / `git fetch` 出现 TLS 握手失败或经 `127.0.0.1` 连不上 GitHub，多半是本机代理（如 Clash **7897**）与 Git 不匹配。先确认代理已开、端口一致；Clash 混合端口下可试 **HTTP 代理**（见上命令）。不需要代理时用 `--unset` 取消 `http.proxy` / `https.proxy`。
