@@ -1,5 +1,7 @@
 # Minimal Personal Blog · 极简个人博客
 
+个人学习笔记与复习资料站。**Yuni** · 仓库：[github.com/Yunikoi/Blog](https://github.com/Yunikoi/Blog) · 静态站：[yunikoi.github.io/Blog](https://yunikoi.github.io/Blog)
+
 This repository contains **two** ways to use the same Markdown-centric content:
 
 1. **Classic static site** at the repo root: **vanilla HTML, CSS, and JavaScript** with a hash router—matches the default **GitHub Pages** workflow (`.github/workflows/pages.yml` publishes the repo root).
@@ -43,6 +45,12 @@ Only `####` headings with a Chinese colon `：` or ASCII `:` between term and de
 ### Deploy note
 
 GitHub Actions in this repo deploys the **static root** to Pages. Host **`web/`** on a Node-compatible platform (e.g. Vercel, root directory `web`) if you want the Next app—including `/quiz` and LaTeX—in production.
+
+**Vercel (Next app):** connect the repo, set **Root Directory** to `web`, framework auto-detected via `web/vercel.json`. `prebuild` runs content sync and quiz-bank generation.
+
+### Content in `content/posts/`
+
+Markdown notes with YAML front matter (`title`, `date`, `tags`, `column`, `toc`, …). Examples in this repo: gaokao math/Japanese grammar, JLPT, IELTS, Java / algorithms / software-architecture exam guides, LLM course notes, study logs. Tag tree uses slash paths (e.g. `学习/数学/高考`).
 
 ---
 
@@ -235,3 +243,5 @@ Next.js 阅读站在 **`web/`** 目录：`cd web`，执行 `npm install` 与 `np
 3. To disable proxy entirely: `git config --global --unset http.proxy` and `git config --global --unset https.proxy`.
 
 **中文：** 若 `git push` / `git fetch` 出现 TLS 握手失败或经 `127.0.0.1` 连不上 GitHub，多半是本机代理（如 Clash **7897**）与 Git 不匹配。先确认代理已开、端口一致；Clash 混合端口下可试 **HTTP 代理**（见上命令）。不需要代理时用 `--unset` 取消 `http.proxy` / `https.proxy`。
+
+**对象损坏（`inflate: data stream error`）：** 本地 `.git/objects` 中某个对象损坏时，`git status` 会失败。可删除报错路径下的 loose object，执行 `git fetch origin`，再对涉及文件 `git restore --staged` 后重新 `git add`（大文件暂存中断时较常见）。
