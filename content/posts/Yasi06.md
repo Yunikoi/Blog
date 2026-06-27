@@ -220,3 +220,52 @@ column: 学习笔记
 #### approach：方法；途径；接近；着手处理
 
 > a new approach to the problem 处理该问题的新方法 | approach the issue 着手处理该问题 | approachable adj. 易接近的；平易近人的
+
+#### linguist：语言学家
+
+> linguistics n. 语言学 | linguistic adj. 语言的 | bilingual adj. 双语的
+
+#### fundamentally：根本上；从根本上
+
+> fundamentally different / wrong 根本不同 / 错误 | fundamental adj. 基本的；根本的 | fundamentals n. 基本原理
+
+#### spatial：空间的；与空间有关的
+
+> spatial awareness / ability 空间意识 / 能力 | spatial orientation 空间定向 | spatially adv.
+
+#### orientation：方向；定位；取向；迎新（活动）
+
+> spatial orientation 空间定向 | sexual / political orientation 性取向 / 政治取向 | orient v. 使朝向；适应 | oriented adj. 以… 为导向的
+
+#### cardinal：主要的；基本的 | 红衣主教；基数（数学）
+
+> cardinal points 基本方位（东南西北）| cardinal rule 基本原则 | cardinality n. 基数（数学）
+
+> ##### 形近易混（附雅思释义）
+>
+> - ordinal：adj. 序数的；顺序的（first, second…）
+> - cardinal number：基数（one, two…）
+
+#### constantly：不断地；经常地；持续地
+
+> constantly changing 不断变化 | constant adj. 持续的；恒定的 | constancy n. 恒定；坚持不懈
+
+#### egocentric：自我中心的
+
+> egocentric thinking 自我中心思维 | egocentrism n. 自我中心主义 | ego n. 自我
+
+#### coordinate：协调；使配合 | 坐标
+
+> coordinate activities / efforts 协调活动 / 努力 | coordinates n. 坐标 | coordination n. 协调 | coordinator n. 协调人
+
+#### empirical：经验主义的；以实证为依据的
+
+> empirical evidence / research 实证证据 / 研究 | empirically adv. | empiricism n. 经验主义
+
+#### replicate：复制；复现；重复（实验）
+
+> replicate the experiment / results 复现实验 / 结果 | replication n. 复制；复现 | replica n. 复制品
+
+#### habitual：习惯性的；惯常的
+
+> habitual behavior / smoker 习惯性行为 / 老烟民 | habit n. 习惯 | habitually adv. 惯常地
