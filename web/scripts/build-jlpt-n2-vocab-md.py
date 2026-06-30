@@ -19,6 +19,12 @@ FREQ_JSON = SCRIPTS / "_n2_freq.json"
 CSV_PATH = SCRIPTS / "_n2_jamsin.csv"
 CACHE_FILE = SCRIPTS / "_n2_meaning_zh_cache.json"
 
+# 听力稿常见短语，不计入词汇题统计
+STOP_EXPR = {
+    "する", "なる", "女の人", "男の人", "お願いします", "お願い", "質問", "問題", "番号",
+    "正しい", "間違い", "選択", "答え", "例", "次", "以下", "以上",
+}
+
 LISTENING_HINTS = {
     "案内", "伝える", "連絡", "確認", "予約", "届く", "遅れる", "割引", "点検", "故障",
     "相談", "説明", "紹介", "乗り換え", "遅延", "欠席", "出席", "延期", "中止", "変更",
@@ -163,6 +169,11 @@ def main() -> None:
 
     # 真题统计
     for expr, it in merged.items():
+        if expr in STOP_EXPR:
+            it["exam_count"] = 0
+            it["occurrence"] = 0
+            it["exam_sessions"] = []
+            continue
         sessions: list[str] = []
         total = 0
         for c in corpus:
