@@ -1,0 +1,10 @@
+﻿python : Traceback (most recent call last):
+所在位置 C:\Users\42165\AppData\Local\Temp\ps-script-115078c7-f103-4775-82df-ba0090b10055.ps1:141 字符: 26
++ pip install openpyxl -q; python -c "
++                          ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 8, in <module>
+ModuleNotFoundError: No module named 'openpyxl'
+xlsx E:\BaiduNetdiskDownload\N2鍘嗗勾鐪熼鍚堥泦1991-2025\N2鑳藉姏鑰冭瘯璁＄畻鏂规硶.xlsx

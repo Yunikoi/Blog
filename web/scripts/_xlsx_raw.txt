@@ -1,0 +1,5 @@
+﻿['[Content_Types].xml', '_rels/.rels', 'xl/_rels/workbook.xml.rels', 'xl/workbook.xml', 'xl/sharedStrings.xml', 'xl/worksheets/_rels/sheet1.xml.rels', 'xl/theme/theme1.xml', 'xl/styles.xml', 'xl/worksheets/sheet1.xml', 'docProps/core.xml']
+strings sample ['注意点：', '1.题量根据实绩的考试题量进行变更', '2.输入各题答对数量即可直接得出得分', '文字词汇算分表', '正确率', '题目', '每题分值', '题量', '满分', '答对题数', '得分', '问题1', '问题2', '问题3', '问题4', '问题5', '问题6', '问题7', '问题8', '问题9', '合计', '单项得分', '阅读算分表', '问题10', '问题11', '问题12', '问题13', '问题14', '听力算分表', '问题5-1/2']
+sheet head <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x14ac" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac"><dimension ref="A1:G42"/><sheetViews><sheetView tabSelected="1" workbookViewId="0"><selection activeCell="I16" sqref="I16"
