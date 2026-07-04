@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from _n2_grammar_notes import explain
+from _n2_grammar_notes import explain, explain_body
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "content" / "posts" / "N2词汇.md"
@@ -273,20 +273,13 @@ def parse_questions(text: str) -> list[GrammarQ]:
 
 
 def build_guide_section(tag_count: Counter[str], tag_exams: dict[str, set[str]]) -> list[str]:
-    """按频次生成语法讲解章节。"""
+    """按频次生成语法讲解章节（详细版）。"""
     out = [
         "## 语法讲解",
         "",
-        "> 按真题出现频次排列；每节含**意思、接续、例句、辨析**。",
+        "> 按真题出现频次排列。每条含：**核心义、接续、例句、辨析表、真题提示**。",
         "",
     ]
-    cat_order = [
-        "敬语", "授受", "条件", "原因", "逆接", "时间", "限定", "程度", "确信",
-        "变化", "关系", "强调", "让步", "语气", "形式名词", "时点", "倾向", "可能",
-        "固定", "补助", "假设", "引用", "副词", "语序", "助词", "接续", "其他", "语境",
-        "话题", "方式", "比喻", "理由", "结果", "选项辨析",
-    ]
-    # 收集 tag -> category 从已有 questions 不太好，按 tag 排序输出
     tags_sorted = [t for t, _ in tag_count.most_common() if t != "（待归类）"]
     if "（待归类）" in tag_count:
         tags_sorted.append("（待归类）")
@@ -294,16 +287,10 @@ def build_guide_section(tag_count: Counter[str], tag_exams: dict[str, set[str]])
     for tag in tags_sorted:
         cnt = tag_count[tag]
         exs = "、".join(sorted(tag_exams[tag]))
-        meaning, usage, example, tip = explain(tag)
+        body = explain_body(tag)
         out.append(f"### {tag}（真题 **{cnt}** 次 · {exs}）")
         out.append("")
-        out.append(f"**意思**：{meaning}")
-        out.append("")
-        out.append(f"**接续 / 用法**：{usage}")
-        out.append("")
-        out.append(f"**例句**：{example}")
-        out.append("")
-        out.append(f"**辨析 / 做题提示**：{tip}")
+        out.append(body)
         out.append("")
 
     return out
@@ -420,16 +407,18 @@ def build_md(questions: list[GrammarQ]) -> str:
         for q in sorted(qs, key=lambda x: x.num):
             label = "★语序" if q.qtype == "order" else "填空"
             tag_str = q.tags[0]
-            meaning, _, _, tip = explain(tag_str)
-            stem_short = q.stem[:80] + ("…" if len(q.stem) > 80 else "")
+            summary, full_body, example, tip = explain(tag_str)
+            stem_short = q.stem[:100] + ("…" if len(q.stem) > 100 else "")
             out.append(f"**{q.num}** [{label}] **{tag_str}**")
-            out.append(f"- 要点：{meaning}")
-            out.append(f"- 题干：{stem_short}")
+            out.append(f"- **要点**：{summary}")
+            out.append(f"- **题干**：{stem_short}")
             if q.options:
                 opts = "　".join(f"{i+1}.{o}" for i, o in enumerate(q.options[:4]))
-                out.append(f"- 选项：{opts}")
-            if tip and tip != "注意与形近语法区分。":
-                out.append(f"- 提示：{tip}")
+                out.append(f"- **选项**：{opts}")
+            if example and example != "—":
+                out.append(f"- **例句**：{example}")
+            if tip and tip not in ("—", "注意与形近语法区分。"):
+                out.append(f"- **做题**：{tip[:300]}")
             out.append("")
 
     out += [
