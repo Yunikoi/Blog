@@ -18,6 +18,25 @@ CACHE = SCRIPTS / "_n2_meaning_zh_cache.json"
 CACHE_DIR = SCRIPTS / "_n2_exam_cache"
 INDEX_FILE = CACHE_DIR / "index.json"
 OUT = ROOT / "content" / "posts" / "N2文字词汇常考词.md"
+BET_N = 500
+BET_EXAM_QUOTA = 380
+BET_SYLL_QUOTA = 120
+
+PROB_WEIGHT = {
+    "跨套": 120,
+    "問題4": 90,
+    "問題1": 85,
+    "問題3": 75,
+    "問題6": 70,
+    "問題5": 65,
+    "問題2": 60,
+    "2012": 50,
+}
+
+STOP_BET = {
+    "女の人", "男の人", "お願いします", "お願い", "する", "なる",
+    "質問", "番号", "正しい", "間違い", "選択", "答え", "例",
+}
 
 KANJI = re.compile(r"[一-龥]")
 KATA = re.compile(r"^[ァ-ヶー・]+$")
@@ -358,6 +377,172 @@ def predict_tier(score: int, in_moji: bool, moji_n: int) -> str:
     return "D"
 
 
+def build_word_problems(by_problem: dict[str, list[str]]) -> dict[str, list[str]]:
+    wp: dict[str, list[str]] = defaultdict(list)
+    for prob, words in by_problem.items():
+        for w in words:
+            if prob not in wp[w]:
+                wp[w].append(prob)
+    return dict(wp)
+
+
+def is_bet_candidate(word: str) -> bool:
+    if word in STOP_BET:
+        return False
+    if not is_valid_word(word):
+        return False
+    if len(word) > 22:
+        return False
+    if re.search(r"[。、？！「」【】（）\(\)]", word):
+        return False
+    if re.match(r"^[A-Za-z\s]+$", word):
+        return False
+    return True
+
+
+def bet_score(
+    moji_n: int,
+    problems: list[str],
+    rank: int | None,
+    corp: int,
+    mtype: str,
+    source: str,
+) -> int:
+    score = 0
+    if moji_n >= 4:
+        score += 5000
+    elif moji_n >= 3:
+        score += 4200
+    elif moji_n >= 2:
+        score += 3400
+    elif moji_n >= 1:
+        score += 2600
+    for p in problems:
+        score += PROB_WEIGHT.get(p, 35)
+    if rank is not None:
+        score += max(0, 900 - rank)
+    score += min(corp, 30) * 12
+    if mtype == "読み":
+        score += 45
+    elif mtype == "意味":
+        score += 35
+    elif mtype == "外来語":
+        score += 30
+    elif mtype == "接辞":
+        score += 40
+    elif mtype == "表記":
+        score += 38
+    if source == "真题":
+        score += 200
+    return score
+
+
+def build_bet500(
+    exam_all: set[str],
+    freq_words: dict[str, int],
+    word_problems: dict[str, list[str]],
+    analyzed: list[dict],
+    by_expr: dict[str, dict],
+    by_reading: dict[str, list[dict]],
+    freq_rank: dict[str, int],
+    corpus: list[dict],
+) -> list[dict]:
+    """押题 Top 500：真题考点优先，考纲高频补足。"""
+    pool: dict[str, dict] = {}
+
+    for word in exam_all:
+        if not is_bet_candidate(word):
+            continue
+        sy = match_to_syllabus(word, by_expr, by_reading)
+        expr = sy["expr"] if sy else word
+        if expr in pool:
+            pool[expr]["moji_n"] = max(pool[expr]["moji_n"], freq_words.get(word, 1))
+            for p in word_problems.get(word, []):
+                if p not in pool[expr]["problems"]:
+                    pool[expr]["problems"].append(p)
+            continue
+        rank = freq_rank.get(expr) if sy else freq_rank.get(word)
+        reading = sy["reading"] if sy else ""
+        corp = corpus_hits(expr, reading, corpus) if corpus and sy else 0
+        mtype = classify_moji_type(expr, reading)
+        probs = list(word_problems.get(word, []))
+        moji_n = freq_words.get(word, 1)
+        pool[expr] = {
+            "expr": expr if sy else word,
+            "reading": reading,
+            "moji_n": moji_n,
+            "problems": probs,
+            "rank": rank,
+            "corp": corp,
+            "mtype": mtype,
+            "source": "真题",
+        }
+
+    for a in analyzed:
+        expr = a["expr"]
+        if expr in pool:
+            pool[expr]["rank"] = pool[expr]["rank"] if pool[expr]["rank"] is not None else a["rank"]
+            pool[expr]["corp"] = max(pool[expr]["corp"], a["corp"])
+            continue
+        if a["in_moji"]:
+            continue
+        if a["expr"] in STOP_BET:
+            continue
+        if a["rank"] is not None and a["rank"] > 700:
+            continue
+        pool[expr] = {
+            "expr": expr,
+            "reading": a["reading"],
+            "moji_n": 0,
+            "problems": [],
+            "rank": a["rank"],
+            "corp": a["corp"],
+            "mtype": a["mtype"],
+            "source": "考纲",
+        }
+
+    ranked: list[dict] = []
+    for it in pool.values():
+        bs = bet_score(it["moji_n"], it["problems"], it["rank"], it["corp"], it["mtype"], it["source"])
+        ranked.append({**it, "bet": bs})
+    ranked.sort(key=lambda x: (-x["bet"], x["rank"] is None, x["rank"] or 99999, x["expr"]))
+
+    exam_pool = [x for x in ranked if x["source"] == "真题"]
+    syll_pool = [x for x in ranked if x["source"] == "考纲"]
+    picked: list[dict] = []
+    seen: set[str] = set()
+
+    for x in exam_pool[:BET_EXAM_QUOTA]:
+        picked.append(x)
+        seen.add(x["expr"])
+    for x in syll_pool:
+        if x["expr"] in seen:
+            continue
+        picked.append(x)
+        seen.add(x["expr"])
+        if len(picked) >= BET_EXAM_QUOTA + BET_SYLL_QUOTA:
+            break
+    if len(picked) < BET_N:
+        for x in ranked:
+            if x["expr"] in seen:
+                continue
+            picked.append(x)
+            seen.add(x["expr"])
+            if len(picked) >= BET_N:
+                break
+
+    picked.sort(key=lambda x: (-x["bet"], x["rank"] is None, x["rank"] or 99999, x["expr"]))
+    return picked[:BET_N]
+
+
+def format_problems(problems: list[str]) -> str:
+    if not problems:
+        return "考纲"
+    order = ["問題1", "問題2", "問題3", "問題4", "問題5", "問題6", "跨套", "2012"]
+    ps = [p for p in order if p in problems]
+    return "/".join(ps[:3]) + ("…" if len(ps) > 3 else "")
+
+
 def main() -> None:
     text = SRC.read_text(encoding="utf-8")
     freq_words, by_problem = parse_exam_vocab(text)
@@ -430,6 +615,14 @@ def main() -> None:
         if a["ptier"] in ("S", "A", "B"):
             by_type[a["mtype"]].append(a)
 
+    word_problems = build_word_problems(by_problem)
+    bet500 = build_bet500(
+        exam_all, freq_words, word_problems, analyzed,
+        by_expr, by_reading, freq_rank, corpus,
+    )
+    bet_exam_n = sum(1 for b in bet500 if b["source"] == "真题")
+    bet_syll_n = len(bet500) - bet_exam_n
+
     lines = [
         "---",
         "title: N2 文字词汇 · 考纲+真题常考词",
@@ -448,6 +641,7 @@ def main() -> None:
         "",
         "## 怎么用",
         "",
+        "0. **临考** → [押题 Top 500](#押题-top-500临考必背)（明天文字語彙最可能考到的范围，先背前 100）。",
         "1. **先背** [一、真题已考高频](#一真题已考高频≥2-次)（确定会考）。",
         "2. **再补** [二、考纲重点·按题型](#二考纲重点按文字词汇题型)（考纲核心 + 未考但易考）。",
         "3. **冲刺** [三、考纲预测·尚未考过](#三考纲预测尚未在文字語彙考过)（高频考纲词，防新题）。",
@@ -472,6 +666,64 @@ def main() -> None:
         "| **A** | 3 次 | 考纲 Top200 / 真题考过 1 次 |",
         "| **B** | 2 次 | 考纲 Top500 |",
         "| **C** | 1 次 | 考纲 Top800，尚未考过 |",
+        "",
+        "---",
+        "",
+        "## 押题 Top 500（临考必背）",
+        "",
+        f"> **说明**：卷面文字語彙约 **30 题**；本表 **{BET_N}** 词为综合押题范围（**非泄题**）。",
+        f"> **构成**：真题考点 **{bet_exam_n}** + 考纲补足 **{bet_syll_n}**；排序 = 真题跨套频次 + 题型命中 + 考纲频率 + 语料出现。",
+        "> **建议**：临考先过 **#1～100**（真题高频），再扫 **#101～380**；**#381～500** 为考纲防新题。",
+        "",
+        "### 速览 · 押题 Top 50",
+        "",
+        "| # | 词 | 読み | 中文 | 题型 | 真题 | 来源 |",
+        "|---:|----|------|------|------|------|------|",
+    ]
+    for i, b in enumerate(bet500[:50], 1):
+        moji_s = f"**{b['moji_n']}**" if b["moji_n"] >= 2 else (str(b["moji_n"]) if b["moji_n"] else "0")
+        lines.append(
+            f"| {i} | {b['expr']} | {b['reading'] or '—'} "
+            f"| {zh_for(b['expr'], csv_idx, en_cache)[:14]} "
+            f"| {format_problems(b['problems'])} | {moji_s} | {b['source']} |"
+        )
+
+    lines += [
+        "",
+        f"### 完整押题表（{BET_N} 词）",
+        "",
+        "| # | 词 | 読み | 中文 | 题型 | 真题次 | 考纲序 | 来源 |",
+        "|---:|----|------|------|------|--------|--------|------|",
+    ]
+    for i, b in enumerate(bet500, 1):
+        rank_s = f"#{b['rank'] + 1}" if b["rank"] is not None else "—"
+        moji_s = f"**{b['moji_n']}**" if b["moji_n"] >= 2 else (str(b["moji_n"]) if b["moji_n"] else "0")
+        lines.append(
+            f"| {i} | {b['expr']} | {b['reading'] or '—'} "
+            f"| {zh_for(b['expr'], csv_idx, en_cache)[:12]} "
+            f"| {format_problems(b['problems'])} | {moji_s} | {rank_s} | {b['source']} |"
+        )
+
+    lines += [
+        "",
+        "### 按题型分布（押题 500 内）",
+        "",
+    ]
+    type_count: dict[str, int] = defaultdict(int)
+    for b in bet500:
+        if b["problems"]:
+            for p in b["problems"]:
+                if p.startswith("問題"):
+                    type_count[p] += 1
+        else:
+            type_count[b["mtype"]] += 1
+    lines.append("| 类别 | 词数 | 说明 |")
+    lines.append("|------|------|------|")
+    for key in ["問題1", "問題2", "問題3", "問題4", "問題5", "問題6", "跨套", "読み", "表記", "意味", "外来語", "接辞"]:
+        if type_count.get(key):
+            lines.append(f"| {key} | {type_count[key]} | {MOJI_TYPE_HINT.get(key, PROBLEM_HINT.get(key, ''))[:28]} |")
+
+    lines += [
         "",
         "---",
         "",
@@ -595,6 +847,7 @@ def main() -> None:
         "",
         "## 说明",
         "",
+        "- **押题 500**：真题跨套频次权重最高；考纲词补足未考过的高频内容词。",
         "- **考纲词表**：JLPT N2 标准词汇（1906 条），含语法接辞词条；本表「内容词」已过滤 `～位` `～化` 等纯语法后缀。",
         "- **预测分**：考纲频率序 + 文字語彙真题命中 + 全卷语料出现 + 题型权重；非官方泄题，仅供备考优先级参考。",
         "- **考纲未收录**：真题中的活用形（如 取り払った）、复合短语、听力干扰项等，仍以真题为准背诵。",
@@ -604,7 +857,7 @@ def main() -> None:
 
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"[moji] -> {OUT}")
-    print(f"  exam>={2}: {len(high_exam)}  syllabus: {len(content_syll)}  predict: {len(predict_unexam)}")
+    print(f"  exam>={2}: {len(high_exam)}  syllabus: {len(content_syll)}  predict: {len(predict_unexam)}  bet500: {len(bet500)}")
 
 
 if __name__ == "__main__":
