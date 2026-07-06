@@ -429,3 +429,307 @@ column: 学习笔记
 >
 > - nature：自然；本性；性质
 > - nurture：n./v. 养育；后天培养（nature vs nurture）
+
+## 0706
+
+#### manure：粪肥；肥料 | 施肥（v.）
+
+> manure n. 粪肥；有机肥料 | manure the ground / soil 给土地 / 土壤施肥 | manured soil / land 施过肥的土壤 | apply manure 施用粪肥 | animal manure 畜粪 | green manure 绿肥
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 农业 / 土壤 / 牲畜阅读常考：**manure** 与 **fertilizer / organic matter** 同场出现
+> - **manure the ground** = 给土地施肥（ground 指耕地表层）
+
+> ##### 同义替换（附雅思释义）
+>
+> - fertilizer / fertiliser：n. 肥料
+> - organic matter：n. 有机质
+> - dung：n. 粪便（较粗）
+
+#### ground：地面；土地 | 根据；理由 | 磨碎（grind 过去式）
+
+> on the ground 在地面上；在现场 | ground soil / farmland 土地；耕地 | break new ground 开辟新领域 | common ground 共同点 | on medical / legal grounds 出于医疗 / 法律理由 | ground coffee / spices 磨碎的咖啡 / 香料（grind 过去式 / 过去分词）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **manure the ground** 中 ground = 可耕作的土地表层，≠ 仅「地面」
+> - **grounds for …** = … 的理由（可数，常复数）
+> - 与 **background / underground / groundwork** 区分
+
+> ##### 同义替换（附雅思释义）
+>
+> - soil / earth / land：n. 土壤；土地
+> - basis / reason：n. 根据；理由
+> - terrain：n. 地形；地势
+
+> ##### 形近易混（附雅思释义）
+>
+> - ground：地面；土地；理由
+> - grounded：adj. 有根据的；接地的；脚踏实地的
+> - groundwork：n. 基础工作；铺垫
+
+#### pathogen：病原体；致病微生物
+
+> pathogen n. 病原体 | pathogenic adj. 致病的 | pathogenic bacteria / virus 致病细菌 / 病毒 | transmit pathogens 传播病原体 | pathogen-free 无病原体的
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 卫生、农业、食品安全阅读高频：**pathogen** ≈ **disease-causing organism / agent**
+> - 与 **contamination / infection / outbreak** 常同段出现
+> - **carrier** 可携带病原体但不发病
+
+> ##### 同义替换（附雅思释义）
+>
+> - disease-causing organism / agent：致病生物 / 因子
+> - microbe / microorganism：n. 微生物（语境更宽）
+> - germ：n. 病菌（口语）
+> - infectious agent：n. 传染因子（正式）
+
+> ##### 形近易混（附雅思释义）
+>
+> - pathogen：病原体
+> - pathology：n. 病理学
+> - pathetic：adj. 可怜的；可悲的（形近无关）
+
+#### be born out of：源于；产生于；由… 催生
+
+> be born out of necessity / crisis / conflict 出于必要 / 危机 / 冲突而产生 | an idea born out of experience 源于经验的想法 | born out of a need to … 出于… 的需要而诞生
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 抽象主语常用：**The practice was born out of …** 这一做法源于…
+> - 判断题：**born out of** = 因果关系中的「起源」，勿译成字面「出生」
+> - 与 **stem from / arise from / originate in** 可互换
+
+> ##### 同义替换（附雅思释义）
+>
+> - stem from / spring from：v. 源于
+> - arise from / emerge from：v. 由… 产生；从… 中出现
+> - originate in / from：v. 起源于
+> - result from：v. 由… 导致（偏结果）
+> - give rise to：v. 引起；使产生（反方向：A give rise to B）
+
+#### organic：有机的；有机物的 | 有机农业 / 食品的
+
+> organic matter / material 有机质；有机物质 | organic farming / food 有机农业 / 有机食品 | organic chemistry 有机化学 | organically adv. 有机地；自然地 | organ n. 器官；机构
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 农业 / 环境阅读：**organic matter** 与 **manure / compost** 常同段
+> - 化学语境：**organic compounds / particles** 有机化合物 / 粒子（≠ 仅「有机食品」）
+> - 与 **inorganic / synthetic** 对照
+
+> ##### 同义替换（附雅思释义）
+>
+> - natural：adj. 天然的（organic food 语境近义，不完全等同）
+> - carbon-based：adj. 碳基的（科学语境）
+> - biological：adj. 生物的；生物性的
+
+> ##### 形近易混（附雅思释义）
+>
+> - organic：有机的
+> - organism：n. 生物体
+> - organize：v. 组织
+
+#### to date：迄今为止；到目前为止
+
+> to date 迄今为止（常放句首 / 句末）| the best result to date 迄今最好成绩 | research to date suggests … 目前研究表明…
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **to date** = **so far / up to now / up to the present**，强调「直到此刻为止」
+> - 与 **by date**（按日期）、**out of date**（过时的）完全不同
+
+> ##### 同义替换（附雅思释义）
+>
+> - so far / thus far：迄今为止
+> - up to now / up to the present：到目前为止
+> - hitherto：adv. 迄今（正式）
+
+#### mound：土堆；小丘；一堆；冢
+
+> a mound of earth / soil 土堆 | burial mound 坟冢；古墓丘 | termite mound 白蚁丘 | mound up 堆起；积成堆
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 地理 / 考古 / 生态阅读：**mound** 可指自然小丘、人工土堆或昆虫堆巢
+> - 与 **hill / heap / pile** 区分：mound 常指圆丘状、不太高的隆起
+
+> ##### 同义替换（附雅思释义）
+>
+> - hillock / knoll：n. 小丘
+> - heap / pile：n. 一堆
+> - elevation：n. 隆起；高地（较正式）
+
+#### top up：加满；补足；充值
+
+> top up the soil / water / fuel 给土壤 / 水 / 燃料加满 | top up a mobile phone 手机充值 | top-up n. 补足；充值；补贴（a top-up payment）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 农业 / 工程语境：**top up nutrients / moisture** 补足养分 / 水分
+> - 英式口语高频；阅读可能以 **replenish / add to** 同义改写
+
+> ##### 同义替换（附雅思释义）
+>
+> - replenish：v. 补充；重新装满
+> - refill：v. 再装满
+> - supplement：v. 增补；补充
+
+#### nothing other than：无非是；只不过是；正是（强调「仅此而已」）
+
+> nothing other than … 无非是…；正是… | it is nothing other than a … 这无非是一个… | choose nothing other than … 选的正是…
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 强调句型，语气比 **only / just** 更强、更正式
+> - 判断题勿漏读 **other than** 的「排除其他可能」意味
+
+> ##### 同义替换（附雅思释义）
+>
+> - nothing but / only / merely：只不过是
+> - precisely / exactly：adv. 正是；恰恰
+> - simply：adv. 仅仅；只不过
+
+#### porous：多孔的；可渗透的；疏松的
+
+> porous soil / rock / material 多孔土壤 / 岩石 / 材料 | porous surface 多孔表面 | porosity n. 孔隙度；多孔性 | porously adv.（罕用）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 土壤 / 水文 / 材料阅读高频：**porous** ↔ **permeable**（可渗透）
+> - 反义 **impermeable / non-porous** 不透水 / 非多孔
+> - 与 **crack / trap / droplet** 常同段：水在孔隙中流动、滞留
+
+> ##### 同义替换（附雅思释义）
+>
+> - permeable：adj. 可渗透的
+> - spongy / holey：adj. 海绵状的；多孔的（较口语）
+> - leaky：adj. 渗漏的（偏「漏」）
+
+> ##### 形近易混（附雅思释义）
+>
+> - porous：多孔的
+> - porousness：n. 多孔性（= porosity）
+> - gorgeous：adj. 华丽的（形近无关）
+
+#### capitalize / capitalise：利用；从… 中获利 | 大写 | 资本化
+
+> capitalize on sth. 利用…；从… 中获利 | capitalize an opportunity / advantage 抓住机会 / 优势 | capital n. 资本；首都；大写字母 | capitalization n. 大写；资本化
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 阅读高频义：**capitalize on** = **take advantage of / exploit / make use of**
+> - 勿与仅「大写字母」义混淆；题干 **use / exploit** 可对应 capitalize on
+
+> ##### 同义替换（附雅思释义）
+>
+> - take advantage of / exploit：v. 利用
+> - make use of / harness：v. 利用；驾驭
+> - benefit from：v. 从… 受益
+
+> ##### 形近易混（附雅思释义）
+>
+> - capitalize on：利用
+> - capital：n./adj. 资本；首都；大写的
+> - caption：n. 说明文字；字幕
+
+#### passage：通道；走廊 | 段落；篇章 | 通过；通行
+
+> a narrow passage 狭窄通道 | air / nasal passage 气道 / 鼻腔通道 | a passage from the text 文中一段 | the passage of time / legislation 时间的流逝 / 法案的通过 | rite of passage 成年礼；人生必经阶段
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 多义高频：**physical passage**（物理通道）vs **text passage**（文章段落）
+> - **the passage of water through porous soil** 水穿过多孔土壤的通道 / 过程
+> - 与 **paragraph / section** 区分：passage 可指更长节选
+
+> ##### 同义替换（附雅思释义）
+>
+> - corridor / channel：n. 通道；渠道
+> - excerpt / extract：n. 节选；段落
+> - transit / movement through：通过；穿行
+
+#### droplet：小滴；微滴
+
+> water droplets 水珠；水滴 | tiny droplets 微小液滴 | droplet size 液滴大小 | a droplet of … 一滴…
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 气象 / 卫生 / 土壤水分阅读：**droplet** 强调「小液滴」，常考 **aerosol / spray / evaporation**
+> - **trap in droplets** 困在微滴中（病原体、颗粒物语境）
+
+> ##### 同义替换（附雅思释义）
+>
+> - drop / bead：n. 滴；珠
+> - particle：n. 颗粒；微粒（更宽）
+> - moisture：n. 水分；湿气
+
+#### trap：陷阱 | 困住；截留；留住
+
+> trap n. 陷阱；捕兽器 | trap v. 困住；截留；使滞留 | trap water / heat / pathogens 截留水分 / 热量 / 病原体 | trapped adj. 被困的；滞留的 | trapping n. 捕获；截留
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 科学阅读抽象义：**trap moisture / droplets / particles** = 留住 / 蓄积，≠ 仅「陷阱」
+> - **greenhouse trap heat** 温室截留热量
+> - 被动 **be trapped in cracks / pores** 困在裂缝 / 孔隙中
+
+> ##### 同义替换（附雅思释义）
+>
+> - capture / retain：v. 捕获；保留
+> - confine / ensnare：v. 困住；限制
+> - snare：n./v. 陷阱；诱捕
+
+> ##### 形近易混（附雅思释义）
+>
+> - trap：陷阱；截留
+> - strap：n./v. 带子；捆扎
+> - wrap：v. 包裹
+
+#### crack：裂缝；裂纹 | 破裂；破解 | 爆裂声
+
+> crack in the soil / rock / surface 土壤 / 岩石 / 表面裂缝 | crack v. 破裂；开裂；破解 | cracked adj. 有裂缝的 | crack down on 严厉打击 | crack a code / problem 破解密码 / 问题
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 土壤 / 材料阅读：**cracks** 与 **porous / dry / erosion** 同场；水分可沿裂缝下渗或蒸发
+> - **water trapped in cracks** 困在裂缝中的水
+> - 勿与 **crack down**（打击）、**crack a joke**（开玩笑）在阅读中混淆
+
+> ##### 同义替换（附雅思释义）
+>
+> - fissure / fracture：n. 裂缝；断裂（正式）
+> - split / gap：n./v. 裂开；缝隙
+> - break：v./n. 破裂；断裂
+
+> ##### 形近易混（附雅思释义）
+>
+> - crack：裂缝；破裂
+> - craze：n./v. 裂纹；狂热
+> - crush：v. 压碎；镇压
+
+#### exploit：利用；开发；剥削 | 壮举；功绩（n.）
+
+> exploit v. 利用；开发；剥削 | exploit natural resources / an opportunity / a weakness 开发自然资源 / 利用机会 / 利用弱点 | exploit workers 剥削工人 | exploitation n. 利用；剥削；开发 | exploitative adj. 剥削性的 | heroic exploits n. 英勇事迹；功绩
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 环境 / 科技 / 经济：**exploit resources / potential** = 开发利用（中性，≈ harness / tap）
+> - 商业 / 社会：**exploit a market / loophole / workers** 开拓市场 / 利用漏洞 / 剥削劳工（褒贬看对象）
+> - 历史 / 文学：**his exploits** = 功绩、壮举（可数复数，≠ 剥削义）
+> - 与 **capitalize on / take advantage of** 常互替；题干 **use / harness** 可对应 exploit
+
+> ##### 同义替换（附雅思释义）
+>
+> - take advantage of / capitalize on：v. 利用
+> - harness / make use of / tap：v. 开发利用
+> - abuse / misuse：v. 滥用；不当利用（偏负面）
+> - heroic deeds / feats：n. 英勇事迹（exploit n.）
+
+> ##### 形近易混（附雅思释义）
+>
+> - exploit：利用；剥削；功绩
+> - explore：v. 探索；考察
+> - exploration：n. 探索（≠ exploitation 剥削 / 开发）
