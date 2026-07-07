@@ -215,3 +215,134 @@ column: 学习笔记
 > - exploit：利用；剥削
 > - explore：v. 探索
 > - exploitation：开发 / 剥削 vs exploration：探索
+
+## 0707
+
+### 本篇逻辑链（经济史 · 活动展开 · 大量涌现）
+
+- **时代背景**：`the Depression` 大萧条 ↔ 经济 `depression / downturn`
+- **活动阶段**：`in full swing` 全面展开、正酣
+- **数量爆发**：`a slew of` 大量 + `pop up` 突然涌现
+- **反响**：`resound` 响彻 / 引起强烈反响（`resounding success`）
+
+### 本篇逻辑链（107 P2 · Western celebrity · 名人文化史）
+
+- **词源**：Latin *celeber*（**populous** / frequented）→ **term** *celebrity*
+- **古代名人**：**deities** / **immortals** / arena **victors** → **revered** figures
+- **名气巩固**：mass media **cement** status；**newfound** fame
+- **现代现象**：**seemingly** ordinary people；**obsession** with **celebrities**
+- **叙事载体**：**portraits**；heroic **exploits**；**miraculous** rise
+- **抽象概念**：**notion** of fame；**intimately** linked to culture
+
+#### resound：回响；引起强烈反响
+
+> resound with applause / criticism 充满掌声 / 批评 | resound through the hall 响彻大厅 | resounding success 巨大成功
+
+> ##### 同义替换（附雅思释义）
+>
+> - echo / reverberate / ring out | be filled with | resounding：彻底的；巨大的
+
+#### in full swing：全面展开；正进行得火热
+
+> the project / festival is in full swing 项目 / 节日正热火朝天 | get into full swing 进入全面阶段
+
+> ##### 阅读注意（附雅思释义）
+>
+> - = 最活跃阶段，≠ 刚开始；同替 **underway / at its peak / in full force**
+
+#### Depression：大萧条 | 萧条；抑郁
+
+> the Great Depression 大萧条 | economic depression 经济萧条 | depression n. 抑郁（小写）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **Depression** 大写 / **the Depression** = 特指 1920–30 年代大萧条
+> - 同替 **recession / downturn / slump**（depression 更严重）
+
+#### a slew of：大量；许多
+
+> a slew of problems / changes / stores 大量问题 / 变化 / 店铺
+
+> ##### 同义替换（附雅思释义）
+>
+> - a host of / a raft of / numerous / an array of
+
+#### pop up：突然出现；冒出
+
+> problems pop up 问题突然出现 | pop-up shop / store 快闪店
+
+> ##### 同义替换（附雅思释义）
+>
+> - spring up / crop up / emerge / appear unexpectedly
+
+#### celebrity / celebrities：名人
+
+> celebrate → **celebrated** adj. | celebrity culture | ancient **celebrities** = deities / victors
+
+> ##### 适当形式
+>
+> - celebrity → **celebrities** | celebrate → **celebrated** / **celebration**
+
+#### obsession：痴迷
+
+> obsess → **obsession** → **obsessed** → **obsessive** | an obsession with / be obsessed with
+
+#### notion：观念
+
+> the **notion** of fame / celebrity | ≈ idea / concept / belief
+
+#### term：术语；词语
+
+> the **term** *celebrity* | in **terms** of | derived from Latin
+
+#### populous：人口稠密的
+
+> populate → **population** → **populous** | *celeber* = frequented or **populous** | ⚠️ ≠ **popular**
+
+#### deity / deities：神祇
+
+> deity → **deities** | divine / divinity
+
+#### immortal / immortals：永生的；神仙
+
+> immortal → **immortals** → **immortality** → **immortalize**
+
+#### Victor / victor / victors：胜利者
+
+> victory → **victor** → **victors** → **victorious** | Roman arena victors
+
+#### revered / revere：受崇敬的
+
+> revere → **revered** → **reverence** → **reverent** | ≈ venerated / respected
+
+#### seemingly：表面上
+
+> seem → **seeming** → **seemingly** | seemingly ordinary ≈ apparently / ostensibly
+
+#### newfound：新获得的
+
+> **newfound** fame / status / wealth（复合 adj.）| ≈ newly acquired
+
+#### miraculous / miracle：奇迹般的
+
+> miracle → **miraculous** → **miraculously**
+
+#### portrait / portraits：肖像
+
+> portrait → **portraits** → **portraitist** | portraiture
+
+#### intimately / intimate：密切地
+
+> intimate → **intimately** → **intimacy** | intimately connected / linked
+
+#### exploits：功绩（n. 复）
+
+> heroic **exploits** | exploit v. 利用（≠ exploits 功绩）
+
+#### cement：巩固
+
+> **cement** fame / status → **cemented** | ≈ strengthen / consolidate / solidify
+
+##### 适当形式填空（107 P2）
+
+> 1. **celebrities** (celebrity) · 2. **victors** (Victor) · 3. **immortals** (immortal) · 4. **revered** (revere) · 5. **populous** (populate) · 6. **obsession** (obsess) · 7. **cemented** (cement) · 8. **portraits** (portrait) · 9. **miraculous** (miracle) · 10. **intimately** (intimate)

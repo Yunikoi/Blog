@@ -733,3 +733,447 @@ column: 学习笔记
 > - exploit：利用；剥削；功绩
 > - explore：v. 探索；考察
 > - exploration：n. 探索（≠ exploitation 剥削 / 开发）
+
+## 0707
+
+#### resound：回响；鸣响；回荡 | 引起强烈反响；被广为传颂
+
+> resound v. 回响；回荡；响彻 | resound with laughter / applause 充满笑声 / 掌声 | resound through / across … 响彻… | resound with 因… 而反响强烈 | resounding adj. 响亮的；轰动的；彻底的（a resounding success 巨大成功）| resoundingly adv. 响亮地；彻底地
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 抽象义：**resound with praise / criticism** 广受赞誉 / 批评（≈ be filled with）
+> - **resounding success / victory / defeat** 形容词义 = 彻底的、巨大的
+> - 与 **echo / reverberate / ring out** 近义
+
+> ##### 同义替换（附雅思释义）
+>
+> - echo / reverberate / ring out：v. 回响；响彻
+> - be filled with：充满（resound with 抽象替换）
+> - resounding：adj. 彻底的；巨大的（success 语境）
+
+> ##### 形近易混（附雅思释义）
+>
+> - resound：回响；引起反响
+> - rebound：v./n. 反弹；回升
+> - abound：v. 大量存在（abound in / with）
+
+#### in full swing：全面展开；正进行得火热；达到高潮
+
+> in full swing 全面展开；如火如荼 | the festival / campaign / construction is in full swing 节日 / 运动 / 施工正热火朝天 | get into full swing 进入全面展开阶段
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 描述活动 / 项目 / 季节 **正处于最活跃阶段**，≠ 刚开始
+> - 与 **underway / at its peak / in progress** 可互换
+> - **swing** 本义摆动；短语为固定搭配，勿拆字译
+
+> ##### 同义替换（附雅思释义）
+>
+> - in full force：全面展开；全力进行
+> - at its height / peak：处于高潮 / 顶峰
+> - underway / in progress：正在进行中
+> - in the thick of：处于… 最活跃阶段
+
+#### Depression：大萧条（the Great Depression）| 萧条；抑郁
+
+> the Great Depression 大萧条（1929–1930s）| economic depression 经济萧条 | depression n. 抑郁；低洼；萧条期 | depressive adj. 抑郁的 | depress v. 使沮丧；压低 | depressed adj. 萧条的；沮丧的
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 历史 / 经济阅读：**Depression** 大写或 **the Depression** = 特指美国大萧条
+> - 小写 **depression** = 经济衰退期或心理抑郁（看语境）
+> - 与 **recession / downturn / slump** 区分：Depression 更严重、更持久
+
+> ##### 同义替换（附雅思释义）
+>
+> - the Great Depression：大萧条（专名）
+> - recession / downturn / slump：n. 经济衰退；萧条
+> - economic crisis：经济危机
+> - melancholy / despondency：n. 忧郁（心理义）
+
+> ##### 形近易混（附雅思释义）
+>
+> - Depression / depression：大萧条；萧条；抑郁
+> - repression：n. 压制；压抑
+> - oppression：n. 压迫
+
+#### a slew of：大量；许多（可数名词前）
+
+> a slew of problems / changes / new products 大量问题 / 变化 / 新产品 | slew n. 大量（单用较少，多 **a slew of**）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 美式口语 / 新闻体高频；学术文亦常见
+> - 后接 **可数名词复数** 或 **不可数名词** 均可
+> - 与 **a host of / a raft of / numerous** 同替
+
+> ##### 同义替换（附雅思释义）
+>
+> - a host of / a raft of / a multitude of：大量
+> - numerous / many / plenty of：许多的
+> - an array of / a range of：一系列；各种各样的
+
+#### pop up：突然出现；冒出；弹出
+
+> pop up v. 突然出现；冷不防冒出 | pop-up adj./n. 弹出的；快闪店（pop-up shop / store）| problems pop up 问题层出不穷 | pop up everywhere 到处涌现
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 强调 **突然、意外、短期出现**；商业阅读 **pop-up store** = 快闪店
+> - 与 **emerge / appear / arise unexpectedly** 同替
+> - 勿与 **popup**（网页弹窗）混淆，阅读多为动词短语
+
+> ##### 同义替换（附雅思释义）
+>
+> - appear / emerge / arise：v. 出现；产生
+> - spring up：v. 迅速出现；涌现
+> - crop up：v. 意外出现（问题等）
+> - surface：v. 浮现；显露
+
+> ##### 形近易混（附雅思释义）
+>
+> - pop up：突然出现
+> - pop in / out：短暂来访 / 出去一下
+> - prop up：v. 支撑；维持
+
+#### celebrity / celebrities：名人；名流；名气
+
+> celebrity n. 名人；名气 | celebrities（复数）名人 | celebrate v. 庆祝；颂扬 | celebrated adj. 著名的；闻名的 | celebration n. 庆祝 | celebrity culture 名人文化 | rise to fame / celebrity 成名
+
+> ##### 适当形式（填空）
+>
+> - celebrity → **celebrities**（复数）
+> - celebrate → **celebrated**（adj. 著名的）→ **celebration**（n.）
+> - 填空示例：The **celebrities** of the ancient world were deities. / a **celebrated** writer
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 本篇 **107 P2 Western celebrity**：词源 **celeber**（拉丁）→ celebrity
+> - 古代 **celebrities** = 神祇、胜利者；现代 = 媒体名人
+> - 与 **public figure / superstar / icon** 同替
+
+> ##### 同义替换（附雅思释义）
+>
+> - public figure / famous personality / superstar / icon
+> - fame / renown / stardom
+
+#### obsession：痴迷；执念 | obsessed / obsessive
+
+> obsession n. 痴迷；执念 | obsessed adj. 痴迷的（**be obsessed with**）| obsessive adj. 过分迷恋的；强迫性的 | obsess v. 使痴迷；困扰 | an obsession with celebrities / fame 对名人 / 名气的痴迷
+
+> ##### 适当形式（填空）
+>
+> - obsess → **obsession**（n.）→ **obsessed**（adj.）→ **obsessive**（adj.）
+> - 填空示例：an **obsession** with fame / **obsessed** with celebrities / **obsessive** fans
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 偏 **过度、不健康** 的迷恋；作文 **fuel / overcome obsession**
+> - **obsessed with** 人作主语；**obsession with** 名词短语
+
+> ##### 同义替换（附雅思释义）
+>
+> - fixation / craze / fascination / addiction / blind admiration
+
+#### notion：观念；概念；想法
+
+> notion n. 观念；概念；想法 | a notion of fame / celebrity … 的概念 | preconceived notion 成见 | notionally adv. 理论上
+
+> ##### 适当形式（填空）
+>
+> - notion（可数 n.）→ **notions**（复数，多种观念）
+> - 填空示例：the **notion** of celebrity / challenge the **notion** that …
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 抽象概念义 ≈ **idea / concept / belief**
+> - **the notion that …** 从句作同位语（… 的观念）
+
+> ##### 同义替换（附雅思释义）
+>
+> - idea / concept / belief / perception
+
+> ##### 形近易混（附雅思释义）
+>
+> - notion：观念
+> - motion：n. 运动；动议
+> - emotion：n. 情感
+
+#### term：术语；词语；期限 | 把… 称作
+
+> term n. 术语；词语；期限 | in the long / short term 长期 / 短期 | the term **celebrity** 一词 | **term** sb. sth. 把某人称为… | terminology n. 术语体系 | terminal adj./n. 终端的；终点站
+
+> ##### 适当形式（填空）
+>
+> - term → **terms**（复数：terms and conditions 条款 / in terms of 就… 而言）
+> - 填空示例：The **term** *celebrity* is derived from Latin. / in **terms** of fame
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 本篇考 **词源**：The word … is derived from … meaning …
+> - **in terms of** = 就… 而言（≠ term 作「期限」）
+
+> ##### 同义替换（附雅思释义）
+>
+> - word / expression / phrase / designation
+> - period / duration（期限义）
+
+#### populous：人口稠密的；众多的
+
+> populous adj. 人口稠密的；众多的 | a populous city / region 人口稠密的城市 / 地区 | populate v. 居住于；填充 | population n. 人口 | populousness n. 人口密度（罕）
+
+> ##### 适当形式（填空）
+>
+> - populate → **population**（n. 人口）→ **populous**（adj. 人口稠密的）
+> - 填空示例：Latin *celeber* meaning ‘frequented or **populous**’ / a **populous** area
+> - ⚠️ **populous**（adj.）≠ **popular**（adj. 流行的）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **107 P2** 原文：*celeber* = **frequented or populous**（常有人往来 / 人多的）
+> - 词根 **popul-** = people
+
+> ##### 同义替换（附雅思释义）
+>
+> - densely populated / crowded / inhabited
+> - numerous / plentiful（众多的）
+
+> ##### 形近易混（附雅思释义）
+>
+> - populous：人口稠密的
+> - popular：流行的；受欢迎的
+> - populate：v. 居住；填充
+
+#### deity / deities：神祇；神灵
+
+> deity n. 神祇；神灵 | deities（复数）诸神 | divine adj. 神的；神圣的 | divinity n. 神性；神学
+
+> ##### 适当形式（填空）
+>
+> - deity → **deities**（复数）
+> - 填空示例：the **deities** of Greece and Rome / awesome **deities**
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 古代 celebrity = **powerful deities**；与 **immortals** 同段
+> - ≈ **god / goddess / divine being**
+
+> ##### 同义替换（附雅思释义）
+>
+> - god / goddess / divine being / immortal（近义场）
+
+#### immortal / immortals：永生的；不朽的 | 神仙；永生者
+
+> immortal adj. 永生的；不朽的 | immortals n. 神仙；永生者（复）| immortality n. 永生；不朽 | immortalize v. 使名垂千古
+
+> ##### 适当形式（填空）
+>
+> - immortal → **immortals**（n. 复）→ **immortality**（n.）→ **immortalize**（v.）
+> - 填空示例：a vast number of **immortals** / **immortal** fame / achieve **immortality**
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 本篇：**immortals who had a direct impact on their lives**
+> - 作品义 **immortal works** = 不朽之作
+
+> ##### 同义替换（附雅思释义）
+>
+> - eternal / undying / everlasting
+> - legendary figure / deity（语境近义）
+
+#### Victor / victor / victors：胜利者；获胜者
+
+> Victor 专名：维克托 | victor n. 胜利者；获胜者 | victors（复数）| victorious adj. 胜利的 | victory n. 胜利 | victoriously adv.
+
+> ##### 适当形式（填空）
+>
+> - victory → **victor**（n.）→ **victors**（复）→ **victorious**（adj.）
+> - 填空示例：Roman **victors** in the arena / a **victorious** general / celebrate **victory**
+> - ⚠️ **Victor** 大写 = 人名；**victor** 小写 = 胜利者
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 古代罗马：**victors** 在竞技 / 战场成名 → 早期 celebrity 类型
+> - 与 **winner / conqueror / champion** 同替
+
+> ##### 同义替换（附雅思释义）
+>
+> - winner / conqueror / champion / hero
+
+#### revered / revere：受崇敬的 | 崇敬；尊崇
+
+> revere v. 崇敬；尊崇 | revered adj. 受崇敬的（**the revered figures**）| reverence n. 崇敬；敬意 | reverent adj. 恭敬的 | reverently adv.
+
+> ##### 适当形式（填空）
+>
+> - revere → **revered**（adj. / 过去分词）→ **reverence**（n.）→ **reverent**（adj.）
+> - 填空示例：**revered** as heroes / **revere** a leader / show **reverence** for
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **revered figures** = 备受尊崇的人物（≈ **respected / venerated**）
+> - 被动 **be revered for …** 因… 而受敬仰
+
+> ##### 同义替换（附雅思释义）
+>
+> - respect / venerate / worship / admire deeply
+> - respected / venerated / esteemed
+
+#### seemingly：表面上； seemingly 看来
+
+> seemingly adv. 表面上；看来 | seem v. 似乎；看起来 | seeming adj. 表面的 | seemingly ordinary 看似普通的 | seemingly impossible 看似不可能的
+
+> ##### 适当形式（填空）
+>
+> - seem → **seeming**（adj. 表面的）→ **seemingly**（adv.）
+> - 填空示例：**seemingly** ordinary people / a **seeming** contradiction / it **seems** that …
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 转折信号：表面… 实则…（**seemingly … but in fact …**）
+> - ≈ **apparently / ostensibly / on the surface**
+
+> ##### 同义替换（附雅思释义）
+>
+> - apparently / ostensibly / on the surface / outwardly
+
+#### newfound：新获得的；新近得到的
+
+> newfound adj. 新获得的；新近发现的 | newfound fame / wealth / freedom / interest 新获得的名望 / 财富 / 自由 / 兴趣
+
+> ##### 适当形式（填空）
+>
+> - new + found → **newfound**（复合 adj.，仅作定语）
+> - 填空示例：**newfound** fame / celebrity / status
+> - ⚠️ 无 **newfoundly**；副词用 **newly**（newly acquired）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 常修饰 **fame / status / celebrity / wealth**
+> - ≈ **newly acquired / recently gained**
+
+> ##### 同义替换（附雅思释义）
+>
+> - newly acquired / recently gained / fresh
+
+#### miraculous / miracle：奇迹般的 | 奇迹
+
+> miraculous adj. 奇迹般的；不可思议的 | miracle n. 奇迹 | miraculously adv. 奇迹般地 | perform / work miracles 创造 / 产生奇迹
+
+> ##### 适当形式（填空）
+>
+> - miracle → **miraculous**（adj.）→ **miraculously**（adv.）
+> - 填空示例：**miraculous** powers / a **miracle** / **miraculously** recover
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 神祇 / 英雄语境：**miraculous powers / deeds**
+> - 勿与 **marvelous**（极好的）混淆
+
+> ##### 同义替换（附雅思释义）
+>
+> - extraordinary / incredible / phenomenal
+> - wonder / marvel（n. 奇迹）
+
+> ##### 形近易混（附雅思释义）
+>
+> - miraculous：奇迹般的
+> - marvelous：极好的；了不起的
+
+#### portrait / portraits：肖像；画像
+
+> portrait n. 肖像；画像 | portraits（复数）| portraitist n. 肖像画家 | portraiture n. 肖像艺术 | self-portrait 自画像
+
+> ##### 适当形式（填空）
+>
+> - portrait → **portraits**（复）→ **portraitist**（n. 肖像画家）
+> - 填空示例：paint **portraits** of celebrities / a **portrait** of the king
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 与 **celebrity / fame** 段：肖像传播名气
+> - **portrait of** sb.；**portraitist** 戈雅篇亦考
+
+> ##### 同义替换（附雅思释义）
+>
+> - likeness / image / depiction / representation
+
+#### intimately / intimate：密切地；深入地 | 亲密的
+
+> intimate adj. 亲密的；密切的 | intimately adv. 亲密地；密切地；深入地 | intimacy n. 亲密；密切 | be intimately connected / linked / involved with … 与… 密切相关
+
+> ##### 适当形式（填空）
+>
+> - intimate → **intimately**（adv.）→ **intimacy**（n.）
+> - 填空示例：**intimately** connected with fame / an **intimate** relationship / **intimacy** between …
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 阅读高频 **intimately connected / linked / tied to** = 密切相关（≠ 仅「亲密」）
+> - 人物义：**intimate friend** 密友
+
+> ##### 同义替换（附雅思释义）
+>
+> - closely / deeply / inextricably
+> - close / familiar（adj.）
+
+> ##### 形近易混（附雅思释义）
+>
+> - intimate / intimately：密切的；深入地
+> - estimate：v./n. 估计（形近无关）
+
+#### exploits：功绩；壮举；英勇事迹（n. 复）
+
+> exploits n.（复）功绩；壮举；英勇事迹 | exploit v. 利用；开发；剥削（见 0706）| exploitative adj. 剥削性的
+
+> ##### 适当形式（填空）
+>
+> - exploit → **exploits**（n. 复，功绩）| **exploited**（adj. 被剥削的）| **exploitation**（n.）
+> - 填空示例：heroic **exploits** / military **exploits**（≠ exploit resources 利用资源）
+
+> ##### 阅读注意（附雅思释义）
+>
+> - **exploits** 必复数 = deeds / feats；**exploit** v. = 利用
+> - 英雄 / 胜利者语境：**celebrate one's exploits**
+
+> ##### 同义替换（附雅思释义）
+>
+> - heroic deeds / feats / achievements / accomplishments
+
+#### cement：巩固；加强；使… 牢固 | 水泥
+
+> cement v. 巩固；加强；使牢固 | cement one's fame / status / reputation / position 巩固名声 / 地位 / 声誉 | cemented adj. 巩固的；牢固的 | cement n. 水泥 | cement the relationship 巩固关系
+
+> ##### 适当形式（填空）
+>
+> - cement → **cemented**（adj. / 过去式）→ **cementing**（现在分词）
+> - 填空示例：**cement** one's status / **cemented** his reputation / **cementing** their fame
+
+> ##### 阅读注意（附雅思释义）
+>
+> - 阅读抽象义 **cement fame / status** = **strengthen / consolidate / solidify**
+> - ≠ 仅「水泥」义
+
+> ##### 同义替换（附雅思释义）
+>
+> - strengthen / consolidate / solidify / reinforce
+> - establish firmly / fix in place
+
+> ##### 形近易混（附雅思释义）
+>
+> - cement：巩固；水泥
+> - sentiment：n. 情感；情绪
+> - cement vs concrete：cement 水泥；concrete 混凝土
+
+##### 适当形式填空（107 P2 · Western celebrity）
+
+> 用括号内词的正确形式填空：
+>
+> 1. The **celebrities** (celebrity) of the ancient world were deities and **victors** (Victor).
+> 2. Citizens believed in many **immortals** (immortal) and **revered** (revere) them.
+> 3. The **term** (term) *celebrity* comes from Latin *celeber*, meaning frequented or **populous** (populate).
+> 4. The **notion** (notion) of fame has changed; **seemingly** (seem) ordinary people can become stars.
+> 5. Mass media **cemented** (cement) the **newfound** (newfound) status of public figures.
+> 6. Fans develop an **obsession** (obsess) and read about heroic **exploits** (exploit) in **portraits** (portrait).
+> 7. **Intimately** (intimate) linked to this culture is **miraculous** (miracle) stories of rise to fame.
