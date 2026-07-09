@@ -14,27 +14,6 @@ column: 学习笔记
 
 #### take on：雅思常考释义：承担（责任 / 任务）；接纳；雇用；呈现（特征 / 面貌）
 
-> ##### 衍生拓展短语（附雅思释义）
->
-> - take up：开始从事；占据（时间 / 空间）
-> - take over：接管；接手；接替
-> - take in：理解；收留；欺骗
-> - take off：起飞；突然走红；脱下
->
-> ##### 形近易混短语（附雅思释义）
->
-> - turn on：打开；取决于
-> - pick on：欺负；挑剔
-> - carry on：继续；坚持
->
-> ##### 同义替换（附雅思释义）
->
-> - undertake：v. 承担；着手做
-> - assume：v. 承担（职责）；假定
-> - employ：v. 雇用；聘用
-> - adopt：v. 呈现；采纳；接受
->
-
 ## 0504
 
 #### domestic：国内的 | 驯养的；家养的
@@ -50,20 +29,6 @@ column: 学习笔记
 #### proficiency：熟练；精通；（语言 / 技能）水平
 
 #### alongside：在…… 旁边；沿着…… 边上 | **与…… 一起；同时并存**（雅思写作高频）
-
-> ##### 语法用法
->
-> 1. 空间：在旁边、并排
->
->    walk alongside the river 沿河边走
->
-> 2. 抽象：
->
->    连同、伴随、与…… 同时
->
->    Traditional skills exist alongside modern technology.
->
->    传统技艺与现代科技并存。
 
 #### circuit：电路；线路 | 环行；绕行
 
@@ -97,8 +62,6 @@ column: 学习笔记
 
 #### correct：正确的；对的 | 纠正；改正
 
-> correctly adv. 正确地；无误地
-
 #### property： 财产；资产；地产（最常用） | 特性；性质；属性（学术 / 理科高频）
 
 #### revulsion：强烈反感；厌恶；憎恶 | （情绪、态度）骤然逆转；突变
@@ -111,12 +74,6 @@ column: 学习笔记
 
 #### subtlety：微妙；细微之处
 
-> ##### 词根关联
->
-> subtle  adj. 微妙的；细微的；含蓄的
->
-> subtly  adv. 微妙地；隐晦地
-
 #### esteem：尊重；敬重；好评
 
 #### patronage：**赞助；资助；扶持**（艺术、机构、项目）|**光顾；惠顾**（商店、商家的顾客支持）
@@ -127,15 +84,11 @@ column: 学习笔记
 
 #### right to：名词短语：**做某事的权利**
 
-> ##### Everyone has the right to express their views.
-
 #### naturally / spontaneously / as a matter of course
 
 #### attend an examination
 
 #### in that
-
-> \# in that 用法精讲 **音标**：/ɪn ðæt/ **词性**：连词（书面正式） **核心意思**：**因为；在于；由于** ## 一、关键语法规则 1. 只能放**句中**，**不能放句首** 2. 用来解释**本质原因、区别特征**，比 because 高级，雅思写作加分 ## 二、句型结构 **主句 + in that + 原因从句** 例句： 1. This method is better **in that** it saves time. 这个方法更好，因为它省时。 2. The two plans differ **in that** one costs more. 两个方案的区别在于其中一个成本更高。 ## 三、和 because 区别 - **because**：普通表原因，口语书面都能用 - **in that**：**正式书面**，侧重「**界定、解释本质不同**」 ## 四、同义替换（写作直接替换） by virtue of the fact that due to the fact that as / since ## 五、易混短语千万别搞混 - in that  因为、在于 - now that  既然 - except that  除了 - in case that  万一 - in the case of  就……而言
 
 #### **receive training** ：接受培训
 
@@ -149,8 +102,6 @@ column: 学习笔记
 
 #### tie up：**占用（时间 / 资金 / 人力）；使无法脱身**（雅思、商务高频）
 
-> be tied up with work 被工作缠身
-
 #### verdict：结论
 
 #### cot：小床
@@ -161,17 +112,11 @@ column: 学习笔记
 
 #### diagonal：对角的；斜向的 | 对角线
 
-> diagonally adv. 对角地；斜向地
-
 #### handpick：v. **精心挑选；亲自甄选；择优挑选**
 
 #### has to offer：具备；拥有；可提供；有… 可取之处
 
-> Cities have a great deal to offer in terms of education and employment.
-
 #### parallel：平行的；类似的 | 平行线；相似处；纬线
-
-> unparalleled adj. 无与伦比的；空前的
 
 #### disdain：鄙视
 
@@ -185,8 +130,6 @@ column: 学习笔记
 
 #### embark：着手；开始（艰巨的任务、新项目）
 
-> 高频必考搭配：**embark on/upon sth** 开始从事、开启
-
 #### dwindle：逐渐减少；缩小；衰退
 
 #### pragmatic：实用的，务实的
@@ -196,8 +139,6 @@ column: 学习笔记
 #### impetus：推动力；促进因素（写作 / 阅读高频，社会、科技、环境话题）
 
 #### impute：归咎于
-
-> 核心固定搭配：**impute A to B** 把 A 归咎于 B
 
 #### distinction：区别；差别 | 优秀；卓越；殊荣 | 特质
 
@@ -210,28 +151,6 @@ column: 学习笔记
 #### overtake：超过；追上；赶超
 
 #### account：账户 | 叙述 | 解释 | 占比
-
-> **account for**
->
-> - 占（比例）
-> - 解释；说明原因
-> - 导致
->
-> **take into account = take account of**
->
-> 考虑到；顾及到（作文万能）
->
-> **on account of**
->
-> 因为；由于
->
-> **by all accounts**
->
-> 据说；人人都说
->
-> **on no account**
->
-> 绝不（倒装句考点）
 
 #### genre：种类
 
@@ -253,8 +172,6 @@ column: 学习笔记
 
 #### perverse：反常的；悖理的；执拗的
 
-> perversely adv. 反常地；偏偏
-
 #### empirical：经验主义的；实证的；以观察 / 实验为依据的
 
 #### intellectual：intellectual  adj. 智力的；知识的  /  n. 知识分子
@@ -266,20 +183,6 @@ column: 学习笔记
 #### dub：**为影片 / 节目配音；译制配音**（雅思娱乐、影视、文化话题高频） | **把…… 称作；授予…… 称号**（阅读 / 写作正式用法）
 
 #### strike：**罢工**（社会类阅读 / 写作高频） | **突然想到；猛然意识到**（雅思写作口语高分用法）|给…… 留下印象
-
-> ##### 必背固定搭配
->
-> - go on strike  举行罢工
-> - strike sb as…  给某人留下…… 印象
-> - It strikes sb that…  某人突然想到……（大作文万能句型）
-> - strike a balance  权衡利弊；保持平衡（写作高频）
-> - strike down  击倒；废除
-> - strike up a conversation  攀谈、开启对话（口语 Part2）
->
-> ##### 衍生词
->
-> - striking adj. 显著的；引人注目的（**雅思写作高分形容词**）
-> - striker n. 罢工者；前锋
 
 #### tempt：**引诱；诱惑**（雅思阅读、写作高频，物质 / 欲望诱惑）
 
@@ -301,8 +204,6 @@ column: 学习笔记
 
 #### ornamental：adj. **装饰性的；观赏用的；美化的**
 
-> decorative 装饰性的；adornment 装饰品；showy 观赏性的
-
 #### aesthetic：审美的；美学的
 
 #### scent：气味
@@ -315,8 +216,6 @@ column: 学习笔记
 
 #### epidemic：传染病，流行病
 
-> ##### pandemic 大流行病；outbreak 爆发；plague 瘟疫
-
 #### crossbreed：杂交
 
 #### pollinator：传粉
@@ -326,8 +225,6 @@ column: 学习笔记
 #### deactive：adj. **无效的；非活性的；失活的** | v. (常用 **deactivate**) **停用；关闭；使失效；解除激活**
 
 #### coincidental：巧合的；同时发生的
-
-> coincidence n. 巧合 | coincidentally adv. 巧合地
 
 #### antiseptic：杀菌的
 
@@ -349,12 +246,6 @@ column: 学习笔记
 
 #### evolve：进化
 
-> evolution n. 进化；演变；发展
->
-> evolutionary adj. 进化的；演变的
->
-> evolved adj. 进化了的；成熟的
-
 #### prepare：准备 | 筹备；配制；制作（食物、文件等）
 
 #### spice：n. **香料；调味品；趣味，情趣**
@@ -370,12 +261,6 @@ column: 学习笔记
 #### fend off：抵挡
 
 #### pollinate：授粉
-
-> pollen n. 花粉
->
-> pollination n. 授粉；传粉
->
-> pollinator n. 传粉昆虫 / 媒介（蜜蜂、蝴蝶等）
 
 #### entice：引诱
 
@@ -399,26 +284,11 @@ column: 学习笔记
 
 #### intuitive：直觉的 | **直观易懂的；上手简单的**（产品、界面、设计**超常用**）
 
-> instinctive 本能的、直觉的
->
-> user-friendly 易用的
->
-> straightforward 浅显易懂的
-
 #### sanitation：卫生 
 
 #### incorporate：包含；纳入；融入
 
-> **incorporate A into B**
->
-> 把 A 纳入 / 融入 B 中
-
 #### potent：**效力强的；强效的**（药物、毒药、化学物质） |  **强有力的；极具影响力的**（论点、理由、情感、力量）
-
-> ##### 词族衍生
->
-> - potency n. 效力；影响力
-> - potential adj./n. 潜在的；潜力（**形近易混重点**）
 
 #### prevalent：流行的普遍的
 
@@ -448,22 +318,6 @@ column: 学习笔记
 
 #### proprietary：专利的；专有产权的；独家的
 
-> exclusive 独家的
->
-> patented 专利的
->
-> private 私有的
->
-> owned by the company 公司专属的
->
-> copyrighted 受版权保护的
->
-> proprietor n. 业主；经营者；老板
->
-> property n. 财产；地产；属性
->
-> appropriate adj. 合适的 v. 挪用（形近易混）
-
 #### cutting-edge：顶尖的；最前沿的；尖端的；领先业界的
 
 #### boast：**自夸，吹嘘**（贬义：吹牛） |  **拥有（引以为傲的特色 / 资源）**（**雅思阅读 / 写作超高频中性褒义**，必考！）
@@ -486,8 +340,6 @@ column: 学习笔记
 
 #### lash：猛烈抽打
 
-> #### lashing：狂风骤雨的
-
 #### rudimentary：**初级的；基础的；粗浅的**（知识、技能） | **简陋的；原始的；未发展完善的**（工具、设施、结构）
 
 #### inconsistent：前后不一致的
@@ -499,18 +351,6 @@ column: 学习笔记
 #### discard：丢弃；抛弃；废弃；不再使用 | 废弃物；被丢弃的东西
 
 #### in favour of：支持；赞同 | 宁愿选择；舍弃… 而选…
-
-> ##### 常用句型
->
-> 1. be in favour of sth
->
->    支持某事
->
-> 2. choose A in favour of B
->
->    选 A 弃 B、优先 A 而不选 B
->
-> 3. **decide in favour of** 做出有利于… 的决定
 
 #### flax:亚麻
 
@@ -528,8 +368,6 @@ column: 学习笔记
 
 #### masterful：熟练的；精湛的；有掌控力的
 
-> masterfully adv. 娴熟地
-
 #### superior：更好的
 
 #### poke：戳；捅；刺 | 打听；打探（隐私、消息）
@@ -543,16 +381,6 @@ column: 学习笔记
 #### malleable：**有延展性的；可锻造的；可压成型的**（物理 / 金属 / 材料） |  **性情柔顺的；易受影响的；可塑性强的**（人性、性格、儿童心理）
 
 #### fibrous：adj. 纤维的；含纤维的；纤维状的；多筋的
-
-> **be made out of** 能看出原料（桌子木头做的、雕像石头做的）
->
-> **be made of** 同上面，可互换
->
-> **be made from** 看不出原料、化学变化（葡萄酒由葡萄酿成）
->
-> **be made in** + 地点：产自某地
->
-> **be made up of** + 组成部分：由…… 组成（整体由部分构成）
 
 #### make a splash：一举成名，引起轰动
 
@@ -573,8 +401,6 @@ column: 学习笔记
 #### exploit：剥削，压榨 | **英勇事迹；壮举；功绩**（阅读文学、历史类）
 
 #### intimate：亲密的；密切的；私人的 | 知己；密友
-
-> intimately adv. 亲密地；深入地
 
 #### viable: **可行的；行得通的**（方案、计划、办法）| **能存活的；能生长发育的**（生物、生态阅读）
 
@@ -608,31 +434,11 @@ column: 学习笔记
 
 #### ritual：仪式；惯例；例行习惯 | 仪式的；例行的；习惯性的
 
-> **ritual** n./adj. 仪式的；惯例
->
-> **virtual** adj. 虚拟的；实际上的
->
-> **mutual** adj. 相互的；彼此的
->
-> **actual** adj. 实际的；真实的
->
-> **spiritual** adj. 精神的；心灵的
-
 #### religious：宗教的；信仰宗教的 | 一丝不苟的；严谨恪守的（雅思阅读熟词僻义）
 
 #### Dutch：荷兰的
 
 #### edict：**法令；敕令；诏书**（帝王 / 官方正式颁布）
-
-> edict  n. 法令
->
-> edit   v. 编辑、修订
->
-> editor n. 编辑
->
-> addict n. 瘾君子；v. 使沉溺
->
-> verdict n. 裁决、判决
 
 #### hygienic：卫生的；洁净的
 
@@ -641,8 +447,6 @@ column: 学习笔记
 #### intrigue：**使着迷；激起好奇心**（雅思最高频） |阴谋；诡计；权谋
 
 #### monastery：**修道院；隐修院；寺院**（修士 / 僧人集体修行居住的地方）
-
-> 对应区分：**church 教堂**、**mosque 清真寺**
 
 #### ceremony：典礼；仪式 | 礼仪；礼节；客套
 
@@ -696,8 +500,6 @@ column: 学习笔记
 
 #### brief：简短的；短暂的 | 简报；概要 | 向… 简要说明
 
-> briefly adv. 简短地；简要地
-
 #### cut short:**打断；提前终止**（谈话、会议、行程）
 
 #### tuberculosis：结核病；肺结核
@@ -712,12 +514,6 @@ column: 学习笔记
 
 #### boredom：无聊；乏味；厌倦
 
-> bored (adj. 感到无聊的)
->
-> boring (adj. 令人无聊的)
->
-> boredom (n. 无聊)
-
 #### merit：**优点；长处**  |**价值；可取之处**
 
 #### quirky：古怪有趣的；奇特另类的；脑洞清奇的
@@ -727,12 +523,6 @@ column: 学习笔记
 #### contagion：（疾病）传染；接触传染 | （情绪、风气）蔓延；感染力；潜移默化的影响
 
 #### exhalation：呼气
-
-> **exhale** v. 呼气；呼出
->
-> inhale v. 吸气
->
-> inhalation n. 吸气
 
 #### stereotype：**n.** 刻板印象；成见；老套看法 | **v.** 对… 抱有刻板印象；把… 模式化看待
 
@@ -753,8 +543,6 @@ column: 学习笔记
 #### inter-yawn：**inter-** 相互、彼此之间 + **yawn** 哈欠 传染性哈欠；互染式打哈欠
 
 #### rare：稀有的；罕见的；半熟的（肉）
-
-> rarely adv. 很少；难得
 
 #### compensate：补偿；赔偿；弥补
 
@@ -837,8 +625,6 @@ column: 学习笔记
 #### in the presence of：在…… 面前；当着…… 的面；存在…… 的情况下
 
 #### rigid：严格的；死板的；坚硬的；固执的
-
-> rigidly adv. 严格地；僵硬地
 
 #### batter：撞击
 
@@ -924,12 +710,6 @@ column: 学习笔记
 
 #### predation：捕食；捕食关系；掠夺
 
-> predator /ˈpredətə(r)/n. 捕食者；食肉动物
->
-> prey n. 猎物
->
-> predatory adj. 捕食性的
-
 #### thereafter：此后；其后；之后
 
 #### owl：猫头鹰
@@ -994,21 +774,11 @@ column: 学习笔记
 
 #### endow：**天赋 / 特质上：赋予、天生具备**（雅思最高频）
 
-> **endow sb. with sth.** 赋予某人某物（天赋、能力、特质）
->
-> - Nature has endowed humans with wisdom.
->
->   大自然赋予人类智慧。
->
-> **be endowed with** 天生拥有；与生俱来（写作高分）
-
 #### neural：神经的（人体神经、大脑神经） | **neural network 神经网络**（科技 / 人工智能高频）
 
 #### vary：改变
 
 #### presume：推定；假定；认为
-
-> presumably adv. 大概；想必 | presumable adj. 可推定的
 
 #### dynamic：动态的
 
@@ -1018,15 +788,9 @@ column: 学习笔记
 
 #### irrespective：不顾的；不考虑的；无关的
 
-> **irrespective of** 不管；不顾；不受… 影响（雅思写作黄金短语）
-
 #### correlate：有联系
 
 #### approach：**方法；途径；方式** = way/method（高分替换） | **着手处理；探讨**（写作最高频） 靠近；走近
-
-> approachable adj. 平易近人的；可接近的
->
-> approaching adj. 即将到来的
 
 #### get anywhere：有进展；有所成就；取得成效
 
@@ -1068,25 +832,9 @@ column: 学习笔记
 
 #### mesh： 网；网状物；网眼 | 啮合；契合；协调；磨合
 
-> mesh with 与… 契合 / 协调
->
-> mesh well 相处融洽、完美适配
->
-> ideas mesh 想法合拍
-
 #### acknowledgement：承认 | 认可
 
 #### scape：花葶；柄；茎
-
-> **escape** v./n. 逃跑；逃避
->
-> **landscape** n. 风景；景观
->
-> **seascape** n. 海景
->
-> **cityscape** n. 城市风貌
->
-> **scapegoat** n. 替罪羊
 
 #### linger：逗留；徘徊；萦绕不散；迟迟不散
 
@@ -1095,12 +843,6 @@ column: 学习笔记
 #### skateboard：滑板
 
 #### fusion：融合
-
-> fuse v. 融合；熔合
->
-> fused adj. 融合在一起的
->
-> fusible adj. 可熔的
 
 #### curate：adj. 精心挑选的；精选策划的
 
@@ -1114,11 +856,7 @@ column: 学习笔记
 
 #### underlie：位于… 之下；构成… 的基础；潜藏于
 
-> underlying adj. 潜在的；根本的；隐含的
-
 #### condescend：屈尊；俯就；表现得居高临下
-
-> condescending adj. 居高临下的；傲慢的
 
 #### hint：暗示
 
@@ -1172,8 +910,6 @@ column: 学习笔记
 
 #### tap：轻敲；开发利用；打开（龙头）| 龙头；旋塞
 
-> untapped adj. 未开发的；未利用的 | tap into 利用
-
 #### customary：**习惯的；惯例的**（雅思主考）
 
 #### arena：**活动领域；舞台；圈子**（雅思最高频）
@@ -1183,8 +919,6 @@ column: 学习笔记
 #### tricky：**难对付的；棘手的；难处理的**（雅思最高频）
 
 #### prevail：盛行；获胜；说服（prevail upon）
-
-> prevailing adj. 盛行的；普遍的 | prevalence n. 流行
 
 #### categorisation：分类
 
@@ -1204,19 +938,13 @@ column: 学习笔记
 
 #### tenancy：租赁；租用
 
-> tenant n. 租客；承租人
-
 #### amenity：**便利设施；生活配套**（住宅、酒店、社区公共设施）
 
 #### Pacific：太平洋的；平静的；温和的
 
 #### plain：平原；朴素的；清楚的；普通的 | 平原
 
-> plainly adv. 清楚地；显然 | in plain sight 显而易见
-
 #### fair：公平的；合理的；相当的；晴朗的 | 集市；义卖会
-
-> fairly adv. 相当；公平地
 
 #### no-frills：简约实用的；无多余装饰的；经济型的；精简低配的
 
@@ -1240,18 +968,6 @@ column: 学习笔记
 
 #### yet：**还；尚；仍然**（not yet / as yet 尚未） | **但是；然而**（= but / nevertheless，较正式） | **甚至；更**（强调，yet another / yet more）
 
-> ##### 高频搭配（雅思）
->
-> - **not yet** 还没有；尚未
-> - **as yet** 到目前为止（尚）——书面 / 学术高频
-> - **and yet** 然而；可是
-> - **have yet to do** 尚未做某事（= have not done sth. yet）
->
-> ##### 辨析
->
-> - **yet** vs **still**：yet 多用于否定句、疑问句；still 肯定句表「仍」更自然
-> - **yet** vs **but**：yet 更书面，常放句首或句中：*Yet, the problem remains.*
-
 #### vacuum：真空 | v. 用吸尘器清扫；抽空
 
 #### submerge：淹没的；浸没的；水下的
@@ -1265,8 +981,6 @@ column: 学习笔记
 #### rainfall：降雨量；降雨
 
 #### acoustic：声学的；听觉的；原声的（音乐）
-
-> acoustics n. 声学 | acoustically adv. 声学上
 
 #### waxy：蜡状的；像蜡的
 
@@ -1290,13 +1004,9 @@ column: 学习笔记
 
 #### succinite：琥珀脂；琥珀酸树脂（succinic 琥珀相关）
 
-> succinic adj. 琥珀的；丁二酸的
-
 #### resin：树脂；松香
 
 #### scorn：蔑视；鄙视 | 轻蔑；嘲笑
-
-> scornful adj. 轻蔑的 | scornfully adv.
 
 #### brittle：易碎的；脆弱的；尖利的（声音）
 
@@ -1312,29 +1022,19 @@ column: 学习笔记
 
 #### prey：猎物 | 捕食；折磨
 
-> predator n. 捕食者 | predatory adj. 捕食性的
-
 #### squid：鱿鱼；乌贼
 
 #### beak：鸟喙；喙状嘴；（鱿鱼等）角质嘴
 
 #### irritate：刺激；使恼怒；使不适
 
-> irritation n. 刺激；恼怒 | irritant n./adj. 刺激物；刺激性的
-
 #### intestine：肠；肠道
-
-> intestinal adj. 肠道的
 
 #### foul：恶臭的；肮脏的；犯规的 | 弄脏；玷污
 
 #### secretion：分泌；分泌物
 
-> secrete v. 分泌 | secretory adj. 分泌的
-
 #### pathological：病理学的；病态的；异常的
-
-> pathology n. 病理学 | pathologist n. 病理学家
 
 #### embed：嵌入；埋入；使深植
 
@@ -1346,25 +1046,13 @@ column: 学习笔记
 
 #### ruthless：无情的；冷酷的；残忍的
 
-> ruthlessly adv. 无情地
-
-> ruthless adj. 无情的；残忍的 | ruthlessness n.
-
 #### pursue：追求；从事；追赶；继续探讨
-
-> pursuit n. 追求；追赶；爱好
 
 #### imposition：强加；征收；负担
 
-> impose v. 强加；征收
-
 #### extract：提取；摘录 | 提取物；精华
 
-> extraction n. 提取；拔出
-
 #### carcass：（动物）尸体；残骸
-
-> carcass disposal 尸体处理（生态 / 牧场阅读）
 
 #### petroleum：石油
 
@@ -1372,25 +1060,17 @@ column: 学习笔记
 
 #### synthetic：合成的；人造的 | 合成物
 
-> synthesise / synthesize v. 合成 | synthesis n. 合成
-
 #### tide：潮汐；潮流；趋势
-
-> tidal adj. 潮汐的
 
 #### beachcomber：海滩拾荒者；在海滩捡漂流物的人
 
 #### reclaim：收回；开垦；回收；改造（荒地）
-
-> reclamation n. 开垦；回收
 
 #### regain：重新获得；恢复
 
 #### be set to：即将；注定；准备做
 
 #### neither：两者都不 | 也不
-
-> neither…nor… 既不… 也不…
 
 #### drop off：下降；减少；让… 下车；睡着
 
@@ -1400,49 +1080,29 @@ column: 学习笔记
 
 #### specific：具体的；特定的；专门的
 
-> specifically adv. 具体地；专门地
-
 #### suppose：假设；认为；猜想
-
-> supposition n. 假定 | supposedly adv. 据称
 
 #### maritime：海事的；海运的；沿海的
 
 #### exposure：暴露；接触；曝光；敞口
 
-> expose v. 暴露；使接触 | exposed adj. 暴露的
-
 #### billow：翻腾的；鼓起的；汹涌的
-
-> billow v./n. 翻腾；巨浪
 
 #### amend：修正；修订（法律、文件）
 
-> amendment n. 修正案 | amendable adj.
-
 #### devise：设计；发明；策划
-
-> device n. 装置；手段
 
 #### contribute：贡献；捐助；促成；撰稿
 
-> contribution n. 贡献；捐款 | contributor n.
-
 #### withdraw：撤回；提取（款）；退出
-
-> withdrawal n. 撤回；提款
 
 #### reinstate：恢复（职位）；使复原
 
 #### precast：预制的；预浇铸的
 
-> precast concrete 预制混凝土
-
 #### be referred to as：被称为；被视作
 
 #### ceramic tile：瓷砖；陶瓷砖
-
-> ceramic adj./n. 陶瓷的；陶瓷制品
 
 #### clad：覆盖… 的；包裹… 的（be clad in / with）
 
@@ -1458,13 +1118,9 @@ column: 学习笔记
 
 #### ascend：上升；攀登；晋升
 
-> ascent n. 上升；上坡 | ascending adj.
-
 #### integrity：正直；诚信；完整（性）
 
 #### colonnade：柱廊
-
-> column n. 圆柱；专栏
 
 #### foyer：门厅；休息厅；（剧院）前厅
 
@@ -1473,8 +1129,6 @@ column: 学习笔记
 #### spreadsheet：电子表格
 
 #### nag：唠叨的；烦人的；持续的（疼痛等）
-
-> nag v. 唠叨；烦扰
 
 #### hustle：催促；推搡；忙碌奔波 | 忙碌； hustle and bustle
 
@@ -1504,11 +1158,7 @@ column: 学习笔记
 
 #### preventative：预防性的 | 预防药
 
-> prevent v. 预防 | prevention n. 预防 | preventive adj.
-
 #### present：当前的；出席的 | 呈现；提交 | 礼物
-
-> presentation n. 展示；陈述 | presently adv. 目前；不久
 
 #### disparate：截然不同的；无法比较的；异质的
 
@@ -1516,39 +1166,25 @@ column: 学习笔记
 
 #### consequence：结果；后果
 
-> consequently adv. 因此；所以 | consequent adj. 随之发生的
-
 #### gum：口香糖；树胶；牙龈
 
 #### all-rounder：全能型选手；多面手
 
 #### refer：提到；查阅；转诊； refer to 指称
 
-> reference n. 参考；提及 | referral n. 转诊
-
 #### denture：假牙；义齿
 
-> dental adj. 牙齿的 | dentist n. 牙医
-
 #### chronic：慢性的；长期的；惯性的
-
-> chronically adv. | chronic disease 慢性病
 
 #### in turn：依次；转而；反过来
 
 #### folk：民间的；人们；民俗
 
-> folklore n. 民间传说 | folks n. 人们（口语）
-
 #### hygiene：卫生；保健
-
-> hygienic adj. 卫生的 | hygienist n. 卫生工作者
 
 #### counterpart：对应的人（或物）；职务相当者
 
 #### grant：授予；同意；拨款 | 拨款；补助金
-
-> grantee n. 受赠人 | granting n.
 
 #### floss：牙线 | 用牙线清洁
 
@@ -1558,206 +1194,105 @@ column: 学习笔记
 
 #### fluoride：氟化物
 
-> fluoridation n. 氟化处理
-
 #### dweller：居民；居住者
-
-> dwell v. 居住；dwell on 纠结于 | dwelling n. 住宅
-
 
 #### sugar cane：甘蔗
 
-> sugarcane n. 甘蔗（常连写）
-
 #### pest：害虫；有害生物；讨厌的人
-
-> pest control 害虫防治 | pestilent adj. 有害的；讨厌的
 
 #### larva：幼虫
 
-> larvae n. 幼虫（复数）| larval adj. 幼虫的
-
 #### pesticide：杀虫剂；农药
-
-> pest n. 害虫 | -cide 杀…剂 | pesticidal adj. 杀虫的
 
 #### predatory：捕食性的；掠夺性的；以捕食为生的
 
-> predator n. 捕食者；掠夺者 | prey n./v. 猎物；捕食
-
 #### parasitic：寄生的；寄生性的；靠他人为生的
-
-> parasite n. 寄生虫；寄生者 | parasitism n. 寄生现象
 
 #### gaining control：取得控制；逐渐控制住（局面 / 虫害）
 
-> gain control of / over 控制… | under control 得到控制
-
 #### agent：剂；媒介；实施者；生物防治因子（biological control agent）
-
-> agency n. 机构；作用 | agential 起作用的（少用，阅读认识即可）
 
 #### toad：蟾蜍；癞蛤蟆
 
-> cane toad 蔗蟾（澳洲引种防治害虫的著名案例）
-
 #### exotic：外来的；异国的；奇异的
 
-> exotic species 外来物种 | exotica n. 奇珍异物
-
 #### cactus moth：仙人掌蛾（=Cactoblastis moth，引种防治仙人掌的经典案例）
-
-> cactus n. 仙人掌 | moth n. 蛾
 
 #### Argentina：阿根廷（南美国家；文中常作引种昆虫来源地）
 
 #### argument：论点；争论；理由
 
-> argue v. 争论；主张 | argumentative adj. 好争辩的
-
 #### rebuke：斥责；指责；谴责 | 斥责；训斥
-
-> rebuke sb. for sth. 因… 斥责某人
 
 #### eminent：杰出的；著名的；显赫的
 
-> eminence n. 杰出；显赫 | pre-eminent adj. 卓越的；首屈一指的
-
 #### decide：决定；下决心；裁决
-
-> decided adj. 明确的；坚定的 | decidedly adv. 明确地；显然 | decision n. 决定
 
 #### infestation：侵扰；大批滋生；（害虫 / 病害）爆发
 
-> infest v. 大批滋生；侵扰 | infested adj. 受侵扰的；虫害严重的
-
 #### swelling：肿胀；膨胀；隆起
-
-> swell v. 肿胀；膨胀；增多 | swollen adj. 肿胀的
 
 #### squirt：喷射；喷出 | 喷射；少量液体
 
-> squirt out 喷出
-
 #### venom：毒液；恶意
-
-> venomous adj. 有毒的；恶毒的 | envenom v. 使带毒（少用）
 
 #### lizard：蜥蜴
 
-> reptile n. 爬行动物（阅读分类常考）
-
 #### groundbreaking：开创性的；突破性的；开创先河地（adj. / 可作名词性用法指「突破性进展」）
-
-> break new ground 开辟新领域；取得突破 | ground-breaking research 突破性研究（写作替换 *innovative / pioneering*）
->
-> ground n. 地面；领域 | break v. 打破；突破
 
 ## 0524
 
 #### ravage：蹂躏；毁坏；劫掠 | 破坏；浩劫（名词）
 
-> ravages n. 破坏；蹂躏的后果 | ravaged adj. 遭蹂躏的
-
 #### wreathe：环绕；缠绕；笼罩（smoke wreathed the hills）
-
-> wreath n. 花环；花圈；环状物
 
 #### impede：阻碍；妨碍；阻止
 
-> impediment n. 障碍；妨碍 | impedimenta n. 行装；装备（阅读偶见）
-
 #### precedent：先例；判例；惯例
-
-> unprecedented adj. 前所未有的 | precede v. 先于；在… 之前
 
 #### lofty：极高的；巍峨的；崇高的；高傲的
 
-> loft n. 阁楼 | loftiness n. 高尚；高傲
-
 #### fridge：冰箱（= refrigerator，口语）
-
-> refrigerator n. 冰箱 | refrigerant n. 制冷剂 | refrigeration n. 冷藏
 
 #### scratch：抓；刮；划伤 | _scratch the surface_ 浅尝辄止
 
-> scratchy adj. 刺耳的；扎人的
-
 #### nitrogen：氮；氮气
-
-> nitrate n. 硝酸盐 | nitrogenous adj. 含氮的
 
 #### sieve：筛子 | 筛；过滤
 
-> sift v. 筛；细查
-
 #### spiral：螺旋；螺旋形 | 螺旋式上升 / 下降；急剧恶化
-
-> spiral staircase 螺旋楼梯 | downward spiral 恶性循环
 
 #### mercenary：雇佣兵 | 唯利是图的；贪财的
 
-> mercy n. 仁慈 | merciful adj. 仁慈的
-
 #### utensil：器具；用具（尤指厨房用具）
-
-> kitchen utensils 厨具
 
 #### back then：那时；当时；在过去那个时候
 
 #### well：井 | 好；出色地 | **那么；好吧**（话语标记） | **涌出**（液体 well up）
 
-> wellbeing n. 健康；幸福 | wellness n. 健康
-
 #### relic：遗物；遗迹；文物；遗风
-
-> relics n. 遗迹；残片
 
 #### churn：搅动；翻搅；（奶）搅拌制黄油 | 剧烈动荡；大量产生
 
-> churn out 大量炮制（文章、产品）
-
 #### Swedish：瑞典的；瑞典人；瑞典语
-
-> Sweden n. 瑞典 | Swede n. 瑞典人
 
 #### currency：货币；流通 | 流行；盛行（观点、话题）
 
-> current adj. 当前的；流通的 | currently adv. 目前
-
 #### flourish：繁荣；兴旺；茂盛 | 挥舞；炫耀；华丽辞藻
-
-> flourishing adj. 繁荣的 | flour n. 面粉（同根不同义，勿混）
 
 #### scene：场景；现场；景象 | 场面；领域（the music scene）
 
-> scenic adj. 风景优美的 | scenery n. 风景；布景
-
 #### unearth：发掘；出土；揭露；发现
-
-> earth n. 地球；泥土 | earthly adj. 尘世的
 
 #### extend across：横跨；延伸至；遍及
 
-> extend v. 延伸；延长；扩大 | extension n. 延伸；延期；分机 | extensive adj. 广泛的
-
 #### wisdom：智慧；学问；明智
-
-> wise adj. 明智的 | wisely adv. 明智地
 
 #### obstacle：障碍；妨碍物
 
-> obstruct v. 阻挡；妨碍 | obstruction n. 障碍；梗阻
-
 #### mild：轻微的；温和的；淡的
 
-> mildly adv. 轻微地；温和地
-
-> mild adj. 温和的；轻微的 | mildness n. 温和
-
 #### statue：雕像；塑像
-
-> statuary n. 雕像（总称）| statuette n. 小雕像
 
 #### gate：大门；闸门；登机口 | 门票收入（gate receipts）
 
@@ -1765,906 +1300,460 @@ column: 学习笔记
 
 #### Bronze Age BC：青铜时代（公元前）（考古 / 历史阅读）
 
-> bronze n. 青铜 | bronzed adj. 古铜色的 | BC = Before Christ 公元前
-
 #### fineness：精细度；纯度；纤细
-
-> fine adj. 精细的；好的 | finely adv. 精细地；轻微地 | refine v. 精炼
 
 #### continental：大陆的；欧洲大陆的 | 大陆性的（气候）
 
-> continent n. 大陆；洲 | continental shelf 大陆架
-
 #### weaver：织工；织布者
-
-> weave v. 编织；编造（故事）| weaving n. 编织
 
 #### Belgium：比利时
 
-> Belgian adj./n. 比利时的；比利时人
-
 #### prosperity：繁荣；兴旺；富足
-
-> prosper v. 繁荣；成功 | prosperous adj. 繁荣的
 
 #### overshadow：使黯然失色；遮蔽；掩盖
 
-> shadow n. 阴影 | overshadowed adj. 被掩盖的
-
 #### devastation：毁坏；毁灭；浩劫
-
-> devastate v. 摧毁；使震惊 | devastating adj. 毁灭性的；极具冲击的
 
 #### arable：可耕种的；适于耕作的
 
-> arable land 耕地 | agriculture n. 农业
-
 #### pasture：牧场；草地 | 放牧
-
-> pastoral adj. 田园的；牧场的 | graze v. 放牧
 
 #### dye：染料 | 给… 染色
 
-> dyer n. 染工 | dyed adj. 染色的
-
 #### latter：后者（the latter）| 后期的；末尾的
-
-> the latter 后者（与 the former 前者相对）| latter-day 现代的；后期的
 
 #### compact：紧凑的；小巧的；坚实的 | 压缩；协定
 
-> compaction n. 压实 | compactly adv. 紧凑地
-
 #### firm：公司；商行 | 坚固的；坚定的 | 稳固地
-
-> firmly adv. 坚定地 | firmness n. 坚定
 
 #### village：村庄；乡村
 
-> villager n. 村民 | rural adj. 乡村的
-
 #### worsted：精纺毛线；精纺毛织物
-
-> worsted yarn 精纺纱（纺织史 / 产业阅读）
 
 #### persecute：迫害；骚扰；为难
 
-> persecution n. 迫害 | persecutor n. 迫害者
-
 #### seek：寻找；寻求；试图
-
-> seeker n. 寻求者 | seek out 找出
 
 #### refuge：避难；庇护；避难所
 
-> refugee n. 难民 | take refuge 避难
-
 #### comprise：包含；由… 组成
-
-> be comprised of = consist of（较正式）
 
 #### Radical：激进的；根本的 | 激进分子；根号（数学另义）
 
-> radically adv. 根本地；激进地 | radicalism n. 激进主义
-
 #### take shape：成形；初具规模；逐渐明朗
-
-> shape n. 形状；状况 | take form 类似用法
 
 #### stem from：源于；来自；起源于
 
-> stem n. 茎；词干；源头 | stem cell 干细胞
-
 #### revival：复兴；复苏；重演
-
-> revive v. 复兴；苏醒 | revivable adj. 可复兴的
 
 #### supersede：取代；替代；淘汰
 
-> supersession n. 取代 | superseded adj. 被取代的
-
 #### unrest：动荡；不安；骚乱
-
-> rest n./v. 休息 | restless adj. 不安的
 
 #### rioter：暴徒；闹事者
 
-> riot n./v. 暴乱；骚乱 | riotous adj. 骚乱的；喧闹的
-
 #### band：乐队；带子；一群 | 用带绑；联合（band together）
-
-> bandage n. 绷带 | bandwidth n. 带宽
 
 #### fear：恐惧；担心 | 害怕
 
-> fearful adj. 可怕的；担心的 | fearless adj. 无畏的 | feared adj. 令人畏惧的
-
 #### split off：分离出去；分裂出来；拆出（独立分支 / 部门 / 地区）
-
-> split v. 分裂；分开；分担 | split up 分手；拆散 | split from 从… 分离
 
 ## 0525
 
 #### depict：描绘；描述；刻画
 
-> depiction n. 描绘；描写 | depictive adj. 描写的（少用）
-
 #### Egyptian：埃及的；埃及人（的）
-
-> Egypt n. 埃及 | Egyptian art / tomb 埃及艺术 / 墓葬（阅读常考）
 
 #### grave：坟墓；墓穴；严重的；严肃的
 
-> gravesite n. 墓地 | gravely adv. 严重地；严肃地（同形异义，阅读注意语境）
-
 #### cherish：珍爱；珍视；怀有（希望、感情）
-
-> cherished adj. 珍爱的；珍视的 | cherishment n. 珍爱（少用）
 
 #### ivory：象牙；象牙色；象牙制品
 
-> ivory carving 象牙雕刻 | illegal ivory trade 非法象牙贸易（环境 / 保护类阅读）
-
 #### lifelike：栩栩如生的；逼真的
-
-> life n. 生命 | -like 像… 的 | likeness n. 相似；肖像
 
 #### movable：可移动的；活动的（财产）
 
-> move v. 移动 | movement n. 运动；动向 | immovable adj. 不可移动的
-
 #### hub：中心；枢纽；集线器（科技义）
-
-> hub airport 枢纽机场 | cultural hub 文化中心
 
 #### stump：树桩；残余部分；绊倒；难住（sb.）| 游说 stump（政治，阅读偶见）
 
-> stumped adj. 被难住的 | stumpy adj. 矮胖的
-
 #### clothespin：晾衣夹；衣夹（美式拼写 clothes pin）
-
-> clothes n. 衣服 | pin n. 别针；夹子
 
 #### collective：集体的；共同的；集体（n.）
 
-> collectively adv. 共同地；集体地 | collect v. 收集 | collection n. 收藏；收集
-
 #### composition：构成；成分；作文；乐曲；构图；（艺术）作品
-
-> compose v. 组成；创作；作曲 | compositional adj. 构成的；作曲的
 
 #### pulp：纸浆；果肉 | 打成纸浆；制成浆状
 
-> pulping n. 制浆 | pulpy adj. 纸浆状的
-
 #### recipe：食谱；配方；方法；秘诀
-
-> recipe for success 成功之道（写作搭配）
 
 #### rag：破布；碎布；抹布；（制）破布纸
 
-> rag paper 破布纸 / 棉纸（造纸史阅读）| ragged adj. 破烂的
-
 #### Civil War：内战（特指美国南北战争时常大写）
-
-> civil adj. 公民的；民用的；文明的 | civil war 内战（泛指）
 
 #### churn：搅拌；翻腾；（奶油）搅制；搅动；大量产生
 
-> churn out 大量炮制（文章、产品）| churning adj. 翻腾的
-
 #### flammability：可燃性；易燃性
-
-> flammable adj. 易燃的 | inflammable adj. 易燃的（易混： inflammable 也为易燃）| flame n. 火焰
 
 #### resemble：像；与… 相似
 
-> resemblance n. 相似；相像 | resembling adj. 相似的
-
 #### wig：假发
-
-> wear a wig 戴假发（历史肖像 / 博物馆展品阅读）
 
 ## 0526
 
 #### porcelain：瓷器；瓷制的；精美的
 
-> porcelain ware 瓷器 | bone china 骨瓷（阅读陶瓷史常考）
-
 #### kiln：窑；炉（烧陶瓷、砖等）
-
-> brick kiln 砖窑 | fire in a kiln 入窑烧制
 
 #### glaze：釉 | 上釉；使光滑
 
-> glazed pottery 上釉陶器 | double-glazed windows 双层玻璃窗（建筑阅读另义）
-
 #### realistic：现实的；逼真的；务实的
 
-> realism n. 现实主义；真实 | realist n. 现实主义者 | realistically adv. 现实地；逼真地 | lifelike adj. 栩栩如生的（近义）
-
 #### subset：子集；子群体；一部分
-
-> set n. 集合；一组 | sub- 下级的；部分的 | a subset of … … 的一部分 / 子集（数学、统计、分类阅读高频）
 
 ## 0527
 
 #### clouds of dust：尘土飞扬；大片尘云（原文 clouds of dust / it 指尘云）
 
-> dust cloud 尘云 | dust storm 尘暴（侵蚀、干旱地区阅读）
-
 #### barren：贫瘠的；不结果实的；无益的
-
-> barren land 荒地 | barrenness n. 贫瘠
 
 #### sediment：沉积物；沉淀物
 
-> sedimentary adj. 沉积的 | sedimentation n. 沉积作用
-
 #### atmospheric：大气的；大气层的
-
-> atmosphere n. 大气；氛围 | atmospherically adv.
 
 #### millennium：一千年；千年期
 
-> millennia 复数 | millennial adj. 千年的
-
 #### shot up：急剧上升；猛涨；迅速长高
-
-> shoot up 蹿升；迅速成长（同义短语）
 
 #### erosion：侵蚀；腐蚀；流失
 
-> erode v. 侵蚀；腐蚀 | erosive adj. 侵蚀的 | soil erosion 水土流失（本篇核心）
-
 #### ill-equipped：装备不足的；准备不足的；能力不足的
-
-> equip v. 装备 | equipment n. 设备 | be ill-equipped for/to 对… 准备不足
 
 #### graze：放牧；吃草；擦伤 | 放牧
 
-> grazing n. 放牧 | grazer n. 食草动物
-
 #### bison：野牛；（北美）美洲野牛
-
-> buffalo n. 水牛；野牛（近义，地域有别）
 
 #### antelope：羚羊
 
-> antelopes 复数 | pronghorn 叉角羚（北美阅读偶见）
-
 #### roam：漫游；闲逛；流浪
-
-> roaming adj. 漫游的 | roamer n. 流浪者
 
 #### manure：粪肥；肥料 | 施肥
 
-> manured soil 施过肥的土壤
-
 #### livestock：牲畜；家畜
-
-> live stock 活畜 | cattle / sheep 等（上下文）
 
 #### strip：剥去；剥夺；条状 | 狭长地带；带状
 
-> strip vegetation 清除植被（导致侵蚀）| strip of land 狭长地带
-
 #### hoof：蹄（hoove 为变体 / 误拼，常用 hoof / hooves）
-
-> hooves 复数 | puncture 刺穿（与 hooves 搭配：蹄子踩穿地表硬壳）
 
 #### puncture：刺穿；穿孔；刺破
 
-> puncture the crust 刺穿表层硬壳（本篇：牲畜踩坏土壤表层）
-
 #### crust：外壳；硬壳；地壳；面包皮
-
-> earth's crust 地壳 | soil crust 土壤结皮 / 表层硬壳
 
 #### desert：沙漠；荒漠 | 遗弃；擅离
 
-> desertification n. 荒漠化 | deserted adj. 荒废的
-
 #### bubble：泡；泡沫；气泡 | 冒泡；迅速上涨（prices bubble）
-
-> soil bubbles 土壤鼓包 / 起泡（阅读具体语境以原文为准）
 
 #### pasture：牧场；草地；放牧
 
-> pasturage n. 牧草；放牧 | put out to pasture 放牧；使退隐
-
 #### ranch：大牧场；牧场；经营牧场
-
-> rancher n. 牧场主 | ranching n. 牧场业
 
 #### speculator：投机者；投机商
 
-> speculate v. 投机；推测 | speculation n. 投机；推测
-
 #### incentive：激励；动机；诱因
 
-> incentivize v. 激励（AmE）| provide incentives 提供激励
-
 #### protect：保护；防护
-
-> protection n. 保护 | protective adj. 保护的 | protected area 保护区
 
 #### barb：倒钩；刺 | 带刺的（barbed wire 带刺铁丝网）
 
 #### seek to：试图；力求；寻求（后接动词原形）
 
-> seek to do 试图做…
-
 #### snowfield：雪原；雪场
-
-> snow field 雪野 | snow-covered 被雪覆盖的
 
 #### sprinkling：少量；洒；点缀 | 洒；下稀疏小雨
 
-> sprinkle v./n. 洒；少量 | a sprinkling of 少量的…
-
 #### glacier：冰川
-
-> glacial adj. 冰川的；冰冷的 | glaciation n. 冰川作用
 
 #### intrigue：激起兴趣；迷住 | 阴谋； intrigue；暧昧关系
 
-> intriguing adj. 引人入胜的；神秘的 | intrigued adj. 被迷住的 | intriguer n. 阴谋家（少用）
-
 #### meditation：冥想；沉思；冥想练习
-
-> meditate v. 冥想；沉思 | meditative adj. 冥想的；沉思的 | meditation practice 冥想练习
 
 #### is given to：倾向于；习惯于（= be inclined to / tend to，后接动名词）
 
-> be given to doing sth. 倾向于做某事；有做某事的习惯 | He is given to meditation. 他惯于冥想 / 他常冥想。
-
 #### duplicate：复制；重复 | 副本；复制品；重复的
-
-> duplication n. 复制；重复 | duplicative adj. 重复的 | duplicate copy 副本（冗余说法，阅读认识即可）
 
 #### boisterous：喧闹的；狂暴的；（人）精力旺盛的
 
-> boisterously adv. 喧闹地 | boisterousness n. 喧闹
-
 #### chest：胸；胸部；箱子；柜子
-
-> chest of drawers 五斗柜 | treasure chest 宝箱 | chest pain 胸痛（医学阅读）
 
 #### ecosystem：生态系统
 
-> ecological adj. 生态的 | ecology n. 生态学 | ecosystem services 生态系统服务
-
 #### seashore：海滨；海岸
-
-> shore n. 岸 | seaside 海边 | coastal adj. 沿海的
 
 #### density：密度；稠密；浓度
 
-> dense adj. 稠密的；密集的 | densely adv. 稠密地 | population density 人口密度
-
 #### credit：把… 归功于；认为… 有…；信用；学分 | 记入贷方
 
-> credit A with B / credit B to A 把 B 归功于 A | be credited as 被誉为…
-
 #### run-off：径流； runoff；决选（选举）；流出物
-
-> surface runoff 地表径流 | agricultural runoff 农业径流（污染、生态阅读高频）
 
 ## 0528
 
 #### army：军队；陆军；大批
 
-> armament n. 军备 | militarize v. 军事化
-
 #### reign：统治；在位时期 | 统治；盛行
-
-> reign over 统治… | reigning adj. 在位的；现行的
 
 #### excavate：挖掘；发掘
 
-> excavation n. 挖掘；发掘现场 | excavator n. 挖掘机；发掘者
-
 #### erect：竖立；建立；搭建 | 直立的
-
-> erection n. 建立；竖立（正式）
 
 #### assembly：集会；议会；装配；组装
 
-> assemble v. 集合；组装 | assembly line 装配线
-
 #### military：军事的；军队的 | 军队（the military）
-
-> militaristic adj. 军国主义的 | militarily adv. 在军事上
 
 #### demolish：拆除；摧毁；推翻
 
-> demolition n. 拆除；毁坏 | demolish a building 拆毁建筑
-
 #### interpret：解释；口译；演绎（原文 interprete 为拼写变体）
-
-> interpretation n. 解释；演绎 | interpreter n. 口译员 | misinterpret v. 误解
 
 #### plausible：貌似合理的；可信的
 
-> plausibly adv. 似乎有理地 | plausibility n. 合理性
-
 #### chieftain：酋长；首领；族长
-
-> chief n./adj. 首领；主要的 | chieftaincy n. 酋长地位
 
 #### inscription：铭文；题字；刻字
 
-> inscribe v. 题写；镌刻 | inscribed adj. 刻有文字的
-
 #### commemorate：纪念；庆贺
-
-> commemoration n. 纪念活动 | commemorative adj. 纪念性的
 
 #### dedicated to：献给；致力于；专门用于
 
-> dedicate A to B 把 A 献给 B；致力于 B | dedication n. 奉献；题词
-
 #### execute：执行；实施；处决；演奏（乐曲）
-
-> execution n. 执行；处决 | executive n./adj. 高管；执行的
 
 #### precede：先于；在… 之前（发生）
 
-> preceding adj. 在前的；前述的 | precedent n. 先例 | unprecedented adj. 前所未有的
-
 #### outlast：比… 活得久；比… 持久
-
-> outlive v. 比… 活得长（近义）| last v. 持续
 
 #### subdivide：再分；细分
 
-> subdivision n. 细分；分部 | sub- 再… | divide v. 划分
-
 #### dismantle：拆除；拆开；逐步废除
-
-> dismantling n. 拆除 | dismantle a structure 拆除结构
 
 ## 0529
 
 #### asteroid：小行星；陨石
 
-> asteroid belt 小行星带 | meteorite n. 陨石（坠入大气层后）
-
 #### ironic：讽刺的；具有讽刺意味的
-
-> irony n. 讽刺；反讽 | ironically adv. 讽刺地；出人意料地
 
 #### symmetry：对称；匀称；对称性
 
-> symmetrical adj. 对称的 | symmetrically adv. 对称地 | asymmetry n. 不对称
-
 #### subsequent：随后的；后来的；接着的
-
-> subsequently adv. 随后 | subsequence n. 后续（少用）
 
 #### overrun：泛滥；蹂躏；超出（预算 / 时间）| overrun 的过去式 overran
 
-> overran 过去式 | time overrun 工期延误 | cost overrun 成本超支
-
 #### monster：怪物；巨兽；庞然大物 | 巨大的
-
-> monstrous adj. 巨大的；可怕的
 
 #### inherit：继承；遗传；承袭
 
-> inheritance n. 继承；遗产 | inherited adj. 继承的；遗传的 | heir n. 继承人
-
 #### eye blink：眨眼；一眨眼（的时间）
-
-> in the blink of an eye 一眨眼之间 | blink v./n. 眨眼
 
 #### rift valley：裂谷；地堑
 
-> rift n. 裂缝；分裂 | valley n. 山谷 | Great Rift Valley 东非大裂谷（地理阅读）
-
 #### bonus：奖金；额外好处；意外收获
-
-> bonus point 加分 | as a bonus 另外；作为额外好处
 
 #### squishy：软绵绵的；湿软的；没主见的
 
-> squish v. 压扁；挤（拟声）| squash v. 压碎（近义）
-
 #### division of labour：劳动分工；分工
-
-> divide the labour 分工 | labour n. 劳动；劳工（BrE labor）
 
 #### march：行进；游行；三月 | 行军；游行示威；进展
 
-> march on 向前推进 | protest march 抗议游行
-
 #### suggestive：暗示的；引起联想的；挑逗的
-
-> suggest v. 暗示；建议 | suggestion n. 建议；暗示
 
 #### meteorite：陨石；陨星
 
-> meteor n. 流星 | meteoritic adj. 陨石的
-
 #### anomaly：异常；反常现象；畸形
-
-> anomalous adj. 异常的 | anomalies 复数
 
 #### fern：蕨类植物；蕨
 
-> ferns 复数 | fernery n. 蕨园（少用）
-
 #### opportunist：机会主义者；投机分子
-
-> opportunistic adj. 机会主义的 | opportunity n. 机会
 
 #### eruption：喷发；爆发；（疾病 / 情绪）突发
 
-> erupt v. 喷发；爆发 | volcanic eruption 火山喷发
-
 #### set up shop：开业；设摊；在某地落脚经营
-
-> set up 建立；开办 | shop n. 店铺；工坊
 
 #### scour：冲刷；擦洗；搜寻；席卷
 
-> scoured adj. 冲刷过的 | scour the area 搜查某地
-
 #### paradise：天堂；乐园；极乐之地
-
-> paradisiacal adj. 天堂般的（少用）| paradise lost 失乐园（专名）
 
 #### spike：尖峰；猛增；长钉 | 使猛增；用尖物刺
 
-> spike in prices 价格飙升 | a spike in … … 的激增
-
 #### knock out：击倒；淘汰；使昏迷；快速完成
-
-> knockout n. 击倒；极出色的人 / 物（口语）| knock sb. out 击昏某人
 
 #### overlook：俯瞰；忽视；宽容
 
-> overlook a crater 俯瞰火山口 | cannot be overlooked 不可忽视
-
 #### crater：火山口；弹坑；坑
-
-> cratered adj. 布满坑的 | impact crater 撞击坑
 
 #### erode：侵蚀；腐蚀；逐渐削弱
 
-> erosion n. 侵蚀 | eroded adj. 被侵蚀的 | erosive adj. 侵蚀性的
-
 #### alternative：可供选择的；另类的 | 选择；替代品
-
-> alternatively adv. 或者；作为另一种选择
-
-> alternative n./adj. 选择；可供替代的 | on the other hand 另一方面
 
 #### tectonic：地壳构造的；构造的；影响深远的
 
-> tectonic plates 构造板块 | tectonic shift 结构性巨变（比喻）
-
 #### misdate：误标日期；把… 年代搞错
-
-> mis- 错误… | date v./n. 标注日期；年代 | dating n. 年代测定
 
 #### disintegrate：瓦解；碎裂；衰变
 
-> disintegration n. 瓦解 | disintegrated adj. 瓦解的；碎裂的
-
 #### comet：彗星
 
-> cometary adj. 彗星的 | Halley's Comet 哈雷彗星
-
 #### perceptible：可察觉的；看得见的；明显的
-
-> perceive v. 察觉；感知 | perception n. 知觉；看法 | imperceptible adj. 难以察觉的
 
 ## 0530
 
 #### practice：实践；练习；惯例；执业（医生 / 律师）
 
-> practise v. 练习；执业（BrE）| practical adj. 实用的 | in practice 实际上
-
 #### expertise：专门知识；专长；专业技能
-
-> expert n. 专家 | expert adj. 熟练的
 
 #### pharmacist：药剂师；药师
 
-> pharmacy n. 药房；药学 | pharmaceutical adj. 制药的
-
 #### herbalist：草药师；卖草药的人
-
-> herb n. 草药 | herbal adj. 草本的 | herbal medicine 草药 / 中医
 
 #### bruise：瘀伤；青肿 | 使瘀伤；挫伤（感情）
 
-> bruised adj. 瘀伤的 | bruising adj. 激烈的；打击惨重的
-
 #### capability：能力；性能；潜力（capabilities 复数）
-
-> capable adj. 有能力的 | incapability n. 无能力
 
 #### alpine：高山的；阿尔卑斯山的
 
-> Alps n. 阿尔卑斯山 | alpine plants 高山植物
-
 #### abrupt：突然的；唐突的；陡峭的
-
-> abruptly adv. 突然地 | abrupt halt 骤然停止
 
 #### halt：停止；中止 | 停止；使停下
 
-> halted 过去式 / 分词 | come to a halt 停下来 | grinding halt 完全停滞
-
 #### agronomist：农学家；农艺师
-
-> agronomy n. 农学 | agro- 农业 | -nomist … 学家
 
 #### disagreement：分歧；不一致；争论
 
-> disagree v. 不同意 | agree v. 同意
-
 #### stock：库存；存货；股票；储备 | 储备；进货（stocked 过去式 / 分词）
-
-> stocked adj. 有存货的；备好的 | stock up 囤货 | out of stock 缺货
 
 #### valuable：有价值的；贵重的；宝贵的
 
-> value n./v. 价值；珍视 | valuation n. 估价 | invaluable adj. 极宝贵的
-
 #### detractor：诽谤者；批评者；贬低者
-
-> detract v. 贬低；分散（注意力）| detect vs detract 勿混
 
 #### petition：请愿；申请书 | 请愿；请求
 
-> petitioned 过去式 / 分词 | petitioner n. 请愿人
-
 #### sum up：总结；概括
-
-> summed up 过去式 / 分词 | summary n. 摘要 | in sum 总之
 
 #### oppose：反对；对抗；与… 相对
 
-> opposing adj. 反对的；对立的 | opposition n. 反对；反对派 | opponent n. 对手
-
 #### obsolete：过时的；废弃的；淘汰的
-
-> obsolescence n. 过时 | become obsolete 被淘汰
 
 #### determine：决定；确定；决心
 
-> determined adj. 坚定的；已决定的 | determination n. 决心 | determinable adj. 可确定的
-
 #### shun：避开；回避；排斥
-
-> shunned 过去式 / 分词 | shun publicity 避风头
 
 #### curriculum：课程；（学校）全部课程（curricula 复数）
 
-> curricular adj. 课程的 | extra-curricular 课外的
-
 #### revive：复兴；复苏；使苏醒
-
-> revival n. 复兴 | revived adj. 复兴的；复活的
 
 #### polytechnic：理工学院；职业技术院校（polytechnics 复数）
 
-> poly- 多 | technic 技术 | 英国历史上 polytechnic 后多并入大学
-
 #### robust：强健的；稳健的；强有力的
-
-> robustly adv. 强有力地 | robust economy 稳健经济
 
 #### export-oriented：出口导向的；以出口为主的
 
-> export n./v. 出口 | orient v. 使面向 | orientation n. 方向；迎新
-
 #### tight：紧的；严格的；拮据的 | 更紧；更严格（tighter 比较级）
-
-> tighten v. 收紧 | tighter controls 更严管控 | tight budget 紧预算
 
 #### ringbark：环剥树皮（使树木枯死）
 
-> ring-bark v. 同义 | bark n. 树皮 | 澳洲等地防侵蚀 / 毁林阅读偶见
-
 #### prohibitive：（价格）高得令人却步的；禁止的
 
-> prohibitively adv. 高得离谱地 | prohibitively expensive 贵得买不起 | prohibit v. 禁止
-
 #### provoke：激怒；挑衅；引起；激起
-
-> provocation n. 挑衅 | provocative adj. 挑衅的；煽动的 | provoking adj. 气人的
 
 ## 0601
 
 #### female：雌性的；女性的 | 雌性动物；女性
 
-> male n./adj. 雄性；男性 | femininity n. 女性气质
-
 #### calf：小牛（calves 复数）；小腿肚
-
-> calve v. 产犊 | calf muscle 小腿肌
 
 #### refuse：拒绝 | 废物；垃圾（BrE）
 
-> refusal n. 拒绝 | refuse to do 拒绝做…
-
 #### valiant：勇敢的；英勇的
-
-> valiantly adv. 勇敢地 | valour n. 勇气（BrE valor）
 
 #### bull：公牛；看涨者；胡说
 
-> bullish adj. 看涨的；咄咄逼人的 | bull market 牛市
-
 #### posture：姿势；姿态；立场
-
-> postural adj. 姿势的 | good posture 良好体态
 
 #### proud：骄傲的；自豪的；prouder 比较级
 
-> proudly adv. 骄傲地 | pride n. 骄傲；自豪
-
 #### mimic：模仿；模拟 | 模仿者
-
-> mimicry n. 模仿；拟态 | mimick 为常见误拼
 
 #### clash：冲突；碰撞；不协调 | 冲突；碰撞
 
-> clashing adj. 冲突的 | culture clash 文化冲突
-
 #### witness：目击者；证人；证据 | 目击；见证
-
-> eyewitness n. 目击者 | bear witness 作证
 
 #### slam：猛关；猛击； slam dunk 扣篮 | 猛烈批评
 
-> slam the door 摔门 | grand slam 大满贯
-
 #### camouflage：伪装；迷彩 | 伪装；掩饰
-
-> camouflaged adj. 伪装的 | blend in 融入（近义）
 
 #### acacia：金合欢（树）
 
-> acacia tree 金合欢树 | 澳洲等地常见树种
-
 #### spot：地点；斑点；发现 | 看见；弄脏
-
-> spot on 完全正确（口语）| grazing spot 放牧点
 
 #### pluck：拔；摘；弹（弦）| 勇气；内脏（禽类）
 
-> pluck up courage 鼓起勇气
-
 #### thorn：刺；荆棘
-
-> thorny adj. 多刺的；棘手的 | rose thorn 玫瑰刺
 
 #### vertebra：椎骨； vertebrae 复数
 
-> vertebral adj. 椎骨的 | spinal adj. 脊柱的
-
 #### spine：脊柱；书脊；刺
-
-> spinal adj. 脊柱的 | spineless adj. 无脊椎的；没骨气的
 
 #### cardiovascular：心血管的
 
-> cardio- 心脏 | vascular adj. 血管的 | cardiovascular system 心血管系统
-
 #### retrieve：取回；检索；挽回
-
-> retrieval n. 取回；检索 | retriever n. 寻回犬
 
 #### pump：泵；抽水；打气 | 泵
 
-> pump blood 泵血 | heart pump 心脏泵血
-
 #### vein：静脉；血管；矿脉；纹理
-
-> venous adj. 静脉的 | in the same vein 同样意义上
 
 #### bend：弯曲；转弯；屈服 | 弯曲；弯道
 
-> bent adj. 弯曲的 | bend over 弯腰
-
 #### faint：微弱的；模糊的；昏厥的 | 昏厥
-
-> faintly adv. 微弱地 | faint-hearted adj. 胆小的
 
 #### nerve：神经；勇气；胆量
 
-> nervous adj. 紧张的 | nervously adv. | nerve-racking adj. 令人紧张的
-
 #### bite：咬；叮；一口 | 咬；一口
-
-> bite the bullet 咬紧牙关 | snake bite 蛇咬
 
 #### scarce：稀缺的；不足的；罕见的
 
-> scarcely adv. 几乎不 | scarcity n. 稀缺
-
 #### confine：限制；禁闭；局限于
-
-> confinement n. 禁闭；限制 | be confined to 局限于 / 只能…
 
 #### microgravity：微重力；失重状态
 
-> micro- 微 | gravity n. 重力 | zero gravity 零重力
-
 #### atrophy：萎缩；衰退
-
-> atrophied adj. 萎缩的 | muscular atrophy 肌肉萎缩
 
 #### disuse：不用；废弃；缺乏使用
 
-> fall into disuse 逐渐废弃 | dis- 否定 + use
-
 #### kidney：肾；肾脏
-
-> renal adj. 肾的（正式）| kidney failure 肾衰竭
 
 #### vicious：恶毒的；凶猛的；恶性的（cycle）
 
-> vicious circle / cycle 恶性循环 | viciously adv.
-
 #### set in：开始；来临；（坏天气、疾病等）持续下来
-
-> winter set in 入冬 | once fatigue sets in 一旦疲劳袭来
 
 #### anabolic：合成代谢的
 
-> anabolism n. 合成代谢 | anabolic steroid 合成代谢类固醇
-
 #### steroid：类固醇；甾体
-
-> anabolic steroid 合成代谢类固醇 | corticosteroid 皮质类固醇
 
 #### undesirable：不受欢迎的；不合意的 | 不受欢迎的人 / 物
 
-> desire v./n. 想要 | und- 否定
-
 #### conjunction：结合；连词；同时发生
-
-> in conjunction with 与… 结合 / 同时 | conjunct adj. 结合的
 
 #### active：活跃的；主动的；起作用的
 
-> actively adv. | activate v. 激活 | inactive adj. 不活跃的
-
 #### filament：细丝；灯丝；纤维丝
-
-> filamentous adj. 丝状的
 
 #### close in on：逼近；接近；逐渐围住
 
-> close in 逼近 | zero in on 锁定（近义）
-
 #### mount：增加；爬上；安装；发起 | 山；坐骑（mounting 现在分词 / 形容词：不断增加的）
-
-> mounting pressure 不断增加的压力 | mount an attack 发起攻击
 
 #### wean off：使逐渐戒除；使脱离（依赖）
 
-> wean sb. off sth. 使某人逐步戒掉… | weaning n. 断奶；戒除
-
 #### respirator：呼吸器；呼吸机；防毒面具
-
-> respire v. 呼吸 | respiratory adj. 呼吸的 | respiration n. 呼吸
 
 #### by the time：到… 时候；等到… 时（常接从句）
 
-> By the time he arrived, … 等他到时…
-
 #### space suit：宇航服；太空服
 
-> space n. 太空 | suit n. 套装
-
 #### cheat：欺骗；作弊 | 骗子；作弊手段
-
-> cheat on 对… 不忠；考试作弊 | cheater n. 骗子
