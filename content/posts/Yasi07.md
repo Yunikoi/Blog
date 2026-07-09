@@ -163,3 +163,46 @@ column: 学习笔记
 #### cement：巩固；加强；使… 牢固 | 水泥
 
 ##### 适当形式填空（107 P2 · Western celebrity）
+
+## 0709
+
+#### biophilic premise：亲生命前提；亲生命设计的基本理念（认为人类天生亲近自然）
+
+#### arguably：可以说； arguably（引出可商榷但合理的判断）
+
+#### block：街区；大块 | 阻挡；阻碍；封锁
+
+#### obstruct：阻碍；妨碍；阻塞（通道、视线、进程）
+
+#### evolutionarily：从进化角度；在进化上；进化地
+
+#### program / programme：程序；计划；方案 | 编程；规划；设定
+
+#### overcast：阴天的；多云的；阴沉的
+
+#### foster：促进；培养；助长 | 收养；寄养
+
+#### analgesic：止痛的；镇痛性的 | 镇痛剂；止痛药
+
+#### complication：并发症；复杂化；使情况变糟的因素
+
+#### atrium：中庭；天井 | 心房（解剖）
+
+#### illuminate：照亮；照明 | 阐明；说明
+
+#### permeate：渗透；弥漫；贯穿
+
+#### combine：结合；合并；兼有
+
+#### wetland：湿地
+
+#### span：跨度；范围 | 跨越；持续（时间）
+
+#### foliage：叶丛；枝叶；（植物的） foliage
+
+#### filtration：过滤；筛选
+
+#### interfere：干扰；干涉；妨碍（interfere with）
+
+#### novel：新颖的；新奇的 | 小说
+

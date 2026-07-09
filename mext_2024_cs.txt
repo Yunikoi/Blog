@@ -1,0 +1,129 @@
+---24004---
+ 秋田大学 Akita University グリーン社会実現に向けた国際資源学先端人材育成 プログラム Advanced Education Program for International Resource Science for Green Transformation (3)工学 
+
+---24005---
+ 群馬大学 Gunma University 日系高度企業人材育成のための知能・制御教育プログ ラム Education Program of Intelligence and Control for Developing Advanced Human Resources of Japanese Companies (3)工学 
+
+---24006---
+ 埼玉大学 Saitama University エネルギーシステム・情報通信技術革新国際人材育成 プログラム Energy System･Information Technology Innovation International Professional Program (3)工学 
+
+---24008---
+ 千葉大学 Chiba University 未来産業創造デザイン人材育成プログラム Design Human Resources Development Program for Future Industry Creation (3)工学 
+
+---24009---
+ 横浜国立大学 Yokohama National University 日本と海外における重工業DX人材育成プログラム Program for fostering engineers and researchers taking essential roles in the digital transformation of Japanese and foreign heavy industries (3)工学 
+
+---24010---
+ 横浜国立大学 Yokohama National University ICT技術×土木工学のイノベーションを牽引できる高度 国際人材育成プログラム International Graduate Program for Innovation of Civil Engineering through ICT technologies (15)工学 
+
+---24014---
+ 筑波大学 University of Tsukuba AI社会実装推進のための国際プログラム International Program for Promoting AI Social Implementation (7)AI・情報 
+
+---24015---
+ 総合研究大学院大学 The Graduate University for Advanced Studies, SOKENDAI 人工知能とデータサイエンスを先導する博士研究者育 成のための情報科学・生命科学分野横断プログラム Interdisciplinary Program in Information Science and Life Science for Leading Researchers on AI and Data Science (7)AI・情報 
+
+---24017---
+ 東京大学 The University of Tokyo 医工学イノベーションを先導する国際リーダー人材育成 プログラム International human resource development program for leading medical engineering innovation (13)健康医療 
+
+---24018---
+ 東京科学大学 Institute of Science Tokyo データサイエンスで世界をつなぐ感染症研究リーダー 育成プログラム Global Infectious Disease Research Leadership Initiative through Data Science (4)保健 
+
+---24019---
+ 東京科学大学 Institute of Science Tokyo 学際型生命科学国際人材育成プログラム Interdisciplinary Life Science Global Leader Program (13)健康医療 
+
+---24020---
+ 2024年度「国費外国⼈留学⽣の優先配置を⾏う特別プログラム」採択プログラム⼀覧【⼤学院】 1 実施⼤学名 Name of University プログラムの名称 Name of Program 募集分野 プログラム 番号 2024年度「国費外国⼈留学⽣の優先配置を⾏う特別プログラム」採択プログラム⼀覧【⼤学院】 東京科学大学 Institute of Science Tokyo ウェルビーイング実現に向けたレジリエントな都市づくり に貢献する環境デザイナー育成プログラム Postgraduate Program for Environmental Designers Contributing to Resilient Cities (3)工学 
+
+---24024---
+ 東京海洋大学 Tokyo University of Marine Science and Technology アジア海事大学連携によるサステナブル社会実現に資 する人材育成 Human resource development for contribution to sustainable marine society by cooperation with the Asian Maritime Universities (3)工学 
+
+---24025---
+ 東京海洋大学 Tokyo University of Marine Science and Technology 国際魚介類感染症防疫中核拠点人材育成プログラム Ⅱ Human resources development program for transboundary fish and shellfish infectious disease prevention II (2)農学 
+
+---24026---
+ 富山大学 University of Toyama グローバルマテリアル科学工学プログラム Program of Global Materials Science and Engineering (8)マテリアル 
+
+---24031---
+ 名古屋大学 Nagoya University 生命科学と情報科学の融合により新世代を創る医科学 研究リーダー育成プログラム PhD Program for Fostering Medical Science Research Leaders: Integrating Bioscience and Information Science to Generate Next-Generation Research (13)健康医療 
+
+---24032---
+ 名古屋大学 Nagoya University アジア−アフリカ農業イノベーションを創出するデータサ イエンス・アントレプレナーシッププログラム Program for Asia-Africa Agricultural Innovation with Data Sciences and Entrepreneurship (3AIDE) (2)農学 
+
+---24033---
+ 三重大学 Mie University 環境循環型社会に資する地域と連携した高度理系人 材の育成支援 Developing highly skilled science professionals in collaboration with local communities for environmentally sustainable recycling society (3)工学 
+
+---24034---
+ 豊橋技術科学大学 Toyohashi University of Technology アジア地域の発展に資するエレクトロニクス材料人材 育成プログラム Educational Program for Electronic Material Human Resources Contributing Asian Region Development (3)工学 
+
+---24035---
+ 豊橋技術科学大学 Toyohashi University of Technology 企業との連携によるアジア地域産業DX人材育成プログ ラム Human resource development of local industry DX for Asian area by collaboration with Japanese companies (3)工学 
+
+---24036---
+ 北陸先端科学技術大 学院大学 Japan Advanced Institute of Science and Technology 安心・安全・持続可能なIoT社会実現プログラム Secure, Safe & Sustainable IoT Space Implementation Program (7)AI・情報 
+
+---24039---
+ 京都工芸繊維大学 Kyoto Institute of Technology 環境調和型マテリアル産業創出のための人材育成プロ グラム Human Resource Development Program for the Eco- Friendly Materials Manufacturing Sector (3)工学 
+
+---24040---
+ 2 実施⼤学名 Name of University プログラムの名称 Name of Program 募集分野 プログラム 番号 2024年度「国費外国⼈留学⽣の優先配置を⾏う特別プログラム」採択プログラム⼀覧【⼤学院】 大阪大学 Osaka University 卓越した科学技術に立脚した産業バイオテクノロジー・ グローバルリーダー育成プログラム Industrial Biotechnology Global Leadership Program Based on Advanced Science and Technology (3)工学 
+
+---24041---
+ 大阪大学 Osaka University 革新的マテリアル・デバイスのデザインと実証のための 人材育成プログラム Human Resources Development Program for Design and Experimental Verification of Innovative Materials and Devices (15)工学 
+
+---24042---
+ 神戸大学 KOBE UNIVERSITY ASEANのメディカルトランスフォーメーションを担う次世 代リーダー育成プログラム Fostering next-generation ASEAN leaders to promote medical transformation (13)健康医療 
+
+---24043---
+ 奈良先端科学技術大 学院大学 Nara Institute of Science and Technology ASEAN諸国と日本の学生の共修による次世代アグリバ イオ工学の革新を目指す国際人材育成プログラム Human resource development for innovation in agricultural biotechnology by co-learning by ASEAN and Japanese students (2)農学 
+
+---24044---
+ 奈良先端科学技術大 学院大学 Nara Institute of Science and Technology 光に関する先端科学技術およびデータサイエンスを駆 使したメディルクス医工学を先導する国際人材育成プ ログラム Human resource development for innovation in medical engineering on Medilux with advanced photonics and data science (3)工学 
+
+---24047---
+ 広島大学 Hiroshima University 新たなグローバル協業に対応した日本型ものづくりシス テムの構築に貢献する高度研究技術者の育成 Graduate Program for Advanced Research Engineers Contributing to Japanese Manufacturing for New Global Economy (3)工学 
+
+---24048---
+ 広島大学 Hiroshima University 超学際分野プラネタリーヘルスを実践する理工学融合 プログラム Transdisciplinary Science and Engineering Program for Implementing Interdisciplinary Planetary Health (1)環境 
+
+---24053---
+ 九州工業大学 Kyushu Institute of Technology 先進医療・診断技術構築を先導する東南アジア連携人 材育成プログラム Leading Southeast Asia Cooperative Program for the Development of Advanced Medical and Diagnostic Technologies (DAMD program) (3)工学 
+
+---24054---
+ 佐賀大学 Saga University AI・データサイエンス高度人材の領域横断的育成プロ グラム Interdisciplinary education program for AI and data science specialists (7)AI・情報 
+
+---24056---
+ 熊本大学 Kumamoto University 慢性ウイルス感染症の克服を目指した先端研究者育 成プログラム Educational Program for Advanced Research in Diseases Associated with Chronic Virus Infections (4)保健 
+
+---24057---
+ 熊本大学 Kumamoto University 防災・減災分野を担うグローバル人材育成プログラム Global Human Resource Development Program for Disaster Prevention and Mitigation (3)工学 
+
+---24058---
+ 大分大学 Oita University グローカルな感染症研究の強化と推進を目指したグ ローバルヘルス人材育成プログラム Global health human resources development program aimed at strengthening and promoting Global and Local infectious disease research (13)健康医療 
+
+---24062---
+ 3 実施⼤学名 Name of University プログラムの名称 Name of Program 募集分野 プログラム 番号 2024年度「国費外国⼈留学⽣の優先配置を⾏う特別プログラム」採択プログラム⼀覧【⼤学院】 北九州市立大学 The University of Kitakyushu 都市間国際連携を活かしたデータ駆動型環境工学共 修プログラム Team-based action-learning program on data-driven environmental engineering for intercity environmental cooperation (1)環境 
+
+---24063---
+ 東京理科大学 Tokyo Universityof Science 国際連携によるアジアの火災安全技術者育成プログラ ム International Cooperation Program to Train Fire Protection Engineers in Asia (3)工学 
+
+---24066---
+ 秋田大学 Akita University グリーン科学技術人材育成プログラム International Program for Green Science and Technology (3)工学 
+
+---24067---
+ 神戸大学 KOBE UNIVERSITY 次世代の医工学領域に資する国際人材育成プログラム International Education Program for the Next Generation in Biomedical Engineering (8)マテリアル 
+
+---24101---
+ 秋田大学 Akita University サステナブル工学への導入プログラム Introduction into Sustainable Engineering (3)工学 
+
+---24102---
+ 筑波大学 University of Tsukuba 総合理工学位プログラム（学士） Bachelor’s Program in Interdisciplinary Engineering (3)工学 
+
+---24104---
+ 東京科学大学 Institute of Science Tokyo 融合理工学系国際人材育成プログラム Global Scientists and Engineers Program (GSEP) (3)工学 
+
+---24105---
+ 金沢大学 Kanazawa University 文理医融合と数理・データサイエンスによるイノベーション共 創人材養成プログラム Innovative and Co-creative Education Program due to Mathematical and Data Sciences and Transdisciplinary study of Humanities, Sciences, Engineering and Medicine (14)文理融合 
+
+---24106---
+ 京都大学 Kyoto University 工学部地球工学科国際コース Undergraduate International Course Program of Civil Engineering (3)工学 
+
