@@ -225,3 +225,181 @@ column: 学习笔记
 #### curb：抑制；控制；限制 | 路缘石；马路牙子
 
 #### lost trade：流失的生意；损失的贸易/营业额
+
+## 0713
+
+#### avian：鸟类的；鸟纲的（与鸟类相关的）
+
+#### mammalian：哺乳动物的；哺乳纲的
+
+#### groundbreaking：开创性的；突破性的；具有里程碑意义的
+
+#### compellingly：令人信服地；极具说服力地； compellingly 论证
+
+#### rival：与…匹敌；媲美 | 对手；竞争者（v./n.）
+
+#### trait：特征；特质；特点（尤指遗传或稳定属性）
+
+#### exclusive：独有的；排他的；仅限于…的
+
+#### causal：因果的；有因果关系的（causal link / causal reasoning）
+
+#### reasoning：推理；推论；论证（reasoning ability 推理能力）
+
+#### involve：涉及；包含；需要；使参与
+
+#### remarkably：显著地； remarkably；不同寻常地
+
+#### representation：表征；表现；再现 | 代表；表述
+
+#### underlying：根本的；潜在的；底层的（underlying mechanism / assumption）
+
+#### episodic：情景的；情节式的（episodic memory 情景记忆）
+
+#### cache：贮藏；隐藏储存（食物等）| 缓存（n./v.）
+
+#### tactical：战术的；策略性的（tactical deception 策略性欺骗）
+
+#### deception：欺骗；蒙蔽；诈术
+
+#### faculty：能力；官能 | 院系；全体教员（n.）
+
+#### harsh：严酷的；苛刻的；刺耳的
+
+#### caution：谨慎；小心 | 警告；告诫（v./n.）
+
+#### contend：主张；声称 | 争夺；竞争 | 应对；与…搏斗（contend with）
+
+#### hierarchy：等级制度；层级；阶层；等级体系
+
+#### substitute：替代品；替代物 | 代替；替换（v./n.）
+
+#### polymer：聚合物；高分子（polymer solution 聚合物溶液）
+
+#### solution：溶液；解法；解决方案 | 解决
+
+#### detachable：可拆卸的；可分离的
+
+#### collar：衣领；领子 | 项圈
+
+#### cuff：袖口；裤脚口 | 手铐（cuffs）
+
+#### react：反应；起化学反应 | 回应； react to
+
+#### cast：浇铸；投射 | 演员阵容；石膏（n.）
+
+#### insulate：使绝缘；隔热；隔音 | 使隔离；使免受（影响）
+
+#### suitable：合适的；适宜的；适用的
+
+#### stick：粘住；粘贴 | 棍；棒 | 坚持（stick to）
+
+#### stretch：拉伸；延伸；弹性 |  stretch（n. 一段时间 / 一片区域）
+
+#### glossy：有光泽的；光滑的； glossy finish 亮面
+
+#### parachute：降落伞 | 空降； parachute（v.）
+
+#### postwar：战后的（postwar era / economy）
+
+#### look after：照顾；照料；负责；保管
+
+#### litter：垃圾；废弃物 | 乱扔垃圾 | 一窝（幼崽）
+
+#### call for：要求；需要；呼吁；提倡
+
+#### biodegradable：可生物降解的；可自然分解的
+
+#### barren：贫瘠的；不毛的；荒芜的；无结果的
+
+#### precipitation：降水；降雨量 | 沉淀；析出
+
+#### hostile：敌对的；不利的；恶劣的（hostile environment / climate）
+
+#### landform：地貌；地形；地形单元
+
+#### clear-cut：明确的；显而易见的 | 皆伐的；砍伐殆尽的
+
+#### finer：更细的；更精细的 | 更优质的（fine 比较级）
+
+#### vibrate：振动；颤动
+
+#### pick up：拾起；捡起 | 逐渐好转；学会 | 接收（信号）
+
+#### jerk：猛拉；急动 | 蠢人（口语，n.）
+
+#### degrade：降解；退化；恶化 | 贬低；使降级
+
+#### a great deal of：大量；许多（修饰不可数名词）
+
+#### desertification：荒漠化；沙漠化
+
+#### more often than not：往往；多半；通常
+
+#### susceptible：易受影响的；易感的；敏感的（susceptible to）
+
+#### devoid：缺乏的；没有的（devoid of）
+
+#### tract：大片土地；地带 | 道；束（解剖）
+
+#### track：踪迹；轨道；小路 | 追踪；跟踪
+
+#### impoverished：贫瘠的；贫乏的；贫困的
+
+#### livestock：牲畜；家畜
+
+#### anchor：锚；固定点 | 锚定；固定（v.）
+
+#### topsoil：表土；表层土壤
+
+#### graze：放牧；吃草 | 擦伤；轻触
+
+#### trample：践踏；踩踏；蹂躏
+
+#### pulverise / pulverize：粉碎；碾碎；磨成粉末
+
+#### nomad：游牧民；流浪者 | 游牧的；漂泊的
+
+#### pasture：牧场；草地 | 放牧
+
+#### oasis：绿洲 | 慰藉之地；避风港（喻）
+
+#### refugee：难民；逃亡者
+
+#### prospect：前景；可能性；展望 | 勘探；寻找（prospect for）
+
+#### confounding：令人困惑的；混淆视听的 | 混杂因素的（confounding factor）
+
+#### contentious：有争议的；引发争论的；好争论的
+
+#### didactic：说教的；教诲式的；教训口吻的
+
+#### matrix：矩阵；母体；基质 | 环境；社会基质（social matrix）
+
+#### recruit：招募；征召 | 新成员；新兵（n.）
+
+#### negligibly：可忽略地；微不足道地
+
+#### definitional：定义上的；界定性的；关乎定义的
+
+#### verbal：口头的；言语的 | 字面上的；逐字的
+
+#### continuum：连续体；统一体；连续统（a continuum of ...）
+
+#### disciplinary：学科的；纪律的；惩戒的
+
+#### fragment：碎片；片段（n.）| 破碎；分裂（v.）
+
+#### welter：混乱；杂乱；纷乱的一堆（a welter of）
+
+#### maze：迷宫；错综复杂的事物
+
+#### solipsism：唯我论；自我中心主义（认为只有自我意识才真实）
+
+#### inaudibly：听不见地；微弱到听不清地
+
+#### subliminal：阈下的；潜意识的；下意识的（subliminal message）
+
+#### competent：胜任的；有能力的；合格的
+
+#### humbler：更谦卑的；更卑微的（humble 比较级）

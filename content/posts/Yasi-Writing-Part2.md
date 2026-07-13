@@ -164,3 +164,5 @@ Step2：一句话总结主体段（1句话）
 > >
 > > - **开头改写**：……我坚信，居家办公对员工自律性的高要求以及随之而来的监管成本，其负面影响要大过其带来的时间便利。
 > > - **结尾完美收尾**：总而言之，尽管远程办公在省时上具备吸引力，但其带来的监管困境不可忽视。归根结底，**企业为了纠正个体惰性所付出的隐形约束成本，往往远超传统统一集中管理的运营开支。**（这个收尾考官绝对会起鸡皮疙瘩，太高级了！）
+
+**landmass**  finely-tuned  ingenious  **harsh**  **revolve**  **temperate**  **arctic**  **hemisphere**  **intriguing**  conundrum 	 **breed**  offspring  **inkling**  **unwittingly**  ground  innate  **calibrate**  sunlit  conducive barometric  flee  grassland  sweep off futile grave watery  silver 
