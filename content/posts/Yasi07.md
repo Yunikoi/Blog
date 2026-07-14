@@ -453,3 +453,5 @@ column: 学习笔记
 #### pesticide：杀虫剂；农药
 
 #### rodent：啮齿动物（鼠、兔等）
+
+#### board on：登上（车 / 船 / 飞机）；登乘（board on a bus / train / plane）
