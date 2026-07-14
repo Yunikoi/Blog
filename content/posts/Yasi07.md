@@ -403,3 +403,53 @@ column: 学习笔记
 #### competent：胜任的；有能力的；合格的
 
 #### humbler：更谦卑的；更卑微的（humble 比较级）
+
+## 0714
+
+#### subject to：受……制约 / 支配；取决于 | 易遭受（subject to change / disease）
+
+#### pharmacological：药理学的；药物作用的
+
+#### ointment：软膏；药膏；油膏
+
+#### anoint：涂油于；敷油 | 指定；选定（anointed leader）
+
+#### cut down：削减；减少 | 砍倒；砍伐（树木）
+
+#### punishable：应受惩罚的；可惩处的（punishable by law）
+
+#### grove：小树林；林子；（尤指果树）树丛
+
+#### ingrained：根深蒂固的；积习难改的（ingrained habit / prejudice）
+
+#### residue：残留物；残渣；余数（chemical residue）
+
+#### naturalist：博物学家；自然主义者
+
+#### philosopher：哲学家；思想家
+
+#### laborious：费力的；辛苦的；耗时吃力的
+
+#### hygienic：卫生的；保健的；清洁无菌的
+
+#### distinct：不同的；有区别的 | 清晰的；明显的
+
+#### stick：粘住；坚持（stick to）| 棍；棒
+
+#### separate：分开；分离（v.）| 单独的；分开的（adj.）
+
+#### bit：一点儿；少量 | 钻头；马嚼子 | 二进制位（计算机）
+
+#### vat：大桶；大缸；瓮（大容量容器）
+
+#### taste：味道；口味 | 品尝；品味 | 鉴赏力；趣味
+
+#### foul：恶臭的；肮脏的；犯规的 | 弄脏；污染（v.）
+
+#### finish：完成；结束 | 表面处理；抛光（n.）| 终点；名次
+
+#### malnutrition：营养不良
+
+#### pesticide：杀虫剂；农药
+
+#### rodent：啮齿动物（鼠、兔等）
