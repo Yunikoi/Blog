@@ -455,3 +455,5 @@ column: 学习笔记
 #### rodent：啮齿动物（鼠、兔等）
 
 #### board on：登上（车 / 船 / 飞机）；登乘（board on a bus / train / plane）
+
+#### border on：接近；近乎；濒于（border on rudeness / the absurd）
