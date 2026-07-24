@@ -457,3 +457,97 @@ column: 学习笔记
 #### board on：登上（车 / 船 / 飞机）；登乘（board on a bus / train / plane）
 
 #### border on：接近；近乎；濒于（border on rudeness / the absurd）
+
+## 0715
+
+#### violent：猛烈的；剧烈的；暴力的
+
+#### ferocious：凶猛的；残暴的；激烈的
+
+#### graphite：石墨
+
+#### smear：涂抹；弄脏 | 诽谤；污蔑（n./v.）| 污迹；油渍
+
+#### fit for：适合于；胜任……的（fit for purpose / duty）
+
+#### stiff：僵硬的；呆板的；费力的 | 严厉的（stiff penalty）
+
+#### hide：隐藏；遮住 | 兽皮；皮革（n.）
+
+#### infancy：婴儿期；幼年 | 初期；萌芽阶段（in its infancy）
+
+#### lead：铅（金属）| 领导；引领 | 领先（lead / led）
+
+#### cannon：大炮；火炮 | 机关炮
+
+#### foundry：铸造厂；铸造车间
+
+#### deterrent：威慑物；制止因素 | 威慑的；遏制的（deterrent effect）
+
+#### Parliament：议会；国会（英：Parliament；美常 Congress）
+
+#### designate：指定；任命；标明（designated area / driver）
+
+#### seam：缝；接缝 | 矿层；煤层（coal seam）
+
+#### resilient：有韧性的；能恢复的；适应力强的
+
+## 0717
+
+#### monasteries：修道院；寺院（monastery 复数）
+
+#### rather：相当；颇 | 宁愿；宁可（would rather）| 反而（rather than）
+
+#### latter：后者的；后一半的；末尾的（the latter part / the latter）
+
+#### encroach：侵占；蚕食；渐渐侵入（encroach on / upon）
+
+#### consignment：托运；委托代销；寄售货物
+
+#### suspicious：可疑的；令人怀疑的 | 猜疑的；不信任的（be suspicious of）
+
+#### monopoly：垄断；专卖权；独占（state monopoly）
+
+#### fair：公平的；合理的 | 集市；展销会（trade fair）| 相当的；还算好的
+
+#### punitive：惩罚性的；惩戒性的（punitive tax / damages）
+
+#### smuggling：走私；偷运（smuggling of tea / goods）
+
+#### adulteration：掺假；掺杂；伪造（food adulteration）
+
+#### brewed：冲泡的；酿造的（brewed tea / beer）
+
+#### dried：干燥的；晒干的；风干的
+
+#### slashed：大幅削减的；砍 slashes 的 | 砍价的（prices slashed）
+
+#### impetus：动力；推动力；促进因素（give impetus to）
+
+#### nurseries：苗圃；育苗场 | 幼儿园（tea nurseries 茶树苗圃）
+
+#### ushered：引领；开创；迎来（usher in a new era）
+
+#### clipper：快速帆船；快船（tea clipper 运茶快船）| 修剪器；理发剪
+
+## 0724
+
+#### Pyramid：金字塔（the Pyramids 金字塔群 / pyramid scheme 传销）
+
+#### obelisks：方尖碑；方尖柱（obelisk 复数）
+
+#### spring up：涌现；突然出现；迅速产生
+
+#### enormously：极大地；巨大地；非常（enormously popular / important）
+
+#### order：命令；订购；顺序 | 秩序；整齐 | 常规；时期（in order to / place an order / out of order）
+
+#### excavations：挖掘；发掘；出土（excavation 复数；archaeological excavations 考古挖掘）
+
+#### ambitious：雄心勃勃的；有野心的 | 宏大的；艰巨的（ambitious project / plan）
+
+#### frescoes：壁画（fresco 复数）
+
+#### chamber：房间；室；厅（burial chamber 墓室 / chamber of commerce 商会）
+
+#### scaffolding：脚手架；建筑架；搭脚手架的材料

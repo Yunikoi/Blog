@@ -108,15 +108,29 @@ Step2：一句话总结主体段（1句话）
 
 ## 表达积累
 
-## 每日练习
+### 第一段
+
+#### 观点AB类
+
+Nowadays, [改写题目]. While some people argue that [A], others believe that [B]. From my perspective, [观点].
+
+#### 综合叙述类
+
+Nowadays, [改写题目]. This trend is undoubtedly a double-edged sword for []. I am convinced that while A poses severe challenges to ..., its core strength of .... carries greater long-term value.每日练习
+
+### 表示原因
+
+This can be attributed to the fact that
+
+## 作文练习
 
 ### 0708
 
 **Topic**：some componies have forced their employees to work from home.What are the advantages and disadvantages of this trend?
 
-**Introduction**：近些年来，强制居家办公已经成为一个愈演愈烈的社会议题。针对于这个问题，从不同角度分析会得到不同的看法。对于员工而言，利弊皆存。我将从员工角度去具体阐述。
+**Introduction**：近些年来，强制居家办公已经成为一个愈演愈烈的社会议题。这一趋势对于员工而言无疑是一把双刃剑。我坚信，尽管居家办公**对员工的自我约束力（弊）**提出了严峻挑战，但它在**节省通勤时间以激发工作效率（利）**方面的核心优势依然更具长远价值。
 
-**Point Paragraph1**：Pointsentence：居家办公可以提高员工工作效率。Why？居家办公省去通勤时间给员工更多休息时间。How？员工可以通过更多的睡眠或者更好的饮食管理以及运动来提高自己的精气神。Example：日本东京社员通勤平均时间为1个小时，通过在家办公减少平均两小时的通勤时间增加了员工36%的工作效率。Result：长此以往，不仅能为公司带来更多的利益，而且能一定程度上缓解城市交通问题。
+**Point Paragraph1**：Pointsentence：居家办公可以提高员工工作效率。Why？居家办公省去通勤时间给员工更多休息时间。How？员工可以通过更多的睡眠或者更好的饮食管理以及运动来提高自己的精气神。Example：日本东京社员通勤平均时间为1个小时，通过在家办公减少平均两小时的通勤时间增加了员工36%的工作效率。Result：如此一来，劳动者就能彻底跳出“由于通勤劳累导致职场倦怠”的恶性循环，在实现个人身心健康的同时，为企业创造出远超以往的岗位价值。
 
 **Point Paragraph2**：Top sentence：居家办公对于员工的自我约束能力要求极高。Why？居家办公意味着没有人监督，没有工作的氛围。How？在这种情况下员工极易出现消极怠惰的心理。Example：在2020年刚刚普及居家办公的时候，日本大阪Yohino公司通过家庭成员的抽查发现43%的员工有懒散的行为导致公司交付时间推迟。Result：如果不居家办公的话，在公司内部大家相互监督，在努力的氛围中自然而然的就会跟进工作。
 
