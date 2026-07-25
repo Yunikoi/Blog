@@ -106,7 +106,7 @@ Step2：一句话总结主体段（1句话）
 >
 > - *This approach not only [主体段1的结果], but also [主体段2的结果].*（这一举措不仅能……，还能……）
 
-## 表达积累
+## 表达句式积累
 
 ### 第一段
 
@@ -121,6 +121,25 @@ Nowadays, [改写题目]. This trend is undoubtedly a double-edged sword for [].
 ### 表示原因
 
 This can be attributed to the fact that
+
+## 好句积累
+
+### 1.impoverished
+
+#### ✅ 社会类（政府该不该扶贫？）
+
+> *Governments should allocate more funding to provide vocational training for **impoverished** rural communities, as this can break the cycle of poverty.*
+> （政府应拨更多资金为贫困农村社区提供职业培训，因为这能打破贫困循环。）
+
+#### ✅ 环境类（土地退化）
+
+> *Overgrazing and deforestation have drastically **impoverished** the once-fertile soil, leading to widespread desertification.*
+> （过度放牧和砍伐森林使曾经肥沃的土壤严重贫瘠化，导致大范围沙漠化。）
+
+#### ✅ 小作文地图题（描述变化）
+
+> *The farmland in the north, which used to be highly productive, became increasingly **impoverished** over the 50-year period.*
+> （北部曾经高产的农田在50年间变得越来越贫瘠。）
 
 ## 作文练习
 

@@ -64,10 +64,10 @@ npm run dev:lan      # 0.0.0.0，手机同 Wi‑Fi 可访问
 
 | 类别 | 示例文章 |
 |------|----------|
-| 高考 | `高考数学复习专项.md`、`高考日语语法复习专项.md` |
-| 语言 | `JLPT.md`、`雅思.md`、`雅思词汇胜经.md`、`TOEIC-AI.md` |
-| 期末攻略 | `Java期末复习满分攻略.md`、`算法考试满分攻略.md`、`软件体系结构期末满分攻略.md`、`大模型期末复习-*.md` |
-| 日志 / 其他 | `Study-Logging.md`、`Study.md`、`Statement of Purpose.md` |
+| 雅思 | `Yasi07.md`、`Yasi06.md`、`雅 思.md`、`Yasi-Reading.md`、`Yasi-Writing-Part2.md`、`Yasi-Speaking.md`、`雅思听力.md`、`Yasi-ZYZ-阅读考频.md`、`Yasi-ZXZ-阅读例句.md` |
+| 语言 | `JLPT.md`、`TOEIC-AI.md`、`单词辨析.md` |
+| 备考专项 | `暑期特训.md` |
+| 日志 / 其他 | `2026-06-30.md`、`Peiqiu Liu.md` |
 
 标签用斜杠分层（如 `学习/数学/高考`）；`column` 可作专栏名；`toc: true` 开启宽屏目录。
 

@@ -532,9 +532,9 @@ column: 学习笔记
 
 ## 0724
 
-#### Pyramid：金字塔（the Pyramids 金字塔群 / pyramid scheme 传销）
+#### pyramid：金字塔（the Pyramids 金字塔群 / pyramid scheme 传销）
 
-#### obelisks：方尖碑；方尖柱（obelisk 复数）
+#### obelisk：方尖碑；方尖柱（obelisks 复数）
 
 #### spring up：涌现；突然出现；迅速产生
 
@@ -542,11 +542,11 @@ column: 学习笔记
 
 #### order：命令；订购；顺序 | 秩序；整齐 | 常规；时期（in order to / place an order / out of order）
 
-#### excavations：挖掘；发掘；出土（excavation 复数；archaeological excavations 考古挖掘）
+#### excavation：挖掘；发掘；出土（excavations 复数；archaeological excavation 考古挖掘）
 
 #### ambitious：雄心勃勃的；有野心的 | 宏大的；艰巨的（ambitious project / plan）
 
-#### frescoes：壁画（fresco 复数）
+#### fresco：壁画（frescoes 复数）
 
 #### chamber：房间；室；厅（burial chamber 墓室 / chamber of commerce 商会）
 
