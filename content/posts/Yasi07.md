@@ -623,3 +623,5 @@ column: 学习笔记
 #### raise：举起；提高 | 筹集；筹集资金 | 养育；饲养 | 提出（raise a question / raise children）
 
 #### vineyard：葡萄园
+
+#### load with：装载；装满；使负担（be loaded with / load sth with）
