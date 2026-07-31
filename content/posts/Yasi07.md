@@ -619,3 +619,5 @@ column: 学习笔记
 #### robust：强健的；结实的 | 稳健的；耐用的（robust system / economy）
 
 #### live off：靠……生活；以……为生（live off the land / savings）
+
+#### raise：举起；提高 | 筹集；筹集资金 | 养育；饲养 | 提出（raise a question / raise children）
