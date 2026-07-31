@@ -551,3 +551,71 @@ column: 学习笔记
 #### chamber：房间；室；厅（burial chamber 墓室 / chamber of commerce 商会）
 
 #### scaffolding：脚手架；建筑架；搭脚手架的材料
+
+## 0730
+
+#### maintain：维持；保持；保养 | 坚持认为；断言（maintained 过去式 / 过去分词）
+
+#### trait：特征；特性；性格特点（traits 复数）
+
+#### acumen：敏锐；洞察力；精明（business acumen 商业头脑）
+
+#### call into question：质疑；使受到怀疑（called into question 过去式）
+
+#### ornithologist：鸟类学家（ornithologists 复数）
+
+#### overly：过度地；过于（overly cautious / optimistic）
+
+#### population：人口；种群；群体（populations 复数；bird populations 鸟类种群）
+
+#### grub：蛆；幼虫 | 食物（口语）| 翻掘；挖土（v.）
+
+#### bark：树皮 | 犬吠；吠叫（v./n.）
+
+#### shellfish：贝类；甲壳类海鲜（单复数同形或 shellfishes）
+
+#### recalcitrant：顽抗的；不服从的；难对付的
+
+#### smoulder：闷烧；郁积；压抑着燃烧（smouldering 现在分词 / 形容词；美式 smolder）
+
+#### stick：粘住；坚持（stick to）| 棍；棒 | 卡住；陷入
+
+#### feast：盛宴；宴会 | 尽情享用；大吃一顿（feast on）
+
+#### perch：栖息；停歇（鸟）| 栖木；高处 | 鲈鱼
+
+#### mould：霉；霉菌 | 模具；铸模 | 塑造；浇铸（美式 mold）
+
+#### retrieve：取回；找回 | 检索；挽回（retrieve data / information）
+
+#### literally：字面上；确实地；简直（Literally 句首大写）
+
+#### collate：核对；整理；对照（collate information / data）
+
+#### exploit：利用；剥削 | 功绩；英勇事迹（n.）
+
+#### communal：公共的；共有的；社区的（communal nest / living）
+
+#### preen：梳理（羽毛）| 精心打扮；自鸣得意（preen oneself）
+
+## 0731
+
+#### ravage：蹂躏；毁坏；破坏 | 破坏的痕迹；劫掠后果（the ravages of war / time）
+
+#### wreathe：环绕；盘绕；缭绕（smoke wreathed / wreathed in smiles）
+
+#### impede：妨碍；阻碍；阻止（impede progress / growth）
+
+#### thesis：论文；学位论文 | 论点；论题（plural: theses）
+
+#### precedent：先例；前例 | 有先例的；先前的（set a precedent / without precedent）
+
+#### lofty：高耸的；巍峨的 | 崇高的；高尚的 | 高傲的；傲慢的（lofty mountains / ideals）
+
+#### fridge：冰箱（refrigerator 的口语缩写）
+
+#### sieve：筛子；滤网 | 筛；过滤（v.）
+
+#### robust：强健的；结实的 | 稳健的；耐用的（robust system / economy）
+
+#### live off：靠……生活；以……为生（live off the land / savings）
