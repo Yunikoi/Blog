@@ -625,3 +625,7 @@ column: 学习笔记
 #### vineyard：葡萄园
 
 #### load with：装载；装满；使负担（be loaded with / load sth with）
+
+#### newlywed：新婚者；新婚夫妇之一（newlyweds 复数；指新婚夫妇）
+
+#### wheelchair：轮椅
