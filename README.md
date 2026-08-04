@@ -64,8 +64,8 @@ npm run dev:lan      # 0.0.0.0，手机同 Wi‑Fi 可访问
 
 | 类别 | 示例文章 |
 |------|----------|
-| 雅思 | `Yasi07.md`、`Yasi06.md`、`雅 思.md`、`Yasi-Reading.md`、`Yasi-Writing-Part2.md`、`Yasi-Speaking.md`、`雅思听力.md`、`Yasi-ZYZ-阅读考频.md`、`Yasi-ZXZ-阅读例句.md` |
-| 语言 | `JLPT.md`、`TOEIC-AI.md`、`单词辨析.md` |
+| 雅思 | `Yasi08.md`、`Yasi07.md`、`Yasi06.md`、`Yasi.md`、`雅思.md`、`Yasi-Reading.md`、`Yasi-Writing-Part2.md`、`Yasi-Speaking.md`、`雅思听力.md`、`Yasi-ZYZ-阅读考频.md`、`Yasi-ZXZ-阅读例句.md` |
+| 语言 | `TOEIC-AI.md`、`单词辨析.md` |
 | 备考专项 | `暑期特训.md` |
 | 日志 / 其他 | `2026-06-30.md`、`Peiqiu Liu.md` |
 
