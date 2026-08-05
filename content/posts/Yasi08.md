@@ -131,3 +131,31 @@ column: 学习笔记
 #### encompass：包含；涵盖；包围（encompassing 现在分词）
 
 #### underscore：强调；突出；在……下划线（underscores 第三人称单数）
+
+#### longitudinal：纵向的；纵贯的；长期跟踪的（longitudinal study 纵向研究）
+
+#### linguistic：语言的；语言学的
+
+#### competence：能力；胜任；技能（linguistic competence 语言能力）
+
+#### socioeconomic：社会经济的（socioeconomic status / factors）
+
+#### babble：咿呀学语；含糊地说 | 潺潺声（babbling 现在分词 / 婴儿咿呀期）
+
+#### phonetic：语音的；语音学的（phonetic alphabet / features）
+
+#### sheer：纯粹的；完全的 | 陡峭的 | 透明薄的（sheer volume / size）
+
+#### intervention：干预；介入；干涉（interventions 复数）
+
+#### proliferation：激增；扩散；增殖（nuclear proliferation / proliferation of）
+
+#### alarmingly：令人担忧地；惊人地（Alarmingly 句首大写）
+
+#### staggering：惊人的；巨大的；难以置信的（staggering number / cost）
+
+#### galvanise：激励；刺激；使振奋 | 镀锌（galvanised 过去式 / 过去分词；美式 galvanize）
+
+#### predicament：困境；窘境；尴尬处境
+
+#### corporate：公司的；企业的 | 共同的；全体的（corporate culture / responsibility）
