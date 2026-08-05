@@ -87,3 +87,47 @@ column: 学习笔记
 #### prolong：延长；拖延（prolong the war / life）
 
 #### vice versa：反之亦然
+
+## 0805
+
+#### a growing body of：越来越多的（研究 / 证据等）（a growing body of research / evidence）
+
+#### landscape：景观；风景 | 形势；局面 | 对……做景观美化（v.）
+
+#### mitigate：减轻；缓和；缓解（mitigate risk / damage）
+
+#### metropolitan：大都市的；大都会的（metropolitan area）
+
+#### rural：农村的；乡村的
+
+#### disparity：差距；差异；不等（income disparity / disparity between）
+
+#### prevalence：流行；普遍；盛行（prevalence of disease / obesity）
+
+#### scarcity：稀缺；短缺；不足（water scarcity）
+
+#### counteract：抵消；对抗；中和（counteract the effects）
+
+#### evapotranspiration：蒸散；蒸发蒸腾（水分从地表与植物散失）
+
+#### canopy：树冠；冠层 | 罩篷；顶篷
+
+#### correlate：相关；使相互关联（correlated 过去分词 / 形容词；be correlated with）
+
+#### combat：与……战斗；对抗；打击（combating 现在分词；combat climate change）
+
+#### contributor：促成因素；贡献者；投稿人（a major contributor to）
+
+#### in this sense：从这个意义上说；在这种意义上
+
+#### a diverse array of：各种各样的；一系列多样的
+
+#### bolster：支撑；加强；支持（bolstering 现在分词；bolster confidence）
+
+#### airborne：空气传播的；在空中的；机载的
+
+#### formidable：强大的；可怕的；难以应付的（formidable challenge / opponent）
+
+#### encompass：包含；涵盖；包围（encompassing 现在分词）
+
+#### underscore：强调；突出；在……下划线（underscores 第三人称单数）
