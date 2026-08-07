@@ -159,3 +159,51 @@ column: 学习笔记
 #### predicament：困境；窘境；尴尬处境
 
 #### corporate：公司的；企业的 | 共同的；全体的（corporate culture / responsibility）
+
+#### teem：充满；盛产；到处都是（teem with life / fish）
+
+#### sterile：无菌的；消过毒的 | 贫瘠的；不结果实的 | 枯燥乏味的
+
+## 0807
+
+#### misuse：误用；滥用；使用不当（misused 过去式 / 过去分词）
+
+#### dehydrate：使脱水；去水（dehydrating 现在分词；dehydrated food）
+
+#### mash：捣烂；捣成泥（mashing 现在分词；mashed potato）
+
+#### childbirth：分娩；生育
+
+#### conquistador：征服者（尤指 16 世纪西班牙征服者；conquistadors 复数）
+
+#### ration：配给；定量；口粮（rations 复数）
+
+#### distaste：厌恶；反感；不喜欢（distaste for）
+
+#### fodder：饲料；草料 | 素材；炮灰（喻）
+
+#### novelty：新奇；新颖；新奇的事物
+
+#### heathen：异教徒；未开化的人 | 异教的；野蛮的（旧时 / 贬义用法）
+
+#### tuber：块茎（如马铃薯、红薯）
+
+#### gain ground：取得进展；越来越流行；站稳脚跟（gained ground 过去式）
+
+#### maraud：劫掠；游荡抢劫（marauding 现在分词 / 形容词：劫掠的）
+
+#### plunder：掠夺；劫掠（plundered 过去式 / 过去分词）
+
+#### sport：运动；体育 | 炫耀；嬉戏 | 带有；穿戴（v.：sport a badge）
+
+#### reverse：颠倒；逆转 | 相反的；背面 | 倒车（in reverse / reverse the trend）
+
+#### sneak：偷偷溜走；悄悄做（sneaked / snuck 过去式）
+
+#### snatch：一把抓住；夺走；抢夺（snatched 过去式 / 过去分词）
+
+#### peasantry：农民（总称）；小农阶级
+
+#### thresh：打谷；脱粒（threshing 现在分词 / 脱粒）
+
+#### mortality：死亡率；死亡数 | 必死性（mortality rate）
